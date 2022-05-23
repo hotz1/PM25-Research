@@ -22,3 +22,26 @@ for(i in 1:length(pm25.files)) {
 
   pm25.list[[i]] <- dat.pm25
 }  
+
+pm25.all <- do.call("rbind", pm25.list)
+
+pm25.cali <- pm25.all %>% filter(State == "California")
+
+write_csv(pm25.all, "./CSN_PM25_2000_2021_USA.csv")
+write_csv(pm25.cali, "./CSN_PM25_2000_2021_Cali.csv")
+
+counts.all <- pm25.all %>% group_by(Latitude, Longitude, State, County, Site.Num) %>% tally()
+
+library(sf)
+library(leaflet)
+library(htmlwidgets)
+
+m <- leaflet(data = counts.all) %>% 
+  addTiles() %>%
+  addCircleMarkers(data=counts.all, lng = ~Longitude, lat = ~Latitude, color = "red", opacity=1) %>%
+  addCircleMarkers(~Longitude, ~Latitude, color="blue", opacity=0.5,
+                   radius=2, popup = paste("State:", counts.all$State, "<br>", 
+                                           "County:", counts.all$County, "<br>",
+                                           "Site Number:", counts.all$Site.Num))
+
+saveWidget(m, file="./PM25_CV_map.html")
