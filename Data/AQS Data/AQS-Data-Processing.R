@@ -1,11 +1,12 @@
 #############
 # Code to extract data from EPA PM2.5 sites (FRM/FEM)
-# Data downloaded from https://aqs.epa.gov/aqsweb/airdata/download_files.html#Daily - Parameter code 88101
+# Data downloaded from https://aqs.epa.gov/aqsweb/airdata/download_files.html#Daily - PM2.5 FRM/FEM Mass (88101)
 # Metadata available at https://aqs.epa.gov/aqsweb/airdata/FileFormats.html#_daily_summary_files
 #############
 
 library(tidyverse)
 
+# Get names and file locations of all the required CSV files
 setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research/Data/AQS Data")
 pm25.files <- list.files(path = "./daily_88101/", pattern = "daily_88101_20*", full.names = TRUE)
 
@@ -16,9 +17,9 @@ pm25.list <- vector('list', length(pm25.files))
 for(i in 1:length(pm25.files)) { 
   dat.pm25 <- read_csv(pm25.files[i])
   dat.pm25 <- dat.pm25 %>%
-    select(PM25 = `Arithmetic Mean`, `POC`, Date = `Date Local`, `Latitude`, `Longitude`,
-           State = `State Name`, County = `County Name`, State.Code = `State Code`,
-           County.Code = `County Code`, Site.Num = `Site Num`)
+    select(`PM25` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`)
 
   pm25.list[[i]] <- dat.pm25
 }  
@@ -37,7 +38,7 @@ write_csv(pm25.all, "./AQS_PM25_2000_2021_USA.csv")
 write_csv(pm25.cali, "./AQS_PM25_2000_2021_Cali.csv")
 
 counts.all <- pm25.all %>% 
-  group_by(Latitude, Longitude, State, County, Site.Code) %>%
+  group_by(Latitude, Longitude, State, County, City, Site.Code) %>%
   tally()
 
 library(sf)
@@ -50,6 +51,7 @@ m <- leaflet(data = counts.all) %>%
   addCircleMarkers(~Longitude, ~Latitude, color="blue", opacity = 0.5,
                    radius = 2, popup = paste("State:", counts.all$State, "<br>", 
                                              "County:", counts.all$County, "<br>",
+                                             "City:", counts.all$City, "<br>",
                                              "Site Code:", counts.all$Site.Code, "<br>",
                                              "Total Observations:", counts.all$n))
 
