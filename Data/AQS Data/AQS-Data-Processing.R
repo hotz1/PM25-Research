@@ -37,22 +37,26 @@ pm25.cali <- pm25.all %>% filter(State == "California")
 write_csv(pm25.all, "./AQS_PM25_2000_2021_USA.csv")
 write_csv(pm25.cali, "./AQS_PM25_2000_2021_Cali.csv")
 
-counts.all <- pm25.all %>% 
+# List all of the individual data sites for the AQS data
+AQS.data.sites <- pm25.all %>% 
   group_by(Latitude, Longitude, State, County, City, Site.Code) %>%
   tally()
+
+write_csv(AQS.data.sites, "./AQS_Data_Sites_2000_2021.csv")
 
 library(sf)
 library(leaflet)
 library(htmlwidgets)
 
-m <- leaflet(data = counts.all) %>% 
+# Create an interactive map of AQS data sites
+AQS.sites.map <- leaflet(data = AQS.data.sites) %>% 
   addTiles() %>%
-  addCircleMarkers(data = counts.all, lng = ~Longitude, lat = ~Latitude, color = "red", opacity = 1) %>%
+  addCircleMarkers(data = AQS.data.sites, lng = ~Longitude, lat = ~Latitude, color = "red", opacity = 1) %>%
   addCircleMarkers(~Longitude, ~Latitude, color="blue", opacity = 0.5,
-                   radius = 2, popup = paste("State:", counts.all$State, "<br>", 
-                                             "County:", counts.all$County, "<br>",
-                                             "City:", counts.all$City, "<br>",
-                                             "Site Code:", counts.all$Site.Code, "<br>",
-                                             "Total Observations:", counts.all$n))
+                   radius = 2, popup = paste("State:", AQS.data.sites$State, "<br>", 
+                                             "County:", AQS.data.sites$County, "<br>",
+                                             "City:", AQS.data.sites$City, "<br>",
+                                             "Site Code:", AQS.data.sites$Site.Code, "<br>",
+                                             "Total Observations:", AQS.data.sites$n))
 
-saveWidget(m, file="./AQS-Sites-Map.html")
+saveWidget(AQS.sites.map, file="./AQS-Sites-Map.html")
