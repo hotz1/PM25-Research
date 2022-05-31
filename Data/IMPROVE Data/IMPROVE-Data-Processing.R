@@ -17,7 +17,7 @@ IMPROVE_metadata <- readxl::read_excel(path = "./IMPROVE_Raw_Data_2000_2021.xlsx
 
 # List all of the individual data sites for the IMPROVE data
 IMPROVE.Data.Sites <- IMPROVE_raw %>% 
-  group_by(Latitude, Longitude, SiteName, SiteCode, EPACode) %>%
+  group_by(Latitude, Longitude, POC, SiteName, SiteCode, EPACode) %>%
   tally()
 
 # Split the EPA code into state, county, site codes
@@ -43,6 +43,7 @@ IMPROVE.sites.map <- leaflet(data = IMPROVE.Data.Sites) %>%
                                                                      IMPROVE.Data.Sites$County.Code,
                                                                      IMPROVE.Data.Sites$Site.Num,
                                                                      sep = '-'), "<br>",
+                                             "POC:", IMPROVE.Data.Sites$POC, "<br>",
                                              "Total Observations:", IMPROVE.Data.Sites$n))
 
 saveWidget(IMPROVE.sites.map, file="./IMPROVE-Sites-Map.html")
