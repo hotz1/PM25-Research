@@ -39,7 +39,7 @@ write_csv(pm25.cali, "./AQS_PM25_2000_2021_Cali.csv")
 
 # List all of the individual data sites for the AQS data
 AQS.data.sites <- pm25.all %>% 
-  group_by(Latitude, Longitude, State, County, City, Site.Code) %>%
+  group_by(Latitude, Longitude, POC, State, County, City, Site.Code) %>%
   tally()
 
 write_csv(AQS.data.sites, "./AQS_Data_Sites_2000_2021.csv")
@@ -57,6 +57,7 @@ AQS.sites.map <- leaflet(data = AQS.data.sites) %>%
                                              "County:", AQS.data.sites$County, "<br>",
                                              "City:", AQS.data.sites$City, "<br>",
                                              "Site Code:", AQS.data.sites$Site.Code, "<br>",
+                                             "POC:", AQS.data.sites$POC, "<br>",
                                              "Total Observations:", AQS.data.sites$n))
 
 saveWidget(AQS.sites.map, file="./AQS-Sites-Map.html")
