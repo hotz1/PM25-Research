@@ -6,3 +6,6 @@ Data/CASTNET Data - USA/Concentration - Weekly.csv
 Data/CASTNET Data - USA/Concentration - Weekly_columninfo.csv
 Data/CASTNET Data - USA/Concentration - Weekly_tableinfo.csv
 Data/AQS Data/daily_88101/
+Data/CSN Data/daily_SPEC/
+*.RData
+*.Rhistory

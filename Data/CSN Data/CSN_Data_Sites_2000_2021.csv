@@ -1,2100 +1,415 @@
-Latitude,Longitude,State,County,City,Site.Code,n
-17.712474,-64.784868,Virgin Islands,St Croix,Not in a city,78-010-0012,519
-17.953006,-66.261461,Puerto Rico,Salinas,Not in a city,72-123-0002,205
-17.955378,-66.162122,Puerto Rico,Guayama,Guayama,72-057-0012,88
-17.957894,-66.165016,Puerto Rico,Guayama,Not in a city,72-057-0008,1610
-18.009558,-66.627249,Puerto Rico,Ponce,Ponce,72-113-0004,1941
-18.045111,-66.802253,Puerto Rico,Guayanilla,Guayanilla,72-059-0016,1482
-18.15344,-65.828617,Puerto Rico,Humacao,Humacao,72-069-0001,1089
-18.175378,-66.725988,Puerto Rico,Adjuntas,Adjuntas,72-001-0002,1131
-18.198712,-66.052237,Puerto Rico,Caguas,Caguas,72-025-0007,230
-18.200099,-67.14588,Puerto Rico,Mayagnez,Mayaguez,72-097-0006,285
-18.207732,-67.146013,Puerto Rico,Mayagnez,Not in a city,72-097-0003,712
-18.260509,-66.854065,Puerto Rico,Lares,Lares,72-081-0001,452
-18.334399,-64.795972,Virgin Islands,St John,Not in a city,78-020-0001,2098
-18.343289,-64.922922,Virgin Islands,St Thomas,Charlotte Amalie,78-030-0009,189
-18.383983,-65.618888,Puerto Rico,Fajardo,Not in a city,72-053-0003,3332
-18.39982,-66.171125,Puerto Rico,Bayamon,Bayamon,72-021-0009,1084
-18.420089,-66.150615,Puerto Rico,Bayamon,Bayamon,72-021-0010,1039
-18.425652,-66.115846,Puerto Rico,Guaynabo,Guaynabo,72-061-0001,529
-18.440095,-66.11446,Puerto Rico,Guaynabo,Guaynabo,72-061-0005,3954
-18.449814,-66.05251,Puerto Rico,San Juan,San Juan,72-127-0003,2701
-18.453389,-66.694987,Puerto Rico,Arecibo,Not in a city,72-013-0002,380
-18.457039,-66.696693,Puerto Rico,Arecibo,Not in a city,72-013-0001,317
-19.4308,-155.2578,Hawaii,Hawaii,Hawaii Volcanoes National Park,15-001-0005,2295
-19.717562,-155.11053,Hawaii,Hawaii,Hilo,15-001-1006,129
-20.7585,-156.24789,Hawaii,Maui,Not in a city,15-009-9001,1512
-20.780997,-156.446373,Hawaii,Maui,Kihei,15-009-0006,851
-20.808788,-156.283507,Hawaii,Maui,Not in a city,15-009-9000,1400
-21.303382,-157.871171,Hawaii,Honolulu,Honolulu,15-003-1004,525
-21.30758,-157.85542,Hawaii,Honolulu,Honolulu,15-003-1001,2254
-21.323745,-158.088613,Hawaii,Honolulu,Not in a city,15-003-0010,3191
-21.392833,-157.969126,Hawaii,Honolulu,Pearl City,15-003-2004,2683
-25.39122,-80.680819,Florida,Miami-Dade,Not in a city,12-086-0030,3910
-25.471944,-80.482778,Florida,Miami-Dade,Homestead,12-086-6001,6271
-25.794222,-80.215556,Florida,Miami-Dade,Miami,12-086-1016,7429
-25.892518,-97.49383,Texas,Cameron,Brownsville,48-061-0006,517
-25.941944,-80.326389,Florida,Miami-Dade,Palm Springs North,12-086-0033,1857
-26.001202,-80.160324,Florida,Broward,Hollywood,12-011-3002,1051
-26.053889,-80.256944,Florida,Broward,Davie,12-011-0034,3683
-26.0711,-97.1577,Texas,Cameron,South Padre Island,48-061-2004,542
-26.083143,-80.237586,Florida,Broward,Davie,12-011-1002,6169
-26.135173,-97.630039,Texas,Cameron,San Benito,48-061-2002,651
-26.217582,-80.127545,Florida,Broward,Pompano Beach,12-011-2004,3157
-26.22621,-98.291069,Texas,Hidalgo,Mission,48-215-0043,1384
-26.288622,-98.152066,Texas,Hidalgo,Edinburg,48-215-1046,84
-26.291088,-80.096353,Florida,Broward,Pompano Beach Highlands,12-011-2003,1007
-26.294167,-80.176389,Florida,Broward,Coconut Creek,12-011-5005,1896
-26.309858,-98.183101,Texas,Hidalgo,Edinburg,48-215-0042,644
-26.454796,-80.096709,Florida,Palm Beach,Delray Beach,12-099-2003,508
-26.456944,-80.092778,Florida,Palm Beach,Delray Beach,12-099-2005,4721
-26.602016,-81.877908,Florida,Lee,Fort Myers,12-071-0005,2596
-26.724786,-80.666447,Florida,Palm Beach,Belle Glade,12-099-0008,2755
-26.730833,-80.233889,Florida,Palm Beach,Royal Palm Beach,12-099-0009,5688
-27.290556,-82.507222,Florida,Sarasota,Ridge Wood Heights,12-115-0013,2640
-27.426981,-97.298692,Texas,Kleberg,Corpus Christi,48-273-0314,151
-27.449206,-80.408104,Florida,St. Lucie,Fort Pierce,12-111-1002,1384
-27.480873,-82.618709,Florida,Manatee,Bradenton,12-081-4012,872
-27.517456,-99.515222,Texas,Webb,Laredo,48-479-0016,737
-27.785866,-82.739875,Florida,Pinellas,Saint Petersburg,12-103-0018,6819
-27.804489,-97.431553,Texas,Nueces,Corpus Christi,48-355-0032,3221
-27.806944,-97.454167,Texas,Nueces,Corpus Christi,48-355-0020,300
-27.811817,-97.465703,Texas,Nueces,Corpus Christi,48-355-0034,1123
-27.850348,-82.714465,Florida,Pinellas,Pinellas Park,12-103-0026,818
-27.932244,-82.50954,Florida,Hillsborough,Tampa,12-057-0030,3750
-27.96565,-82.2304,Florida,Hillsborough,Valrico,12-057-3002,11106
-27.986283,-82.78215,Florida,Pinellas,Clearwater,12-103-1009,1845
-28.000297,-82.776213,Florida,Pinellas,Dunedin,12-103-1008,303
-28.028889,-81.972222,Florida,Polk,Lakeland,12-105-6006,2500
-28.050296,-82.377871,Florida,Hillsborough,Tampa,12-057-1075,1915
-28.053611,-80.628611,Florida,Brevard,Melbourne,12-009-0007,2242
-28.551112,-81.345347,Florida,Orange,Orlando,12-095-1004,4199
-28.596389,-81.3625,Florida,Orange,Winter Park,12-095-2002,6237
-28.746111,-81.310556,Florida,Seminole,Sanford,12-117-1002,2650
-28.748678,-82.554769,Florida,Citrus,Not in a city,12-017-9000,2419
-28.980556,-82.644381,Florida,Citrus,Not in a city,12-017-0005,2257
-29.010841,-95.397744,Texas,Brazoria,Clute (corporate name for Clute City),48-039-1003,312
-29.119168,-89.206659,Louisiana,Plaquemines,Not in a city,22-075-9000,499
-29.170533,-82.100646,Florida,Marion,Ocala,12-083-0003,936
-29.206667,-81.0525,Florida,Volusia,Daytona Beach,12-127-5002,1998
-29.254474,-94.861289,Texas,Galveston,Galveston,48-167-1034,574
-29.263319,-94.856568,Texas,Galveston,Galveston,48-167-0014,655
-29.275381,-98.311692,Texas,Bexar,San Antonio,48-029-0059,477
-29.30265,-103.17781,Texas,Brewster,Not in a city,48-043-0101,3958
-29.342,-98.472,Texas,Bexar,San Antonio,48-029-1052,85
-29.39,-94.919444,Texas,Galveston,Texas City,48-167-0053,364
-29.422194,-98.505419,Texas,Bexar,San Antonio,48-029-0060,921
-29.503889,-95.104444,Texas,Galveston,League City,48-167-1005,439
-29.51509,-98.620166,Texas,Bexar,San Antonio,48-029-0032,481
-29.587741,-98.312512,Texas,Bexar,Selma,48-029-0053,383
-29.623889,-95.474167,Texas,Harris,Houston,48-201-0051,354
-29.625556,-95.267222,Texas,Harris,Houston,48-201-0062,351
-29.632058,-98.564936,Texas,Bexar,San Antonio,48-029-0052,857
-29.658578,-82.408162,Florida,Alachua,Gainesville,12-001-0024,1249
-29.670025,-95.128508,Texas,Harris,Deer Park,48-201-1039,4522
-29.679301,-90.779731,Louisiana,Terrebonne,Gray (Beattieville),22-109-0001,2403
-29.695729,-95.499219,Texas,Harris,Houston,48-201-0055,667
-29.706111,-82.387778,Florida,Alachua,Gainesville,12-001-0023,2681
-29.733726,-95.257593,Texas,Harris,Houston,48-201-1035,6419
-29.751111,-95.361389,Texas,Harris,Houston,48-201-1037,136
-29.752778,-95.350278,Texas,Harris,Houston,48-201-0075,229
-29.764788,-95.178538,Texas,Harris,Houston,48-201-0803,185
-29.767997,-95.220582,Texas,Harris,Houston,48-201-1034,577
-29.770698,-95.031232,Texas,Harris,Baytown,48-201-0058,1515
-29.802707,-95.125495,Texas,Harris,Channelview,48-201-0026,765
-29.81453,-95.38769,Texas,Harris,Houston,48-201-1052,114
-29.863957,-94.317802,Texas,Jefferson,Not in a city,48-245-0022,685
-29.88546,-89.94952,Louisiana,Plaquemines,Not in a city,22-075-8400,87
-29.888276,-97.87806,Texas,Caldwell,San Marcos,48-055-0062,384
-29.900314,-90.109836,Louisiana,Jefferson,Marrero,22-051-2001,2070
-29.901036,-95.326137,Texas,Harris,Houston,48-201-0024,1575
-29.9198,-90.231783,Louisiana,Jefferson,Waggaman,22-051-8107,68
-29.922894,-93.909018,Texas,Jefferson,Port Arthur,48-245-0021,2528
-29.933261,-90.359524,Louisiana,St. Charles,Luling,22-089-0005,36
-29.939614,-89.923883,Louisiana,St. Bernard,Meraux,22-087-0004,783
-29.943164,-89.97625,Louisiana,St. Bernard,Chalmette,22-087-0007,820
-29.955704,-90.121733,Louisiana,Orleans,New Orleans,22-071-0010,680
-29.96249,-90.05689,Louisiana,Orleans,New Orleans,22-071-8401,110
-29.971443,-89.998605,Louisiana,St. Bernard,Arabi,22-087-8103,194
-29.993519,-90.10155,Louisiana,Orleans,New Orleans,22-071-0012,1789
-29.996013,-90.11819,Louisiana,Orleans,New Orleans,22-071-0021,780
-29.999264,-90.211619,Louisiana,Jefferson,Metairie,22-051-8106,100
-30.016905,-89.927185,Louisiana,Orleans,New Orleans,22-071-8105,301
-30.020892,-90.123099,Louisiana,Jefferson,Metairie,22-051-8105,44
-30.032329,-90.045465,Louisiana,Orleans,New Orleans,22-071-8106,122
-30.041238,-90.272826,Louisiana,Jefferson,Kenner,22-051-1001,5292
-30.0655,-89.804767,Louisiana,Orleans,New Orleans,22-071-8110,22
-30.085263,-93.761341,Texas,Orange,West Orange,48-361-1001,1428
-30.0925,-84.161111,Florida,Wakulla,Saint Marks,12-129-0001,4087
-30.108633,-89.761683,Louisiana,Orleans,New Orleans,22-071-9000,1348
-30.135797,-81.633981,Florida,Duval,Jacksonville,12-031-0098,6246
-30.144369,-85.614371,Florida,Bay,Panama City,12-005-1004,1018
-30.16635,-89.737333,Louisiana,Orleans,New Orleans,22-071-8109,28
-30.17735,-93.214668,Louisiana,Calcasieu,Lake Charles,22-019-0010,1613
-30.194167,-93.866944,Texas,Orange,West Orange,48-361-1100,581
-30.217701,-92.051511,Louisiana,Lafayette,Lafayette,22-055-0005,611
-30.219101,-91.062552,Louisiana,Iberville,St. Gabriel,22-047-0005,2315
-30.221255,-91.315418,Louisiana,Iberville,Not in a city,22-047-0009,1575
-30.22611,-92.042908,Louisiana,Lafayette,Lafayette,22-055-0007,1738
-30.227798,-93.579965,Louisiana,Calcasieu,Vinton,22-019-0009,2433
-30.230363,-89.567498,Mississippi,Hancock,Not in a city,28-045-0001,651
-30.263204000000002,-97.712891,Texas,Travis,Austin,48-453-0021,1539
-30.26588,-89.76997,Louisiana,St. Tammany,Slidell,22-103-8401,52
-30.26892,-89.44933,Mississippi,Hancock,Bay St. Louis,28-045-8104,160
-30.275033,-92.01732,Louisiana,Lafayette,Lafayette,22-055-0006,1122
-30.286737,-89.3743,Mississippi,Hancock,Waveland,28-045-8108,11
-30.300833,-89.395916,Mississippi,Hancock,Waveland,28-045-0003,1146
-30.31445,-89.81415,Louisiana,St. Tammany,Not in a city,22-103-8400,109
-30.319695,-89.267386,Mississippi,Harrison,Pass Christian,28-047-8107,11
-30.350302,-95.425128,Texas,Montgomery,Conroe,48-339-0078,442
-30.353889,-95.421667,Texas,Montgomery,Conroe,48-339-0089,230
-30.354722,-81.547778,Florida,Duval,Jacksonville,12-031-0099,6703
-30.356339,-81.635396,Florida,Duval,Jacksonville,12-031-0032,2715
-30.3658,-103.6491,Texas,Brewster,Alpine,48-043-0002,292
-30.373678,-89.15513,Mississippi,Harrison,Long Beach,28-047-8101,215
-30.378287,-88.53393,Mississippi,Jackson,Pascagoula,28-059-0006,2345
-30.38,-89.448333,Mississippi,Hancock,Not in a city,28-045-0002,8
-30.390369,-89.049778,Mississippi,Harrison,Gulfport,28-047-0008,3064
-30.393193,-89.580378,Mississippi,Hancock,Not in a city,28-045-8201,312
-30.40288,-88.87987,Mississippi,Harrison,Biloxi,28-047-8106,3
-30.408199,-86.889961,Florida,Santa Rosa,Gulf Breeze,12-113-0014,278
-30.40966,-89.44114,Mississippi,Hancock,Kiln,28-045-8105,156
-30.437,-87.256,Florida,Escambia,Pensacola,12-033-0025,446
-30.439722,-84.346389,Florida,Leon,Tallahassee,12-073-0012,4249
-30.449005,-89.052683,Mississippi,Harrison,Gulfport,28-047-8102,201
-30.4589,-87.334,Florida,Escambia,Not in a city,12-033-0030,41
-30.4594,-87.3285,Florida,Escambia,Bellview,12-033-0029,41
-30.461981,-91.179219,Louisiana,East Baton Rouge,Baton Rouge,22-033-0009,9531
-30.4641,-87.3287,Florida,Escambia,Bellview,12-033-0028,41
-30.4678,-87.3316,Florida,Escambia,Bellview,12-033-0027,62
-30.470916,-88.9827,Mississippi,Harrison,Biloxi,28-047-8103,211
-30.474305,-88.141022,Alabama,Mobile,Theodore,01-097-2005,1273
-30.483163,-97.875084,Texas,Travis,Leander,48-453-0020,1876
-30.491857,-91.150107,Louisiana,East Baton Rouge,Baton Rouge,22-033-0002,400
-30.497478,-87.880258,Alabama,Baldwin,Fairhope,01-003-0010,1793
-30.500642,-91.213556,Louisiana,West Baton Rouge,Not in a city,22-121-0001,6938
-30.503287,-90.377212,Louisiana,Tangipahoa,Hammond,22-105-0001,2899
-30.525367,-87.20355,Florida,Escambia,Ferry Pass,12-033-0004,2975
-30.5295,-89.691056,Mississippi,Pearl River,Not in a city,28-109-0001,644
-30.55,-87.376,Florida,Escambia,Pensacola,12-033-0026,488
-30.593978,-91.251943,Louisiana,East Baton Rouge,Not in a city,22-033-1001,563
-30.669362,-104.024657,Texas,Jeff Davis,Not in a city,48-243-0004,177
-30.740718,-82.128154,Georgia,Charlton,Not in a city,13-049-9000,2456
-30.76652,-88.075727,Alabama,Mobile,Chickasaw,01-097-0002,809
-30.770181,-88.087761,Alabama,Mobile,Chickasaw,01-097-0003,2051
-30.8486,-83.2933,Georgia,Lowndes,Valdosta,13-185-0003,1334
-31.106567,-87.071081,Alabama,Escambia,Brewton,01-053-0002,905
-31.169805,-81.495035,Georgia,Glynn,Brunswick,13-127-0006,2196
-31.177824,-92.410746,Louisiana,Rapides,Alexandria,22-079-0002,1966
-31.224783,-85.390789,Alabama,Houston,Dothan,01-069-0003,1320
-31.228787,-85.375489,Alabama,Houston,Dothan,01-069-0002,463
-31.289627,-92.480971,Louisiana,Rapides,Alexandria,22-079-0001,355
-31.323639,-89.287167,Mississippi,Forrest,Hattiesburg,28-035-0004,2839
-31.337204,-110.936718,Arizona,Santa Cruz,Nogales,04-023-0004,1882
-31.33745,-110.93715,Arizona,Santa Cruz,Nogales,04-023-9000,598
-31.3492,-109.539683,Arizona,Cochise,Douglas,04-003-1005,1584
-31.513097,-82.749971,Georgia,Coffee,Not in a city,13-069-0002,1138
-31.520556,-97.200556,Texas,McLennan,Waco,48-309-1002,370
-31.560752,-91.390405,Mississippi,Adams,Natchez,28-001-0004,1243
-31.568222,-91.45845,Louisiana,Concordia,Vidalia,22-029-0002,106
-31.574402,-91.455353,Louisiana,Concordia,Vidalia,22-029-0003,247
-31.5776,-84.0998,Georgia,Dougherty,Albany,13-095-0007,3179
-31.664302,-85.606175,Alabama,Barbour,Not in a city,01-005-0002,135
-31.6675,-106.288,Texas,El Paso,El Paso,48-141-0057,432
-31.688638,-89.135115,Mississippi,Jones,Laurel,28-067-0002,2091
-31.735857,-106.377909,Texas,El Paso,El Paso,48-141-0038,396
-31.746775,-106.402806,Texas,El Paso,El Paso,48-141-0055,353
-31.757654,-106.482922,Texas,El Paso,El Paso,48-141-0002,1278
-31.758532,-106.501045,Texas,El Paso,El Paso,48-141-0053,567
-31.765685,-106.455227,Texas,El Paso,El Paso,48-141-0044,4371
-31.768286,-106.501243,Texas,El Paso,El Paso,48-141-0037,1847
-31.776944,-106.501667,Texas,El Paso,El Paso,48-141-0033,199
-31.790479,-85.978974,Alabama,Pike,Troy,01-109-0003,836
-31.79594,-106.558044,New Mexico,Dona Ana,Not in a city,35-013-0017,1520
-31.796218,-106.584434,New Mexico,Dona Ana,Not in a city,35-013-0021,835
-31.83345,-104.810224,Texas,Culberson,Not in a city,48-109-0101,2354
-31.836577,-102.342066,Texas,Ector,Odessa,48-135-0003,1079
-31.846667,-106.588333,Texas,El Paso,El Paso,48-141-0045,440
-31.86247,-106.5473,Texas,El Paso,El Paso,48-141-1021,165
-31.893913,-106.425827,Texas,El Paso,El Paso,48-141-0058,543
-31.899722,-106.4125,Texas,El Paso,El Paso,48-141-0010,414
-31.95,-112.801,Arizona,Pima,Organ Pipe Cactus National Monument,04-019-0005,2102
-32.003712,-106.599715,New Mexico,Dona Ana,Anthony,35-013-0016,723
-32.00941,-109.38906,Arizona,Cochise,Not in a city,04-003-8001,2427
-32.057581,-92.435157,Louisiana,Winn,Not in a city,22-127-9000,1152
-32.092957,-81.14399,Georgia,Chatham,Savannah,13-051-0017,1473
-32.110679,-81.161823,Georgia,Chatham,Garden City,13-051-0091,2044
-32.174538,-110.737116,Arizona,Pima,Not in a city,04-019-0021,2312
-32.1783,-104.4406,New Mexico,Eddy,Not in a city,35-015-3001,360
-32.248712,-111.218494,Arizona,Pima,Not in a city,04-019-9000,3011
-32.275528,-90.132528,Mississippi,Rankin,Pearl,28-121-0001,569
-32.29515,-110.9823,Arizona,Pima,Tucson,04-019-1028,4136
-32.296952,-90.188394,Mississippi,Hinds,Jackson,28-049-0018,956
-32.32,-89.666667,Mississippi,Scott,Not in a city,28-123-0001,656
-32.322037,-106.768337,New Mexico,Dona Ana,Las Cruces,35-013-0025,1528
-32.322661,-111.038389,Arizona,Pima,Tucson,04-019-0011,3232
-32.32298,-90.887216,Mississippi,Warren,Vicksburg,28-149-0004,654
-32.329111,-90.182722,Mississippi,Hinds,Jackson,28-049-0020,1768
-32.33037,-90.166201,Mississippi,Hinds,Jackson,28-049-0019,495
-32.346722,-90.225667,Mississippi,Hinds,Jackson,28-049-0021,387
-32.36401,-88.201865,Alabama,Sumter,Not in a city,01-119-0002,734
-32.364565,-88.731491,Mississippi,Lauderdale,Meridian,28-075-0003,1481
-32.378696,-94.711813,Texas,Gregg,Longview,48-183-0001,659
-32.385731,-90.1412,Mississippi,Hinds,Jackson,28-049-0010,1694
-32.412811,-86.263394,Alabama,Montgomery,Montgomery,01-101-1002,2032
-32.42597,-86.285247,Alabama,Montgomery,Montgomery,01-101-0007,1965
-32.4274,-84.9457,Georgia,Muscogee,Columbus,13-215-0012,15
-32.4297,-84.9316,Georgia,Muscogee,Columbus,13-215-0011,2826
-32.434882,-80.677853,South Carolina,Beaufort,Beaufort,45-013-0007,844
-32.436944,-97.025,Texas,Ellis,Midlothian,48-139-0015,197
-32.437028,-84.999653,Alabama,Russell,Phenix City,01-113-0003,238
-32.471819000000004,-93.795179,Louisiana,Caddo,Shreveport,22-017-0008,2066
-32.472136,-85.005028,Alabama,Russell,Phenix City,01-113-0001,4514
-32.478486,-93.766012,Louisiana,Caddo,Shreveport,22-017-1002,631
-32.482083,-97.026899,Texas,Ellis,Midlothian,48-139-0016,881
-32.4842,-84.9789,Georgia,Muscogee,Columbus,13-215-0001,1739
-32.509959,-92.046196,Louisiana,Ouachita,Monroe,22-073-0004,2402
-32.518947,-117.012801,Country Of Mexico,BAJA CALIFORNIA NORTE,Tijuana,80-002-0016,215
-32.521272,-84.944635,Georgia,Muscogee,Columbus,13-215-0008,685
-32.535293,-93.747041,Louisiana,Bossier,Shreveport,22-015-0008,707
-32.564968,-96.317687,Texas,Kaufman,Kaufman,48-257-0005,194
-32.6056,-83.5978,Georgia,Houston,Warner Robins,13-153-0001,1382
-32.629225,-115.447769,Country Of Mexico,BAJA CALIFORNIA NORTE,Mexicali,80-002-0012,131
-32.631242,-117.059088,California,San Diego,Chula Vista,06-073-0001,1820
-32.633671,-115.504995,Country Of Mexico,BAJA CALIFORNIA NORTE,Mexicali,80-002-0014,30
-32.664753,-97.337917,Texas,Tarrant,Fort Worth,48-439-1053,122
-32.669001,-94.167468,Texas,Harrison,Not in a city,48-203-0002,2033
-32.67618,-115.48307,California,Imperial,Calexico,06-025-0005,5681
-32.676451,-96.87206,Texas,Dallas,Dallas,48-113-0087,1056
-32.677001,-114.648905,Arizona,Yuma,Yuma,04-027-0004,120
-32.690278,-114.61444,Arizona,Yuma,Yuma,04-027-8011,208
-32.692354,-96.792778,Texas,Dallas,Dallas,48-113-0020,854
-32.693056,-97.248611,Texas,Tarrant,Fort Worth,48-439-3006,2333
-32.701492,-117.149653,California,San Diego,San Diego,06-073-1010,3594
-32.709224,-117.154841,California,San Diego,San Diego,06-073-1007,1770
-32.7106,-96.8033,Texas,Dallas,Dallas,48-113-3004,1062
-32.724832,-103.129097,New Mexico,Lea,Hobbs,35-025-0007,229
-32.726656,-103.122917,New Mexico,Lea,Hobbs,35-025-0008,1160
-32.731919,-96.317911,Texas,Kaufman,Terrell,48-257-0020,300
-32.7392,-97.47033,Texas,Tarrant,White Settlement,48-439-3010,150
-32.741667,-97.468889,Texas,Tarrant,Fort Worth,48-439-0063,230
-32.742919,-94.303524,Texas,Marion,Jefferson,48-315-0050,176
-32.759154,-97.342332,Texas,Tarrant,Fort Worth,48-439-1006,3346
-32.759722,-97.328056,Texas,Tarrant,Fort Worth,48-439-1003,400
-32.774262,-96.797686,Texas,Dallas,Dallas,48-113-0050,2533
-32.777465,-83.640996,Georgia,Bibb,Macon,13-021-0007,4825
-32.778889,-96.873056,Texas,Dallas,Dallas,48-113-0057,631
-32.780926,-79.973596,South Carolina,Charleston,Charleston,45-019-0006,21
-32.784519,-108.272271,New Mexico,Grant,Silver City,35-017-1002,804
-32.789565,-116.944308,California,San Diego,El Cajon,06-073-1022,596
-32.790984,-79.958694,South Carolina,Charleston,Charleston,45-019-0049,8379
-32.791194,-116.942092,California,San Diego,El Cajon,06-073-0003,4683
-32.79222,-115.56306,California,Imperial,El Centro,06-025-1003,1843
-32.805264,-83.543493,Georgia,Bibb,Macon,13-021-0012,1734
-32.80581,-97.356529,Texas,Tarrant,Fort Worth,48-439-1002,4297
-32.817978,-116.968133,California,San Diego,El Cajon,06-073-1018,590
-32.820061,-96.860117,Texas,Dallas,Dallas,48-113-0069,9120
-32.824986,-116.962575,California,San Diego,El Cajon,06-073-1021,72
-32.830746,-79.957197,South Carolina,Charleston,Charleston,45-019-0009,22
-32.836461,-117.128752,California,San Diego,San Diego,06-073-0006,1329
-32.837917,-79.867063,South Carolina,Charleston,Mount Pleasant,45-019-0008,21
-32.843553,-79.95699,South Carolina,Charleston,North Charleston,45-019-0051,254
-32.845709,-117.123964,California,San Diego,San Diego,06-073-1016,649
-32.877583,-111.752222,Arizona,Pinal,Casa Grande,04-021-0001,1753
-32.881829,-83.333775,Georgia,Wilkinson,Gordon,13-319-0001,1699
-32.884761,-112.03705,Arizona,Pinal,Stanfield,04-021-3015,991
-32.916792,-96.768889,Texas,Dallas,Dallas,48-113-0035,661
-32.941023,-79.657187,South Carolina,Charleston,Not in a city,45-019-0046,5492
-32.967359,-82.806871,Georgia,Washington,Sandersville,13-303-0001,1320
-32.97833,-115.53917,California,Imperial,Brawley,06-025-0007,1419
-32.978379,-115.534156,California,Imperial,Brawley,06-025-0003,352
-32.980254,-80.06501,South Carolina,Charleston,North Charleston,45-019-0048,8115
-33.002517,-110.765467,Arizona,Gila,Not in a city,04-007-1002,1111
-33.0035,-110.7822,Arizona,Gila,Hayden,04-007-1003,435
-33.007866,-80.965038,South Carolina,Colleton,Not in a city,45-029-0002,15
-33.01053,-111.97205,Arizona,Pinal,Maricopa,04-021-3013,984
-33.127769,-117.075086,California,San Diego,Escondido,06-073-1002,4389
-33.128569,-117.271665,California,San Diego,Carlsbad,06-073-1020,53
-33.1304,-91.962076,Arkansas,Ashley,Crossett,05-003-0003,63
-33.130897,-117.272389,California,San Diego,Carlsbad,06-073-1023,807
-33.1324,-96.786419,Texas,Collin,Frisco,48-085-0005,372
-33.133211,-91.961255,Arkansas,Ashley,Crossett,05-003-0004,111
-33.136025,-96.824473,Texas,Collin,Frisco,48-085-0029,303
-33.139471,-91.939208,Arkansas,Ashley,Crossett,05-003-0005,2504
-33.142336,-96.824683,Texas,Collin,Frisco,48-085-0003,424
-33.144662,-96.828809,Texas,Collin,Frisco,48-085-0009,418
-33.147414,-96.825769,Texas,Collin,Frisco,48-085-0007,418
-33.189931,-87.484189,Alabama,Tuscaloosa,Tuscaloosa,01-125-0004,1526
-33.19698,-79.976767,South Carolina,Berkeley,Moncks Corner,45-015-0005,228
-33.214019,-92.668767,Arkansas,Union,El Dorado,05-139-0004,133
-33.214464,-92.654228,Arkansas,Union,El Dorado,05-139-0005,135
-33.217062,-87.538895,Alabama,Tuscaloosa,Tuscaloosa,01-125-0003,121
-33.220502,-108.235719,New Mexico,Catron,Not in a city,35-003-9000,2289
-33.220563,-92.672263,Arkansas,Union,El Dorado,05-139-0006,2174
-33.27947,-86.349438,Alabama,Talladega,Childersburg,01-121-0002,1804
-33.284928,-85.803608,Alabama,Clay,Ashland,01-027-0001,1898
-33.290229,-112.160597,Arizona,Maricopa,Not in a city,04-013-7003,114
-33.293465,-111.285594,Arizona,Pinal,Queen Valley,04-021-8001,1722
-33.312927,-86.821104,Alabama,Shelby,Pelham,01-117-0006,1769
-33.331111,-87.003611,Alabama,Jefferson,Not in a city,01-073-1005,3311
-33.342226,-81.788731,South Carolina,Aiken,Jackson,45-003-0003,278
-33.373994,-79.285697,South Carolina,Georgetown,Georgetown,45-043-0009,886
-33.386389,-86.816667,Alabama,Jefferson,Hoover,01-073-2006,1823
-33.39166,-111.926388,Arizona,Maricopa,Tempe,04-013-9990,531
-33.397043,-104.524135,New Mexico,Chaves,Roswell,35-005-0005,867
-33.40314,-112.07526,Arizona,Maricopa,Phoenix,04-013-4003,889
-33.40635,-112.14426,Arizona,Maricopa,Phoenix,04-013-4009,450
-33.41018,-111.86536,Arizona,Maricopa,Mesa,04-013-1003,802
-33.41123,-111.93471,Arizona,Maricopa,Tempe,04-013-4005,19
-33.419017,-110.82967,Arizona,Gila,Globe,04-007-8000,598
-33.421194,-111.503222,Arizona,Pinal,Apache Junction,04-021-3002,1770
-33.425758,-94.070802,Texas,Bowie,Texarkana,48-037-0004,1560
-33.4265,-112.11821,Arizona,Maricopa,Phoenix,04-013-9812,20
-33.427625,-94.041021,Arkansas,Miller,Texarkana,05-091-0004,307
-33.4339,-82.0224,Georgia,Richmond,Augusta,13-245-0091,2831
-33.4349,-112.093,Arizona,Maricopa,Phoenix,04-013-8006,74
-33.436111,-94.07778,Texas,Bowie,Texarkana,48-037-1031,13
-33.455277,-111.996111,Arizona,Maricopa,Phoenix,04-013-9998,91
-33.459722,-87.305556,Alabama,Jefferson,Not in a city,01-073-1009,2085
-33.459914,-104.404711,New Mexico,Chaves,Not in a city,35-005-9000,2366
-33.463644,-116.971457,California,Riverside,Not in a city,06-065-9000,2026
-33.468809,-105.535444,New Mexico,Lincoln,Ruidoso,35-027-9000,2110
-33.469164,-81.991426,Georgia,Richmond,Augusta-Richmond County (Remainder),13-245-0005,1336
-33.476111,-112.199722,Arizona,Maricopa,Phoenix,04-013-9992,741
-33.476608,-112.108597,Arizona,Maricopa,Phoenix,04-013-9991,127
-33.48378,-112.14256,Arizona,Maricopa,Phoenix,04-013-0019,2742
-33.488131,-111.855443,Arizona,Maricopa,Scottsdale,04-013-7020,1831
-33.491121,-88.418567,Mississippi,Lowndes,Columbus,28-087-0001,1117
-33.499722,-86.924167,Alabama,Jefferson,Birmingham,01-073-2003,8264
-33.503833,-112.095767,Arizona,Maricopa,Phoenix,04-013-9997,7490
-33.521427,-86.844112,Alabama,Jefferson,Birmingham,01-073-2059,502
-33.529881,-80.866837,South Carolina,Orangeburg,Orangeburg,45-075-0002,218
-33.545278,-86.549167,Alabama,Jefferson,Leeds,01-073-1010,2073
-33.553056,-86.815,Alabama,Jefferson,Birmingham,01-073-0023,9031
-33.565278,-86.796389,Alabama,Jefferson,Birmingham,01-073-6004,71
-33.590764,-101.850419,Texas,Lubbock,Lubbock,48-303-0325,131
-33.590851,-101.847594,Texas,Lubbock,Lubbock,48-303-0001,493
-33.610845,-84.390717,Georgia,Clayton,Forest Park,13-063-0091,1741
-33.616499,-84.437427,Georgia,Fulton,East Point,13-121-1001,109
-33.63003,-117.67593,California,Orange,Mission Viejo,06-059-2022,2433
-33.6547,-111.1074,Arizona,Gila,Tonto National Monument,04-007-0010,2373
-33.6878,-84.2905,Georgia,DeKalb,Not in a city,13-089-0002,7947
-33.702771,-78.877478,South Carolina,Horry,Myrtle Beach,45-051-0002,1307
-33.704722,-86.669167,Alabama,Jefferson,Pinson,01-073-5002,1813
-33.70853,-116.21537,California,Riverside,Indio,06-065-2002,2789
-33.739963,-81.853635,South Carolina,Edgefield,Not in a city,45-037-0001,2449
-33.746056,-90.723028,Mississippi,Bolivar,Cleveland,28-011-0001,1268
-33.7784,-84.3914,Georgia,Fulton,Atlanta,13-121-0056,351
-33.77933,-84.39576,Georgia,Fulton,Atlanta,13-121-0048,265
-33.785602,-81.119776,South Carolina,Lexington,Not in a city,45-063-0005,208
-33.79236,-118.17533,California,Los Angeles,Long Beach,06-037-4004,6114
-33.801667,-86.9425,Alabama,Jefferson,Not in a city,01-073-5003,1806
-33.802241,-84.435618,Georgia,Fulton,Atlanta,13-121-0039,1548
-33.819564,-84.389708,Georgia,Fulton,Atlanta,13-121-0032,4009
-33.821353,-117.91427,California,Orange,Anaheim,06-059-0001,416
-33.82376,-118.18921,California,Los Angeles,Long Beach,06-037-4002,6653
-33.83062,-117.93845,California,Orange,Anaheim,06-059-0007,7788
-33.832885,-87.272505,Alabama,Walker,Jasper,01-127-0002,1121
-33.834444,-89.792778,Mississippi,Grenada,Grenada,28-043-0001,1488
-33.85275,-116.54101,California,Riverside,Palm Springs,06-065-5001,2410
-33.859662,-118.200707,California,Los Angeles,Long Beach,06-037-4008,2290
-33.869593,-106.852584,New Mexico,Socorro,Not in a city,35-053-9000,2225
-33.89932,-84.661514,Georgia,Cobb,Powder Springs,13-067-0004,1079
-33.901389,-118.205,California,Los Angeles,Compton,06-037-1302,1969
-33.901389,-84.279903,Georgia,DeKalb,Doraville,13-089-2001,4026
-33.918137,-83.344385,Georgia,Clarke,Athens (corp name Athens-Clarke County),13-059-0002,1080
-33.9285,-85.04534,Georgia,Paulding,Not in a city,13-223-0003,1739
-33.92899,-118.21071,California,Los Angeles,Lynwood,06-037-1301,1016
-33.945948,-83.372102,Georgia,Clarke,Athens (corp name Athens-Clarke County),13-059-0001,1369
-33.94603,-117.40063,California,Riverside,Riverside,06-065-1003,1655
-33.9632,-84.0691,Georgia,Gwinnett,Not in a city,13-135-0002,1433
-33.982253,-81.040235,South Carolina,Richland,Columbia,45-079-0018,29
-33.991494,-85.992647,Alabama,Etowah,Gadsden,01-055-0010,2404
-33.991509,-81.024141,South Carolina,Richland,Columbia,45-079-0019,6451
-33.99636,-117.4924,California,Riverside,Mira Loma,06-065-8005,5070
-33.99958,-117.41601,California,Riverside,Rubidoux,06-065-8001,13128
-34.01029,-118.0685,California,Los Angeles,Pico Rivera,06-037-1602,2069
-34.01407,-118.06056,California,Los Angeles,Pico Rivera,06-037-1601,612
-34.015436,-84.607423,Georgia,Cobb,Kennesaw,13-067-0003,3476
-34.030833,-117.61722,California,San Bernardino,Ontario,06-071-0027,2277
-34.037234,-117.690889,California,San Bernardino,Ontario,06-071-0025,1629
-34.051017,-81.15495,South Carolina,Lexington,Seven Oaks,45-063-0008,6418
-34.058475,-109.441259,Arizona,Apache,Not in a city,04-001-8001,2290
-34.06659,-118.22688,California,Los Angeles,Los Angeles,06-037-1103,12035
-34.06957,-116.38893,California,San Bernardino,Not in a city,06-071-9002,2404
-34.090866,-110.942801,Arizona,Gila,Young,04-007-8100,1617
-34.093959,-80.962304,South Carolina,Richland,Dentsville (Dents),45-079-0007,4087
-34.10002,-117.49201,California,San Bernardino,Fontana,06-071-2002,3500
-34.106678,-117.274063,California,San Bernardino,San Bernardino,06-071-9004,2362
-34.131262,-80.868318,South Carolina,Richland,Not in a city,45-079-1001,239
-34.1326,-118.1272,California,Los Angeles,Pasadena,06-037-2005,2511
-34.1365,-117.92391,California,Los Angeles,Azusa,06-037-0002,4248
-34.166667,-97.126389,Oklahoma,Carter,Ardmore,40-019-0295,635
-34.167636,-79.850404,South Carolina,Florence,Not in a city,45-041-0002,1068
-34.17605,-118.31712,California,Los Angeles,Burbank,06-037-1002,2702
-34.190931,-92.058531,Arkansas,Jefferson,Pine Bluff,05-069-0006,262
-34.193925,-116.914063,California,San Bernardino,Not in a city,06-071-9010,2413
-34.19925,-118.53276,California,Los Angeles,Reseda,06-037-1201,2352
-34.210169,-118.870509,California,Ventura,Thousand Oaks,06-111-0007,2052
-34.212869,-82.173149,South Carolina,Greenwood,Greenwood,45-047-0003,919
-34.214263,-79.767347,South Carolina,Florence,Florence,45-041-0003,1458
-34.220098,-92.000973,Arkansas,Jefferson,Pine Bluff,05-069-0005,113
-34.229733,-111.3295,Arizona,Gila,Payson,04-007-0008,805
-34.237184,-77.910073,North Carolina,New Hanover,Wilmington,37-129-0009,475
-34.25239,-119.143182,California,Ventura,Not in a city,06-111-3001,1588
-34.2605,-85.3232,Georgia,Floyd,Not in a city,13-115-0003,3086
-34.263198,-85.304826,Georgia,Floyd,Rome,13-115-0005,1879
-34.26464,-116.86147,California,San Bernardino,Big Bear City,06-071-8001,1172
-34.264917,-88.766222,Mississippi,Lee,Tupelo,28-081-0005,1625
-34.276316,-118.683685,California,Ventura,Simi Valley,06-111-2002,2587
-34.288567,-85.969858,Alabama,DeKalb,Crossville,01-049-1003,1814
-34.2993,-83.8134,Georgia,Hall,Gainesville,13-139-0003,1795
-34.340556,-111.683923,Arizona,Yavapai,Not in a city,04-025-8104,2251
-34.342904,-87.33973,Alabama,Lawrence,Moulton,01-079-0002,2292
-34.364167,-77.838611,North Carolina,New Hanover,Castle Hayne,37-129-0002,1554
-34.37892,-117.69211,California,Los Angeles,Not in a city,06-037-9000,362
-34.404281,-118.80998,California,Ventura,Piru,06-111-0009,1047
-34.421386,-119.702079,California,Santa Barbara,Santa Barbara,06-083-0010,52
-34.427775,-119.691218,California,Santa Barbara,Santa Barbara,06-083-0011,420
-34.42888,-112.961944,Arizona,Yavapai,Hillside,04-025-0005,470
-34.454514,-94.143521,Arkansas,Polk,Mena,05-113-0003,2332
-34.469441,-93.000178,Arkansas,Garland,Hot Springs (Hot Springs National Park),05-051-0003,2523
-34.499264,-91.574296,Arkansas,Arkansas,Stuttgart,05-001-0001,116
-34.510367,-93.054346,Arkansas,Garland,Not in a city,05-051-0002,341
-34.512496,-117.330879,California,San Bernardino,Victorville,06-071-0014,56
-34.518515,-91.55896,Arkansas,Arkansas,Stuttgart,05-001-0011,2970
-34.519819,-91.558461,Arkansas,Arkansas,Stuttgart,05-001-0010,114
-34.529766,-90.586049,Arkansas,Phillips,Helena,05-107-0001,1443
-34.530717,-86.967536,Alabama,Morgan,Decatur,01-103-0011,2187
-34.55199,-113.372362,Arizona,Mohave,Not in a city,04-015-1111,60
-34.583699,-94.226234,Arkansas,Polk,Mena,05-113-0002,2526
-34.595,-112.331,Arizona,Yavapai,Prescott Valley,04-025-2002,347
-34.615367,-80.198787,South Carolina,Chesterfield,Not in a city,45-025-0001,3379
-34.625165,-78.987809,North Carolina,Robeson,Lumberton,37-155-0004,35
-34.628724,-98.425672,Oklahoma,Comanche,Lawton,40-031-0648,590
-34.630956,-87.052775,Alabama,Morgan,Decatur,01-103-0010,137
-34.645,-78.99028,North Carolina,Robeson,Not in a city,37-155-0005,1687
-34.676268,-92.337164,Arkansas,Pulaski,Little Rock,05-119-1005,1391
-34.681343,-92.328697,Arkansas,Pulaski,Little Rock,05-119-1008,3916
-34.687761,-86.586362,Alabama,Madison,Huntsville,01-089-0014,3883
-34.689985,-118.13285,California,Los Angeles,Lancaster,06-037-9002,55
-34.729603,-92.243587,Arkansas,Pulaski,Little Rock,05-119-1004,1794
-34.732404,-98.713351,Oklahoma,Comanche,Not in a city,40-031-9000,2216
-34.733425,-92.24126,Arkansas,Pulaski,Little Rock,05-119-0003,81
-34.733889,-120.008349,California,Santa Barbara,Not in a city,06-083-9000,2248
-34.751848,-82.256701,South Carolina,Greenville,Simpsonville,45-045-0016,2328
-34.756189,-92.281296,Arkansas,Pulaski,North Little Rock,05-119-0007,10425
-34.762619,-87.638097,Alabama,Colbert,Muscle Shoals,01-033-1002,1870
-34.772828,-77.42796,North Carolina,Onslow,Jacksonville,37-133-0005,929
-34.776927,-82.490386,South Carolina,Anderson,Powderville,45-007-0003,324
-34.785219,-84.626423,Georgia,Murray,Chatsworth,13-213-0003,2081
-34.805261,-83.2377,South Carolina,Oconee,Not in a city,45-073-0001,1191
-34.813034,-118.884819,California,Los Angeles,Not in a city,06-037-9034,2042
-34.817197,-82.418487,South Carolina,Greenville,Greenville,45-045-0012,84
-34.82166,-89.98783,Mississippi,DeSoto,Hernando,28-033-0002,2396
-34.821922,-118.887598,California,Kern,Lebec,06-029-9001,1653
-34.82251,-109.89249,Arizona,Navajo,Not in a city,04-017-0119,2311
-34.828839,-118.880056,California,Kern,Lebec,06-029-9002,506
-34.829396,-95.843642,Oklahoma,Pittsburg,Savanna,40-121-0416,274
-34.838814,-82.402918,South Carolina,Greenville,Greenville,45-045-0008,3137
-34.842279,-82.401163,South Carolina,Greenville,Greenville,45-045-0014,21
-34.843895,-82.414585,South Carolina,Greenville,Greenville,45-045-0015,4779
-34.854799,-82.380631,South Carolina,Greenville,Greenville,45-045-0013,19
-34.884511,-82.359807,South Carolina,Greenville,Greenville,45-045-0011,90
-34.885608,-95.78441,Oklahoma,Pittsburg,McAlester,40-121-0415,1831
-34.899141,-82.31307,South Carolina,Greenville,Taylors,45-045-0009,5015
-34.9031,-106.7,New Mexico,Bernalillo,Not in a city,35-001-9013,102
-34.903108,-106.700581,New Mexico,Bernalillo,Not in a city,35-001-9004,103
-34.926839,-82.005211,South Carolina,Spartanburg,Not in a city,45-083-0010,3320
-34.935817,-81.228409,South Carolina,York,Not in a city,45-091-0006,179
-34.942872,-120.435611,California,Santa Barbara,Santa Maria,06-083-1008,607
-34.954823,-77.960781,North Carolina,Duplin,Kenansville,37-061-0002,1893
-34.955566,-81.924797,South Carolina,Spartanburg,Spartanburg,45-083-0011,4344
-34.9784,-85.2943,Georgia,Walker,Rossville,13-295-0004,6
-34.9788,-85.3009,Georgia,Walker,Not in a city,13-295-0002,2317
-34.99438,-85.24293,Tennessee,Hamilton,East Ridge,47-065-0031,2603
-35.041416,-78.953112,North Carolina,Cumberland,Fayetteville,37-051-0009,2728
-35.050551,-118.147294,California,Kern,Mojave,06-029-0011,863
-35.050918,-85.293019,Tennessee,Hamilton,Chattanooga,47-065-4002,4077
-35.085924,-89.949533,Tennessee,Shelby,Memphis,47-157-0014,1678
-35.105193,-92.427859,Arkansas,Faulkner,Conway,05-045-0002,1991
-35.111944,-98.252778,Oklahoma,Caddo,Anadarko,40-015-9008,771
-35.115968,-87.469954,Tennessee,Lawrence,Loretto,47-099-0002,2840
-35.129722,-96.490556,Oklahoma,Seminole,Wewoka,40-133-9006,280
-35.1343,-106.5852,New Mexico,Bernalillo,Albuquerque,35-001-0023,1629
-35.139589,-80.847294,North Carolina,Mecklenburg,Charlotte,37-119-0040,81
-35.140635,-111.969938,Arizona,Coconino,Not in a city,04-005-8103,1737
-35.147591,-90.176483,Arkansas,Crittenden,West Memphis,05-035-0004,524
-35.151194,-90.041559,Tennessee,Shelby,Memphis,47-157-0024,1279
-35.151283,-80.866983,North Carolina,Mecklenburg,Charlotte,37-119-0042,2383
-35.151699,-89.850249,Tennessee,Shelby,Memphis,47-157-0075,2599
-35.16126,-89.87065,Tennessee,Shelby,Memphis,47-157-0100,539
-35.1639,-111.9823,Arizona,Coconino,Parks (Maine),04-005-9000,557
-35.168894,-90.021537,Tennessee,Shelby,Memphis,47-157-0047,4947
-35.176181,-85.253291,Tennessee,Hamilton,Chattanooga,47-065-0032,101
-35.184167,-89.930278,Tennessee,Shelby,Memphis,47-157-0038,2160
-35.197288,-90.193141,Arkansas,Crittenden,Marion,05-035-0005,2006
-35.201592,-101.909275,Texas,Potter,Amarillo,48-375-0320,470
-35.206111,-111.652777,Arizona,Coconino,Flagstaff,04-005-1008,750
-35.210016,-101.832384,Texas,Potter,Amarillo,48-375-0005,580
-35.22542,-80.882572,North Carolina,Mecklenburg,Charlotte,37-119-0010,2076
-35.231459,-77.568792,North Carolina,Lenoir,Kinston,37-107-0004,232
-35.2318,-77.5669,North Carolina,Lenoir,Kinston,37-107-0004,1791
-35.233476,-85.181581,Tennessee,Hamilton,Soddy-Daisy,47-065-1011,800
-35.238098,-106.650026,New Mexico,Sandoval,Rio Rancho Estates,35-043-1003,715
-35.2401,-80.785683,North Carolina,Mecklenburg,Charlotte,37-119-0041,6998
-35.24894,-91.715596,Arkansas,White,Searcy,05-145-0001,1429
-35.253056,-81.153333,North Carolina,Gaston,Gastonia,37-071-0016,1862
-35.25651,-120.6693,California,San Luis Obispo,San Luis Obispo,06-079-2006,324
-35.259775,-93.10005,Arkansas,Pope,Russellville,05-115-0003,1459
-35.263165,-79.836636,North Carolina,Montgomery,Candor,37-123-0001,1860
-35.280273,-101.71564,Texas,Potter,Amarillo,48-375-0024,333
-35.283864,-120.655171,California,San Luis Obispo,San Luis Obispo,06-079-2002,343
-35.3041,-80.88865,North Carolina,Mecklenburg,Not in a city,37-119-0043,2640
-35.324636,-118.997627,California,Kern,Bakersfield,06-029-0016,2407
-35.348126,-96.903356,Oklahoma,Pottawatomie,Shawnee,40-125-0054,51
-35.356615,-119.062613,California,Kern,Bakersfield,06-029-0014,11103
-35.369214,-77.993893,North Carolina,Wayne,Goldsboro,37-191-0005,1514
-35.378153,-89.83447,Tennessee,Shelby,Millington,47-157-1004,467
-35.379167,-82.7925,North Carolina,Haywood,Not in a city,37-087-0035,2165
-35.385574,-119.015009,California,Kern,Bakersfield,06-029-0010,1579
-35.389672,-94.424288,Arkansas,Sebastian,Fort Smith,05-131-0008,1771
-35.40814,-94.524413,Oklahoma,Sequoyah,Roland,40-135-9021,1371
-35.434767,-83.442133,North Carolina,Swain,Bryson City (RR name Bryson),37-173-0002,1328
-35.450115,-84.596195,Tennessee,McMinn,Athens,47-107-1002,1991
-35.45109,-76.207165,North Carolina,Hyde,Not in a city,37-095-9000,2242
-35.466767,-83.277928,North Carolina,Jackson,Not in a city,37-099-0006,1364
-35.47292,-97.52709,Oklahoma,Oklahoma,Oklahoma City,40-109-0035,4425
-35.489167,-82.9875,North Carolina,Haywood,Waynesville,37-087-0010,941
-35.490338,-97.486983,Oklahoma,Oklahoma,Oklahoma City,40-109-0038,1114
-35.49158,-120.66804,California,San Luis Obispo,Atascadero,06-079-8001,1204
-35.50307,-97.577981,Oklahoma,Oklahoma,Oklahoma City,40-109-0097,20
-35.50575,-82.97918,North Carolina,Haywood,Waynesville,37-087-0012,967
-35.5064,-106.7222,New Mexico,Sandoval,Zia Pueblo,35-043-9011,348
-35.50642,-106.722811,New Mexico,Sandoval,Not in a city,35-043-9003,198
-35.507083,-80.617845,North Carolina,Cabarrus,Kannapolis,37-025-0004,600
-35.516019,-98.96729,Oklahoma,Custer,Clinton,40-039-0852,180
-35.551868,-80.395039,North Carolina,Rowan,Rockwell,37-159-0021,4513
-35.581174,-94.830059,Oklahoma,Sequoyah,Marble City Community,40-135-9015,591
-35.588726,-113.489025,Arizona,Mohave,Not in a city,04-015-1011,238
-35.59095,-78.4622,North Carolina,Johnston,Not in a city,37-101-0002,1082
-35.594328,-77.385798,North Carolina,Pitt,Greenville,37-147-0005,1483
-35.595689,-81.401753,North Carolina,Catawba,Hickory,37-035-0005,190
-35.6062,-82.5844,North Carolina,Buncombe,Asheville,37-021-0034,4191
-35.609722,-88.815556,Tennessee,Madison,Jackson,47-113-0004,912
-35.610031,-106.34836,New Mexico,Sandoval,Not in a city,35-043-9001,103
-35.613044,-97.99325,Oklahoma,Canadian,Not in a city,40-017-9001,273
-35.614131,-97.475083,Oklahoma,Oklahoma,Oklahoma City,40-109-1037,4059
-35.615306,-106.725034,New Mexico,Sandoval,Not in a city,35-043-9004,893
-35.62109,-117.67296,California,Kern,Ridgecrest,06-029-0015,1092
-35.63348,-83.941606,Tennessee,Blount,Not in a city,47-009-0101,5709
-35.637283,-91.188906,Arkansas,Jackson,Newport,05-067-0001,1845
-35.641276,-77.360126,North Carolina,Pitt,Not in a city,37-147-0006,1352
-35.651349,-88.809578,Tennessee,Madison,Jackson,47-113-0006,2922
-35.65188,-87.0096,Tennessee,Maury,Columbia,47-119-2007,2040
-35.671142,-105.954188,New Mexico,Santa Fe,Santa Fe,35-049-0020,1249
-35.6725,-96.657222,Oklahoma,Lincoln,Stroud,40-081-9005,596
-35.687406,-81.993808,North Carolina,McDowell,Marion,37-111-0004,2558
-35.7278,-81.3425,North Carolina,Catawba,Hickory,37-035-0006,242
-35.7288,-78.6802,North Carolina,Wake,Not in a city,37-183-0020,715
-35.728889,-81.365556,North Carolina,Catawba,Hickory,37-035-0004,4403
-35.744539,-84.317057,Tennessee,Loudon,Loudon,47-105-0108,1572
-35.750735,-94.669697,Oklahoma,Adair,Cherry Tree,40-001-9009,1318
-35.755372,-95.377916,Oklahoma,Muskogee,Muskogee,40-101-0169,1250
-35.757222,-79.159722,North Carolina,Chatham,Pittsboro,37-037-0004,1816
-35.768847,-83.942152,Tennessee,Blount,Maryville,47-009-0011,2027
-35.77,-83.938889,Tennessee,Blount,Maryville,47-009-0005,44
-35.77881,-80.30236,North Carolina,Davidson,Lexington,37-057-0003,191
-35.785665,-115.357087,Nevada,Clark,Jean,32-003-1019,1677
-35.790023,-78.619723,North Carolina,Wake,Raleigh,37-183-0015,469
-35.800085,-94.616891,Oklahoma,Adair,Not in a city,40-001-9901,99
-35.804193,-106.298639,New Mexico,Los Alamos,Not in a city,35-028-1002,2426
-35.81066,-76.9063,North Carolina,Martin,Jamesville,37-117-0001,1536
-35.8145,-80.2627,North Carolina,Davidson,Lexington,37-057-0002,3080
-35.825893,-93.203187,Arkansas,Newton,Not in a city,05-101-9000,2384
-35.837638,-90.679516,Arkansas,Craighead,Jonesboro,05-031-0005,139
-35.838686,-90.708724,Arkansas,Craighead,Jonesboro,05-031-0001,539
-35.84119,-80.24452,North Carolina,Davidson,Not in a city,37-057-0004,205
-35.85408,-94.985964,Oklahoma,Cherokee,Park Hill,40-021-9002,902
-35.856111,-78.574167,North Carolina,Wake,Raleigh,37-183-0014,11532
-35.88931,-78.87466,North Carolina,Durham,Not in a city,37-063-0099,57
-35.892804,-106.0228,New Mexico,Santa Fe,Not in a city,35-049-9002,103
-35.901944,-79.056667,North Carolina,Orange,Chapel Hill,37-135-0007,1037
-35.9049,-84.51157,Tennessee,Roane,Not in a city,47-145-3001,34
-35.912487,-82.062082,North Carolina,Mitchell,Spruce Pine,37-121-0004,485
-35.915278,-82.073333,North Carolina,Mitchell,Spruce Pine,37-121-0001,1976
-35.916761,-84.503624,Tennessee,Roane,Not in a city,47-145-1001,159
-35.92924,-89.900919,Arkansas,Mississippi,Blytheville,05-093-0007,550
-35.93355,-77.75007,North Carolina,Edgecombe,Rocky Mount,37-065-0004,1207
-35.939078,-84.542802,Tennessee,Roane,Harriman,47-145-0004,2018
-35.944601,-84.03598,Tennessee,Knox,Knoxville,47-093-0028,4681
-35.950237,-77.783464,North Carolina,Nash,Rocky Mount,37-127-0002,27
-35.953488,-77.785533,North Carolina,Edgecombe,Rocky Mount,37-065-0003,370
-35.955556,-79.998889,North Carolina,Guilford,High Point,37-081-1005,160
-35.972347,-81.933072,North Carolina,Avery,Not in a city,37-011-0002,2366
-35.973117,-111.984846,Arizona,Coconino,Not in a city,04-005-8102,2457
-35.978074,-83.950666,Tennessee,Knox,Knoxville,47-093-1017,6569
-35.980675,-83.925773,Tennessee,Knox,Knoxville,47-093-1013,921
-35.991944,-78.896389,North Carolina,Durham,Durham,37-063-0001,2601
-36.013945,-106.845299,New Mexico,Rio Arriba,Not in a city,35-039-9000,2112
-36.019186,-83.87381,Tennessee,Knox,Knoxville,47-093-1020,7060
-36.019302,-114.069205,Arizona,Mohave,Not in a city,04-015-9000,2005
-36.026612,-80.341962,North Carolina,Forsyth,Winston-Salem,37-067-0030,1553
-36.032955,-78.904037,North Carolina,Durham,Durham,37-063-0015,2170
-36.045831,-94.169183,Arkansas,Washington,Fayetteville,05-143-0004,205
-36.048705,-115.052942,Nevada,Clark,Henderson,32-003-0298,836
-36.052024,-94.162704,Arkansas,Washington,Fayetteville,05-143-0003,307
-36.05266,-89.382157,Tennessee,Dyer,Dyersburg,47-045-0004,1985
-36.06866,-80.00705,North Carolina,Guilford,Not in a city,37-081-0014,857
-36.075833,-79.794444,North Carolina,Guilford,Greensboro,37-081-0009,870
-36.077814,-112.129551,Arizona,Coconino,Not in a city,04-005-8100,1317
-36.084239,-92.58683,Arkansas,Marion,Not in a city,05-089-0001,289
-36.085552,-99.935774,Oklahoma,Ellis,Not in a city,40-045-0890,1794
-36.089004,-79.407821,North Carolina,Alamance,Burlington,37-001-0002,1592
-36.100059,-86.734442,Tennessee,Davidson,Nashville,47-037-0025,837
-36.102244,-119.56565,California,Kings,Corcoran,06-031-0004,1787
-36.107274,-97.059479,Oklahoma,Payne,Stillwater,40-119-0614,176
-36.109006,-79.802314,North Carolina,Guilford,Greensboro,37-081-0013,4339
-36.110693,-80.226438,North Carolina,Forsyth,Winston-Salem,37-067-0022,731
-36.11094,-80.224501,North Carolina,Forsyth,Winston-Salem,37-067-0022,6606
-36.118251,-86.873547,Tennessee,Davidson,Nashville,47-037-0036,5543
-36.119819,-95.857767,Oklahoma,Tulsa,Tulsa,40-143-0131,1146
-36.14004,-95.925382,Oklahoma,Tulsa,Tulsa,40-143-0110,3070
-36.141875,-115.078742,Nevada,Clark,Sunrise Manor,32-003-0540,2859
-36.1424,-86.7341,Tennessee,Davidson,Nashville-Davidson (Remainder),47-037-0040,857
-36.158582,-115.111666,Nevada,Clark,Las Vegas,32-003-0560,1831
-36.163962,-115.11393,Nevada,Clark,Las Vegas,32-003-0561,3268
-36.171527,-80.281717,North Carolina,Forsyth,Winston-Salem,37-067-0024,630
-36.173672,-85.50942,Tennessee,Putnam,Cookeville,47-141-0001,777
-36.176382,-86.7389,Tennessee,Davidson,Nashville,47-037-0023,8707
-36.1797,-94.116827,Arkansas,Washington,Springdale,05-143-0005,1599
-36.185702,-85.492107,Tennessee,Putnam,Cookeville,47-141-0005,1239
-36.191251,-115.122953,Nevada,Clark,North Las Vegas,32-003-2002,1241
-36.204902,-95.976537,Oklahoma,Tulsa,Tulsa,40-143-1127,7011
-36.221944,-81.663056,North Carolina,Watauga,Boone,37-189-0003,1717
-36.228408,-95.249943,Oklahoma,Mayes,Not in a city,40-097-9014,237
-36.229601,-76.293825,North Carolina,Pasquotank,Elizabeth City,37-139-0002,404
-36.245248,-115.093058,Nevada,Clark,North Las Vegas,32-003-0020,188
-36.29756,-86.653137,Tennessee,Sumner,Hendersonville,47-165-0007,4868
-36.304718,-95.310863,Oklahoma,Mayes,Pryor (corporate name Pryor Creek),40-097-0186,1289
-36.307033,-79.467417,North Carolina,Caswell,Not in a city,37-033-0001,1437
-36.332178999999996,-119.291228,California,Tulare,Visalia,06-107-2002,3566
-36.338056,-96.793611,Oklahoma,Pawnee,Not in a city,40-117-9007,175
-36.39103,-114.907429,Nevada,Clark,Not in a city,32-003-0022,452
-36.420311,-97.88728,Oklahoma,Garfield,Enid,40-047-0554,972
-36.435172,-94.229248,Arkansas,Benton,Bella Vista,05-007-0003,146
-36.459691,-94.205662,Arkansas,Benton,Bella Vista,05-007-0002,143
-36.48324,-121.15688,California,San Benito,Not in a city,06-069-0003,2449
-36.487823,-117.871036,California,Inyo,Keeler,06-027-1003,2831
-36.498835,-118.824821,California,Tulare,Sequoia National Park,06-107-1001,2428
-36.508611,-116.847778,California,Inyo,Not in a city,06-027-0101,1547
-36.514627,-87.328041,Tennessee,Montgomery,Clarksville,47-125-1009,4584
-36.53781,-87.327778,Tennessee,Montgomery,Not in a city,47-125-1011,384
-36.538761,-82.521599,Tennessee,Sullivan,Kingsport,47-163-1007,2723
-36.58544,-105.452563,New Mexico,Taos,Not in a city,35-055-9000,2132
-36.608,-82.1641,Virginia,Bristol City,Bristol,51-520-0006,2234
-36.60843,-83.73694,Kentucky,Bell,Middlesborough (corporate name for Middlesboro),21-013-0002,979
-36.61,-97.49,Oklahoma,Grant,Not in a city,40-053-9000,113
-36.613879,-92.92228,Missouri,Taney,Not in a city,29-213-0003,4127
-36.625,-87.169167,Tennessee,Montgomery,Not in a city,47-125-1010,137
-36.662778,-97.074444,Oklahoma,Kay,Ponca City,40-071-9003,440
-36.694261,-121.623271,California,Monterey,Salinas,06-053-1003,1537
-36.704761,-97.087656,Oklahoma,Kay,Ponca City,40-071-0602,608
-36.72639,-119.733,California,Fresno,Fresno,06-019-5025,2051
-36.727503,-108.221463,New Mexico,San Juan,Farmington,35-045-0006,622
-36.774162,-108.165034,New Mexico,San Juan,Farmington,35-045-0019,1307
-36.781333,-119.77319,California,Fresno,Fresno,06-019-0008,6205
-36.783939,-87.851963,Kentucky,Trigg,Not in a city,21-221-8001,1123
-36.78538,-119.77321,California,Fresno,Fresno,06-019-0011,4837
-36.804037,-76.272162,Virginia,Chesapeake City,Chesapeake,51-550-0012,1278
-36.819449,-119.716433,California,Fresno,Clovis,06-019-5001,1795
-36.841883,-76.181233,Virginia,Virginia Beach City,Virginia Beach,51-810-0008,4850
-36.843425,-121.3621,California,San Benito,Hollister,06-069-0002,181
-36.85555,-76.30135,Virginia,Norfolk City,Norfolk,51-710-0024,2649
-36.91171,-87.323337,Kentucky,Christian,Not in a city,21-047-0006,1877
-36.922222,-94.838889,Oklahoma,Ottawa,Miami,40-115-9004,1073
-36.939969,-97.345,Oklahoma,Kay,Not in a city,40-071-9030,2711
-36.953256,-120.034203,California,Madera,Madera,06-039-2010,340
-36.956222,-97.03135,Oklahoma,Kay,Not in a city,40-071-9010,906
-36.970052,-90.1401,Missouri,Stoddard,Not in a city,29-207-0001,2462
-36.98332,-121.98822,California,Santa Cruz,Live Oak,06-087-0007,597
-36.9846,-94.8249,Oklahoma,Ottawa,Picher,40-115-9006,224
-36.985702,-94.83931,Oklahoma,Ottawa,Picher,40-115-9007,223
-36.993375,-86.418323,Kentucky,Warren,Bowling Green,21-227-0007,1243
-36.999571,-121.574684,California,Santa Clara,Gilroy,06-085-0002,324
-37.000074,-91.68931,Missouri,Howell,Mountain View,29-091-0003,136
-37.000983,-76.398633,Virginia,Hampton City,Hampton,51-650-0004,1046
-37.035438,-86.250628,Kentucky,Warren,Oakland,21-227-0008,797
-37.04926,-86.21487,Kentucky,Warren,Smiths Grove,21-227-0009,790
-37.05822,-88.57251,Kentucky,McCracken,Paducah,21-145-1024,359
-37.06636,-88.63774,Kentucky,McCracken,Paducah,21-145-1004,1777
-37.069444,-84.98925,Kentucky,Russell,Not in a city,21-207-0001,264
-37.087311,-84.063264,Kentucky,Laurel,London,21-125-0004,463
-37.09798,-84.61152,Kentucky,Pulaski,Somerset,21-199-0003,551
-37.0998,-76.48105,Virginia,Newport News City,Newport News,51-700-0013,573
-37.10258,-107.870219,Colorado,La Plata,Not in a city,08-067-7003,633
-37.103733,-76.387017,Virginia,Hampton City,Hampton,51-650-0008,730
-37.13179,-86.142953,Kentucky,Edmonson,Not in a city,21-061-0501,4450
-37.13678,-107.62863,Colorado,La Plata,Not in a city,08-067-7001,583
-37.170016,-94.4633,Missouri,Jasper,Webb City,29-097-0005,498
-37.179125,-113.305096,Utah,Washington,Hurricane,49-053-0007,322
-37.183379,-86.099975,Kentucky,Edmonson,Not in a city,21-061-9901,71
-37.18494,-80.51606,Virginia,Montgomery,Not in a city,51-121-0009,237
-37.198286,-94.317246,Missouri,Jasper,Not in a city,29-097-0003,493
-37.1983,-113.1506,Utah,Washington,Virgin,49-053-0130,2020
-37.1984,-108.49046,Colorado,Montezuma,Not in a city,08-083-0101,4388
-37.199541,-93.284874,Missouri,Greene,Springfield,29-077-0032,1772
-37.22064,-119.155557,California,Fresno,Not in a city,06-019-9000,2118
-37.247778,-82.018056,Virginia,Buchanan,Not in a city,51-027-0006,190
-37.256248,-79.98476,Virginia,Roanoke City,Roanoke,51-770-0014,1261
-37.266434,-107.012731,Colorado,Archuleta,Pagosa Springs,08-007-0002,71
-37.267437,-81.235677,West Virginia,Mercer,Bluefield,54-055-0002,647
-37.267684,-107.874589,Colorado,La Plata,Durango,08-067-0008,321
-37.26842,-107.009659,Colorado,Archuleta,Pagosa Springs,08-007-0001,331
-37.273994,-79.999448,Virginia,Roanoke City,Roanoke,51-770-0011,213
-37.27494,-79.98567,Virginia,Roanoke City,Roanoke,51-770-0016,341
-37.28329,-83.20932,Kentucky,Perry,Hazard,21-193-0003,1037
-37.28342,-79.88452,Virginia,Roanoke,Vinton,51-161-1004,1099
-37.292079,-80.056707,Virginia,Salem City,Salem,51-775-0010,727
-37.297167,-79.955733,Virginia,Roanoke City,Roanoke,51-770-0015,2181
-37.297883,-80.081017,Virginia,Salem City,Salem,51-775-0011,904
-37.30389,-107.484167,Colorado,La Plata,Not in a city,08-067-1004,1916
-37.3062,-121.84885,California,Santa Clara,San Jose,06-085-2003,1321
-37.30832,-120.480456,California,Merced,Merced,06-047-2510,2041
-37.319769,-86.956091,Kentucky,Ohio,Not in a city,21-183-0032,298
-37.329841,-121.815438,California,Santa Clara,San Jose,06-085-2011,506
-37.332706,-79.215011,Virginia,Lynchburg City,Lynchburg,51-680-0015,1569
-37.339666,-121.888575,California,Santa Clara,San Jose,06-085-0004,736
-37.34438,-77.25925,Virginia,Charles,Not in a city,51-036-0002,1938
-37.348497,-121.894898,California,Santa Clara,San Jose,06-085-0005,5201
-37.350054,-108.592334,Colorado,Montezuma,Cortez,08-083-0006,414
-37.35681,-79.175024,Virginia,Lynchburg City,Lynchburg,51-680-0014,309
-37.35748,-77.59355,Virginia,Chesterfield,Not in a city,51-041-0004,8
-37.360684,-118.330783,California,Inyo,Not in a city,06-027-0002,1069
-37.364208,-91.122386,Missouri,Reynolds,Not in a city,29-179-0003,562
-37.41222,-79.116233,Virginia,Amherst,Madison Heights,51-009-0007,592
-37.43467,-77.45118,Virginia,Chesterfield,Bensley,51-041-0003,1942
-37.457621,-122.112286,California,Santa Clara,Palo Alto,06-085-2010,174
-37.459079,-113.225096,Utah,Washington,Not in a city,49-053-9000,499
-37.468956,-91.088595,Missouri,Reynolds,Not in a city,29-179-0002,1840
-37.472177,-90.689302,Missouri,Iron,Not in a city,29-093-0029,463
-37.47689,-97.366399,Kansas,Sumner,Not in a city,20-191-0002,1891
-37.4826,-82.53532,Kentucky,Pike,Pikeville,21-195-0002,2540
-37.482934,-122.20337,California,San Mateo,Redwood City,06-081-1001,1133
-37.485387,-90.690022,Missouri,Iron,Not in a city,29-093-0027,920
-37.489726,-90.692572,Missouri,Iron,Not in a city,29-093-0033,1840
-37.508162,-122.246305,California,San Mateo,Not in a city,06-081-2004,123
-37.508813,-122.247291,California,San Mateo,San Carlos,06-081-2002,90
-37.510703,-77.498041,Virginia,Richmond City,Richmond,51-760-0020,1882
-37.518769,-122.249353,California,San Mateo,San Carlos,06-081-2003,58
-37.534735,-91.148697,Missouri,Reynolds,Not in a city,29-179-0001,1838
-37.535833,-121.961823,California,Alameda,Fremont,06-001-1001,920
-37.55652,-77.40027,Virginia,Henrico,East Highland Park,51-087-0014,7645
-37.564915,-91.114356,Missouri,Reynolds,Not in a city,29-179-0034,1840
-37.59088,-77.46925,Virginia,Richmond City,Richmond,51-760-0025,18
-37.618383,-112.174368,Utah,Garfield,Not in a city,49-017-0101,2422
-37.624064,-91.128396,Missouri,Iron,Not in a city,29-093-0016,914
-37.62668,-79.51257,Virginia,Rockbridge,Not in a city,51-163-0003,2416
-37.642165,-120.994212,California,Stanislaus,Modesto,06-099-0005,2732
-37.64571,-118.96652,California,Mono,Mammoth Lakes,06-051-0001,527
-37.651114,-97.362212,Kansas,Sedgwick,Wichita,20-173-0009,1839
-37.651843,-91.131066,Missouri,Iron,Not in a city,29-093-0021,464
-37.65214,-91.11689,Missouri,Iron,Not in a city,29-093-0034,3531
-37.65214,-91.11689,Missouri,Iron,Not in a city,29-093-9008,328
-37.653943,-91.131286,Missouri,Iron,Not in a city,29-093-0032,452
-37.653943,-91.131286,Missouri,Iron,Not in a city,29-093-9007,45
-37.659334,-97.297714,Kansas,Sedgwick,Wichita,20-173-0008,1481
-37.659409,-107.800541,Colorado,San Juan,Not in a city,08-111-9000,2457
-37.67132,-77.5664,Virginia,Henrico,Not in a city,51-087-0015,1962
-37.67696,-95.47594,Kansas,Neosho,Not in a city,20-133-0003,251
-37.687526,-121.784217,California,Alameda,Livermore,06-001-0007,1766
-37.70097,-94.03474,Missouri,Cedar,Not in a city,29-039-0001,1875
-37.702066,-97.314847,Kansas,Sedgwick,Wichita,20-173-0010,3583
-37.705612,-85.852629,Kentucky,Hardin,Elizabethtown,21-093-0006,2280
-37.71325,-119.7062,California,Mariposa,Not in a city,06-043-0003,3310
-37.724919,-105.519073,Colorado,Alamosa,Not in a city,08-003-9000,2435
-37.736349,-84.291774,Kentucky,Madison,Richmond,21-151-0005,254
-37.738458,-84.284952,Kentucky,Madison,Richmond,21-151-0003,1925
-37.741159,-87.118053,Kentucky,Daviess,Owensboro,21-059-0014,684
-37.743065,-122.169935,California,Alameda,Oakland,06-001-0009,176
-37.747085,-97.316912,Kansas,Sedgwick,Wichita,20-173-1012,357
-37.765946,-122.399044,California,San Francisco,San Francisco,06-075-0005,1762
-37.773176,-80.706472,West Virginia,Summers,Not in a city,54-089-0001,639
-37.780776,-87.075307,Kentucky,Daviess,Not in a city,21-059-0005,1444
-37.807767,-81.197433,West Virginia,Raleigh,Beckley,54-081-0002,1675
-37.814191,-90.507487,Missouri,Saint Francois,Park Hills,29-187-0007,1967
-37.814781,-122.282347,California,Alameda,Oakland,06-001-0011,355
-37.864911,-90.508147,Missouri,Saint Francois,Park Hills,29-187-0006,1514
-37.865043,-87.557513,Kentucky,Henderson,Henderson,21-101-0006,361
-37.8712,-87.46375,Kentucky,Henderson,Not in a city,21-101-0014,1769
-37.90084,-90.42388,Missouri,Sainte Genevieve,Not in a city,29-186-0005,1324
-37.936013,-122.026154,California,Contra Costa,Concord,06-013-0002,3830
-37.937872,-107.813061,Colorado,San Miguel,Telluride,08-113-0004,372
-37.950741,-121.268523,California,San Joaquin,Stockton,06-077-1002,1267
-37.971727,-87.567236,Indiana,Vanderburgh,Evansville,18-163-0006,1532
-37.974436,-87.532289,Indiana,Vanderburgh,Evansville,18-163-0016,2510
-37.974465,-87.55802,Indiana,Vanderburgh,Evansville,18-163-0023,717
-37.975248,-87.56783,Indiana,Vanderburgh,Evansville,18-163-0020,357
-37.982225,-90.052547,Missouri,Sainte Genevieve,Ste. Genevieve,29-186-0006,1092
-37.98629,-85.71192,Kentucky,Bullitt,Shepherdsville,21-029-0006,1384
-38.013333,-87.577222,Indiana,Vanderburgh,Evansville,18-163-0021,2659
-38.021727,-87.569458,Indiana,Vanderburgh,Evansville,18-163-0012,1457
-38.038966,-84.507439,Kentucky,Fayette,Lexington-Fayette (corporate name for Lexington),21-067-0014,1339
-38.06091,-85.89804,Kentucky,Jefferson,Louisville,21-111-0051,1271
-38.06503,-84.49761,Kentucky,Fayette,Lexington-Fayette (corporate name for Lexington),21-067-0012,2726
-38.07657,-78.50397,Virginia,Albemarle,Not in a city,51-003-0001,1010
-38.082155,-88.624943,Illinois,Hamilton,Not in a city,17-065-0002,726
-38.088023,-119.178069,California,Mono,Not in a city,06-051-9000,2945
-38.102507,-122.237976,California,Solano,Vallejo,06-095-0004,1776
-38.122979,-122.90944,California,Marin,Point Reyes National Seashore,06-041-0002,2312
-38.135882,-94.731988,Kansas,Linn,Not in a city,20-107-0002,1970
-38.167523,-86.983214,Indiana,Spencer,Dale,18-147-0009,2146
-38.176278,-89.788459,Illinois,Randolph,Not in a city,17-157-0001,1071
-38.19113,-85.77935,Kentucky,Jefferson,Louisville,21-111-0044,4583
-38.193600000000004,-85.7119,Kentucky,Jefferson,Louisville,21-111-0075,360
-38.20185,-120.680277,California,Calaveras,San Andreas,06-009-0001,636
-38.219433,-84.83845,Kentucky,Franklin,Frankfort,21-073-0006,1388
-38.22876,-85.65452,Kentucky,Jefferson,Louisville,21-111-0067,2342
-38.23158,-85.82678,Kentucky,Jefferson,Louisville,21-111-1041,343
-38.23319,-85.81566,Kentucky,Jefferson,Louisville,21-111-0043,7338
-38.23887,-82.9881,Kentucky,Carter,Not in a city,21-043-0500,2358
-38.24024,-85.73195,Kentucky,Jefferson,Louisville,21-111-0048,1297
-38.243055,-90.373823,Missouri,Jefferson,Not in a city,29-099-0025,1847
-38.243055,-90.373823,Missouri,Jefferson,Not in a city,29-099-9006,239
-38.25872,-90.38091,Missouri,Jefferson,Herculaneum,29-099-0024,1527
-38.260694,-90.381083,Missouri,Jefferson,Herculaneum,29-099-0022,669
-38.261792,-90.378844,Missouri,Jefferson,Herculaneum,29-099-0015,273
-38.261792,-90.378823,Missouri,Jefferson,Herculaneum,29-099-9005,418
-38.26216,-90.38126,Missouri,Jefferson,Herculaneum,29-099-0023,1968
-38.263058,-104.612133,Colorado,Pueblo,Pueblo,08-101-0012,1124
-38.26339,-90.37883,Missouri,Jefferson,Herculaneum,29-099-0004,1653
-38.26339,-90.37883,Missouri,Jefferson,Herculaneum,29-099-9001,1211
-38.26351,-90.37993,Missouri,Jefferson,Herculaneum,29-099-0020,3107
-38.26351,-90.37993,Missouri,Jefferson,Herculaneum,29-099-0027,3466
-38.264888,-90.37777,Missouri,Jefferson,Herculaneum,29-099-0021,273
-38.267085,-90.378853,Missouri,Jefferson,Herculaneum,29-099-0005,2242
-38.267085,-90.378853,Missouri,Jefferson,Herculaneum,29-099-9002,913
-38.268254,-90.373903,Missouri,Jefferson,Herculaneum,29-099-0011,299
-38.268254,-90.373903,Missouri,Jefferson,Herculaneum,29-099-9003,244
-38.270903,-85.74024,Indiana,Clark,Jeffersonville,18-019-0005,403
-38.271754,-90.376683,Missouri,Jefferson,Herculaneum,29-099-0013,1859
-38.271754,-90.376683,Missouri,Jefferson,Herculaneum,29-099-9004,543
-38.274083,-91.701611,Missouri,Maries,Not in a city,29-125-0001,322
-38.276099,-104.597613,Colorado,Pueblo,Pueblo,08-101-0015,1375
-38.277719,-85.740111,Indiana,Clark,Jeffersonville,18-019-0006,4759
-38.286214,-90.381024,Missouri,Jefferson,Pevely,29-099-0009,1809
-38.288191,-85.741337,Indiana,Clark,Jeffersonville,18-019-0010,409
-38.296054,-90.393104,Missouri,Jefferson,Pevely,29-099-0026,1846
-38.302177,-111.293349,Utah,Wayne,Not in a city,49-055-9000,2255
-38.30703,-85.832974,Indiana,Floyd,New Albany,18-043-1004,3106
-38.322931,-87.318789,Indiana,Gibson,Not in a city,18-051-0012,444
-38.3315,-82.59106,Kentucky,Boyd,Not in a city,21-019-0016,197
-38.3456,-81.628317,West Virginia,Kanawha,Charleston,54-039-0010,1800
-38.346258,-81.621161,West Virginia,Kanawha,Charleston,54-039-0020,625
-38.34843,-81.62679,West Virginia,Kanawha,Charleston,54-039-0009,40
-38.366183,-81.693717,West Virginia,Kanawha,South Charleston,54-039-1005,3740
-38.369436,-86.959031,Indiana,Dubois,Not in a city,18-037-0004,294
-38.391799,-86.929668,Indiana,Dubois,Jasper,18-037-2001,3835
-38.393822,-85.664118,Indiana,Clark,Not in a city,18-019-0008,1728
-38.404778,-86.928322,Indiana,Dubois,Jasper,18-037-0005,329
-38.424133,-82.4259,West Virginia,Cabell,Huntington,54-011-0006,2084
-38.434141,-96.5605,Kansas,Chase,Not in a city,20-017-0001,2152
-38.43783,-90.361492,Missouri,Jefferson,Arnold,29-099-0012,3051
-38.443503,-122.710169,California,Sonoma,Santa Rosa,06-097-0003,890
-38.448672,-90.395904,Missouri,Jefferson,Arnold,29-099-0019,1841
-38.448833,-81.684717,West Virginia,Kanawha,Not in a city,54-039-0011,1525
-38.456762,-90.327477,Missouri,Saint Louis,Oakville,29-189-0015,204
-38.45832,-109.82126,Utah,San Juan,Not in a city,49-037-0101,2370
-38.45934,-82.64041,Kentucky,Boyd,Ashland,21-019-0017,2793
-38.47753,-78.81952,Virginia,Rockingham,Not in a city,51-165-0003,1138
-38.508075,-82.659241,Ohio,Lawrence,Ironton,39-087-0012,1377
-38.520043,-82.665331,Ohio,Lawrence,Ironton,39-087-0010,1282
-38.5231,-78.43471,Virginia,Madison,Not in a city,51-113-0003,2489
-38.525945,-90.0391,Illinois,Saint Clair,Belleville,17-163-0900,322
-38.529631,-89.99285,Illinois,Saint Clair,Swansea,17-163-4001,1234
-38.53278,-90.38243,Missouri,Saint Louis,Sunset Hills,29-189-0004,597
-38.534652,-86.260372,Indiana,Washington,Not in a city,18-175-9000,1169
-38.542551,-90.263711,Missouri,St. Louis City,St. Louis,29-510-0007,2896
-38.556326,-121.458499,California,Sacramento,Sacramento,06-067-4001,2475
-38.56844,-121.49311,California,Sacramento,Sacramento,06-067-0010,5110
-38.593322,-121.503795,California,Sacramento,Sacramento,06-067-0015,459
-38.60183,-90.232891,Missouri,St. Louis City,St. Louis,29-510-0089,94
-38.612034,-90.160477,Illinois,Saint Clair,East Saint Louis,17-163-0010,1088
-38.612034,-90.160477,Illinois,Saint Clair,Not in a city,17-163-9010,322
-38.613779,-121.368014,California,Sacramento,Arden-Arcade,06-067-0006,9215
-38.642857,-90.185059,Missouri,St. Louis City,St. Louis,29-510-0087,2725
-38.649771,-90.350659,Missouri,Saint Louis,Ladue,29-189-2003,2866
-38.6539,-75.6106,Delaware,Sussex,Seaford,10-005-1002,2187
-38.656429,-90.198348,Missouri,St. Louis City,St. Louis,29-510-0085,10131
-38.656479,-90.189868,Missouri,St. Louis City,St. Louis,29-510-0093,121
-38.66121,-121.73269,California,Yolo,Woodland,06-113-1003,1659
-38.66373,-78.50442,Virginia,Page,Not in a city,51-139-0004,2017
-38.673221,-90.239166,Missouri,St. Louis City,St. Louis,29-510-0086,2107
-38.699565,-90.143529,Illinois,Madison,Granite City,17-119-0023,790
-38.700632,-90.144763,Illinois,Madison,Granite City,17-119-0024,1895
-38.704534,-90.139675,Illinois,Madison,Granite City,17-119-1007,2689
-38.739213,-108.073118,Colorado,Delta,Delta,08-029-0004,380
-38.740882,-87.484733,Indiana,Knox,Not in a city,18-083-0004,1334
-38.74643,-121.26498,California,Placer,Roseville,06-061-0006,1407
-38.754599,-82.91701,Ohio,Scioto,Portsmouth,39-145-0013,2603
-38.75961,-94.57983,Missouri,Cass,Not in a city,29-037-0003,1171
-38.766158,-90.285934,Missouri,Saint Louis,Ferguson,29-189-5001,421
-38.770081,-99.763424,Kansas,Trego,Not in a city,20-195-0001,2175
-38.77335,-77.10468,Virginia,Fairfax,Groveton,51-059-0030,5708
-38.776473,-97.606494,Kansas,Saline,Not in a city,20-169-0004,391
-38.79502,-92.918251,Missouri,Cooper,Not in a city,29-053-0001,210
-38.80002,-92.950196,Missouri,Cooper,Not in a city,29-053-9901,109
-38.810403,-77.04435,Virginia,Alexandria City,Alexandria,51-510-0009,230
-38.81161,-120.033084,California,El Dorado,Not in a city,06-017-0012,246
-38.81194,-76.74417,Maryland,Prince George's,Greater Upper Marlboro,24-033-8003,2092
-38.828042,-104.827739,Colorado,El Paso,Colorado Springs,08-041-0011,1387
-38.83738,-77.16338,Virginia,Fairfax,Annandale,51-059-1005,931
-38.838575,-94.746424,Kansas,Johnson,Not in a city,20-091-0010,1352
-38.848014,-104.828564,Colorado,El Paso,Colorado Springs,08-041-0017,982
-38.848382,-90.076413,Illinois,Madison,Roxana,17-119-9010,184
-38.851667,-76.932778,Maryland,Prince George's,Suitland-Silver Hill,24-033-8001,202
-38.8577,-77.05922,Virginia,Arlington,Arlington,51-013-0020,3059
-38.860669,-90.105851,Illinois,Madison,Wood River,17-119-3007,1830
-38.863063,-94.769127,Kansas,Johnson,Olathe,20-091-0009,762
-38.868168,-77.142758,Virginia,Fairfax,Seven Corners,51-059-1004,124
-38.872546,-90.226488,Missouri,Saint Charles,West Alton,29-183-1002,1332
-38.876255,-77.034059,District Of Columbia,District of Columbia,Washington,11-001-0042,2063
-38.87805,-106.974698,Colorado,Gunnison,Mount Crested Butte,08-051-0005,322
-38.895572,-76.958072,District Of Columbia,District of Columbia,Washington,11-001-0041,5002
-38.895975,-104.761296,Colorado,El Paso,Colorado Springs,08-041-0008,835
-38.900392,-106.966104,Colorado,Gunnison,Mount Crested Butte,08-051-0007,83
-38.9025,-76.653056,Maryland,Anne Arundel,Not in a city,24-003-0014,647
-38.903085,-90.143168,Illinois,Madison,Alton,17-119-2009,1669
-38.903618,-94.706904,Kansas,Johnson,Overland Park,20-091-0008,460
-38.921847,-77.013178,District Of Columbia,District of Columbia,Washington,11-001-0043,6646
-38.9248,-119.97,California,El Dorado,South Lake Tahoe,06-017-9001,764
-38.9326,-77.19822,Virginia,Fairfax,McLean,51-059-5001,1153
-38.939722,-76.935,Maryland,Prince George's,Bladensburg,24-033-0001,443
-38.94121,-76.93219,Maryland,Prince George's,Bladensburg,24-033-0025,574
-38.944979,-119.970609,California,El Dorado,South Lake Tahoe,06-017-0011,408
-38.950002,-82.108935,Ohio,Gallia,Not in a city,39-053-0003,134
-38.951811,-118.81557,Nevada,Mineral,Schurz,32-021-9000,292
-38.956431,-92.321834,Missouri,Boone,Columbia,29-019-0004,486
-38.974457,-94.687013,Kansas,Johnson,Overland Park,20-091-0007,2153
-38.976,-120.103506,California,El Dorado,Not in a city,06-017-9000,2333
-38.985477,-86.990419,Indiana,Greene,Not in a city,18-055-0001,1162
-38.986672,-75.5568,Delaware,Kent,Not in a city,10-001-0002,2170
-39.00512,-114.21593,Nevada,White Pine,Not in a city,32-033-0101,2404
-39.01893,-122.91333,California,Lake,Lakeport,06-033-3002,238
-39.02,-76.827778,Maryland,Prince George's,Greenbelt,24-033-0002,196
-39.02139,-95.748594,Kansas,Shawnee,Topeka,20-177-0011,710
-39.021881,-84.47445,Kentucky,Campbell,Highland Heights,21-037-3002,1076
-39.024265,-95.711275,Kansas,Shawnee,Topeka,20-177-0013,1050
-39.02473,-77.48925,Virginia,Loudoun,Not in a city,51-107-1005,1918
-39.032501,-95.701371,Kansas,Shawnee,Topeka,20-177-0012,147
-39.0327,-122.92229,California,Lake,Lakeport,06-033-3001,990
-39.036,-94.5741,Missouri,Jackson,Kansas City,29-095-0010,295
-39.037778,-94.5875,Missouri,Jackson,Kansas City,29-095-0037,404
-39.04,-95.691927,Kansas,Shawnee,Topeka,20-177-0010,798
-39.043241,-119.950183,Nevada,Douglas,Cave Rock,32-005-0008,249
-39.044992,-87.258969,Indiana,Sullivan,Not in a city,18-153-0007,592
-39.046314,-94.694816,Kansas,Wyandotte,Kansas City,20-209-0022,1486
-39.055277,-76.878333,Maryland,Prince George's,Beltsville,24-033-0030,3011
-39.063798,-108.561173,Colorado,Mesa,Grand Junction,08-077-0017,2183
-39.065617,-84.451885,Kentucky,Campbell,Fort Thomas,21-037-0003,700
-39.0725,-84.525,Kentucky,Kenton,Covington,21-117-0007,1717
-39.07587,-94.521627,Missouri,Jackson,Kansas City,29-095-0035,30
-39.0828,-84.1441,Ohio,Clermont,Batavia,39-025-0022,758
-39.0916,-108.563775,Colorado,Mesa,Grand Junction,08-077-0003,808
-39.095314,-94.578018,Missouri,Jackson,Kansas City,29-095-2002,370
-39.101111,-76.729444,Maryland,Anne Arundel,Fort Meade (U.S. Army),24-003-0019,737
-39.104686,-94.57079,Missouri,Jackson,Kansas City,29-095-0034,3430
-39.10492,-84.55117,Ohio,Hamilton,Cincinnati,39-061-0042,1876
-39.105336,-79.425851,West Virginia,Tucker,Not in a city,54-093-9000,2463
-39.109296,-94.441061,Missouri,Jackson,Sugar Creek,29-095-0041,1132
-39.109449,-94.44023,Missouri,Clay,North Kansas City,29-047-0041,28
-39.110539,-90.32408,Illinois,Jersey,Jerseyville,17-083-1001,834
-39.114313,-77.106876,Maryland,Montgomery,Not in a city,24-031-3001,1210
-39.117219,-94.635605,Kansas,Wyandotte,Kansas City,20-209-0021,5035
-39.12886,-84.50404,Ohio,Hamilton,Cincinnati,39-061-0040,4953
-39.132016,-94.531518,Missouri,Jackson,Kansas City,29-095-0018,144
-39.138773,-121.618549,California,Sutter,Yuba City,06-101-0003,5228
-39.146025,-84.538375,Ohio,Hamilton,Cincinnati,39-061-0048,119
-39.148647,-94.56524,Missouri,Clay,North Kansas City,29-047-0026,1202
-39.150042,-84.516585,Ohio,Hamilton,Cincinnati,39-061-9903,30
-39.15047,-123.20655,California,Mendocino,Ukiah,06-045-0006,605
-39.154,-106.821,Colorado,Pitkin,Not in a city,08-097-0002,2412
-39.155,-75.518056,Delaware,Kent,Dover,10-001-0003,3109
-39.158911,-76.511025,Maryland,Anne Arundel,Riviera Beach,24-003-2002,973
-39.159383,-86.504762,Indiana,Monroe,Bloomington,18-105-0003,1458
-39.16032,-84.45826,Ohio,Hamilton,Norwood,39-061-7001,2336
-39.169533,-76.627933,Maryland,Anne Arundel,Glen Burnie,24-003-1003,2239
-39.180527,-84.49215,Ohio,Hamilton,St. Bernard,39-061-8001,1197
-39.186026,-84.513662,Ohio,Hamilton,Cincinnati,39-061-0041,591
-39.18919,-121.99887,California,Colusa,Colusa,06-011-1002,1617
-39.19433,-84.478974,Ohio,Hamilton,Cincinnati,39-061-0014,3610
-39.21487,-84.69086,Ohio,Hamilton,Cleves,39-061-0010,540
-39.231384,-104.63477,Colorado,Elbert,Not in a city,08-039-0001,965
-39.232778,-76.579722,Maryland,Baltimore (City),Baltimore,24-510-0035,3217
-39.233477,-121.055608,California,Nevada,Grass Valley,06-057-0005,1154
-39.237457,-85.891332,Indiana,Bartholomew,Columbus,18-005-0008,510
-39.243833,-76.709149,Maryland,Baltimore,Arbutus (census name for Halethorpe),24-005-9000,297
-39.250409,-119.956738,Nevada,Washoe,Incline Village-Crystal Bay,32-031-2002,249
-39.261667,-76.6375,Maryland,Baltimore (City),Baltimore,24-510-0049,626
-39.274551,-76.543297,Maryland,Baltimore (City),Baltimore,24-510-0052,134
-39.278117,-80.34225,West Virginia,Harrison,Clarksburg,54-033-0003,1843
-39.2787,-84.36625,Ohio,Hamilton,Blue Ash,39-061-0006,1562
-39.28102,-78.08157,Virginia,Frederick,Not in a city,51-069-0010,1073
-39.28777,-76.546861,Maryland,Baltimore (City),Baltimore,24-510-0008,1862
-39.288996,-76.554131,Maryland,Baltimore (City),Baltimore,24-510-0053,169
-39.290319,-84.414356,Ohio,Hamilton,Sharonville,39-061-0043,953
-39.297733,-76.604603,Maryland,Baltimore (City),Baltimore,24-510-0040,4984
-39.303174,-94.377014,Missouri,Clay,Not in a city,29-047-0005,2670
-39.310833,-76.474444,Maryland,Baltimore,Essex,24-005-3001,6037
-39.316743,-82.099866,Ohio,Athens,Athens,39-009-9902,105
-39.318611,-76.5825,Maryland,Baltimore (City),Baltimore,24-510-0050,32
-39.323533,-81.552367,West Virginia,Wood,Vienna,54-107-1002,2063
-39.32783,-120.184592,California,Nevada,Truckee,06-057-1001,3163
-39.332928,-104.745221,Colorado,Douglas,Not in a city,08-035-0005,63
-39.33839,-84.5666,Ohio,Butler,Fairfield,39-017-0016,1822
-39.340556,-76.582222,Maryland,Baltimore (City),Baltimore,24-510-0006,1327
-39.34465,-76.68538,Maryland,Baltimore (City),Baltimore,24-510-0007,2035
-39.36326,-74.431,New Jersey,Atlantic,Atlantic City,34-001-1006,2053
-39.410191,-76.296946,Maryland,Harford,Edgewood,24-025-1001,1254
-39.42689,-84.20077,Ohio,Warren,Lebanon,39-165-0007,528
-39.442165,-81.908827,Ohio,Athens,Not in a city,39-009-0003,1230
-39.448105,-77.963845,West Virginia,Berkeley,Martinsburg,54-003-0003,1839
-39.456238,-87.370553,Indiana,Vigo,Terre Haute,18-167-0023,1826
-39.460478,-76.633543,Maryland,Baltimore,Cockeysville,24-005-1007,2113
-39.464872,-74.448736,New Jersey,Atlantic,Galloway (Township of),34-001-0006,2532
-39.472436,-84.394952,Ohio,Butler,Middletown,39-017-0020,858
-39.474976,-91.788991,Missouri,Monroe,Not in a city,29-137-0001,811
-39.478686,-84.397112,Ohio,Butler,Middletown,39-017-0022,72
-39.479822,-84.409617,Ohio,Butler,Middletown,39-017-0019,883
-39.481483,-80.134667,West Virginia,Marion,Fairmont,54-049-0006,1857
-39.485987,-87.401312,Indiana,Vigo,Terre Haute,18-167-0018,2325
-39.49072,-84.36374,Ohio,Butler,Middletown,39-017-0015,14
-39.4938,-84.3543,Ohio,Butler,Middletown,39-017-0003,2752
-39.519667,-104.767157,Colorado,Douglas,Parker,08-035-0003,107
-39.521933,-119.7954,Nevada,Washoe,Reno,32-031-0031,173
-39.52455,-84.369652,Ohio,Butler,Middletown,39-017-0017,617
-39.525083,-119.807717,Nevada,Washoe,Reno,32-031-0016,5981
-39.528439,-84.3942,Ohio,Butler,Middletown,39-017-1004,1103
-39.534488,-105.070358,Colorado,Douglas,Roxborough Park,08-035-0004,1920
-39.5513,-75.732,Delaware,New Castle,Not in a city,10-003-1007,2183
-39.564178,-77.720244,Maryland,Washington,Not in a city,24-043-0009,1230
-39.604399,-105.019526,Colorado,Arapahoe,Littleton,08-005-0005,2581
-39.6463,-86.248773,Indiana,Marion,Indianapolis,18-097-0042,935
-39.649367,-79.920867,West Virginia,Monongalia,Morgantown,54-061-0003,2111
-39.691962,-75.761299,Delaware,New Castle,Newark,10-003-1012,3082
-39.701444,-75.860051,Maryland,Cecil,Not in a city,24-015-0003,228
-39.702982,-75.864771,Maryland,Cecil,Not in a city,24-015-0003,948
-39.704005,-104.998113,Colorado,Denver,Denver,08-031-0025,813
-39.70595,-79.012,Maryland,Garrett,Grantsville,24-023-0002,3814
-39.732170000000004,-105.0153,Colorado,Denver,Denver,08-031-0027,619
-39.733375,-86.28332,Indiana,Marion,Indianapolis,18-097-9901,28
-39.738578,-104.939925,Colorado,Denver,Denver,08-031-0013,223
-39.739444,-75.558056,Delaware,New Castle,Wilmington,10-003-2004,9510
-39.740342,-104.991037,Colorado,Denver,Denver,08-031-0017,81
-39.741694,-94.858584,Missouri,Buchanan,St. Joseph,29-021-0005,1768
-39.744993,-86.166464,Indiana,Marion,Indianapolis (Remainder),18-097-0043,3043
-39.751184,-104.987625,Colorado,Denver,Denver,08-031-0002,8800
-39.755305,-94.845807,Missouri,Buchanan,St. Joseph,29-021-0010,537
-39.755969,-84.198674,Ohio,Montgomery,Dayton,39-113-0038,704
-39.757371,-121.843286,California,Butte,Not in a city,06-007-0002,1395
-39.758855,-86.115415,Indiana,Marion,Indianapolis (Remainder),18-097-0084,1411
-39.759533,-84.144201,Ohio,Montgomery,Dayton,39-113-0031,1829
-39.76048,-86.108833,Indiana,Marion,Indianapolis,18-097-0066,1134
-39.760659,-84.187678,Ohio,Montgomery,Dayton,39-113-0032,3219
-39.761111,-75.491944,Delaware,New Castle,Not in a city,10-003-1003,2239
-39.76168,-121.84047,California,Butte,Chico,06-007-0008,2704
-39.76367,-84.191884,Ohio,Montgomery,Dayton,39-113-0014,509
-39.774979,-86.12202,Indiana,Marion,Indianapolis (Remainder),18-097-0083,3219
-39.77949,-105.00518,Colorado,Denver,Denver,08-031-0026,2040
-39.781083,-104.95665,Colorado,Denver,Denver,08-031-0023,2722
-39.787933,-86.13088,Indiana,Marion,Indianapolis (Remainder),18-097-0087,934
-39.788903,-86.214628,Indiana,Marion,Indianapolis (Remainder),18-097-0081,6473
-39.800339,-75.212119,New Jersey,Gloucester,East Greenwich (Township of),34-015-0002,422
-39.808333,-120.471667,California,Plumas,Portola,06-063-1009,2105
-39.80834,-83.88705,Ohio,Greene,Yellow Springs,39-057-0005,1746
-39.810833,-86.114444,Indiana,Marion,Indianapolis (Remainder),18-097-0078,8157
-39.81336,-120.47069,California,Plumas,Portola,06-063-1010,1511
-39.818715,-75.413973,Pennsylvania,Delaware,Marcus Hook,42-045-0109,305
-39.82572,-75.28939,New Jersey,Gloucester,Gibbstown (Township name Greenwich),34-015-5001,666
-39.826007,-104.937438,Colorado,Adams,Commerce City,08-001-0006,3884
-39.827594,-104.937668,Colorado,Adams,Commerce City,08-001-0001,237
-39.8281,-104.93647,Colorado,Adams,Commerce City,08-001-0010,48
-39.82835,-104.93836,Colorado,Adams,Commerce City,08-001-0008,495
-39.830806,-75.284723,New Jersey,Gloucester,Greenwich (Township of),34-015-0004,1204
-39.831921,-89.644164,Illinois,Sangamon,Not in a city,17-167-0012,1704
-39.834461,-75.768242,Pennsylvania,Chester,Not in a city,42-029-0100,2976
-39.835556,-75.3725,Pennsylvania,Delaware,Chester,42-045-0002,2990
-39.83562,-84.720524,Ohio,Preble,New Paris,39-135-1001,3085
-39.862928,-75.325689,Pennsylvania,Delaware,Eddystone,42-045-0004,231
-39.866834,-88.925594,Illinois,Macon,Decatur,17-115-0013,1440
-39.89365,-86.04054,Indiana,Marion,Indianapolis,18-097-0079,962
-39.9153,-107.6345,Colorado,Rio Blanco,Not in a city,08-103-9000,1046
-39.915409,-91.335868,Illinois,Adams,Quincy,17-001-0007,330
-39.915961,-80.733858,West Virginia,Marshall,Moundsville,54-051-1002,3477
-39.92002,-77.30968,Pennsylvania,Adams,Not in a city,42-001-0001,4577
-39.922867,-75.186921,Pennsylvania,Philadelphia,Philadelphia,42-101-0055,2705
-39.923042,-75.097617,New Jersey,Camden,Camden,34-007-0003,2263
-39.927613,-75.222403,Pennsylvania,Philadelphia,Philadelphia,42-101-0136,2568
-39.92845,-82.98104,Ohio,Franklin,Columbus,39-049-0025,3216
-39.928531,-82.980105,Ohio,Franklin,Columbus,39-049-0039,261
-39.928804,-86.078775,Indiana,Hamilton,Carmel,18-057-0008,320
-39.92882,-83.80949,Ohio,Clark,Springfield,39-023-0005,1892
-39.93139,-75.16222,Pennsylvania,Philadelphia,Philadelphia,42-101-0052,80
-39.93301,-91.404237,Illinois,Adams,Quincy,17-001-0006,414
-39.934559,-75.125219,New Jersey,Camden,Camden,34-007-0002,1798
-39.939567,-120.944376,California,Plumas,Quincy,06-063-1006,3342
-39.940029,-81.3387,Ohio,Noble,Not in a city,39-121-8001,2327
-39.94418,-75.165722,Pennsylvania,Philadelphia,Philadelphia,42-101-0003,173
-39.944651,-75.165206,Pennsylvania,Philadelphia,Philadelphia,42-101-0047,4842
-39.960048,-75.142614,Pennsylvania,Philadelphia,Philadelphia,42-101-0057,2433
-39.960884,-85.939546000000007,Indiana,Hamilton,Fishers (corporate name for Fishers Station),18-057-0007,562
-39.965278,-76.699444,Pennsylvania,York,York,42-133-0008,4696
-39.966673,-95.550261,Kansas,Brown,Not in a city,20-013-9901,101
-39.9679,-80.7464,Ohio,Belmont,Shadyside,39-013-0006,99
-39.979123,-95.568475,Kansas,Brown,Reserve,20-013-9000,1912
-39.98826,-86.83096,Indiana,Montgomery,Not in a city,18-107-0004,167
-39.989036,-75.050008,New Jersey,Camden,Pennsauken (Township of),34-007-1007,2416
-39.991389,-75.080833,Pennsylvania,Philadelphia,Philadelphia,42-101-0048,1870
-39.994908,-74.170447,New Jersey,Ocean,Toms River,34-029-2002,5396
-39.99875,-82.99344,Ohio,Franklin,Columbus,39-049-0024,2893
-40.002335,-75.219903,Pennsylvania,Philadelphia,Philadelphia,42-101-0020,549
-40.008889,-75.09778,Pennsylvania,Philadelphia,Philadelphia,42-101-0004,6538
-40.009544,-85.52347,Indiana,Henry,Middletown,18-065-0003,3539
-40.010668,-75.151565,Pennsylvania,Philadelphia,Philadelphia,42-101-0027,47
-40.021097,-105.26338199999999,Colorado,Boulder,Boulder,08-013-0012,2598
-40.027222,-95.235833,Missouri,Holt,Forest City,29-087-0008,1406
-40.035985,-75.002405,Pennsylvania,Philadelphia,Philadelphia,42-101-1002,623
-40.036389,-75.0025,Pennsylvania,Philadelphia,Philadelphia,42-101-1001,33
-40.043833,-76.1124,Pennsylvania,Lancaster,Not in a city,42-071-0012,277
-40.046667,-76.283333,Pennsylvania,Lancaster,Lancaster,42-071-0007,5029
-40.049604,-75.241209,Pennsylvania,Philadelphia,Philadelphia,42-101-0014,94
-40.052032,-88.37334,Illinois,Champaign,Not in a city,17-019-9000,693
-40.05278,-88.37251,Illinois,Champaign,Bondville,17-019-1001,2445
-40.059828,-77.710608,Pennsylvania,Franklin,Not in a city,42-055-0002,385
-40.063903,-80.720308,West Virginia,Ohio,Wheeling,54-069-0008,579
-40.076389,-75.011944,Pennsylvania,Philadelphia,Philadelphia,42-101-0024,2640
-40.085,-107.312,Colorado,Garfield,Not in a city,08-045-0015,68
-40.0877,-82.959773,Ohio,Franklin,Columbus,39-049-0081,2608
-40.100032,-88.366725,Illinois,Champaign,Not in a city,17-019-9901,110
-40.107222,-74.882222,Pennsylvania,Bucks,Bristol,42-017-0012,3280
-40.108944,-76.472235,Pennsylvania,Lancaster,Mount Joy,42-071-0009,556
-40.111975,-85.679952,Indiana,Madison,Anderson,18-095-0009,1741
-40.112222,-75.309167,Pennsylvania,Montgomery,Norristown,42-091-0013,3272
-40.114876,-80.700972,West Virginia,Ohio,Wheeling,54-069-0010,1415
-40.123796,-88.229531,Illinois,Champaign,Champaign,17-019-0004,594
-40.123886,-88.240553,Illinois,Champaign,Champaign,17-019-0006,456
-40.125703,-85.652184,Indiana,Madison,Anderson,18-095-0011,965
-40.136336,-111.660502,Utah,Utah,Spanish Fork,49-049-5010,2398
-40.146667,-79.902222,Pennsylvania,Washington,Charleroi,42-125-0005,1331
-40.157952,-85.420984,Indiana,Delaware,Muncie,18-035-0008,180
-40.158417,-85.415021,Indiana,Delaware,Muncie,18-035-0009,180
-40.164576,-105.100856,Colorado,Boulder,Longmont,08-013-0003,2598
-40.170556,-80.261389,Pennsylvania,Washington,Washington,42-125-0200,3394
-40.199502,-85.387908,Indiana,Delaware,Muncie,18-035-0006,2662
-40.209387,-104.82405,Colorado,Weld,Platteville,08-123-0008,3631
-40.222411,-74.763167,New Jersey,Mercer,Trenton,34-021-0008,5297
-40.246528,-77.18675,Pennsylvania,Cumberland,Carlisle,42-041-0101,4990
-40.246992,-76.846988,Pennsylvania,Dauphin,Not in a city,42-043-0401,4953
-40.252222,-77.140472,Pennsylvania,Cumberland,Not in a city,42-041-0100,342
-40.253611,-111.663056,Utah,Utah,Provo,49-049-0002,2433
-40.268963,-80.243995,Pennsylvania,Washington,Not in a city,42-125-5200,616
-40.27813,-105.54564,Colorado,Larimer,Not in a city,08-069-0007,2464
-40.294178,-110.009732,Utah,Duchesne,Roosevelt,49-013-0002,104
-40.294341,-79.885331,Pennsylvania,Allegheny,Clairton,42-003-3007,872
-40.304694,-79.505667,Pennsylvania,Westmoreland,Greensburg,42-129-0008,3474
-40.309722,-78.915,Pennsylvania,Cambria,Johnstown,42-021-0011,2430
-40.31239,-74.87266,New Jersey,Mercer,Hopewell (Township of),34-021-8001,1740
-40.319511,-80.607945,Ohio,Jefferson,Mingo Junction,39-081-0021,203
-40.320278,-75.926667,Pennsylvania,Berks,Reading,42-011-0009,723
-40.32207,-80.6063,Ohio,Jefferson,Mingo Junction,39-081-1001,2525
-40.323768,-79.868062,Pennsylvania,Allegheny,Liberty,42-003-0064,7333
-40.337328,-76.383447,Pennsylvania,Lebanon,Not in a city,42-075-0100,1
-40.338516,-76.394788,Pennsylvania,Lebanon,Not in a city,42-075-0101,24
-40.341023,-80.596635,West Virginia,Brooke,Follansbee,54-009-0005,1877
-40.341389,-111.713611,Utah,Utah,Lindon,49-049-4001,5339
-40.362381,-105.564396,Colorado,Larimer,Not in a city,08-069-9000,115
-40.362847,-80.615352,Ohio,Jefferson,Steubenville,39-081-0016,438
-40.3663,-80.6158,Ohio,Jefferson,Steubenville,39-081-0017,2637
-40.375644,-80.169943,Pennsylvania,Allegheny,McDonald,42-003-0067,1693
-40.377222,-75.914444,Pennsylvania,Berks,Laureldale,42-011-1717,679
-40.38335,-75.9686,Pennsylvania,Berks,Not in a city,42-011-0011,2985
-40.385981,-75.912856,Pennsylvania,Berks,Not in a city,42-011-0020,1299
-40.392694,-75.925222,Pennsylvania,Berks,Reading,42-011-0010,177
-40.392922,-79.024456,Pennsylvania,Westmoreland,Not in a city,42-129-0009,642
-40.394651,-80.611813,West Virginia,Brooke,Weirton,54-009-0011,2911
-40.400959,-91.391012,Iowa,Lee,Keokuk,19-111-0008,1706
-40.402328,-79.860973,Pennsylvania,Allegheny,North Braddock,42-003-1301,1842
-40.402544,-95.841639,Nebraska,Nemaha,Not in a city,31-127-0002,342
-40.41368,-79.941162,Pennsylvania,Allegheny,Pittsburgh,42-003-0021,147
-40.414877,-104.70693,Colorado,Weld,Greeley,08-123-0006,1941
-40.420401,-91.403382,Iowa,Lee,Not in a city,19-111-0009,58
-40.421539,-80.580717,West Virginia,Hancock,Weirton,54-029-1004,1751
-40.425591,-86.879453,Indiana,Tippecanoe,Lafayette,18-157-0007,430
-40.427372,-80.592318,West Virginia,Hancock,Weirton,54-029-0009,110
-40.430278,-111.803889,Utah,Utah,Highland,49-049-5008,18
-40.431639,-86.8525,Indiana,Tippecanoe,Lafayette,18-157-0008,3178
-40.43743,-79.863572,Pennsylvania,Allegheny,Wilkinsburg,42-003-1376,20
-40.44,-109.3,Utah,Uintah,Not in a city,49-047-9000,224
-40.444843,-111.708885,Utah,Utah,Not in a city,49-049-9000,162
-40.445278,-80.420833,Pennsylvania,Washington,Not in a city,42-125-5001,5339
-40.452267,-109.510393,Utah,Uintah,Vernal,49-047-1003,76
-40.456944,-77.165556,Pennsylvania,Perry,Not in a city,42-099-0301,890
-40.462182,-74.429439,New Jersey,Middlesex,East Brunswick (Township of),34-023-0011,1399
-40.46471,-109.561472,Utah,Uintah,Vernal,49-047-1004,31
-40.46542,-79.960757,Pennsylvania,Allegheny,Pittsburgh,42-003-0008,8446
-40.472825,-74.422403,New Jersey,Middlesex,North Brunswick Township,34-023-0006,4138
-40.477075,-75.756919,Pennsylvania,Berks,Lyons (corporate and RR name for Lyon Station),42-011-0021,679
-40.478319,-75.753947,Pennsylvania,Berks,Lyons (corporate and RR name for Lyon Station),42-011-0022,1125
-40.481347,-86.109688,Indiana,Howard,Kokomo,18-067-0004,533
-40.485201000000004,-106.831625,Colorado,Routt,Steamboat Springs,08-107-0003,280
-40.485479,-86.132879,Indiana,Howard,Kokomo,18-067-0003,1349
-40.487012,-80.187837,Pennsylvania,Allegheny,Coraopolis,42-003-0095,209
-40.499767,-80.071337,Pennsylvania,Allegheny,Avalon,42-003-0002,969
-40.515314,-88.995909,Illinois,McLean,Normal,17-113-2002,280
-40.518735,-88.996896,Illinois,McLean,Normal,17-113-2003,1111
-40.5383,-106.6766,Colorado,Jackson,Not in a city,08-057-9000,2303
-40.53999,-121.57646,California,Shasta,Not in a city,06-089-3003,3565
-40.543309,-112.299618,Utah,Tooele,Tooele,49-045-0003,453
-40.55013,-122.38092,California,Shasta,Redding,06-089-0004,1217
-40.56,-93.418333,Missouri,Mercer,Not in a city,29-129-0001,246
-40.571288,-105.079693,Colorado,Larimer,Fort Collins,08-069-0009,1973
-40.592861,-105.143122,Colorado,Larimer,Not in a city,08-069-9002,32
-40.59664,-74.12525,New York,Richmond,New York,36-085-0067,1358
-40.597778,-112.466667,Utah,Tooele,Grantsville,49-045-0002,31
-40.598056,-111.894167,Utah,Salt Lake,Midvale,49-035-2005,91
-40.600532,-112.353414,Utah,Tooele,Erda,49-045-0004,1855
-40.603943,-74.276174,New Jersey,Union,Rahway,34-039-2003,2348
-40.606624,-80.021669,Pennsylvania,Allegheny,McCandless Township,42-003-0093,733
-40.611944,-75.4325,Pennsylvania,Lehigh,Allentown,42-077-0004,1931
-40.617488,-79.727664,Pennsylvania,Allegheny,Harrison Township,42-003-1008,1734
-40.628056,-75.341111,Pennsylvania,Northampton,Freemansburg,42-095-0025,5339
-40.6304,-122.4031,California,Shasta,Redding,06-089-3004,599
-40.63103,-73.73388,New York,Nassau,Cedarhurst,36-059-0008,1376
-40.63307,-74.13719,New York,Richmond,New York,36-085-0055,2338
-40.638936,-80.365653,Pennsylvania,Beaver,Not in a city,42-007-0006,675
-40.639509,-80.523951,Ohio,Columbiana,East Liverpool,39-029-0020,35
-40.64144,-74.208365,New Jersey,Union,Elizabeth,34-039-0004,10427
-40.64182,-74.01871,New York,Kings,New York,36-047-0052,333
-40.645889,-75.404397,Pennsylvania,Northampton,Not in a city,42-095-0027,2020
-40.646667,-111.849722,Utah,Salt Lake,Cottonwood West,49-035-0003,31
-40.652511,-79.292769,Pennsylvania,Indiana,Not in a city,42-063-0005,407
-40.662878,-111.901188,Utah,Salt Lake,Murray,49-035-4002,61
-40.671953,-73.977823,New York,Kings,New York,36-047-0076,380
-40.673406,-74.213889,New Jersey,Union,Elizabeth,34-039-0006,1697
-40.673656,-80.317731,Pennsylvania,Beaver,Not in a city,42-007-0007,666
-40.685019,-80.324775,Pennsylvania,Beaver,Not in a city,42-007-0505,657
-40.689196,-91.994618,Iowa,Van Buren,Not in a city,19-177-0005,559
-40.69184,-122.40179,California,Shasta,Shasta Lake,06-089-3005,648
-40.6932,-92.0059,Iowa,Van Buren,Not in a city,19-177-9000,8
-40.695078,-92.006318,Iowa,Van Buren,Not in a city,19-177-0006,2398
-40.697007,-89.584737,Illinois,Peoria,Peoria,17-143-0037,1687
-40.699207,-75.180525,New Jersey,Warren,Phillipsburg,34-041-0006,1695
-40.704444,-111.968611,Utah,Salt Lake,West Valley,49-035-3007,30
-40.708611,-112.094722,Utah,Salt Lake,Magna,49-035-1001,1110
-40.712146,-112.111275,Utah,Salt Lake,Magna,49-035-1007,300
-40.71436,-73.99518,New York,New York,New York,36-061-0134,4209
-40.71528,-124.20139,California,Humboldt,Not in a city,06-023-1005,554
-40.716699,-91.950172,Iowa,Van Buren,Not in a city,19-177-9901,116
-40.71961,-73.94771,New York,Kings,New York,36-047-0122,2377
-40.720622,-74.003674,New York,New York,New York,36-061-0062,2256
-40.720989,-74.192892,New Jersey,Essex,Newark,34-013-0003,2553
-40.722222,-74.146944,New Jersey,Essex,Newark,34-013-0016,299
-40.725413,-74.052293,New Jersey,Hudson,Jersey City,34-017-1003,6796
-40.73,-73.984,New York,New York,New York,36-061-0128,2478
-40.730286,-74.212738,New Jersey,Essex,Newark,34-013-0015,917
-40.73277,-73.94722,New York,Kings,New York,36-047-0011,98
-40.73614,-73.82153,New York,Queens,New York,36-081-0124,10979
-40.736389,-111.872222,Utah,Salt Lake,Salt Lake City,49-035-3006,6436
-40.73669,-73.41664,New York,Suffolk,East Farmingdale,36-103-0005,62
-40.739264,-73.817694,New York,Queens,New York,36-081-0125,484
-40.739546,-73.985694,New York,New York,New York,36-061-0010,474
-40.74529,-73.41919,New York,Suffolk,East Farmingdale,36-103-0002,1756
-40.745932,-73.419845,New York,Suffolk,Babylon,36-103-0001,698
-40.747796,-80.316442,Pennsylvania,Beaver,Beaver Falls,42-007-0014,3509
-40.75527,-73.75861,New York,Queens,New York,36-081-0097,109
-40.75623,-73.97657,New York,New York,New York,36-061-0077,249
-40.75912,-73.96661,New York,New York,New York,36-061-0056,1911
-40.76078,-73.4906,New York,Nassau,Bethpage,36-059-0013,358
-40.77039,-73.82841,New York,Queens,New York,36-081-0096,341
-40.770908,-74.036218,New Jersey,Hudson,Union City,34-017-0008,481
-40.770944,-84.0539,Ohio,Allen,Lima,39-003-0009,432
-40.772793,-74.031718,New Jersey,Hudson,Union City,34-017-2002,1413
-40.77678,-124.17949,California,Humboldt,Eureka,06-023-1004,1419
-40.777145,-111.945849,Utah,Salt Lake,Salt Lake City,49-035-3015,707
-40.77798,-73.84318,New York,Queens,New York,36-081-0094,488
-40.78422,-111.931,Utah,Salt Lake,Salt Lake City,49-035-3010,5416
-40.78527,-73.64416,New York,Nassau,Roslyn Heights (RR name Rosalyn (sta.)),36-059-0011,20
-40.786247,-122.805707,California,Trinity,Not in a city,06-105-9000,1995
-40.786804,-81.394153,Ohio,Stark,Canton,39-151-0017,4086
-40.787628,-74.676301,New Jersey,Morris,Chester,34-027-3001,4098
-40.78909,-73.63648,New York,Nassau,Roslyn,36-059-0012,315
-40.7997,-73.93432,New York,New York,New York,36-061-0079,3984
-40.800717,-81.373,Ohio,Stark,Canton,39-151-0020,1953
-40.801211,-74.483433,New Jersey,Morris,Morristown,34-027-0004,1679
-40.80178,-124.1621,California,Humboldt,Eureka,06-023-1002,1008
-40.8075,-111.921111,Utah,Salt Lake,Salt Lake City,49-035-0012,32
-40.811389,-77.877028,Pennsylvania,Centre,State College,42-027-0100,5621
-40.812488,-75.60594,Pennsylvania,Carbon,Not in a city,42-025-0217,69
-40.812591,-96.683314,Nebraska,Lancaster,Lincoln,31-109-0022,3632
-40.8129,-72.8621,New York,Suffolk,Shirley,36-103-0024,63
-40.814204,-75.580448,Pennsylvania,Carbon,Not in a city,42-025-0214,793
-40.816,-73.902,New York,Bronx,New York,36-005-0110,13484
-40.816809,-74.043673,New Jersey,Bergen,Carlstadt,34-003-0008,82
-40.817218,-74.043758,New Jersey,Bergen,Carlstadt,34-003-0007,83
-40.833111,-74.043459,New Jersey,Bergen,Carlstadt,34-003-0009,83
-40.83606,-73.92009,New York,Bronx,New York,36-005-0080,1784
-40.852256,-73.973314,New Jersey,Bergen,Fort Lee,34-003-0003,2304
-40.860031,-80.279092,Pennsylvania,Lawrence,Not in a city,42-073-0011,605
-40.865557,-96.146955,Nebraska,Cass,Weeping Water,31-025-0002,652
-40.86585,-73.88083,New York,Bronx,New York,36-005-0083,1719
-40.8679,-73.87809,New York,Bronx,New York,36-005-0133,1620
-40.886389,-111.882222,Utah,Davis,Bountiful,49-011-0001,122
-40.902967,-111.884467,Utah,Davis,Bountiful,49-011-0004,3447
-40.918381,-74.168092,New Jersey,Passaic,Paterson,34-031-0005,2251
-40.92458,-75.067815,New Jersey,Warren,Knowlton (Township of),34-041-0007,1572
-40.925012,-98.339784,Nebraska,Hall,Grand Island,31-079-0003,494
-40.93149,-73.76575,New York,Westchester,Mamaroneck,36-119-1002,1416
-40.942099,-98.364967,Nebraska,Hall,Grand Island,31-079-0004,1772
-40.969112,-95.044951,Iowa,Montgomery,Not in a city,19-137-0002,2445
-41.050604,-85.149693,Indiana,Allen,Fort Wayne,18-003-0014,908
-41.0604,-81.9239,Ohio,Medina,Not in a city,39-103-0004,586
-41.063153,-73.528456,Connecticut,Fairfield,Stamford,09-001-2124,491
-41.063526,-81.468956,Ohio,Summit,Akron,39-153-0017,4032
-41.087862,-81.541532,Ohio,Summit,Akron,39-153-0023,4008
-41.093322,-102.471578,Nebraska,Deuel,Not in a city,31-049-0001,304
-41.094965,-85.101816,Indiana,Allen,Fort Wayne,18-003-0004,3117
-41.09596,-80.65847,Ohio,Mahoning,Youngstown,39-099-0014,3137
-41.10087,-81.911636,Ohio,Medina,Not in a city,39-103-0003,645
-41.111111,-80.645278,Ohio,Mahoning,Youngstown,39-099-0005,2895
-41.1125,-73.407222,Connecticut,Fairfield,Norwalk,09-001-3005,1330
-41.118333,-73.336667,Connecticut,Fairfield,Westport,09-001-9003,2701
-41.133294,-95.956103,Nebraska,Sarpy,Bellevue,31-153-0007,1371
-41.136109,-100.764867,Nebraska,Lincoln,North Platte,31-111-1002,632
-41.136846,-104.818239,Wyoming,Laramie,Cheyenne,56-021-0001,2594
-41.1644,-81.2352,Ohio,Portage,Ravenna,39-133-0002,1827
-41.169646,-85.629292,Indiana,Whitley,Not in a city,18-183-0003,1319
-41.170833,-73.194722,Connecticut,Fairfield,Bridgeport,09-001-0010,1745
-41.179722,-111.983056,Utah,Weber,Washington Terrace,49-057-0007,31
-41.182227,-104.778334,Wyoming,Laramie,Not in a city,56-021-0100,2736
-41.183708,-73.189835,Connecticut,Fairfield,Bridgeport,09-001-0113,324
-41.197847,-96.056686,Nebraska,Douglas,Omaha,31-055-0052,3760
-41.206321,-111.975524,Utah,Weber,Ogden,49-057-0002,2797
-41.214577,-80.787053,Ohio,Trumbull,Warren,39-155-0007,2158
-41.215014,-80.484779,Pennsylvania,Mercer,Farrell,42-085-0100,4942
-41.219167,-111.972778,Utah,Weber,Ogden,49-057-0001,16
-41.221537,-88.190967,Illinois,Will,Braidwood,17-197-1011,956
-41.231167,-80.801914,Ohio,Trumbull,Warren,39-155-0005,628
-41.23172,-80.80116,Ohio,Trumbull,Warren,39-155-0014,39
-41.247486,-95.973142,Nebraska,Douglas,Omaha,31-055-0019,6404
-41.25425,-95.887249,Iowa,Pottawattamie,Council Bluffs,19-155-0011,1618
-41.264171,-95.896124,Iowa,Pottawattamie,Council Bluffs,19-155-0009,3307
-41.265556,-75.846389,Pennsylvania,Luzerne,Wilkes-Barre,42-079-1101,1966
-41.277875,-72.963992,Connecticut,New Haven,West Haven,09-009-8003,162
-41.291111,-72.894167,Connecticut,New Haven,New Haven,09-009-0026,728
-41.293015,-89.049425,Illinois,La Salle,Oglesby,17-099-0007,1240
-41.293986,-72.900935,Connecticut,New Haven,New Haven,09-009-0018,1467
-41.3014,-72.902871,Connecticut,New Haven,New Haven,09-009-0027,6283
-41.303614,-111.987871,Utah,Weber,Harrisville,49-057-1003,1050
-41.310833,-72.916944,Connecticut,New Haven,New Haven,09-009-1123,1623
-41.311586,-105.591725,Wyoming,Albany,Laramie,56-001-0006,1298
-41.330469,-70.785225,Massachusetts,Dukes,Aquinnah,25-007-0001,2065
-41.331389,-72.919722,Connecticut,New Haven,New Haven,09-009-2008,728
-41.341111,-72.921389,Connecticut,New Haven,Hamden (Town of),09-009-9005,422
-41.348869,-75.747322,Pennsylvania,Luzerne,Duryea,42-079-0036,480
-41.35362,-72.07882,Connecticut,New London,Groton,09-011-0124,55
-41.366166,-106.242427,Wyoming,Albany,Not in a city,56-001-9000,420
-41.386108,-96.116128,Nebraska,Douglas,Omaha,31-055-0051,561
-41.39629,-81.818667,Ohio,Cuyahoga,Brook Park,39-035-1002,1719
-41.399167,-73.443056,Connecticut,Fairfield,Danbury,09-001-1123,1737
-41.400968,-91.067957,Iowa,Muscatine,Muscatine,19-139-0015,6417
-41.4069,-91.0616,Iowa,Muscatine,Muscatine,19-139-0020,1291
-41.414388,-91.062605,Iowa,Muscatine,Muscatine,19-139-0018,1025
-41.419429,-91.070975,Iowa,Muscatine,Muscatine,19-139-0016,1558
-41.42353,-81.64755,Ohio,Cuyahoga,Cuyahoga Heights,39-035-0076,170
-41.424819,-96.480819,Nebraska,Dodge,Not in a city,31-053-0005,730
-41.426911,-80.145067,Pennsylvania,Mercer,Not in a city,42-085-9000,1175
-41.439458,-82.161501,Ohio,Lorain,Lorain,39-093-0016,648
-41.442778,-75.623056,Pennsylvania,Lackawanna,Scranton,42-069-2006,3936
-41.446624,-81.662356,Ohio,Cuyahoga,Newburgh Heights,39-035-0065,1985
-41.45869,-74.35404,New York,Orange,Not in a city,36-071-3002,534
-41.46107,-74.36343,New York,Orange,Scotchtown,36-071-3001,1098
-41.462831,-81.580125,Ohio,Cuyahoga,Cleveland,39-035-0066,489
-41.463071,-82.114261,Ohio,Lorain,Sheffield,39-093-3002,3256
-41.468652,-82.159595,Ohio,Lorain,Lorain,39-093-2003,191
-41.46964,-74.37217,New York,Orange,Scotchtown,36-071-3004,419
-41.471782,-81.656792,Ohio,Cuyahoga,Cleveland,39-035-0045,1775
-41.477011,-81.682383,Ohio,Cuyahoga,Cleveland,39-035-0038,4895
-41.480891,-81.703803,Ohio,Cuyahoga,Cleveland,39-035-0027,1975
-41.483225,-120.540234,California,Modoc,Alturas,06-049-0001,109
-41.484041,-81.673603,Ohio,Cuyahoga,Cleveland,39-035-0013,435
-41.492117,-81.678449,Ohio,Cuyahoga,Cleveland,39-035-0060,5232
-41.492707,-112.018863,Utah,Box Elder,Brigham City,49-003-0003,1622
-41.49511,-71.423705,Rhode Island,Washington,Not in a city,44-009-0007,299
-41.49916,-74.00885,New York,Orange,Newburgh,36-071-0002,2428
-41.511978,-90.514301,Illinois,Rock Island,Moline,17-161-0003,59
-41.512077,-90.624044,Iowa,Scott,Davenport,19-163-0020,2951
-41.514727,-90.51735,Illinois,Rock Island,Rock Island Arsenal (U.S. Army),17-161-3002,963
-41.517772,-90.618755,Iowa,Scott,Davenport,19-163-0019,2610
-41.524167,-72.076667,Connecticut,New London,Norwich,09-011-3002,2399
-41.526885,-88.116474,Illinois,Will,Joliet,17-197-1002,1212
-41.530011,-90.587611,Iowa,Scott,Davenport,19-163-0015,11593
-41.546593,-87.426481,Indiana,Lake,Griffith,18-089-0027,1336
-41.550005,-90.600115,Iowa,Scott,Davenport,19-163-0018,2086
-41.550556,-73.043611,Connecticut,New Haven,Waterbury,09-009-2123,2381
-41.551211,-96.146175,Nebraska,Washington,Blair,31-177-0002,2228
-41.55523,-81.575256,Ohio,Cuyahoga,Cleveland,39-035-0034,1710
-41.560952,-124.083964,California,Del Norte,Redwood National Park,06-015-0002,2358
-41.573282,-87.406579,Indiana,Lake,Gary,18-089-0026,2706
-41.583183,-93.58385,Iowa,Polk,Des Moines,19-153-0059,355
-41.586386,-87.475543,Indiana,Lake,Hammond,18-089-2004,2444
-41.588925,-87.407817,Indiana,Lake,Gary,18-089-1003,879
-41.592536,-109.220852,Wyoming,Sweetwater,Rock Springs,56-037-0007,1431
-41.594427,-87.495044,Indiana,Lake,Hammond,18-089-0036,348
-41.598473,-87.342947,Indiana,Lake,Gary,18-089-0031,2755
-41.600314,-87.33476,Indiana,Lake,Gary,18-089-1016,1007
-41.602265,-86.730301,Indiana,LaPorte,La Porte,18-091-0012,905
-41.603159,-93.643118,Iowa,Polk,Des Moines,19-153-0030,8060
-41.603517,-93.7479,Iowa,Polk,Clive,19-153-2510,2486
-41.606662,-87.304943,Indiana,Lake,Gary,18-089-0022,4337
-41.615237,-71.72,Rhode Island,Kent,Not in a city,44-003-0002,594
-41.6175,-87.199167,Indiana,Porter,Ogden Dunes (Wickliffe),18-127-0024,2603
-41.62057,-83.64226,Ohio,Lucas,Toledo,39-095-0026,3427
-41.628715,-70.926149,Massachusetts,Bristol,New Bedford,25-005-2004,295
-41.631427,-87.086977,Indiana,Porter,Dune Acres,18-127-0020,881
-41.635952,-87.442017,Indiana,Lake,East Chicago,18-089-0006,3112
-41.641361,-87.487528,Indiana,Lake,East Chicago,18-089-6000,18
-41.644067,-83.54616,Ohio,Lucas,Toledo,39-095-0024,3412
-41.64486,-73.07908,Connecticut,Litchfield,Thomaston,09-005-0004,455
-41.653501,-87.435561,Indiana,Lake,East Chicago,18-089-0034,220
-41.657155,-85.968446,Indiana,Elkhart,Elkhart,18-039-0008,1694
-41.657232,-91.503478,Iowa,Johnson,Iowa City,19-103-2001,5864
-41.662109,-87.696467,Illinois,Cook,Blue Island,17-031-2001,1511
-41.662567,-83.478333,Ohio,Lucas,Toledo,39-095-0028,855
-41.66346,-86.207826,Indiana,St. Joseph,South Bend,18-141-0014,1409
-41.664711,-93.614385,Iowa,Polk,Des Moines,19-153-2520,1486
-41.66579,-83.47611,Ohio,Lucas,Toledo,39-095-0025,1021
-41.667827,-85.969444,Indiana,Elkhart,Elkhart,18-039-0003,1252
-41.670992,-87.732457,Illinois,Cook,Alsip,17-031-0001,162
-41.678349,-87.508345,Indiana,Lake,Hammond,18-089-2010,1430
-41.685707,-71.169235,Massachusetts,Bristol,Fall River,25-005-1004,1726
-41.687165,-87.539315,Illinois,Cook,Chicago,17-031-0022,1450
-41.693659,-86.236673,Indiana,St. Joseph,South Bend,18-141-1008,1151
-41.694492,-86.287508,Indiana,St. Joseph,South Bend,18-141-2004,917
-41.69486,-73.91441,New York,Dutchess,Poughkeepsie,36-027-1004,369
-41.69666,-86.214722,Indiana,St. Joseph,South Bend,18-141-0015,2641
-41.699174,-90.521944,Iowa,Scott,Davenport,19-163-0014,399
-41.70038,-71.151156,Massachusetts,Bristol,Fall River,25-005-3001,307
-41.707212,-86.891216,Indiana,LaPorte,Michigan City,18-091-0011,2679
-41.70757,-87.568574,Illinois,Cook,Chicago,17-031-0050,1920
-41.711825,-121.509993,California,Siskiyou,Lava Beds National Monument,06-093-0005,2335
-41.72229,-81.24248,Ohio,Lake,Painesville,39-085-3002,394
-41.726811,-81.242156,Ohio,Lake,Painesville,39-085-0007,1303
-41.726892,-122.633579,California,Siskiyou,Yreka,06-093-2001,654
-41.731111,-111.8375,Utah,Cache,Logan,49-005-0004,1932
-41.7425,-72.634444,Connecticut,Hartford,East Hartford,09-003-2006,817
-41.7514,-87.713488,Illinois,Cook,Chicago,17-031-0076,7051
-41.754963,-81.273114,Ohio,Lake,Fairport Harbor (Fairport),39-085-1001,692
-41.760933,-72.67037,Connecticut,Hartford,Hartford,09-003-1018,413
-41.762681,-102.434108,Nebraska,Garden,Not in a city,31-069-9000,1590
-41.763936,-83.471878,Michigan,Monroe,Luna Pier,26-115-0005,2229
-41.771071,-88.152534,Illinois,DuPage,Naperville,17-043-4002,2154
-41.771444,-72.679923,Connecticut,Hartford,Hartford,09-003-0025,198
-41.782766,-87.805376999999993,Illinois,Cook,Summit,17-031-3301,1882
-41.784717,-88.329374,Illinois,Kane,Aurora,17-089-0007,705
-41.784722,-72.631667,Connecticut,Hartford,East Hartford,09-003-1003,5124
-41.80118,-87.832349,Illinois,Cook,McCook,17-031-1016,2957
-41.807469,-71.412968,Rhode Island,Providence,Providence,44-007-0022,2852
-41.809235,-71.40743,Rhode Island,Providence,Providence,44-007-0028,176
-41.811767,-71.40589,Rhode Island,Providence,Providence,44-007-0020,103
-41.821342,-73.297257,Connecticut,Litchfield,Cornwall,09-005-0005,2299
-41.823283000000004,-90.211982,Iowa,Clinton,Clinton,19-045-0019,4243
-41.834276,-87.623851,Illinois,Cook,Chicago,17-031-0014,552
-41.841039,-71.36097,Rhode Island,Providence,East Providence,44-007-1010,3387
-41.842649,-111.852199,Utah,Cache,Smithfield,49-005-0007,2816
-41.864426,-87.748902,Illinois,Cook,Cicero,17-031-6005,1593
-41.864967,-103.664943,Nebraska,Scotts Bluff,Scottsbluff,31-157-0003,970
-41.874668,-71.379971,Rhode Island,Providence,Pawtucket,44-007-0026,480
-41.874999,-90.177574,Iowa,Clinton,Clinton,19-045-0021,4933
-41.876853,-103.656561,Nebraska,Scotts Bluff,Scottsbluff,31-157-0004,1065
-41.878433,-71.378389,Rhode Island,Providence,Pawtucket,44-007-1005,99
-41.888789,-100.339141,Nebraska,Thomas,Not in a city,31-171-9000,2081
-41.892499,-115.427015,Nevada,Elko,Not in a city,32-007-9000,2419
-41.912739,-87.722673,Illinois,Cook,Chicago,17-031-0057,3704
-41.912877,-71.672011,Rhode Island,Providence,Providence,44-007-0023,308
-41.923582,-83.34573,Michigan,Monroe,Not in a city,26-115-0006,407
-41.941114,-91.634067,Iowa,Linn,Cedar Rapids,19-113-0038,1307
-41.945874,-112.233973,Utah,Box Elder,Not in a city,49-003-7001,514
-41.965193,-87.876265,Illinois,Cook,Schiller Park,17-031-3103,1489
-41.965485,-87.749928,Illinois,Cook,Chicago,17-031-0052,4781
-41.97028,-91.620178,Iowa,Linn,Cedar Rapids,19-113-0036,357
-41.975804,-70.023598,Massachusetts,Barnstable,Truro,25-001-0002,2216
-41.97677,-91.68766,Iowa,Linn,Cedar Rapids,19-113-0040,6431
-41.987306,-92.65225,Iowa,Tama,Not in a city,19-171-0007,152
-41.995568,-83.946559,Michigan,Lenawee,Tecumseh,26-091-0007,1595
-42.00508,-91.6793,Iowa,Linn,Cedar Rapids,19-113-0037,3719
-42.013333,-111.809167,Idaho,Franklin,Franklin,16-041-0001,1396
-42.027807,-87.905344,Illinois,Cook,Des Plaines,17-031-4006,101
-42.041375,-93.614107,Iowa,Story,Ames,19-169-2530,337
-42.050403,-88.280015,Illinois,Kane,Elgin,17-089-0003,1224
-42.060285,-87.863225,Illinois,Cook,Des Plaines,17-031-4007,1758
-42.065106,-71.012129,Massachusetts,Plymouth,Brockton,25-023-0005,1100
-42.081936,-71.014739,Massachusetts,Plymouth,Brockton,25-023-0004,3198
-42.082222,-111.864167,Idaho,Franklin,Preston,16-041-0002,105
-42.09142,-77.20978,New York,Steuben,Not in a city,36-101-0003,7222
-42.10065,-72.5912,Massachusetts,Hampden,Springfield,25-013-2007,201
-42.104278,-123.681083,Oregon,Josephine,Cave Junction,41-033-0010,2399
-42.105792,-72.597133,Massachusetts,Hampden,Springfield,25-013-2009,1427
-42.108806,-75.879909,New York,Broome,Binghamton,36-007-0009,348
-42.108992,-72.590803,Massachusetts,Hampden,Springfield,25-013-0016,3395
-42.120229,-72.584503,Massachusetts,Hampden,Springfield,25-013-0018,171
-42.139996,-87.799227,Illinois,Cook,Northbrook,17-031-4201,4134
-42.14175,-80.038611,Pennsylvania,Erie,Erie,42-049-0003,3416
-42.145572,-115.0145,Idaho,Twin Falls,Not in a city,16-083-0006,209
-42.148699,-96.432113,Nebraska,Thurston,Not in a city,31-173-9000,530
-42.187289,-83.153905,Michigan,Wayne,Wyandotte,26-163-0036,1833
-42.189215,-120.353969,Oregon,Lake,Lakeview,41-037-0001,2469
-42.190296,-121.731369,Oregon,Klamath,Altamont,41-035-0004,3108
-42.19438,-72.555112,Massachusetts,Hampden,Chicopee,25-013-0008,6522
-42.19779,-86.309694,Michigan,Berrien,Coloma,26-021-0014,1886
-42.22016,-120.433294,Oregon,Lake,Lakeview,41-037-0003,179
-42.221442,-88.242207,Illinois,McHenry,Cary,17-111-0001,1657
-42.22862,-83.2082,Michigan,Wayne,Allen Park,26-163-0001,8543
-42.240565,-83.599602,Michigan,Washtenaw,Ypsilanti,26-161-0008,2187
-42.250039,-83.199926,Michigan,Wayne,Allen Park,26-163-9901,104
-42.260102,-71.798375,Massachusetts,Worcester,Worcester,25-027-0016,1831
-42.263081,-89.092767,Illinois,Winnebago,Rockford,17-201-0013,1017
-42.263955,-71.794322,Massachusetts,Worcester,Worcester,25-027-0023,1939
-42.267242,-89.08955,Illinois,Winnebago,Rockford,17-201-0010,429
-42.267315,-71.798405,Massachusetts,Worcester,Worcester,25-027-0020,1333
-42.274821,-71.031994,Massachusetts,Norfolk,Quincy,25-021-0007,451
-42.278067,-85.54189,Michigan,Kalamazoo,Kalamazoo,26-077-0008,2183
-42.290094,-123.2321,Oregon,Josephine,Not in a city,41-033-0011,14
-42.29071,-79.58961,New York,Chautauqua,Westfield,36-013-0011,1473
-42.293927,-83.711051,Michigan,Washtenaw,Ann Arbor,26-161-0005,656
-42.298493,-72.334079,Massachusetts,Hampshire,Ware (census name for Ware Center),25-015-4002,1886
-42.302786,-83.10653,Michigan,Wayne,Detroit,26-163-0015,2684
-42.306674,-83.148754,Michigan,Wayne,Dearborn,26-163-0033,3065
-42.31411,-122.87923,Oregon,Jackson,Medford,41-029-0133,3661
-42.323341,-83.068473,Michigan,Wayne,Detroit,26-163-0039,2716
-42.325186,-71.056061,Massachusetts,Suffolk,Boston,25-025-0044,706
-42.3295,-71.0826,Massachusetts,Suffolk,Boston,25-025-0042,6814
-42.33155,-122.880266,Oregon,Jackson,Medford,41-029-2129,1234
-42.335008,-83.109563,Michigan,Wayne,Detroit,26-163-0038,871
-42.348873,-71.097163,Massachusetts,Suffolk,Boston,25-025-0002,2317
-42.357808,-83.096033,Michigan,Wayne,Detroit,26-163-0016,3167
-42.3631,-71.0543,Massachusetts,Suffolk,Boston,25-025-0043,9216
-42.372122,-71.061741,Massachusetts,Suffolk,Boston,25-025-0027,2632
-42.4006,-76.6538,New York,Tompkins,Not in a city,36-109-9991,621
-42.413574,-71.482775,Massachusetts,Middlesex,Stow,25-017-1102,228
-42.421502,-83.425042,Michigan,Wayne,Livonia,26-163-0095,155
-42.423063,-83.426263,Michigan,Wayne,Livonia,26-163-0025,1843
-42.426705,-122.852272,Oregon,Jackson,Not in a city,41-029-4001,224
-42.43084,-83.000138,Michigan,Wayne,Detroit,26-163-0019,1887
-42.431944,-123.345833,Oregon,Josephine,Grants Pass,41-033-0107,301
-42.434139,-123.348466,Oregon,Josephine,Grants Pass,41-033-0114,742
-42.448009,-73.254108,Massachusetts,Berkshire,Pittsfield,25-003-5001,2131
-42.452299,-73.239648,Massachusetts,Berkshire,Pittsfield,25-003-0008,288
-42.463063,-83.183199,Michigan,Oakland,Oak Park,26-125-0001,1812
-42.467573,-87.810047,Illinois,Lake,Zion,17-097-1007,808
-42.474642,-70.970816,Massachusetts,Essex,Lynn,25-009-2006,2004
-42.490313,-83.279931,Michigan,Oakland,Southfield,26-125-0010,64
-42.493042,-92.344074,Iowa,Black Hawk,Waterloo,19-013-0008,1428
-42.49963,-79.31881,New York,Chautauqua,Dunkirk,36-013-0006,934
-42.499844,-96.394755,Iowa,Woodbury,Sioux City,19-193-0021,688
-42.501126,-89.033721,Wisconsin,Rock,Beloit,55-105-0002,168
-42.501543,-92.316017,Iowa,Black Hawk,Waterloo,19-013-0009,1533
-42.50472,-87.8093,Wisconsin,Kenosha,Pleasant Prairie,55-059-0019,1364
-42.504722,-87.8093,Wisconsin,Kenosha,Pleasant Prairie,55-059-0019,551
-42.50908,-89.06281,Wisconsin,Rock,Beloit,55-105-0024,173
-42.517968,-96.387903,Iowa,Woodbury,Sioux City,19-193-0017,1077
-42.522355,-96.40021,Iowa,Woodbury,Sioux City,19-193-0019,840
-42.535958,-122.876155,Oregon,Jackson,Central Point,41-029-1001,799
-42.564008,-114.447071,Idaho,Twin Falls,Twin Falls,16-083-0010,367
-42.595089,-71.788685,Massachusetts,Worcester,Fitchburg,25-027-2004,257
-42.600834,-91.538493,Iowa,Delaware,Not in a city,19-055-0001,909
-42.605816,-72.596689,Massachusetts,Franklin,Greenfield,25-011-2005,807
-42.624999,-97.250331,Nebraska,Cedar,Not in a city,31-027-0001,321
-42.62668,-71.362068,Massachusetts,Middlesex,Chelmsford (Chelmsford Center),25-017-0009,617
-42.64225,-73.75464,New York,Albany,Albany,36-001-0005,6776
-42.647591,-71.311449,Massachusetts,Middlesex,Lowell,25-017-0008,209
-42.661298,-111.591443,Idaho,Caribou,Soda Springs,16-029-0003,85
-42.68075,-73.75733,New York,Albany,Albany,36-001-0012,1848
-42.69302,-90.69813,Wisconsin,Grant,Potosi,55-043-0009,1336
-42.6938,-90.6979,Wisconsin,Grant,Potosi,55-043-0009,377
-42.695391,-93.655976,Iowa,Wright,Clarion,19-197-0004,768
-42.698215,-71.164413,Massachusetts,Essex,Lawrence,25-009-6001,1966
-42.702034,-71.444509,New Hampshire,Hillsborough,Nashua,33-011-1010,336
-42.731394,-82.793463,Michigan,Macomb,New Haven,26-099-0009,1884
-42.738618,-84.534633,Michigan,Ingham,Lansing,26-065-0012,1894
-42.743036,-92.513241,Iowa,Bremer,Waverly,19-017-0011,215
-42.758145,-71.465621,New Hampshire,Hillsborough,Nashua,33-011-1007,203
-42.762056,-71.444583,New Hampshire,Hillsborough,Nashua,33-011-1015,957
-42.767786,-86.148577,Michigan,Allegan,Holland,26-005-0003,3552
-42.770837,-71.10229,Massachusetts,Essex,Haverhill,25-009-5005,2125
-42.796378,-112.25892,Idaho,Bannock,Not in a city,16-005-0018,139
-42.79901,-73.9389,New York,Schenectady,Schenectady,36-093-0003,377
-42.8273,-78.84984,New York,Erie,Lackawanna,36-029-1007,1256
-42.832736,-108.739562,Wyoming,Fremont,Lander,56-013-1004,219
-42.842168,-108.736281,Wyoming,Fremont,Lander,56-013-1003,2021
-42.846483,-109.639733,Wyoming,Sublette,Not in a city,56-035-9001,1314
-42.850975,-96.747325,South Dakota,Union,Not in a city,46-127-0002,349
-42.851064,-106.325088,Wyoming,Natrona,Casper,56-025-0001,1264
-42.86183,-71.878626,New Hampshire,Hillsborough,Peterborough (Peterboro),33-011-5001,1833
-42.862531,-71.38014,New Hampshire,Rockingham,Londonderry,33-015-0018,1454
-42.870531,-109.860957,Wyoming,Sublette,Pinedale,56-035-0705,674
-42.876725,-112.460347,Idaho,Bannock,Pocatello,16-005-0015,1188
-42.876907,-78.809526,New York,Erie,Buffalo,36-029-0005,5268
-42.88759,-73.24984,Vermont,Bennington,Bennington,50-003-0004,1039
-42.894451,-85.852734,Michigan,Ottawa,Jenison,26-139-0005,2140
-42.909851,-122.140861,Oregon,Klamath,Not in a city,41-035-8001,2381
-42.921107,-78.765825,New York,Erie,Cheektowaga,36-029-0023,795
-42.925556,-112.478889,Idaho,Bannock,Chubbuck,16-005-0006,352
-42.930521,-72.272332,New Hampshire,Cheshire,Keene,33-005-0007,962
-42.930708,-87.931983,Wisconsin,Milwaukee,Milwaukee,55-079-0058,372
-42.953336,-82.456229,Michigan,St. Clair,Port Huron,26-147-0005,2249
-42.955016,-87.934251,Wisconsin,Milwaukee,Milwaukee,55-079-0059,980
-42.9561,-72.9098,Vermont,Windham,Not in a city,50-025-9000,1022
-42.956117,-85.679117,Michigan,Kent,Grand Rapids,26-081-0007,1094
-42.958335,-101.625425,Nebraska,Cherry,Not in a city,31-031-0001,318
-42.974831,-109.758655,Wyoming,Sublette,Not in a city,56-035-9000,2390
-42.984173,-85.671339,Michigan,Kent,Grand Rapids,26-081-0020,5396
-42.99328,-78.77153,New York,Erie,Amherst,36-029-0002,1500
-42.995778,-71.462528,New Hampshire,Hillsborough,Manchester,33-011-0020,1061
-43.00064,-71.467568,New Hampshire,Hillsborough,Manchester,33-011-0019,168
-43.007222,-88.229722,Wisconsin,Waukesha,Waukesha,55-133-0034,319
-43.016667,-87.933333,Wisconsin,Milwaukee,Milwaukee,55-079-0010,886
-43.01724,-87.93369,Wisconsin,Milwaukee,Milwaukee,55-079-0010,1697
-43.020075,-88.21507,Wisconsin,Waukesha,Waukesha,55-133-0027,2835
-43.02014,-76.16075,New York,Onondaga,Syracuse,36-067-0020,291
-43.02641,-87.91111,Wisconsin,Milwaukee,Milwaukee,55-079-0043,1035
-43.034444,-88.043167,Wisconsin,Milwaukee,Milwaukee,55-079-0051,316
-43.039871,-87.920794,Wisconsin,Milwaukee,Milwaukee,55-079-0099,1457
-43.047224,-83.670159,Michigan,Genesee,Flint,26-049-0021,1907
-43.04823,-76.16479,New York,Onondaga,Syracuse,36-067-0019,333
-43.05235,-76.05921,New York,Onondaga,East Syracuse,36-067-1015,2536
-43.060975,-87.913504,Wisconsin,Milwaukee,Milwaukee,55-079-0026,4588
-43.0733,-89.4358,Wisconsin,Dane,Madison,55-025-0047,3546
-43.075371,-70.748017,New Hampshire,Rockingham,Portsmouth,33-015-0014,2087
-43.077589,-70.753665,New Hampshire,Rockingham,Portsmouth,33-015-0006,161
-43.078144,-70.762276,New Hampshire,Rockingham,Portsmouth,33-015-0009,93
-43.08194,-89.376786,Wisconsin,Dane,Madison,55-025-0025,335
-43.08218,-79.00106,New York,Niagara,Niagara Falls,36-063-2008,2877
-43.092996,-89.340168,Wisconsin,Dane,Madison,55-025-0048,127
-43.097778,-88.007778,Wisconsin,Milwaukee,Milwaukee,55-079-0050,319
-43.09892,-75.22506,New York,Oneida,Utica,36-065-2001,387
-43.10101,-89.35768,Wisconsin,Dane,Madison,55-025-0041,299
-43.123704,-94.693518,Iowa,Palo Alto,Emmetsburg,19-147-1002,1942
-43.13246,-71.458246,New Hampshire,Merrimack,Suncook,33-013-1006,1836
-43.145013,-77.55728,New York,Monroe,Rochester,36-055-0015,725
-43.14618,-77.54817,New York,Monroe,Rochester,36-055-1007,4684
-43.148176,-73.126323,Vermont,Bennington,Not in a city,50-003-8001,1366
-43.158442,-77.564302,New York,Monroe,Rochester,36-055-2002,321
-43.158561,-93.203005,Iowa,Cerro Gordo,Mason City,19-033-0020,47
-43.161062,-77.603293,New York,Monroe,Rochester,36-055-6001,1150
-43.161628,-93.208537,Iowa,Cerro Gordo,Mason City,19-033-0019,545
-43.183884,-88.994276,Wisconsin,Jefferson,Waterloo,55-055-0008,345
-43.205914,-71.537572,New Hampshire,Merrimack,Concord,33-013-0003,438
-43.2266,-123.36479,Oregon,Douglas,Roseburg,41-019-0002,51
-43.233061,-86.23858,Michigan,Muskegon,Muskegon,26-121-0040,2077
-43.326464,-72.077585,New Hampshire,Merrimack,Not in a city,33-013-5001,117
-43.343,-87.92,Wisconsin,Ozaukee,Not in a city,55-089-0008,318
-43.364518,-72.337867,New Hampshire,Sullivan,Claremont,33-019-0003,516
-43.397459,-94.817485,Iowa,Emmet,Estherville,19-063-0003,574
-43.426621,-105.386453,Wyoming,Converse,Not in a city,56-009-0819,747
-43.434996,-88.527879,Wisconsin,Dodge,Not in a city,55-027-0007,2838
-43.4351,-89.67979,Wisconsin,Sauk,Not in a city,55-111-0007,1688
-43.4351,-89.6797,Wisconsin,Sauk,Not in a city,55-111-0007,80
-43.45776,-110.79799,Wyoming,Teton,Jackson,56-039-1006,1428
-43.460556,-113.562222,Idaho,Butte,Not in a city,16-023-0101,2344
-43.4647,-112.04645,Idaho,Bonneville,Idaho Falls,16-019-0011,298
-43.46611,-88.62111,Wisconsin,Dodge,Kekoskee,55-027-0001,1997
-43.480762,-110.76604,Wyoming,Teton,Jackson,56-039-0006,509
-43.483325,-88.533431,Wisconsin,Dodge,Not in a city,55-027-9901,29
-43.494806,-70.442273,Maine,York,Saco,23-031-0008,225
-43.4981,-87.81,Wisconsin,Ozaukee,Not in a city,55-089-0009,64
-43.4983,-87.8102,Wisconsin,Ozaukee,Not in a city,55-089-0009,1090
-43.499358,-112.014971,Idaho,Bonneville,Idaho Falls,16-019-0010,280
-43.508358,-83.968032,Michigan,Saginaw,Saginaw,26-145-0018,664
-43.518267,-112.020708,Idaho,Bonneville,Idaho Falls,16-019-0013,88
-43.537626,-96.682001,South Dakota,Minnehaha,Sioux Falls,46-099-0007,878
-43.544289,-96.726435,South Dakota,Minnehaha,Sioux Falls,46-099-0006,2191
-43.54792,-96.700769,South Dakota,Minnehaha,Sioux Falls,46-099-0008,2020
-43.55764,-103.48386,South Dakota,Custer,Not in a city,46-033-0132,2418
-43.561043,-70.207324,Maine,Cumberland,Not in a city,23-005-2003,167
-43.562401,-116.563232,Idaho,Canyon,Nampa,16-027-0004,2002
-43.5625,-116.563611,Idaho,Canyon,Caldwell,16-027-0005,421
-43.566122,-71.496335,New Hampshire,Belknap,Laconia,33-001-2004,1385
-43.571391,-83.890721,Michigan,Bay,Bay City,26-017-0014,1781
-43.572855,-71.418406,New Hampshire,Belknap,Laconia,33-001-2003,17
-43.577603,-116.178156,Idaho,Ada,Boise (corporate name Boise City),16-001-0017,294
-43.58031,-116.562676,Idaho,Canyon,Nampa,16-027-0002,370
-43.586261,-119.052159,Oregon,Harney,Burns,41-025-0002,434
-43.58925,-119.04872,Oregon,Harney,Burns,41-025-0003,1096
-43.59901,-96.78331,South Dakota,Minnehaha,Sioux Falls,46-099-0009,18
-43.600699,-116.347853,Idaho,Ada,Not in a city,16-001-0010,2566
-43.608056,-72.982778,Vermont,Rutland,Rutland,50-021-0002,1211
-43.629605,-72.309499,New Hampshire,Grafton,Lebanon,33-009-0010,418
-43.636111,-116.270278,Idaho,Ada,Boise (corporate name Boise City),16-001-0011,1230
-43.643055,-116.265718,Idaho,Ada,Garden City,16-001-0021,109
-43.6483,-105.2133,Wyoming,Campbell,Not in a city,56-005-0891,277
-43.650235,-93.366599,Minnesota,Freeborn,Albert Lea,27-047-5401,66
-43.660246,-70.268965,Maine,Cumberland,Portland,23-005-0029,1510
-43.662372,-70.264929,Maine,Cumberland,Portland,23-005-0027,1189
-43.676748,-70.368662,Maine,Cumberland,Westbrook,23-005-0028,165
-43.676916,-105.23637,Wyoming,Campbell,Not in a city,56-005-0877,626
-43.677994,-70.256178,Maine,Cumberland,Portland,23-005-0015,2904
-43.71579,-96.191613,Minnesota,Rock,Not in a city,27-133-9000,2897
-43.744352,-122.480487,Oregon,Lane,Oakridge,41-039-2013,3619
-43.744451,-87.776424,Wisconsin,Sheboygan,Kohler,55-117-0008,54
-43.74561,-101.941218,South Dakota,Jackson,Not in a city,46-071-0001,2516
-43.7775,-91.2269,Wisconsin,La Crosse,La Crosse,55-063-0012,1023
-43.787147,-116.959578,Idaho,Canyon,Parma,16-027-0008,56
-43.799501,-123.053487,Oregon,Lane,Cottage Grove,41-039-9004,1083
-43.82291,-115.8395,Idaho,Boise,Not in a city,16-015-0001,54
-43.832458,-70.063815,Maine,Cumberland,Not in a city,23-005-9002,2298
-43.8345,-123.0353,Oregon,Lane,Not in a city,41-039-1007,556
-43.856442,-116.515456,Idaho,Gem,Emmett,16-045-0001,69
-43.867746,-73.355735,Vermont,Addison,Not in a city,50-001-0003,38
-43.926574,-73.384203,Vermont,Addison,Not in a city,50-001-0002,40
-43.937299,-91.405348,Minnesota,Winona,Not in a city,27-169-9000,2240
-43.996908,-92.450366,Minnesota,Olmsted,Rochester,27-109-5008,2820
-44.026312,-123.083737,Oregon,Lane,Eugene,41-039-0060,4158
-44.046696,-123.017704,Oregon,Lane,Springfield,41-039-1009,778
-44.053737,-122.938971,Oregon,Lane,Springfield,41-039-1061,1181
-44.062339,-121.32281,Oregon,Deschutes,Bend,41-017-0113,398
-44.063916,-121.312554,Oregon,Deschutes,Bend,41-017-0120,977
-44.064932,-103.209138,South Dakota,Pennington,Rapid City,46-103-0016,764
-44.065552,-103.270045,South Dakota,Pennington,Rapid City,46-103-0017,296
-44.066304,-123.139831,Oregon,Lane,Eugene,41-039-0058,412
-44.067224,-123.141352,Oregon,Lane,Eugene,41-039-0059,785
-44.075262,-88.529835,Wisconsin,Winnebago,Oshkosh,55-139-0011,333
-44.078352,-103.22824,South Dakota,Pennington,Rapid City,46-103-1001,1799
-44.083489,-103.269603,South Dakota,Pennington,Rapid City,46-103-0013,219
-44.083954,-72.009533,New Hampshire,Grafton,Haverhill,33-009-0008,149
-44.087397,-103.273777,South Dakota,Pennington,Rapid City,46-103-0020,829
-44.087405,-103.274271,South Dakota,Pennington,Rapid City,46-103-0019,344
-44.089406,-70.214219,Maine,Androscoggin,Lewiston,23-001-0011,3009
-44.096389,-69.147169,Maine,Knox,Not in a city,23-013-2001,161
-44.097074,-105.343164,Wyoming,Campbell,Not in a city,56-005-0892,798
-44.104498,-115.972386,Idaho,Boise,Not in a city,16-015-0002,52
-44.107524,-70.729165,Maine,Cumberland,Not in a city,23-005-0002,1757
-44.136098,-103.297684,South Dakota,Pennington,Not in a city,46-103-0015,55
-44.138619,-87.6161,Wisconsin,Manitowoc,Not in a city,55-071-0007,545
-44.13862,-87.61612,Wisconsin,Manitowoc,Not in a city,55-071-0007,843
-44.155636,-103.315765,South Dakota,Meade,Not in a city,46-093-0001,452
-44.170385,-114.928034,Idaho,Custer,Not in a city,16-037-0002,2287
-44.183761,-94.039819,Minnesota,Nicollet,North Mankato,27-103-5109,50
-44.19982,-122.044547,Oregon,Lane,Not in a city,41-039-0070,2455
-44.299787,-120.844773,Oregon,Crook,Prineville,41-013-0100,864
-44.307,-86.242649,Michigan,Manistee,Manistee,26-101-0922,1131
-44.30738,-88.395178,Wisconsin,Outagamie,Appleton,55-087-0009,434
-44.30738,-88.39509,Wisconsin,Outagamie,Appleton,55-087-0009,2256
-44.308132,-71.217639,New Hampshire,Coos,Not in a city,33-007-4002,2271
-44.310283,-96.80071,South Dakota,Brookings,Brookings,46-011-0002,1621
-44.310555,-84.891865,Michigan,Missaukee,Not in a city,26-113-0001,2312
-44.312319,-69.786717,Maine,Kennebec,Augusta,23-011-0016,3087
-44.33344,-106.957181,Wyoming,Johnson,Not in a city,56-019-9000,1505
-44.35288,-89.05083,Wisconsin,Waupaca,Waupaca,55-135-0004,98
-44.37705,-68.2609,Maine,Hancock,Not in a city,23-009-0103,8907
-44.382465,-89.819291,Wisconsin,Wood,Wisconsin Rapids,55-141-0016,335
-44.39308,-73.8589,New York,Essex,Not in a city,36-031-0003,4403
-44.3958,-122.7305,Oregon,Linn,Sweet Home,41-043-2002,159
-44.415549,-87.994269,Wisconsin,Brown,De Pere,55-009-0025,49
-44.415556,-87.988333,Wisconsin,Brown,De Pere,55-009-0028,221
-44.4438,-95.81789,Minnesota,Lyon,Marshall,27-083-4210,154
-44.465968,-105.551745,Wyoming,Campbell,Not in a city,56-005-0899,581
-44.471169,-71.166188,New Hampshire,Coos,Berlin,33-007-0014,927
-44.4762,-73.2106,Vermont,Chittenden,Burlington,50-007-0014,239
-44.480278,-73.214444,Vermont,Chittenden,Burlington,50-007-0012,4258
-44.502675,-105.539763,Wyoming,Campbell,Not in a city,56-005-1899,141
-44.50729,-87.99344,Wisconsin,Brown,Green Bay,55-009-0005,4707
-44.523604,-88.001215,Wisconsin,Brown,Green Bay,55-009-0009,159
-44.524568,-109.06926,Wyoming,Park,Cody,56-029-0001,1464
-44.52839,-72.86884,Vermont,Chittenden,Underhill (Town of),50-007-0007,4355
-44.53098,-87.90799,Wisconsin,Brown,Green Bay,55-009-0026,336
-44.550136,-69.629881,Maine,Kennebec,Waterville,23-011-2002,242
-44.551419,-70.546319,Maine,Oxford,Rumford (census name for Rumford Compact),23-017-2011,1280
-44.565217,-110.400996,Wyoming,Teton,Not in a city,56-039-9000,2348
-44.568397,-69.62075,Maine,Kennebec,Waterville,23-011-2006,139
-44.5884,-123.2673,Oregon,Benton,Corvallis,41-003-0013,352
-44.61569,-123.091457,Oregon,Linn,Albany,41-043-0009,611
-44.6522,-105.2903,Wyoming,Campbell,Not in a city,56-005-0123,1825
-44.657705,-111.091608,Montana,Gallatin,Not in a city,30-031-0013,394
-44.661393,-111.105891,Montana,Gallatin,West Yellowstone,30-031-0016,86
-44.669338,-70.154046,Maine,Franklin,Farmington (census name for Farmington Center),23-007-2003,47
-44.67811,-74.95151,New York,St. Lawrence,Potsdam,36-089-3001,866
-44.706123,-93.285803,Minnesota,Dakota,Lakeville,27-037-0480,250
-44.73846,-93.23725,Minnesota,Dakota,Apple Valley,27-037-0470,2311
-44.744723,-109.382366,Wyoming,Park,Not in a city,56-029-9002,2112
-44.749967,-92.887985,Minnesota,Dakota,Hastings,27-037-6018,444
-44.75389,-85.592019,Michigan,Grand Traverse,Traverse City,26-055-0003,275
-44.76249,-91.41445,Wisconsin,Eau Claire,Eau Claire,55-035-0014,230
-44.78275,-106.96432,Wyoming,Sheridan,Sheridan,56-033-1003,978
-44.791437,-93.512534,Minnesota,Scott,Shakopee,27-139-0505,2280
-44.797161,-106.949853,Wyoming,Sheridan,Sheridan,56-033-0001,593
-44.79886,-68.769675,Maine,Penobscot,Bangor,23-019-0002,2416
-44.805494,-106.976243,Wyoming,Sheridan,Sheridan,56-033-0003,697
-44.812,-91.496,Wisconsin,Eau Claire,Not in a city,55-035-0100,104
-44.815142,-106.955933,Wyoming,Sheridan,Sheridan,56-033-0002,2995
-44.817398,-68.772762,Maine,Penobscot,Bangor,23-019-0017,226
-44.87551,-93.25892,Minnesota,Hennepin,Richfield,27-053-0961,1121
-44.888551,-93.195377,Minnesota,Hennepin,Not in a city,27-053-0964,125
-44.890795,-94.367482999999993,Minnesota,McLeod,Hutchinson,27-085-4301,55
-44.893005,-93.233227,Minnesota,Hennepin,Minneapolis,27-053-0968,150
-44.899213,-116.094873,Idaho,Valley,Not in a city,16-085-0001,53
-44.89926,-93.017080000000007,Minnesota,Ramsey,St. Paul,27-123-0866,1624
-44.89965,-97.128802,South Dakota,Codington,Watertown,46-029-0002,1036
-44.92239,-68.631638,Maine,Penobscot,Not in a city,23-019-0016,382
-44.931073,-93.156253,Minnesota,Ramsey,St. Paul,27-123-0872,427
-44.93345,-68.645594,Maine,Penobscot,Old Town,23-019-4003,639
-44.943231,-123.006,Oregon,Marion,Salem,41-047-0040,407
-44.94798,-68.64788,Maine,Penobscot,Not in a city,23-019-9000,1644
-44.94805,-93.34315,Minnesota,Hennepin,St. Louis Park,27-053-2006,2472
-44.95072,-93.09827,Minnesota,Ramsey,St. Paul,27-123-0868,2938
-44.95366,-93.25821,Minnesota,Hennepin,Minneapolis,27-053-0963,5265
-44.95939,-93.03587,Minnesota,Ramsey,St. Paul,27-123-0871,4080
-44.959409,-93.256892,Minnesota,Hennepin,Minneapolis,27-053-0960,199
-44.965242,-93.254759,Minnesota,Hennepin,Minneapolis,27-053-0962,164
-44.991634,-92.822429,Minnesota,Washington,Stillwater,27-163-0301,37
-45.001229,-93.267117,Minnesota,Hennepin,Minneapolis,27-053-0050,273
-45.004478,-93.240046,Minnesota,Hennepin,Minneapolis,27-053-0965,272
-45.008297,-93.277041,Minnesota,Hennepin,Minneapolis,27-053-0910,161
-45.012102,-93.276699,Minnesota,Hennepin,Minneapolis,27-053-0909,164
-45.013611,-93.272049,Minnesota,Hennepin,Minneapolis,27-053-1909,164
-45.01876,-92.78027,Minnesota,Washington,Bayport,27-163-0445,86
-45.02124,-92.77525,Minnesota,Washington,Bayport,27-163-0448,195
-45.02798,-92.77415,Minnesota,Washington,Bayport,27-163-0446,154
-45.03972,-93.29874,Minnesota,Hennepin,Minneapolis,27-053-1007,1089
-45.073069,-83.435531,Michigan,Alpena,Alpena,26-007-0005,302
-45.079864,-116.844808,Oregon,Wallowa,Not in a city,41-063-0002,2287
-45.112271,-95.040357,Minnesota,Kandiyohi,Willmar,27-067-4110,42
-45.124437,-92.662696,Wisconsin,St. Croix,Not in a city,55-109-1002,922
-45.125837,-67.265408,Maine,Washington,Calais,23-029-1004,2401
-45.13768,-93.207615,Minnesota,Anoka,Blaine,27-003-1002,6472
-45.158688,-114.026921,Idaho,Lemhi,Not in a city,16-059-0007,56
-45.181897,-113.890285,Idaho,Lemhi,Not in a city,16-059-0004,593
-45.2066,-90.5972,Wisconsin,Taylor,Not in a city,55-119-8001,2324
-45.20916,-93.66921,Minnesota,Wright,St. Michael,27-171-3201,201
-45.224748,-118.513962,Oregon,Union,Not in a city,41-061-0010,2452
-45.2384,-86.994,Wisconsin,Door,Not in a city,55-029-0004,338
-45.261667,-118.041111,Oregon,Union,La Grande,41-061-9103,157
-45.266079,-122.832817,Oregon,Marion,Not in a city,41-047-0110,392
-45.28845,-121.782775,Oregon,Clackamas,Not in a city,41-005-0102,2411
-45.319216,-118.098668,Oregon,Union,La Grande,41-061-0117,1109
-45.339,-118.095206,Oregon,Union,La Grande,41-061-0119,727
-45.393497000000004,-122.747894,Oregon,Washington,Tualatin,41-067-0005,227
-45.4625,-98.486111,South Dakota,Brown,Aberdeen,46-013-0003,1640
-45.464876,-69.591648,Maine,Piscataquis,Greenville (Greenville Center),23-021-0004,814
-45.470191,-122.816411,Oregon,Washington,Beaverton,41-067-0111,507
-45.496641,-122.602877,Oregon,Multnomah,Portland,41-051-0080,4632
-45.518294,-122.967048,Oregon,Washington,Hillsboro,41-067-1003,529
-45.528501,-122.972398,Oregon,Washington,Hillsboro,41-067-0004,1146
-45.535,-122.698889,Oregon,Multnomah,Portland,41-051-0244,1064
-45.549839,-94.13345,Minnesota,Stearns,St. Cloud,27-145-3052,1208
-45.56137,-122.6679,Oregon,Multnomah,Portland,41-051-0246,2418
-45.56498,-88.80859,Wisconsin,Forest,Not in a city,55-041-0007,1360
-45.586785,-122.40287,Washington,Clark,Camas,53-011-0020,68
-45.602419,-121.203387,Oregon,Wasco,City of The Dalles,41-065-0007,311
-45.623325,-106.668643,Montana,Rosebud,Not in a city,30-087-0307,849
-45.648328,-106.557247,Montana,Rosebud,Not in a city,30-087-0762,2140
-45.648333,-122.586944,Washington,Clark,Vancouver,53-011-0013,2502
-45.64987,-122.5901,Washington,Clark,Vancouver,53-011-0023,67
-45.652231,-118.823033,Oregon,Umatilla,Pendleton,41-059-0121,1499
-45.666204,-121.000708,Washington,Klickitat,Not in a city,53-039-0003,2468
-45.694425,-121.883215,Washington,Skamania,Not in a city,53-059-0002,62
-45.726223,-111.068135,Montana,Gallatin,Not in a city,30-031-0006,345
-45.749818,-121.401159,Washington,Klickitat,Not in a city,53-039-0010,1239
-45.768531,-122.7721,Oregon,Columbia,Not in a city,41-009-0004,493
-45.772707,-111.178286,Montana,Gallatin,Not in a city,30-031-0008,1181
-45.79367,-111.16489,Montana,Gallatin,Not in a city,30-031-0018,261
-45.801897,-108.4268,Montana,Yellowstone,Billings,30-111-1065,1133
-45.828968,-119.262991,Oregon,Umatilla,Hermiston,41-059-1003,116
-45.839111,-119.283,Oregon,Umatilla,Hermiston,41-059-1002,125
-45.859686,-114.001032,Montana,Ravalli,Not in a city,30-081-9000,2289
-45.8639,-122.410889,Washington,Clark,Yacolt,53-011-0022,60
-45.931274,-116.116255,Idaho,Idaho,Grangeville,16-049-0002,48
-45.968217,-95.605594,Minnesota,Douglas,Not in a city,27-041-2110,48
-46.002602,-112.501247,Montana,Silver Bow,Butte-Silver Bow (Remainder),30-093-0005,2358
-46.0519,-89.654,Wisconsin,Vilas,Not in a city,55-125-0001,861
-46.05881,-118.35147,Washington,Walla Walla,Walla Walla,53-071-0005,62
-46.139391,-87.907356,Michigan,Dickinson,Not in a city,26-043-0002,91
-46.139444,-122.961944,Washington,Cowlitz,Longview,53-015-0015,69
-46.15983,-88.119762,Michigan,Iron,Crystal Falls,26-071-0001,43
-46.164666,-94.359379,Minnesota,Crow Wing,Not in a city,27-035-3202,41
-46.2053,-93.75945,Minnesota,Mille Lacs,Onamia,27-095-3051,1388
-46.21835,-119.204153,Washington,Benton,Kennewick,53-005-0002,480
-46.243621,-114.158889,Montana,Ravalli,Hamilton,30-081-0007,425
-46.244328,-114.158166,Montana,Ravalli,Hamilton,30-081-0001,571
-46.288877,-85.950227,Michigan,Schoolcraft,Not in a city,26-153-0001,3728
-46.31932,-119.999677,Washington,Yakima,Sunnyside,53-077-0005,41
-46.37543,-120.72932,Washington,Yakima,White Swan,53-077-0016,27
-46.38024,-120.33266,Washington,Yakima,Toppenish,53-077-0015,85
-46.39674,-94.1303,Minnesota,Crow Wing,Brainerd,27-035-3204,156
-46.401631,-122.955557,Washington,Lewis,Chehalis,53-041-0008,59
-46.408352,-116.992533,Idaho,Nez Perce,Lewiston,16-069-0012,54
-46.417778,-117.018611,Idaho,Nez Perce,Lewiston,16-069-0009,496
-46.425416,-117.060445,Washington,Asotin,Clarkston,53-003-0004,124
-46.454021,-84.606753,Michigan,Chippewa,Not in a city,26-033-0903,80
-46.481689,-84.331705,Michigan,Chippewa,Sault Ste. Marie,26-033-0902,694
-46.493633,-84.364207,Michigan,Chippewa,Sault Ste. Marie,26-033-0901,1612
-46.586904,-95.584209,Minnesota,Otter Tail,Not in a city,27-111-2012,34
-46.598056,-120.499167,Washington,Yakima,Yakima,53-077-0009,2932
-46.602248,-90.656141,Wisconsin,Ashland,Not in a city,55-003-0010,81
-46.60234,-90.65615,Wisconsin,Ashland,Not in a city,55-003-0010,1289
-46.603824,-112.036109,Montana,Lewis and Clark,Helena,30-049-0018,1034
-46.624184,-121.388064,Washington,Lewis,Not in a city,53-041-0007,2324
-46.658762,-112.013089,Montana,Lewis and Clark,Helena Valley West Central,30-049-0026,747
-46.682299,-68.016195,Maine,Aroostook,Presque Isle,23-003-1011,516
-46.69634,-68.032614,Maine,Aroostook,Presque Isle,23-003-1020,2336
-46.698422,-68.038403,Maine,Aroostook,Presque Isle,23-003-1008,416
-46.713694,-92.511722,Minnesota,Carlton,Cloquet,27-017-7417,158
-46.717881,-122.969575,Washington,Lewis,Centralia,53-041-0006,68
-46.72182,-116.960177,Idaho,Latah,Moscow,16-057-0005,56
-46.72447,-117.18014,Washington,Whitman,Pullman,53-075-0003,145
-46.730218,-92.079912,Wisconsin,Douglas,Superior,55-031-0025,342
-46.743657,-92.165998,Minnesota,Saint Louis,Duluth,27-137-7554,1026
-46.75838,-122.12429,Washington,Pierce,Not in a city,53-053-1010,2410
-46.76643,-92.13354,Minnesota,Saint Louis,Duluth,27-137-7551,1352
-46.81826,-92.08936,Minnesota,Saint Louis,Duluth,27-137-7550,3004
-46.825425,-100.76821,North Dakota,Burleigh,Bismarck,38-015-0003,4865
-46.826103,-111.711573,Montana,Lewis and Clark,Not in a city,30-049-9000,3209
-46.842181,-114.021499,Montana,Missoula,Missoula,30-063-0024,385
-46.8505,-111.987164,Montana,Lewis and Clark,Not in a city,30-049-0004,2410
-46.851811,-95.846272,Minnesota,Becker,Detroit Lakes,27-005-2013,146
-46.874836,-113.996196,Montana,Missoula,Missoula,30-063-0031,2603
-46.878221,-117.365183,Washington,Whitman,Colfax,53-075-0004,63
-46.88,-102.788333,North Dakota,Stark,Dickinson,38-089-0002,88
-46.881214,-113.885678,Montana,Missoula,Not in a city,30-063-0012,229
-46.8943,-103.37853,North Dakota,Billings,Not in a city,38-007-0002,2442
-46.933754,-96.85535,North Dakota,Cass,Not in a city,38-017-1004,3836
-46.954415,-112.697617,Montana,Lewis and Clark,Not in a city,30-049-0019,221
-46.954617,-112.682575,Montana,Lewis and Clark,Lincoln,30-049-0025,90
-46.97228,-123.83173,Washington,Grays Harbor,Aberdeen,53-027-2002,98
-46.99364,-120.545,Washington,Kittitas,Ellensburg,53-037-0002,82
-47.029396,-122.821548,Washington,Thurston,Lacey,53-067-0013,474
-47.12,-118.3819,Washington,Adams,Ritzville,53-001-0003,97
-47.122091,-113.155326,Montana,Powell,Not in a city,30-077-9000,2310
-47.1303,-119.2737,Washington,Grant,Moses Lake,53-025-1002,71
-47.14,-122.3003,Washington,Pierce,South Hill,53-053-1018,352
-47.1411,-121.9379,Washington,King,Enumclaw,53-033-0023,92
-47.153855,-67.930167,Maine,Aroostook,Van Buren (census name for Van Buren Center),23-003-1019,270
-47.159942,-94.150987,Minnesota,Cass,Not in a city,27-021-0001,896
-47.177035,-113.483612,Montana,Missoula,Seeley Lake,30-063-0021,473
-47.1864,-122.4517,Washington,Pierce,Tacoma,53-053-0029,6619
-47.227649,-123.115827,Washington,Mason,Shelton,53-045-0004,80
-47.236699,-93.526411,Minnesota,Itasca,Grand Rapids,27-061-1105,46
-47.2656,-122.3858,Washington,Pierce,Tacoma,53-053-0031,1427
-47.296309,-91.264331,Minnesota,Lake,Silver Bay,27-075-7608,20
-47.298611,-101.766944,North Dakota,Mercer,Not in a city,38-057-0004,1175
-47.316577,-116.571281,Idaho,Benewah,Not in a city,16-009-0010,953
-47.3223,-122.22604,Washington,King,Auburn,53-033-0029,92
-47.355332,-68.322685,Maine,Aroostook,Madawaska (census name for Madawaska Center),23-003-0013,314
-47.355332,-68.321106,Maine,Aroostook,Madawaska (census name for Madawaska Center),23-003-0014,1180
-47.383433,-122.233454,Washington,King,Kent,53-033-0033,122
-47.38443,-94.60166,Minnesota,Cass,Cass Lake,27-021-3410,155
-47.386111,-122.230278,Washington,King,Kent,53-033-2004,373
-47.399815,-121.427096,Washington,Kittitas,Snoqualmie Pass,53-037-0004,2389
-47.412222,-120.318333,Washington,Chelan,Wenatchee,53-007-0006,60
-47.41645,-117.52997,Washington,Spokane,Cheney,53-063-0001,10
-47.459599,-88.149138,Michigan,Keweenaw,Not in a city,26-083-9001,591
-47.49022,-121.77278,Washington,King,North Bend (Northbend),53-033-0017,459
-47.50218,-111.279698,Montana,Cascade,Great Falls,30-013-1026,1140
-47.523355,-92.536305,Minnesota,Saint Louis,Virginia,27-137-7001,1310
-47.523432,-122.324014,Washington,King,Seattle,53-033-0021,1043
-47.526878,-114.101502,Montana,Lake,Not in a city,30-047-0013,661
-47.536389,-116.236667,Idaho,Shoshone,Pinehurst (Pine Creek),16-079-0017,2454
-47.545377,-122.323458,Washington,King,Seattle,53-033-0032,272
-47.55975,-122.338265,Washington,King,Seattle,53-033-0057,2620
-47.568236,-122.308628,Washington,King,Seattle,53-033-0080,8976
-47.5812,-103.2995,North Dakota,McKenzie,Not in a city,38-053-0002,570
-47.582225,-108.720383,Montana,Fergus,Not in a city,30-027-9000,2389
-47.594395,-115.323746,Montana,Sanders,Thompson Falls,30-089-0007,1279
-47.597222,-122.319722,Washington,King,Seattle,53-033-0030,360
-47.598863,-120.664702,Washington,Chelan,Leavenworth,53-007-0010,21
-47.599703,-97.899009,North Dakota,Steele,Sharon,38-091-0001,114
-47.61311,-122.20161,Washington,King,Bellevue,53-033-0037,318
-47.6153,-122.33,Washington,King,Seattle,53-033-0048,239
-47.660743,-117.358121,Washington,Spokane,Spokane,53-063-0016,2076
-47.672482,-117.364852,Washington,Spokane,Spokane,53-063-0021,640
-47.682315,-116.76553,Idaho,Kootenai,Coeur d'Alene,16-055-0006,520
-47.688683,-122.314584,Washington,King,Seattle,53-033-0038,80
-47.692161,-114.163172,Montana,Lake,Polson,30-047-0028,900
-47.69978,-117.42635,Washington,Spokane,Spokane,53-063-0047,511
-47.715456,-117.042701,Washington,Spokane,Not in a city,53-063-9000,237
-47.721597,-116.92615,Idaho,Kootenai,Post Falls,16-055-0014,60
-47.755,-122.2806,Washington,King,Lake Forest Park,53-033-0024,1189
-47.773283,-114.269975,Montana,Lake,Not in a city,30-047-9000,2129
-47.794821,-122.130681,Washington,King,Redmond,53-033-0027,349
-47.799851,-117.801091,Washington,Spokane,Not in a city,53-063-0051,397
-47.8064,-122.3167,Washington,Snohomish,Mountlake Terrace,53-061-0005,566
-47.878159,-95.029172,Minnesota,Beltrami,Red Lake,27-007-2304,145
-47.90208,-122.10039,Washington,Snohomish,Snohomish,53-061-0013,56
-47.9167,-89.150075,Michigan,Keweenaw,Not in a city,26-083-9000,1873
-47.918596,-97.082314,North Dakota,Grand Forks,Grand Forks,38-035-0004,230
-47.948622,-91.495574,Minnesota,Lake,Not in a city,27-075-0005,2494
-47.954771,-115.671925,Montana,Sanders,Not in a city,30-089-9000,2352
-47.972085,-89.69098,Minnesota,Cook,Not in a city,27-031-7810,155
-48.006295,-122.973953,Washington,Clallam,Blyn,53-009-0020,3400
-48.054315,-122.171529,Washington,Snohomish,Marysville,53-061-1007,2794
-48.11697,-123.464555,Washington,Clallam,Port Angeles,53-009-0009,74
-48.12919,-122.77897,Washington,Jefferson,Port Townsend,53-031-0003,74
-48.20054,-114.305334,Montana,Flathead,Kalispell,30-029-0047,1154
-48.2469,-121.6031,Washington,Snohomish,Darrington,53-061-0020,810
-48.2675,-116.572222,Idaho,Bonner,Sandpoint,16-017-0005,72
-48.270633,-116.567724,Idaho,Bonner,Sandpoint,16-017-0004,120
-48.274167,-116.550833,Idaho,Bonner,Sandpoint,16-017-0001,238
-48.279805,-117.714376,Washington,Stevens,Not in a city,53-065-0009,59
-48.29786,-124.62491,Washington,Clallam,Not in a city,53-009-0013,1098
-48.30795,-105.102866,Montana,Roosevelt,Not in a city,30-085-9000,1946
-48.36451,-120.121113,Washington,Okanogan,Twisp,53-047-0009,107
-48.37182,-124.59519,Washington,Clallam,Neah Bay,53-009-0014,353
-48.381075,-114.175681,Montana,Flathead,Columbia Falls,30-029-0007,398
-48.387531,-119.928671,Washington,Okanogan,Not in a city,53-047-0012,2295
-48.391545,-115.553309,Montana,Lincoln,Libby,30-053-0018,2029
-48.39999,-119.51896,Washington,Okanogan,Not in a city,53-047-0013,47
-48.400407,-114.336962,Montana,Flathead,Whitefish,30-029-0009,945
-48.411632,-114.338189,Montana,Flathead,Whitefish,30-029-0039,121
-48.41252,-92.829225,Minnesota,Saint Louis,Not in a city,27-137-0034,2367
-48.431495,-122.31488,Washington,Skagit,Mount Vernon,53-057-0014,123
-48.487054,-104.476346,Montana,Sheridan,Not in a city,30-091-9000,4108
-48.5103,-113.99681,Montana,Flathead,Not in a city,30-029-8001,2407
-48.544722,-117.903611,Washington,Stevens,Colville,53-065-0004,62
-48.64193,-102.4018,North Dakota,Burke,Not in a city,38-013-0004,2337
-48.705486,-116.370001,Idaho,Boundary,Bonners Ferry,16-021-0002,299
-48.73142,-121.065815,Washington,Whatcom,Not in a city,53-073-0022,2328
-48.76278,-122.44028,Washington,Whatcom,Bellingham,53-073-0015,419
-48.876553,-102.56842,North Dakota,Burke,Lignite,38-013-0003,685
-48.9904,-102.7815,North Dakota,Burke,Not in a city,38-013-0002,330
-49.135138,-102.984855,Canada,Saskatchewan,Not in a city,CC-011-0002,290
-49.145602,-103.091252,Canada,Saskatchewan,Not in a city,CC-011-0001,312
-55.324675,-160.508331,Alaska,Aleutians East,Sand Point,02-013-0002,2200
-55.351043,-131.650019,Alaska,Ketchikan Gateway,Ketchikan,02-130-0008,90
-56.61076,-132.81234,Alaska,Wrangell Petersburg,Not in a city,02-280-9000,587
-58.358875,-134.510427,Alaska,Juneau,Juneau,02-110-0026,206
-58.365508,-134.516499,Alaska,Juneau,Juneau,02-110-0027,57
-58.388497,-134.567237,Alaska,Juneau,Juneau,02-110-0004,1595
-59.45315,-135.32125,Alaska,Skagway-Hoonah-Angoon,Not in a city,02-232-0001,12
-59.46008,-135.31053,Alaska,Skagway-Hoonah-Angoon,Not in a city,02-232-0002,113
-59.982667,-152.661089,Alaska,Kenai Peninsula,Not in a city,02-122-0009,1501
-60.012315,-151.711491,Alaska,Kenai Peninsula,Happy Valley,02-122-9000,623
-61.181083,-149.817389,Alaska,Anchorage,Anchorage,02-020-0044,354
-61.205861,-149.824602,Alaska,Anchorage,Anchorage,02-020-0018,1543
-61.215497,-149.830175,Alaska,Anchorage,Anchorage,02-020-0051,122
-61.532508,-150.252229,Alaska,Matanuska-Susitna,Not in a city,02-170-0004,322
-61.534163,-149.031655,Alaska,Matanuska-Susitna,Not in a city,02-170-0008,1509
-61.598796,-149.455255,Alaska,Matanuska-Susitna,Wasilla,02-170-0013,99
-61.598898,-149.10622,Alaska,Matanuska-Susitna,Palmer,02-170-0012,127
-62.314754,-150.317909,Alaska,Matanuska-Susitna,Trapper Creek,02-170-0011,3349
-63.7232,-148.9676,Alaska,Denali,Not in a city,02-068-0003,2477
-64.752336,-147.347208,Alaska,Fairbanks North Star,North Pole,02-090-0033,133
-64.762973,-147.310297,Alaska,Fairbanks North Star,Not in a city,02-090-0035,2559
-64.839846,-147.653858,Alaska,Fairbanks North Star,Fairbanks,02-090-4103,12
-64.840672,-147.722461,Alaska,Fairbanks North Star,Fairbanks,02-090-0010,4297
-64.845281,-147.683903,Alaska,Fairbanks North Star,Fairbanks,02-090-4101,17
-64.84569,-147.727413,Alaska,Fairbanks North Star,Fairbanks,02-090-0034,3871
-64.84593,-147.69327,Alaska,Fairbanks North Star,Fairbanks,02-090-0040,517
-64.846506,-147.692461,Alaska,Fairbanks North Star,Fairbanks,02-090-0029,153
-66.93093,-151.49188,Alaska,Yukon-Koyukuk,Evansville,02-290-9000,743
-67.091949,-157.874821,Alaska,Northwest Arctic,Ambler,02-188-9000,32
-67.5701,-162.968,Alaska,Northwest Arctic,Noatak,02-188-0001,27
-68.637233,-149.590949,Alaska,North Slope,Not in a city,02-185-9000,220
+Latitude,Longitude,POC,State,County,City,Site.Code,n
+17.712474,-64.784868,5,Virgin Islands,St Croix,Not in a city,78-010-0012,61
+18.420089,-66.150615,5,Puerto Rico,Bayamon,Bayamon,72-021-0010,323
+18.425652,-66.115846,5,Puerto Rico,Guaynabo,Guaynabo,72-061-0001,529
+21.323745,-158.088613,5,Hawaii,Honolulu,Not in a city,15-003-0010,1263
+21.392833,-157.969126,5,Hawaii,Honolulu,Pearl City,15-003-2004,395
+25.794222,-80.215556,5,Florida,Miami-Dade,Miami,12-086-1016,480
+26.053889,-80.256944,5,Florida,Broward,Davie,12-011-0034,759
+26.0711,-97.1577,5,Texas,Cameron,South Padre Island,48-061-2004,542
+26.083143,-80.237586,5,Florida,Broward,Davie,12-011-1002,1030
+27.426981,-97.298692,5,Texas,Kleberg,Corpus Christi,48-273-0314,151
+27.811817,-97.465703,5,Texas,Nueces,Corpus Christi,48-355-0034,1123
+27.850348,-82.714465,5,Florida,Pinellas,Pinellas Park,12-103-0026,818
+27.96565,-82.2304,5,Florida,Hillsborough,Valrico,12-057-3002,2084
+28.050296,-82.377871,5,Florida,Hillsborough,Tampa,12-057-1075,432
+29.263319,-94.856568,5,Texas,Galveston,Galveston,48-167-0014,655
+29.30265,-103.17781,5,Texas,Brewster,Not in a city,48-043-0101,450
+29.670025,-95.128508,5,Texas,Harris,Deer Park,48-201-1039,77
+29.695729,-95.499219,5,Texas,Harris,Houston,48-201-0055,667
+29.764788,-95.178538,5,Texas,Harris,Houston,48-201-0803,185
+29.767997,-95.220582,5,Texas,Harris,Houston,48-201-1034,218
+29.802707,-95.125495,5,Texas,Harris,Channelview,48-201-0026,597
+29.863957,-94.317802,5,Texas,Jefferson,Not in a city,48-245-0022,665
+29.88546,-89.94952,5,Louisiana,Plaquemines,Not in a city,22-075-8400,44
+29.900314,-90.109836,5,Louisiana,Jefferson,Marrero,22-051-2001,24
+29.901036,-95.326137,5,Texas,Harris,Houston,48-201-0024,1497
+29.9198,-90.231783,5,Louisiana,Jefferson,Waggaman,22-051-8107,21
+29.922894,-93.909018,5,Texas,Jefferson,Port Arthur,48-245-0021,421
+29.933261,-90.359524,5,Louisiana,St. Charles,Luling,22-089-0005,18
+29.939614,-89.923883,5,Louisiana,St. Bernard,Meraux,22-087-0004,48
+29.955704,-90.121733,5,Louisiana,Orleans,New Orleans,22-071-0010,42
+29.96249,-90.05689,5,Louisiana,Orleans,New Orleans,22-071-8401,40
+29.971443,-89.998605,5,Louisiana,St. Bernard,Arabi,22-087-8103,35
+29.993519,-90.10155,5,Louisiana,Orleans,New Orleans,22-071-0012,45
+29.999264,-90.211619,5,Louisiana,Jefferson,Metairie,22-051-8106,17
+30.016905,-89.927185,5,Louisiana,Orleans,New Orleans,22-071-8105,43
+30.020892,-90.123099,5,Louisiana,Jefferson,Metairie,22-051-8105,21
+30.032329,-90.045465,5,Louisiana,Orleans,New Orleans,22-071-8106,26
+30.041238,-90.272826,5,Louisiana,Jefferson,Kenner,22-051-1001,45
+30.0655,-89.804767,5,Louisiana,Orleans,New Orleans,22-071-8110,11
+30.16635,-89.737333,5,Louisiana,Orleans,New Orleans,22-071-8109,14
+30.194167,-93.866944,5,Texas,Orange,West Orange,48-361-1100,581
+30.26588,-89.76997,5,Louisiana,St. Tammany,Slidell,22-103-8401,26
+30.26892,-89.44933,5,Mississippi,Hancock,Bay St. Louis,28-045-8104,69
+30.31445,-89.81415,5,Louisiana,St. Tammany,Not in a city,22-103-8400,23
+30.350302,-95.425128,5,Texas,Montgomery,Conroe,48-339-0078,442
+30.353889,-95.421667,5,Texas,Montgomery,Conroe,48-339-0089,185
+30.3658,-103.6491,5,Texas,Brewster,Alpine,48-043-0002,292
+30.373678,-89.15513,5,Mississippi,Harrison,Long Beach,28-047-8101,90
+30.378287,-88.53393,5,Mississippi,Jackson,Pascagoula,28-059-0006,99
+30.390369,-89.049778,5,Mississippi,Harrison,Gulfport,28-047-0008,790
+30.393193,-89.580378,5,Mississippi,Hancock,Not in a city,28-045-8201,96
+30.40966,-89.44114,5,Mississippi,Hancock,Kiln,28-045-8105,63
+30.439722,-84.346389,5,Florida,Leon,Tallahassee,12-073-0012,1149
+30.449005,-89.052683,5,Mississippi,Harrison,Gulfport,28-047-8102,89
+30.461981,-91.179219,5,Louisiana,East Baton Rouge,Baton Rouge,22-033-0009,2141
+30.470916,-88.9827,5,Mississippi,Harrison,Biloxi,28-047-8103,92
+30.483163,-97.875084,5,Texas,Travis,Leander,48-453-0020,621
+30.669362,-104.024657,5,Texas,Jeff Davis,Not in a city,48-243-0004,177
+30.770181,-88.087761,5,Alabama,Mobile,Chickasaw,01-097-0003,242
+31.323639,-89.287167,5,Mississippi,Forrest,Hattiesburg,28-035-0004,219
+31.513097,-82.749971,5,Georgia,Coffee,Not in a city,13-069-0002,1138
+31.664302,-85.606175,5,Alabama,Barbour,Not in a city,01-005-0002,135
+31.688638,-89.135115,5,Mississippi,Jones,Laurel,28-067-0002,483
+31.758532,-106.501045,5,Texas,El Paso,El Paso,48-141-0053,567
+31.765685,-106.455227,5,Texas,El Paso,El Paso,48-141-0044,2283
+32.092957,-81.14399,5,Georgia,Chatham,Savannah,13-051-0017,162
+32.29515,-110.9823,5,Arizona,Pima,Tucson,04-019-1028,1708
+32.296952,-90.188394,5,Mississippi,Hinds,Jackson,28-049-0018,252
+32.329111,-90.182722,5,Mississippi,Hinds,Jackson,28-049-0020,881
+32.33037,-90.166201,5,Mississippi,Hinds,Jackson,28-049-0019,263
+32.412811,-86.263394,5,Alabama,Montgomery,Montgomery,01-101-1002,762
+32.4274,-84.9457,5,Georgia,Muscogee,Columbus,13-215-0012,15
+32.4297,-84.9316,5,Georgia,Muscogee,Columbus,13-215-0011,1085
+32.436944,-97.025,5,Texas,Ellis,Midlothian,48-139-0015,197
+32.437028,-84.999653,5,Alabama,Russell,Phenix City,01-113-0003,238
+32.472136,-85.005028,5,Alabama,Russell,Phenix City,01-113-0001,679
+32.482083,-97.026899,5,Texas,Ellis,Midlothian,48-139-0016,881
+32.535293,-93.747041,5,Louisiana,Bossier,Shreveport,22-015-0008,707
+32.564968,-96.317687,5,Texas,Kaufman,Kaufman,48-257-0005,194
+32.629225,-115.447769,5,Country Of Mexico,BAJA CALIFORNIA NORTE,Mexicali,80-002-0012,131
+32.633671,-115.504995,5,Country Of Mexico,BAJA CALIFORNIA NORTE,Mexicali,80-002-0014,30
+32.669001,-94.167468,5,Texas,Harrison,Not in a city,48-203-0002,1248
+32.67618,-115.48307,5,California,Imperial,Calexico,06-025-0005,1098
+32.774262,-96.797686,5,Texas,Dallas,Dallas,48-113-0050,1598
+32.777465,-83.640996,5,Georgia,Bibb,Macon,13-021-0007,1142
+32.789565,-116.944308,5,California,San Diego,El Cajon,06-073-1022,596
+32.790984,-79.958694,5,South Carolina,Charleston,Charleston,45-019-0049,1153
+32.791194,-116.942092,5,California,San Diego,El Cajon,06-073-0003,1218
+32.817978,-116.968133,5,California,San Diego,El Cajon,06-073-1018,161
+32.820061,-96.860117,5,Texas,Dallas,Dallas,48-113-0069,2229
+32.941023,-79.657187,5,South Carolina,Charleston,Not in a city,45-019-0046,154
+33.127769,-117.075086,5,California,San Diego,Escondido,06-073-1002,827
+33.139471,-91.939208,5,Arkansas,Ashley,Crossett,05-003-0005,161
+33.290229,-112.160597,5,Arizona,Maricopa,Not in a city,04-013-7003,114
+33.40635,-112.14426,5,Arizona,Maricopa,Phoenix,04-013-4009,57
+33.41123,-111.93471,5,Arizona,Maricopa,Tempe,04-013-4005,19
+33.4265,-112.11821,5,Arizona,Maricopa,Phoenix,04-013-9812,20
+33.4339,-82.0224,5,Georgia,Richmond,Augusta,13-245-0091,1084
+33.4349,-112.093,5,Arizona,Maricopa,Phoenix,04-013-8006,74
+33.455277,-111.996111,5,Arizona,Maricopa,Phoenix,04-013-9998,91
+33.459722,-87.305556,5,Alabama,Jefferson,Not in a city,01-073-1009,276
+33.48378,-112.14256,5,Arizona,Maricopa,Phoenix,04-013-0019,125
+33.488131,-111.855443,5,Arizona,Maricopa,Scottsdale,04-013-7020,116
+33.499722,-86.924167,5,Alabama,Jefferson,Birmingham,01-073-2003,1529
+33.503833,-112.095767,5,Arizona,Maricopa,Phoenix,04-013-9997,52
+33.553056,-86.815,5,Alabama,Jefferson,Birmingham,01-073-0023,2395
+33.590851,-101.847594,5,Texas,Lubbock,Lubbock,48-303-0001,148
+33.6878,-84.2905,5,Georgia,DeKalb,Not in a city,13-089-0002,2214
+33.834444,-89.792778,5,Mississippi,Grenada,Grenada,28-043-0001,212
+33.945948,-83.372102,5,Georgia,Clarke,Athens (corp name Athens-Clarke County),13-059-0001,722
+33.991509,-81.024141,5,South Carolina,Richland,Columbia,45-079-0019,292
+33.99958,-117.41601,5,California,Riverside,Rubidoux,06-065-8001,2340
+34.06659,-118.22688,5,California,Los Angeles,Los Angeles,06-037-1103,1740
+34.093959,-80.962304,5,South Carolina,Richland,Dentsville (Dents),45-079-0007,1223
+34.2605,-85.3232,5,Georgia,Floyd,Not in a city,13-115-0003,742
+34.263198,-85.304826,5,Georgia,Floyd,Rome,13-115-0005,413
+34.276316,-118.683685,5,California,Ventura,Simi Valley,06-111-2002,893
+34.530717,-86.967536,5,Alabama,Morgan,Decatur,01-103-0011,209
+34.615367,-80.198787,5,South Carolina,Chesterfield,Not in a city,45-025-0001,1027
+34.687761,-86.586362,5,Alabama,Madison,Huntsville,01-089-0014,722
+34.756189,-92.281296,5,Arkansas,Pulaski,North Little Rock,05-119-0007,1744
+34.838814,-82.402918,5,South Carolina,Greenville,Greenville,45-045-0008,87
+34.843895,-82.414585,5,South Carolina,Greenville,Greenville,45-045-0015,334
+34.899141,-82.31307,5,South Carolina,Greenville,Taylors,45-045-0009,424
+34.9784,-85.2943,5,Georgia,Walker,Rossville,13-295-0004,6
+34.9788,-85.3009,5,Georgia,Walker,Not in a city,13-295-0002,902
+35.041416,-78.953112,5,North Carolina,Cumberland,Fayetteville,37-051-0009,177
+35.050918,-85.293019,5,Tennessee,Hamilton,Chattanooga,47-065-4002,773
+35.115968,-87.469954,5,Tennessee,Lawrence,Loretto,47-099-0002,764
+35.1343,-106.5852,5,New Mexico,Bernalillo,Albuquerque,35-001-0023,1629
+35.151194,-90.041559,5,Tennessee,Shelby,Memphis,47-157-0024,665
+35.168894,-90.021537,5,Tennessee,Shelby,Memphis,47-157-0047,528
+35.2318,-77.5669,5,North Carolina,Lenoir,Kinston,37-107-0004,355
+35.2401,-80.785683,5,North Carolina,Mecklenburg,Charlotte,37-119-0041,2306
+35.24894,-91.715596,5,Arkansas,White,Searcy,05-145-0001,162
+35.356615,-119.062613,5,California,Kern,Bakersfield,06-029-0014,1820
+35.551868,-80.395039,5,North Carolina,Rowan,Rockwell,37-159-0021,602
+35.6062,-82.5844,5,North Carolina,Buncombe,Asheville,37-021-0034,762
+35.614131,-97.475083,5,Oklahoma,Oklahoma,Oklahoma City,40-109-1037,1159
+35.728889,-81.365556,5,North Carolina,Catawba,Hickory,37-035-0004,721
+35.8145,-80.2627,5,North Carolina,Davidson,Lexington,37-057-0002,662
+35.856111,-78.574167,5,North Carolina,Wake,Raleigh,37-183-0014,2149
+35.88931,-78.87466,5,North Carolina,Durham,Not in a city,37-063-0099,57
+35.916761,-84.503624,5,Tennessee,Roane,Not in a city,47-145-1001,159
+36.019186,-83.87381,5,Tennessee,Knox,Knoxville,47-093-1020,1107
+36.085552,-99.935774,5,Oklahoma,Ellis,Not in a city,40-045-0890,252
+36.109006,-79.802314,5,North Carolina,Guilford,Greensboro,37-081-0013,262
+36.110693,-80.226438,5,North Carolina,Forsyth,Winston-Salem,37-067-0022,16
+36.11094,-80.224501,5,North Carolina,Forsyth,Winston-Salem,37-067-0022,1139
+36.141875,-115.078742,5,Nevada,Clark,Sunrise Manor,32-003-0540,1159
+36.158582,-115.111666,5,Nevada,Clark,Las Vegas,32-003-0560,107
+36.163962,-115.11393,5,Nevada,Clark,Las Vegas,32-003-0561,176
+36.176382,-86.7389,5,Tennessee,Davidson,Nashville,47-037-0023,768
+36.204902,-95.976537,5,Oklahoma,Tulsa,Tulsa,40-143-1127,2254
+36.245248,-115.093058,5,Nevada,Clark,North Las Vegas,32-003-0020,188
+36.29756,-86.653137,5,Tennessee,Sumner,Hendersonville,47-165-0007,224
+36.307033,-79.467417,5,North Carolina,Caswell,Not in a city,37-033-0001,98
+36.332178999999996,-119.291228,5,California,Tulare,Visalia,06-107-2002,1156
+36.514627,-87.328041,5,Tennessee,Montgomery,Clarksville,47-125-1009,363
+36.538761,-82.521599,5,Tennessee,Sullivan,Kingsport,47-163-1007,283
+36.608,-82.1641,5,Virginia,Bristol City,Bristol,51-520-0006,286
+36.781333,-119.77319,5,California,Fresno,Fresno,06-019-0008,1366
+36.78538,-119.77321,5,California,Fresno,Fresno,06-019-0011,1121
+36.970052,-90.1401,5,Missouri,Stoddard,Not in a city,29-207-0001,221
+36.993375,-86.418323,5,Kentucky,Warren,Bowling Green,21-227-0007,254
+37.06636,-88.63774,5,Kentucky,McCracken,Paducah,21-145-1004,254
+37.087311,-84.063264,5,Kentucky,Laurel,London,21-125-0004,244
+37.256248,-79.98476,5,Virginia,Roanoke City,Roanoke,51-770-0014,188
+37.267684,-107.874589,5,Colorado,La Plata,Durango,08-067-0008,90
+37.28329,-83.20932,5,Kentucky,Perry,Hazard,21-193-0003,393
+37.339666,-121.888575,5,California,Santa Clara,San Jose,06-085-0004,222
+37.348497,-121.894898,5,California,Santa Clara,San Jose,06-085-0005,1947
+37.510703,-77.498041,5,Virginia,Richmond City,Richmond,51-760-0020,272
+37.55652,-77.40027,5,Virginia,Henrico,East Highland Park,51-087-0014,1791
+37.642165,-120.994212,5,California,Stanislaus,Modesto,06-099-0005,1155
+37.64571,-118.96652,5,California,Mono,Mammoth Lakes,06-051-0001,266
+37.687526,-121.784217,5,California,Alameda,Livermore,06-001-0007,398
+37.702066,-97.314847,5,Kansas,Sedgwick,Wichita,20-173-0010,862
+37.741159,-87.118053,5,Kentucky,Daviess,Owensboro,21-059-0014,164
+37.780776,-87.075307,5,Kentucky,Daviess,Not in a city,21-059-0005,69
+37.814781,-122.282347,5,California,Alameda,Oakland,06-001-0011,355
+37.90084,-90.42388,5,Missouri,Sainte Genevieve,Not in a city,29-186-0005,1324
+38.013333,-87.577222,5,Indiana,Vanderburgh,Evansville,18-163-0021,722
+38.021727,-87.569458,5,Indiana,Vanderburgh,Evansville,18-163-0012,396
+38.06503,-84.49761,5,Kentucky,Fayette,Lexington-Fayette (corporate name for Lexington),21-067-0012,781
+38.102507,-122.237976,5,California,Solano,Vallejo,06-095-0004,396
+38.23158,-85.82678,5,Kentucky,Jefferson,Louisville,21-111-1041,9
+38.23319,-85.81566,5,Kentucky,Jefferson,Louisville,21-111-0043,414
+38.23887,-82.9881,5,Kentucky,Carter,Not in a city,21-043-0500,392
+38.24024,-85.73195,5,Kentucky,Jefferson,Louisville,21-111-0048,256
+38.277719,-85.740111,5,Indiana,Clark,Jeffersonville,18-019-0006,659
+38.288191,-85.741337,5,Indiana,Clark,Jeffersonville,18-019-0010,122
+38.346258,-81.621161,5,West Virginia,Kanawha,Charleston,54-039-0020,625
+38.366183,-81.693717,5,West Virginia,Kanawha,South Charleston,54-039-1005,596
+38.391799,-86.929668,5,Indiana,Dubois,Jasper,18-037-2001,993
+38.43783,-90.361492,5,Missouri,Jefferson,Arnold,29-099-0012,793
+38.448833,-81.684717,5,West Virginia,Kanawha,Not in a city,54-039-0011,1290
+38.45934,-82.64041,5,Kentucky,Boyd,Ashland,21-019-0017,789
+38.508075,-82.659241,5,Ohio,Lawrence,Ironton,39-087-0012,426
+38.520043,-82.665331,5,Ohio,Lawrence,Ironton,39-087-0010,357
+38.525945,-90.0391,5,Illinois,Saint Clair,Belleville,17-163-0900,322
+38.56844,-121.49311,5,California,Sacramento,Sacramento,06-067-0010,1144
+38.60183,-90.232891,5,Missouri,St. Louis City,St. Louis,29-510-0089,94
+38.613779,-121.368014,5,California,Sacramento,Arden-Arcade,06-067-0006,2521
+38.656429,-90.198348,5,Missouri,St. Louis City,St. Louis,29-510-0085,47
+38.66373,-78.50442,5,Virginia,Page,Not in a city,51-139-0004,164
+38.700632,-90.144763,5,Illinois,Madison,Granite City,17-119-0024,818
+38.79502,-92.918251,5,Missouri,Cooper,Not in a city,29-053-0001,210
+38.828042,-104.827739,5,Colorado,El Paso,Colorado Springs,08-041-0011,297
+38.848382,-90.076413,5,Illinois,Madison,Roxana,17-119-9010,184
+38.903085,-90.143168,5,Illinois,Madison,Alton,17-119-2009,342
+38.921847,-77.013178,5,District Of Columbia,District of Columbia,Washington,11-001-0043,2181
+38.950002,-82.108935,5,Ohio,Gallia,Not in a city,39-053-0003,134
+39.055277,-76.878333,5,Maryland,Prince George's,Beltsville,24-033-0030,1550
+39.063798,-108.561173,5,Colorado,Mesa,Grand Junction,08-077-0017,373
+39.0725,-84.525,5,Kentucky,Kenton,Covington,21-117-0007,513
+39.0916,-108.563775,5,Colorado,Mesa,Grand Junction,08-077-0003,102
+39.101111,-76.729444,5,Maryland,Anne Arundel,Fort Meade (U.S. Army),24-003-0019,179
+39.10492,-84.55117,5,Ohio,Hamilton,Cincinnati,39-061-0042,77
+39.117219,-94.635605,5,Kansas,Wyandotte,Kansas City,20-209-0021,1957
+39.12886,-84.50404,5,Ohio,Hamilton,Cincinnati,39-061-0040,1679
+39.155,-75.518056,5,Delaware,Kent,Dover,10-001-0003,753
+39.180527,-84.49215,5,Ohio,Hamilton,St. Bernard,39-061-8001,58
+39.288996,-76.554131,5,Maryland,Baltimore (City),Baltimore,24-510-0053,169
+39.303174,-94.377014,5,Missouri,Clay,Not in a city,29-047-0005,1536
+39.310833,-76.474444,5,Maryland,Baltimore,Essex,24-005-3001,2071
+39.318611,-76.5825,5,Maryland,Baltimore (City),Baltimore,24-510-0050,32
+39.521933,-119.7954,5,Nevada,Washoe,Reno,32-031-0031,173
+39.525083,-119.807717,5,Nevada,Washoe,Reno,32-031-0016,2247
+39.528439,-84.3942,5,Ohio,Butler,Middletown,39-017-1004,502
+39.704005,-104.998113,5,Colorado,Denver,Denver,08-031-0025,230
+39.739444,-75.558056,5,Delaware,New Castle,Wilmington,10-003-2004,1631
+39.755969,-84.198674,5,Ohio,Montgomery,Dayton,39-113-0038,391
+39.757371,-121.843286,5,California,Butte,Not in a city,06-007-0002,639
+39.759533,-84.144201,5,Ohio,Montgomery,Dayton,39-113-0031,273
+39.760659,-84.187678,5,Ohio,Montgomery,Dayton,39-113-0032,453
+39.76168,-121.84047,5,California,Butte,Chico,06-007-0008,496
+39.77949,-105.00518,5,Colorado,Denver,Denver,08-031-0026,949
+39.808333,-120.471667,5,California,Plumas,Portola,06-063-1009,682
+39.810833,-86.114444,5,Indiana,Marion,Indianapolis (Remainder),18-097-0078,2172
+39.81336,-120.47069,5,California,Plumas,Portola,06-063-1010,452
+39.818715,-75.413973,5,Pennsylvania,Delaware,Marcus Hook,42-045-0109,305
+39.826007,-104.937438,5,Colorado,Adams,Commerce City,08-001-0006,1240
+39.8281,-104.93647,5,Colorado,Adams,Commerce City,08-001-0010,13
+39.82835,-104.93836,5,Colorado,Adams,Commerce City,08-001-0008,253
+39.834461,-75.768242,5,Pennsylvania,Chester,Not in a city,42-029-0100,1120
+39.835556,-75.3725,5,Pennsylvania,Delaware,Chester,42-045-0002,791
+39.83562,-84.720524,5,Ohio,Preble,New Paris,39-135-1001,1215
+39.866834,-88.925594,5,Illinois,Macon,Decatur,17-115-0013,297
+39.915961,-80.733858,5,West Virginia,Marshall,Moundsville,54-051-1002,898
+39.92002,-77.30968,5,Pennsylvania,Adams,Not in a city,42-001-0001,1182
+39.922867,-75.186921,5,Pennsylvania,Philadelphia,Philadelphia,42-101-0055,939
+39.923042,-75.097617,5,New Jersey,Camden,Camden,34-007-0003,671
+39.927613,-75.222403,5,Pennsylvania,Philadelphia,Philadelphia,42-101-0136,198
+39.934559,-75.125219,5,New Jersey,Camden,Camden,34-007-0002,550
+39.965278,-76.699444,5,Pennsylvania,York,York,42-133-0008,754
+39.991389,-75.080833,5,Pennsylvania,Philadelphia,Philadelphia,42-101-0048,895
+40.008889,-75.09778,5,Pennsylvania,Philadelphia,Philadelphia,42-101-0004,48
+40.009544,-85.52347,5,Indiana,Henry,Middletown,18-065-0003,1157
+40.035985,-75.002405,5,Pennsylvania,Philadelphia,Philadelphia,42-101-1002,318
+40.036389,-75.0025,5,Pennsylvania,Philadelphia,Philadelphia,42-101-1001,33
+40.043833,-76.1124,5,Pennsylvania,Lancaster,Not in a city,42-071-0012,277
+40.046667,-76.283333,5,Pennsylvania,Lancaster,Lancaster,42-071-0007,1156
+40.114876,-80.700972,5,West Virginia,Ohio,Wheeling,54-069-0010,114
+40.209387,-104.82405,5,Colorado,Weld,Platteville,08-123-0008,1165
+40.246992,-76.846988,5,Pennsylvania,Dauphin,Not in a city,42-043-0401,770
+40.304694,-79.505667,5,Pennsylvania,Westmoreland,Greensburg,42-129-0008,1238
+40.309722,-78.915,5,Pennsylvania,Cambria,Johnstown,42-021-0011,745
+40.320278,-75.926667,5,Pennsylvania,Berks,Reading,42-011-0009,15
+40.32207,-80.6063,5,Ohio,Jefferson,Mingo Junction,39-081-1001,378
+40.337328,-76.383447,5,Pennsylvania,Lebanon,Not in a city,42-075-0100,1
+40.338516,-76.394788,5,Pennsylvania,Lebanon,Not in a city,42-075-0101,24
+40.341389,-111.713611,5,Utah,Utah,Lindon,49-049-4001,1197
+40.3663,-80.6158,5,Ohio,Jefferson,Steubenville,39-081-0017,575
+40.38335,-75.9686,5,Pennsylvania,Berks,Not in a city,42-011-0011,461
+40.392694,-75.925222,5,Pennsylvania,Berks,Reading,42-011-0010,59
+40.41368,-79.941162,5,Pennsylvania,Allegheny,Pittsburgh,42-003-0021,147
+40.445278,-80.420833,5,Pennsylvania,Washington,Not in a city,42-125-5001,1214
+40.456944,-77.165556,5,Pennsylvania,Perry,Not in a city,42-099-0301,223
+40.462182,-74.429439,5,New Jersey,Middlesex,East Brunswick (Township of),34-023-0011,522
+40.472825,-74.422403,5,New Jersey,Middlesex,North Brunswick Township,34-023-0006,1524
+40.628056,-75.341111,5,Pennsylvania,Northampton,Freemansburg,42-095-0025,872
+40.64144,-74.208365,5,New Jersey,Union,Elizabeth,34-039-0004,2019
+40.71436,-73.99518,5,New York,New York,New York,36-061-0134,1525
+40.720622,-74.003674,5,New York,New York,New York,36-061-0062,546
+40.720989,-74.192892,5,New Jersey,Essex,Newark,34-013-0003,1169
+40.736389,-111.872222,5,Utah,Salt Lake,Salt Lake City,49-035-3006,2515
+40.786804,-81.394153,5,Ohio,Stark,Canton,39-151-0017,881
+40.787628,-74.676301,5,New Jersey,Morris,Chester,34-027-3001,1686
+40.800717,-81.373,5,Ohio,Stark,Canton,39-151-0020,196
+40.811389,-77.877028,5,Pennsylvania,Centre,State College,42-027-0100,740
+40.816,-73.902,5,New York,Bronx,New York,36-005-0110,1935
+40.83606,-73.92009,5,New York,Bronx,New York,36-005-0080,8
+40.86585,-73.88083,5,New York,Bronx,New York,36-005-0083,45
+40.886389,-111.882222,5,Utah,Davis,Bountiful,49-011-0001,91
+40.902967,-111.884467,5,Utah,Davis,Bountiful,49-011-0004,1083
+41.087862,-81.541532,5,Ohio,Summit,Akron,39-153-0023,1096
+41.094965,-85.101816,5,Indiana,Allen,Fort Wayne,18-003-0004,104
+41.09596,-80.65847,5,Ohio,Mahoning,Youngstown,39-099-0014,770
+41.118333,-73.336667,5,Connecticut,Fairfield,Westport,09-001-9003,95
+41.182227,-104.778334,5,Wyoming,Laramie,Not in a city,56-021-0100,1154
+41.247486,-95.973142,5,Nebraska,Douglas,Omaha,31-055-0019,2025
+41.3014,-72.902871,5,Connecticut,New Haven,New Haven,09-009-0027,1799
+41.310833,-72.916944,5,Connecticut,New Haven,New Haven,09-009-1123,66
+41.42353,-81.64755,5,Ohio,Cuyahoga,Cuyahoga Heights,39-035-0076,170
+41.439458,-82.161501,5,Ohio,Lorain,Lorain,39-093-0016,53
+41.442778,-75.623056,5,Pennsylvania,Lackawanna,Scranton,42-069-2006,743
+41.446624,-81.662356,5,Ohio,Cuyahoga,Newburgh Heights,39-035-0065,217
+41.463071,-82.114261,5,Ohio,Lorain,Sheffield,39-093-3002,1071
+41.492117,-81.678449,5,Ohio,Cuyahoga,Cleveland,39-035-0060,2087
+41.530011,-90.587611,5,Iowa,Scott,Davenport,19-163-0015,2372
+41.586386,-87.475543,5,Indiana,Lake,Hammond,18-089-2004,422
+41.603159,-93.643118,5,Iowa,Polk,Des Moines,19-153-0030,707
+41.606662,-87.304943,5,Indiana,Lake,Gary,18-089-0022,1090
+41.62057,-83.64226,5,Ohio,Lucas,Toledo,39-095-0026,773
+41.657155,-85.968446,5,Indiana,Elkhart,Elkhart,18-039-0008,425
+41.664711,-93.614385,5,Iowa,Polk,Des Moines,19-153-2520,103
+41.667827,-85.969444,5,Indiana,Elkhart,Elkhart,18-039-0003,180
+41.693659,-86.236673,5,Indiana,St. Joseph,South Bend,18-141-1008,61
+41.70757,-87.568574,5,Illinois,Cook,Chicago,17-031-0050,48
+41.7514,-87.713488,5,Illinois,Cook,Chicago,17-031-0076,2099
+41.763936,-83.471878,5,Michigan,Monroe,Luna Pier,26-115-0005,664
+41.771071,-88.152534,5,Illinois,DuPage,Naperville,17-043-4002,839
+41.807469,-71.412968,5,Rhode Island,Providence,Providence,44-007-0022,775
+41.841039,-71.36097,5,Rhode Island,Providence,East Providence,44-007-1010,1402
+41.842649,-111.852199,5,Utah,Cache,Smithfield,49-005-0007,150
+41.912739,-87.722673,5,Illinois,Cook,Chicago,17-031-0057,1173
+41.923582,-83.34573,5,Michigan,Monroe,Not in a city,26-115-0006,89
+41.97677,-91.68766,5,Iowa,Linn,Cedar Rapids,19-113-0040,186
+41.995568,-83.946559,5,Michigan,Lenawee,Tecumseh,26-091-0007,649
+42.00508,-91.6793,5,Iowa,Linn,Cedar Rapids,19-113-0037,646
+42.09142,-77.20978,5,New York,Steuben,Not in a city,36-101-0003,2379
+42.139996,-87.799227,5,Illinois,Cook,Northbrook,17-031-4201,1674
+42.14175,-80.038611,5,Pennsylvania,Erie,Erie,42-049-0003,755
+42.189215,-120.353969,5,Oregon,Lake,Lakeview,41-037-0001,250
+42.190296,-121.731369,5,Oregon,Klamath,Altamont,41-035-0004,472
+42.19438,-72.555112,5,Massachusetts,Hampden,Chicopee,25-013-0008,1949
+42.22862,-83.2082,5,Michigan,Wayne,Allen Park,26-163-0001,2431
+42.240565,-83.599602,5,Michigan,Washtenaw,Ypsilanti,26-161-0008,302
+42.278067,-85.54189,5,Michigan,Kalamazoo,Kalamazoo,26-077-0008,312
+42.302786,-83.10653,5,Michigan,Wayne,Detroit,26-163-0015,774
+42.306674,-83.148754,5,Michigan,Wayne,Dearborn,26-163-0033,1146
+42.31411,-122.87923,5,Oregon,Jackson,Medford,41-029-0133,449
+42.3295,-71.0826,5,Massachusetts,Suffolk,Boston,25-025-0042,2398
+42.43084,-83.000138,5,Michigan,Wayne,Detroit,26-163-0019,78
+42.490313,-83.279931,5,Michigan,Oakland,Southfield,26-125-0010,64
+42.50472,-87.8093,5,Wisconsin,Kenosha,Pleasant Prairie,55-059-0019,121
+42.504722,-87.8093,5,Wisconsin,Kenosha,Pleasant Prairie,55-059-0019,113
+42.64225,-73.75464,5,New York,Albany,Albany,36-001-0005,1253
+42.767786,-86.148577,5,Michigan,Allegan,Holland,26-005-0003,190
+42.953336,-82.456229,5,Michigan,St. Clair,Port Huron,26-147-0005,399
+42.984173,-85.671339,5,Michigan,Kent,Grand Rapids,26-081-0020,1705
+42.995778,-71.462528,5,New Hampshire,Hillsborough,Manchester,33-011-0020,231
+43.01724,-87.93369,5,Wisconsin,Milwaukee,Milwaukee,55-079-0010,135
+43.020075,-88.21507,5,Wisconsin,Waukesha,Waukesha,55-133-0027,784
+43.060975,-87.913504,5,Wisconsin,Milwaukee,Milwaukee,55-079-0026,2229
+43.075371,-70.748017,5,New Hampshire,Rockingham,Portsmouth,33-015-0014,646
+43.14618,-77.54817,5,New York,Monroe,Rochester,36-055-1007,1978
+43.161062,-77.603293,5,New York,Monroe,Rochester,36-055-6001,355
+43.434996,-88.527879,5,Wisconsin,Dodge,Not in a city,55-027-0007,966
+43.46611,-88.62111,5,Wisconsin,Dodge,Kekoskee,55-027-0001,1394
+43.544289,-96.726435,5,South Dakota,Minnehaha,Sioux Falls,46-099-0006,402
+43.54792,-96.700769,5,South Dakota,Minnehaha,Sioux Falls,46-099-0008,1266
+43.562401,-116.563232,5,Idaho,Canyon,Nampa,16-027-0004,556
+43.58925,-119.04872,5,Oregon,Harney,Burns,41-025-0003,22
+43.59901,-96.78331,5,South Dakota,Minnehaha,Sioux Falls,46-099-0009,18
+43.600699,-116.347853,5,Idaho,Ada,Not in a city,16-001-0010,1811
+43.744352,-122.480487,5,Oregon,Lane,Oakridge,41-039-2013,207
+43.996908,-92.450366,5,Minnesota,Olmsted,Rochester,27-109-5008,771
+44.026312,-123.083737,5,Oregon,Lane,Eugene,41-039-0060,444
+44.063916,-121.312554,5,Oregon,Deschutes,Bend,41-017-0120,102
+44.067224,-123.141352,5,Oregon,Lane,Eugene,41-039-0059,106
+44.138619,-87.6161,5,Wisconsin,Manitowoc,Not in a city,55-071-0007,118
+44.13862,-87.61612,5,Wisconsin,Manitowoc,Not in a city,55-071-0007,65
+44.299787,-120.844773,5,Oregon,Crook,Prineville,41-013-0100,29
+44.310555,-84.891865,5,Michigan,Missaukee,Not in a city,26-113-0001,809
+44.39308,-73.8589,5,New York,Essex,Not in a city,36-031-0003,1420
+44.480278,-73.214444,5,Vermont,Chittenden,Burlington,50-007-0012,2215
+44.50729,-87.99344,5,Wisconsin,Brown,Green Bay,55-009-0005,553
+44.95366,-93.25821,5,Minnesota,Hennepin,Minneapolis,27-053-0963,2332
+44.95939,-93.03587,5,Minnesota,Ramsey,St. Paul,27-123-0871,205
+44.959409,-93.256892,5,Minnesota,Hennepin,Minneapolis,27-053-0960,4
+45.13768,-93.207615,5,Minnesota,Anoka,Blaine,27-003-1002,1242
+45.2066,-90.5972,5,Wisconsin,Taylor,Not in a city,55-119-8001,1233
+45.339,-118.095206,5,Oregon,Union,La Grande,41-061-0119,217
+45.496641,-122.602877,5,Oregon,Multnomah,Portland,41-051-0080,59
+45.528501,-122.972398,5,Oregon,Washington,Hillsboro,41-067-0004,66
+45.648333,-122.586944,5,Washington,Clark,Vancouver,53-011-0013,308
+45.64987,-122.5901,5,Washington,Clark,Vancouver,53-011-0023,67
+46.002602,-112.501247,5,Montana,Silver Bow,Butte-Silver Bow (Remainder),30-093-0005,769
+46.2053,-93.75945,5,Minnesota,Mille Lacs,Onamia,27-095-3051,329
+46.288877,-85.950227,5,Michigan,Schoolcraft,Not in a city,26-153-0001,316
+46.493633,-84.364207,5,Michigan,Chippewa,Sault Ste. Marie,26-033-0901,426
+46.598056,-120.499167,5,Washington,Yakima,Yakima,53-077-0009,777
+46.825425,-100.76821,5,North Dakota,Burleigh,Bismarck,38-015-0003,1023
+46.842181,-114.021499,5,Montana,Missoula,Missoula,30-063-0024,125
+46.8505,-111.987164,5,Montana,Lewis and Clark,Not in a city,30-049-0004,1180
+46.874836,-113.996196,5,Montana,Missoula,Missoula,30-063-0031,913
+46.933754,-96.85535,5,North Dakota,Cass,Not in a city,38-017-1004,1776
+47.1864,-122.4517,5,Washington,Pierce,Tacoma,53-053-0029,869
+47.2656,-122.3858,5,Washington,Pierce,Tacoma,53-053-0031,357
+47.545377,-122.323458,5,Washington,King,Seattle,53-033-0032,130
+47.55975,-122.338265,5,Washington,King,Seattle,53-033-0057,357
+47.568236,-122.308628,5,Washington,King,Seattle,53-033-0080,48
+47.5812,-103.2995,5,North Dakota,McKenzie,Not in a city,38-053-0002,299
+47.597222,-122.319722,5,Washington,King,Seattle,53-033-0030,360
+47.660743,-117.358121,5,Washington,Spokane,Spokane,53-063-0016,240
+48.054315,-122.171529,5,Washington,Snohomish,Marysville,53-061-1007,344
+48.391545,-115.553309,5,Montana,Lincoln,Libby,30-053-0018,369
+61.205861,-149.824602,5,Alaska,Anchorage,Anchorage,02-020-0018,267
+64.762973,-147.310297,5,Alaska,Fairbanks North Star,Not in a city,02-090-0035,48
+64.839846,-147.653858,5,Alaska,Fairbanks North Star,Fairbanks,02-090-4103,12
+64.845281,-147.683903,5,Alaska,Fairbanks North Star,Fairbanks,02-090-4101,17
+64.84569,-147.727413,5,Alaska,Fairbanks North Star,Fairbanks,02-090-0034,857

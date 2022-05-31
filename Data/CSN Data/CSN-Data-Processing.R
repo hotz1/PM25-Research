@@ -16,12 +16,20 @@ pm25.spec.list <- vector('list', length(pm25.spec.files))
 # Clean downloaded data files (one for each year 2000 - 2021)
 for(i in 1:length(pm25.spec.files)) { 
   pm25.spec.data <- read_csv(pm25.spec.files[i])
+  
+  # Filter speciation data based on POC (POC = 5 is the marker for CSN data)
+  pm25.spec.data <- pm25.spec.data %>%
+    filter(`POC` == 5)
+    
+  # Create a site code variable from individual state, county, site numbers
+  pm25.spec.data <- pm25.spec.data %>%
+    mutate(Site.Code = paste(`State Code`, `County Code`, `Site Num`, sep = "-"))
 
   # Creates a table of daily mean temperatures and the site info 
   mean_temp <- pm25.spec.data %>%
     filter(`Parameter Code` == 68105) %>%
     select(`Mean.Temp` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
 
@@ -29,7 +37,7 @@ for(i in 1:length(pm25.spec.files)) {
   min_temp <- pm25.spec.data %>%
     filter(`Parameter Code` == 68103) %>%
     select(`Min.Temp` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -37,7 +45,7 @@ for(i in 1:length(pm25.spec.files)) {
   max_temp <- pm25.spec.data %>%
     filter(`Parameter Code` == 68104) %>%
     select(`Max.Temp` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -45,7 +53,7 @@ for(i in 1:length(pm25.spec.files)) {
   atm_pres <- pm25.spec.data %>%
     filter(`Parameter Code` == 68108) %>%
     select(`Atm.Press` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -53,7 +61,7 @@ for(i in 1:length(pm25.spec.files)) {
   Ag <- pm25.spec.data %>%
     filter(`Parameter Code` == 88166) %>%
     select(`Ag` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -61,7 +69,7 @@ for(i in 1:length(pm25.spec.files)) {
   As <- pm25.spec.data %>%
     filter(`Parameter Code` == 88103) %>%
     select(`As` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -69,7 +77,7 @@ for(i in 1:length(pm25.spec.files)) {
   Al <- pm25.spec.data %>%
     filter(`Parameter Code` == 88104) %>%
     select(`Al` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -77,7 +85,7 @@ for(i in 1:length(pm25.spec.files)) {
   Ba <- pm25.spec.data %>%
     filter(`Parameter Code` == 88107) %>%
     select(`Ba` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -85,7 +93,7 @@ for(i in 1:length(pm25.spec.files)) {
   Br <- pm25.spec.data %>%
     filter(`Parameter Code` == 88109) %>%
     select(`Br` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -93,7 +101,7 @@ for(i in 1:length(pm25.spec.files)) {
   Ca <- pm25.spec.data %>%
     filter(`Parameter Code` == 88111) %>%
     select(`Ca` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -101,7 +109,7 @@ for(i in 1:length(pm25.spec.files)) {
   Cr <- pm25.spec.data %>%
     filter(`Parameter Code` == 88112) %>%
     select(`Cr` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -109,7 +117,7 @@ for(i in 1:length(pm25.spec.files)) {
   Co <- pm25.spec.data %>%
     filter(`Parameter Code` == 88113) %>%
     select(`Co` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -117,7 +125,7 @@ for(i in 1:length(pm25.spec.files)) {
   Cu <- pm25.spec.data %>%
     filter(`Parameter Code` == 88114) %>%
     select(`Cu` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -125,7 +133,7 @@ for(i in 1:length(pm25.spec.files)) {
   Cl <- pm25.spec.data %>%
     filter(`Parameter Code` == 88115) %>%
     select(`Cl` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -133,7 +141,7 @@ for(i in 1:length(pm25.spec.files)) {
   Cd <- pm25.spec.data %>%
     filter(`Parameter Code` == 88110) %>%
     select(`Cd` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()  
   
@@ -141,7 +149,7 @@ for(i in 1:length(pm25.spec.files)) {
   Ce <- pm25.spec.data %>%
     filter(`Parameter Code` == 88117) %>%
     select(`Ce` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()  
   
@@ -149,7 +157,7 @@ for(i in 1:length(pm25.spec.files)) {
   Cs <- pm25.spec.data %>%
     filter(`Parameter Code` == 88118) %>%
     select(`Cs` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -157,7 +165,7 @@ for(i in 1:length(pm25.spec.files)) {
   Fe <- pm25.spec.data %>%
     filter(`Parameter Code` == 88126) %>%
     select(`Fe` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -165,7 +173,7 @@ for(i in 1:length(pm25.spec.files)) {
   Hg <- pm25.spec.data %>%
     filter(`Parameter Code` == 88142) %>%
     select(`Hg` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -173,7 +181,7 @@ for(i in 1:length(pm25.spec.files)) {
   K <- pm25.spec.data %>%
     filter(`Parameter Code` == 88180) %>%
     select(`K` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -181,7 +189,7 @@ for(i in 1:length(pm25.spec.files)) {
   Mn <- pm25.spec.data %>%
     filter(`Parameter Code` == 88132) %>%
     select(`Mn` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -189,7 +197,7 @@ for(i in 1:length(pm25.spec.files)) {
   Mg <- pm25.spec.data %>%
     filter(`Parameter Code` == 88140) %>%
     select(`Mg` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -197,7 +205,7 @@ for(i in 1:length(pm25.spec.files)) {
   Na <- pm25.spec.data %>%
     filter(`Parameter Code` == 88184) %>%
     select(`Na` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -205,7 +213,7 @@ for(i in 1:length(pm25.spec.files)) {
   Ni <- pm25.spec.data %>%
     filter(`Parameter Code` == 88136) %>%
     select(`Ni` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -213,7 +221,7 @@ for(i in 1:length(pm25.spec.files)) {
   P <- pm25.spec.data %>%
     filter(`Parameter Code` == 88152) %>%
     select(`P` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -221,7 +229,7 @@ for(i in 1:length(pm25.spec.files)) {
   Pb <- pm25.spec.data %>%
     filter(`Parameter Code` == 88128) %>%
     select(`Pb` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -229,7 +237,7 @@ for(i in 1:length(pm25.spec.files)) {
   Rb <- pm25.spec.data %>%
     filter(`Parameter Code` == 88176) %>%
     select(`Rb` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -237,7 +245,7 @@ for(i in 1:length(pm25.spec.files)) {
   S <- pm25.spec.data %>%
     filter(`Parameter Code` == 88169) %>%
     select(`S` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -245,7 +253,7 @@ for(i in 1:length(pm25.spec.files)) {
   Sb <- pm25.spec.data %>%
     filter(`Parameter Code` == 88102) %>%
     select(`Sb` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -253,7 +261,7 @@ for(i in 1:length(pm25.spec.files)) {
   Se <- pm25.spec.data %>%
     filter(`Parameter Code` == 88154) %>%
     select(`Se` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -261,7 +269,7 @@ for(i in 1:length(pm25.spec.files)) {
   Si <- pm25.spec.data %>%
     filter(`Parameter Code` == 88165) %>%
     select(`Si` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -269,7 +277,7 @@ for(i in 1:length(pm25.spec.files)) {
   Sn <- pm25.spec.data %>%
     filter(`Parameter Code` == 88160) %>%
     select(`Sn` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -277,7 +285,7 @@ for(i in 1:length(pm25.spec.files)) {
   Sr <- pm25.spec.data %>%
     filter(`Parameter Code` == 88168) %>%
     select(`Sr` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -285,7 +293,7 @@ for(i in 1:length(pm25.spec.files)) {
   Ti <- pm25.spec.data %>%
     filter(`Parameter Code` == 88161) %>%
     select(`Ti` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -293,7 +301,7 @@ for(i in 1:length(pm25.spec.files)) {
   V <- pm25.spec.data %>%
     filter(`Parameter Code` == 88164) %>%
     select(`V` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -301,7 +309,7 @@ for(i in 1:length(pm25.spec.files)) {
   Zn <- pm25.spec.data %>%
     filter(`Parameter Code` == 88167) %>%
     select(`Zn` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -309,7 +317,7 @@ for(i in 1:length(pm25.spec.files)) {
   Zr <- pm25.spec.data %>%
     filter(`Parameter Code` == 88185) %>%
     select(`Zr` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -317,7 +325,7 @@ for(i in 1:length(pm25.spec.files)) {
   NH4 <- pm25.spec.data %>%
     filter(`Parameter Code` == 88301) %>%
     select(`NH4` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -325,7 +333,7 @@ for(i in 1:length(pm25.spec.files)) {
   Cl_ion <- pm25.spec.data %>%
     filter(`Parameter Code` == 88203) %>%
     select(`Cl_ion` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -333,7 +341,7 @@ for(i in 1:length(pm25.spec.files)) {
   Na_ion <- pm25.spec.data %>%
     filter(`Parameter Code` == 88302) %>%
     select(`Na_ion` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -341,7 +349,7 @@ for(i in 1:length(pm25.spec.files)) {
   K_ion <- pm25.spec.data %>%
     filter(`Parameter Code` == 88303) %>%
     select(`K_ion` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -349,7 +357,7 @@ for(i in 1:length(pm25.spec.files)) {
   nitrate <- pm25.spec.data %>%
     filter(`Parameter Code` == 88306) %>%
     select(`nitrate` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -357,7 +365,7 @@ for(i in 1:length(pm25.spec.files)) {
   OC <- pm25.spec.data %>%
     filter(`Parameter Code` == 88320) %>%
     select(`OC` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -365,7 +373,7 @@ for(i in 1:length(pm25.spec.files)) {
   EC <- pm25.spec.data %>%
     filter(`Parameter Code` == 88321) %>%
     select(`EC` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -373,7 +381,7 @@ for(i in 1:length(pm25.spec.files)) {
   EC2 <- pm25.spec.data %>%
     filter(`Parameter Code` == 88380) %>%
     select(`EC_unadjusted` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
   
@@ -381,7 +389,7 @@ for(i in 1:length(pm25.spec.files)) {
   sulfate <- pm25.spec.data %>%
     filter(`Parameter Code` == 88403) %>%
     select(`sulfate` = `Arithmetic Mean`, `POC`, `Date` = `Date Local`, `Latitude`, `Longitude`,
-           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`,
+           `State` = `State Name`, `County` = `County Name`, `City` = `City Name`, `Site.Code`,
            `State.Code` = `State Code`, `County.Code` = `County Code`, Site.Num = `Site Num`) %>%
     distinct()
 
@@ -390,9 +398,6 @@ for(i in 1:length(pm25.spec.files)) {
                          list(mean_temp, min_temp, max_temp, atm_pres, Ag, As, Al, Ba, Br, Ca, Cr, Co, Cu, Cl, 
                               Cd, Ce, Cs, Fe, Hg, K, Mn, Mg, Na, Ni, P, Pb, Rb, S, Sb, Se, Si, Sn, Sr, Ti, V, 
                               Zn, Zr, NH4, Cl_ion, Na_ion, K_ion, nitrate, OC, EC, EC2, sulfate))
-  
-  # Create a site code variable from individual state, county, site numbers
-  joined.table <- joined.table %>% mutate(Site.Code = paste(State.Code, County.Code, Site.Num, sep = "-"))
   
   pm25.spec.list[[i]] <- joined.table
 }
@@ -409,7 +414,7 @@ write_csv(pm25.spec.cali, "./CSN_PM25_SPEC_2000_2021_Cali.csv")
 
 # List all of the individual data sites for the CSN data
 CSN.data.sites <- pm25.spec.all %>% 
-  group_by(Latitude, Longitude, State, County, City, Site.Code) %>%
+  group_by(Latitude, Longitude, POC, State, County, City, Site.Code) %>%
   tally()
 
 write_csv(CSN.data.sites, "./CSN_Data_Sites_2000_2021.csv")
@@ -427,6 +432,7 @@ CSN.sites.map <- leaflet(data = CSN.data.sites) %>%
                                              "County:", CSN.data.sites$County, "<br>",
                                              "City:", CSN.data.sites$City, "<br>",
                                              "Site Code:", CSN.data.sites$Site.Code, "<br>",
+                                             "POC:", CSN.data.sites$POC, "<br>",
                                              "Total Observations:", CSN.data.sites$n))
 
 saveWidget(CSN.sites.map, file="./CSN-Sites-Map.html")
