@@ -1,0 +1,382 @@
+Latitude,Longitude,State,County,City,Site.Code,n
+17.712474,-64.784868,Virgin Islands,St Croix,Not in a city,78-010-0012,34
+18.420089,-66.150615,Puerto Rico,Bayamon,Bayamon,72-021-0010,357
+21.323745,-158.088613,Hawaii,Honolulu,Not in a city,15-003-0010,2863
+21.392833,-157.969126,Hawaii,Honolulu,Pearl City,15-003-2004,439
+25.794222,-80.215556,Florida,Miami-Dade,Miami,12-086-1016,523
+26.053889,-80.256944,Florida,Broward,Davie,12-011-0034,2118
+26.0711,-97.1577,Texas,Cameron,South Padre Island,48-061-2004,521
+26.083143,-80.237586,Florida,Broward,Davie,12-011-1002,1100
+27.426981,-97.298692,Texas,Kleberg,Corpus Christi,48-273-0314,149
+27.811817,-97.465703,Texas,Nueces,Corpus Christi,48-355-0034,1077
+27.96565,-82.2304,Florida,Hillsborough,Valrico,12-057-3002,3707
+28.050296,-82.377871,Florida,Hillsborough,Tampa,12-057-1075,412
+29.263319,-94.856568,Texas,Galveston,Galveston,48-167-0014,635
+29.30265,-103.17781,Texas,Brewster,Not in a city,48-043-0101,444
+29.670025,-95.128508,Texas,Harris,Deer Park,48-201-1039,73
+29.695729,-95.499219,Texas,Harris,Houston,48-201-0055,634
+29.767997,-95.220582,Texas,Harris,Houston,48-201-1034,216
+29.802707,-95.125495,Texas,Harris,Channelview,48-201-0026,574
+29.863957,-94.317802,Texas,Jefferson,Not in a city,48-245-0022,653
+29.88546,-89.94952,Louisiana,Plaquemines,Not in a city,22-075-8400,42
+29.900314,-90.109836,Louisiana,Jefferson,Marrero,22-051-2001,34
+29.901036,-95.326137,Texas,Harris,Houston,48-201-0024,1515
+29.9198,-90.231783,Louisiana,Jefferson,Waggaman,22-051-8107,21
+29.922894,-93.909018,Texas,Jefferson,Port Arthur,48-245-0021,416
+29.933261,-90.359524,Louisiana,St. Charles,Luling,22-089-0005,18
+29.939614,-89.923883,Louisiana,St. Bernard,Meraux,22-087-0004,47
+29.955704,-90.121733,Louisiana,Orleans,New Orleans,22-071-0010,42
+29.96249,-90.05689,Louisiana,Orleans,New Orleans,22-071-8401,40
+29.971443,-89.998605,Louisiana,St. Bernard,Arabi,22-087-8103,34
+29.993519,-90.10155,Louisiana,Orleans,New Orleans,22-071-0012,43
+29.999264,-90.211619,Louisiana,Jefferson,Metairie,22-051-8106,17
+30.016905,-89.927185,Louisiana,Orleans,New Orleans,22-071-8105,45
+30.020892,-90.123099,Louisiana,Jefferson,Metairie,22-051-8105,22
+30.032329,-90.045465,Louisiana,Orleans,New Orleans,22-071-8106,25
+30.041238,-90.272826,Louisiana,Jefferson,Kenner,22-051-1001,89
+30.0655,-89.804767,Louisiana,Orleans,New Orleans,22-071-8110,11
+30.16635,-89.737333,Louisiana,Orleans,New Orleans,22-071-8109,14
+30.194167,-93.866944,Texas,Orange,West Orange,48-361-1100,573
+30.26588,-89.76997,Louisiana,St. Tammany,Slidell,22-103-8401,26
+30.26892,-89.44933,Mississippi,Hancock,Bay St. Louis,28-045-8104,69
+30.31445,-89.81415,Louisiana,St. Tammany,Not in a city,22-103-8400,23
+30.350302,-95.425128,Texas,Montgomery,Conroe,48-339-0078,423
+30.3658,-103.6491,Texas,Brewster,Alpine,48-043-0002,281
+30.373678,-89.15513,Mississippi,Harrison,Long Beach,28-047-8101,89
+30.378287,-88.53393,Mississippi,Jackson,Pascagoula,28-059-0006,137
+30.390369,-89.049778,Mississippi,Harrison,Gulfport,28-047-0008,775
+30.393193,-89.580378,Mississippi,Hancock,Not in a city,28-045-8201,131
+30.40966,-89.44114,Mississippi,Hancock,Kiln,28-045-8105,63
+30.439722,-84.346389,Florida,Leon,Tallahassee,12-073-0012,1585
+30.449005,-89.052683,Mississippi,Harrison,Gulfport,28-047-8102,89
+30.461981,-91.179219,Louisiana,East Baton Rouge,Baton Rouge,22-033-0009,4996
+30.470916,-88.9827,Mississippi,Harrison,Biloxi,28-047-8103,91
+30.483163,-97.875084,Texas,Travis,Leander,48-453-0020,605
+30.669362,-104.024657,Texas,Jeff Davis,Not in a city,48-243-0004,167
+30.770181,-88.087761,Alabama,Mobile,Chickasaw,01-097-0003,407
+31.323639,-89.287167,Mississippi,Forrest,Hattiesburg,28-035-0004,207
+31.513097,-82.749971,Georgia,Coffee,Not in a city,13-069-0002,247
+31.688638,-89.135115,Mississippi,Jones,Laurel,28-067-0002,449
+31.758532,-106.501045,Texas,El Paso,El Paso,48-141-0053,563
+31.765685,-106.455227,Texas,El Paso,El Paso,48-141-0044,3875
+32.092957,-81.14399,Georgia,Chatham,Savannah,13-051-0017,150
+32.29515,-110.9823,Arizona,Pima,Tucson,04-019-1028,3881
+32.296952,-90.188394,Mississippi,Hinds,Jackson,28-049-0018,216
+32.329111,-90.182722,Mississippi,Hinds,Jackson,28-049-0020,1645
+32.33037,-90.166201,Mississippi,Hinds,Jackson,28-049-0019,403
+32.412811,-86.263394,Alabama,Montgomery,Montgomery,01-101-1002,873
+32.4274,-84.9457,Georgia,Muscogee,Columbus,13-215-0012,15
+32.4297,-84.9316,Georgia,Muscogee,Columbus,13-215-0011,1023
+32.436944,-97.025,Texas,Ellis,Midlothian,48-139-0015,195
+32.437028,-84.999653,Alabama,Russell,Phenix City,01-113-0003,837
+32.472136,-85.005028,Alabama,Russell,Phenix City,01-113-0001,1267
+32.482083,-97.026899,Texas,Ellis,Midlothian,48-139-0016,815
+32.564968,-96.317687,Texas,Kaufman,Kaufman,48-257-0005,188
+32.629225,-115.447769,Country Of Mexico,BAJA CALIFORNIA NORTE,Mexicali,80-002-0012,494
+32.633671,-115.504995,Country Of Mexico,BAJA CALIFORNIA NORTE,Mexicali,80-002-0014,60
+32.669001,-94.167468,Texas,Harrison,Not in a city,48-203-0002,1212
+32.67618,-115.48307,California,Imperial,Calexico,06-025-0005,1645
+32.774262,-96.797686,Texas,Dallas,Dallas,48-113-0050,1553
+32.777465,-83.640996,Georgia,Bibb,Macon,13-021-0007,1556
+32.789565,-116.944308,California,San Diego,El Cajon,06-073-1022,568
+32.790984,-79.958694,South Carolina,Charleston,Charleston,45-019-0049,1061
+32.791194,-116.942092,California,San Diego,El Cajon,06-073-0003,1129
+32.817978,-116.968133,California,San Diego,El Cajon,06-073-1018,148
+32.820061,-96.860117,Texas,Dallas,Dallas,48-113-0069,5253
+33.127769,-117.075086,California,San Diego,Escondido,06-073-1002,915
+33.139471,-91.939208,Arkansas,Ashley,Crossett,05-003-0005,151
+33.41123,-111.93471,Arizona,Maricopa,Tempe,04-013-4005,38
+33.4265,-112.11821,Arizona,Maricopa,Phoenix,04-013-9812,40
+33.4339,-82.0224,Georgia,Richmond,Augusta,13-245-0091,1220
+33.459722,-87.305556,Alabama,Jefferson,Not in a city,01-073-1009,329
+33.48378,-112.14256,Arizona,Maricopa,Phoenix,04-013-0019,238
+33.488131,-111.855443,Arizona,Maricopa,Scottsdale,04-013-7020,193
+33.499722,-86.924167,Alabama,Jefferson,Birmingham,01-073-2003,2421
+33.503833,-112.095767,Arizona,Maricopa,Phoenix,04-013-9997,38
+33.553056,-86.815,Alabama,Jefferson,Birmingham,01-073-0023,5024
+33.590851,-101.847594,Texas,Lubbock,Lubbock,48-303-0001,147
+33.6878,-84.2905,Georgia,DeKalb,Not in a city,13-089-0002,4710
+33.945948,-83.372102,Georgia,Clarke,Athens (corp name Athens-Clarke County),13-059-0001,150
+33.991509,-81.024141,South Carolina,Richland,Columbia,45-079-0019,540
+33.99958,-117.41601,California,Riverside,Rubidoux,06-065-8001,4471
+34.06659,-118.22688,California,Los Angeles,Los Angeles,06-037-1103,2594
+34.093959,-80.962304,South Carolina,Richland,Dentsville (Dents),45-079-0007,1508
+34.2605,-85.3232,Georgia,Floyd,Not in a city,13-115-0003,413
+34.263198,-85.304826,Georgia,Floyd,Rome,13-115-0005,367
+34.276316,-118.683685,California,Ventura,Simi Valley,06-111-2002,924
+34.530717,-86.967536,Alabama,Morgan,Decatur,01-103-0011,369
+34.615367,-80.198787,South Carolina,Chesterfield,Not in a city,45-025-0001,881
+34.687761,-86.586362,Alabama,Madison,Huntsville,01-089-0014,719
+34.756189,-92.281296,Arkansas,Pulaski,North Little Rock,05-119-0007,2773
+34.838814,-82.402918,South Carolina,Greenville,Greenville,45-045-0008,79
+34.843895,-82.414585,South Carolina,Greenville,Greenville,45-045-0015,423
+34.899141,-82.31307,South Carolina,Greenville,Taylors,45-045-0009,769
+34.9784,-85.2943,Georgia,Walker,Rossville,13-295-0004,17
+34.9788,-85.3009,Georgia,Walker,Not in a city,13-295-0002,1105
+35.041416,-78.953112,North Carolina,Cumberland,Fayetteville,37-051-0009,349
+35.050918,-85.293019,Tennessee,Hamilton,Chattanooga,47-065-4002,1375
+35.115968,-87.469954,Tennessee,Lawrence,Loretto,47-099-0002,408
+35.1343,-106.5852,New Mexico,Bernalillo,Albuquerque,35-001-0023,3799
+35.151194,-90.041559,Tennessee,Shelby,Memphis,47-157-0024,37
+35.168894,-90.021537,Tennessee,Shelby,Memphis,47-157-0047,515
+35.2318,-77.5669,North Carolina,Lenoir,Kinston,37-107-0004,342
+35.2401,-80.785683,North Carolina,Mecklenburg,Charlotte,37-119-0041,3130
+35.24894,-91.715596,Arkansas,White,Searcy,05-145-0001,154
+35.356615,-119.062613,California,Kern,Bakersfield,06-029-0014,2311
+35.551868,-80.395039,North Carolina,Rowan,Rockwell,37-159-0021,784
+35.6062,-82.5844,North Carolina,Buncombe,Asheville,37-021-0034,1468
+35.614131,-97.475083,Oklahoma,Oklahoma,Oklahoma City,40-109-1037,1941
+35.728889,-81.365556,North Carolina,Catawba,Hickory,37-035-0004,1002
+35.8145,-80.2627,North Carolina,Davidson,Lexington,37-057-0002,681
+35.856111,-78.574167,North Carolina,Wake,Raleigh,37-183-0014,5988
+35.916761,-84.503624,Tennessee,Roane,Not in a city,47-145-1001,310
+36.019186,-83.87381,Tennessee,Knox,Knoxville,47-093-1020,731
+36.109006,-79.802314,North Carolina,Guilford,Greensboro,37-081-0013,482
+36.110693,-80.226438,North Carolina,Forsyth,Winston-Salem,37-067-0022,1558
+36.11094,-80.224501,North Carolina,Forsyth,Winston-Salem,37-067-0022,1558
+36.141875,-115.078742,Nevada,Clark,Sunrise Manor,32-003-0540,3463
+36.158582,-115.111666,Nevada,Clark,Las Vegas,32-003-0560,200
+36.163962,-115.11393,Nevada,Clark,Las Vegas,32-003-0561,329
+36.176382,-86.7389,Tennessee,Davidson,Nashville,47-037-0023,826
+36.204902,-95.976537,Oklahoma,Tulsa,Tulsa,40-143-1127,4351
+36.29756,-86.653137,Tennessee,Sumner,Hendersonville,47-165-0007,429
+36.307033,-79.467417,North Carolina,Caswell,Not in a city,37-033-0001,96
+36.332178999999996,-119.291228,California,Tulare,Visalia,06-107-2002,1021
+36.514627,-87.328041,Tennessee,Montgomery,Clarksville,47-125-1009,56
+36.538761,-82.521599,Tennessee,Sullivan,Kingsport,47-163-1007,321
+36.608,-82.1641,Virginia,Bristol City,Bristol,51-520-0006,270
+36.781333,-119.77319,California,Fresno,Fresno,06-019-0008,1928
+36.78538,-119.77321,California,Fresno,Fresno,06-019-0011,4920
+36.993375,-86.418323,Kentucky,Warren,Bowling Green,21-227-0007,251
+37.06636,-88.63774,Kentucky,McCracken,Paducah,21-145-1004,226
+37.087311,-84.063264,Kentucky,Laurel,London,21-125-0004,201
+37.256248,-79.98476,Virginia,Roanoke City,Roanoke,51-770-0014,181
+37.267684,-107.874589,Colorado,La Plata,Durango,08-067-0008,74
+37.28329,-83.20932,Kentucky,Perry,Hazard,21-193-0003,356
+37.339666,-121.888575,California,Santa Clara,San Jose,06-085-0004,194
+37.348497,-121.894898,California,Santa Clara,San Jose,06-085-0005,3639
+37.510703,-77.498041,Virginia,Richmond City,Richmond,51-760-0020,268
+37.55652,-77.40027,Virginia,Henrico,East Highland Park,51-087-0014,3296
+37.642165,-120.994212,California,Stanislaus,Modesto,06-099-0005,1943
+37.64571,-118.96652,California,Mono,Mammoth Lakes,06-051-0001,703
+37.687526,-121.784217,California,Alameda,Livermore,06-001-0007,630
+37.702066,-97.314847,Kansas,Sedgwick,Wichita,20-173-0010,1584
+37.741159,-87.118053,Kentucky,Daviess,Owensboro,21-059-0014,148
+37.780776,-87.075307,Kentucky,Daviess,Not in a city,21-059-0005,56
+37.814781,-122.282347,California,Alameda,Oakland,06-001-0011,238
+38.013333,-87.577222,Indiana,Vanderburgh,Evansville,18-163-0021,2228
+38.021727,-87.569458,Indiana,Vanderburgh,Evansville,18-163-0012,369
+38.06503,-84.49761,Kentucky,Fayette,Lexington-Fayette (corporate name for Lexington),21-067-0012,720
+38.102507,-122.237976,California,Solano,Vallejo,06-095-0004,872
+38.23158,-85.82678,Kentucky,Jefferson,Louisville,21-111-1041,8
+38.23319,-85.81566,Kentucky,Jefferson,Louisville,21-111-0043,693
+38.23887,-82.9881,Kentucky,Carter,Not in a city,21-043-0500,371
+38.24024,-85.73195,Kentucky,Jefferson,Louisville,21-111-0048,217
+38.277719,-85.740111,Indiana,Clark,Jeffersonville,18-019-0006,623
+38.288191,-85.741337,Indiana,Clark,Jeffersonville,18-019-0010,355
+38.346258,-81.621161,West Virginia,Kanawha,Charleston,54-039-0020,1585
+38.366183,-81.693717,West Virginia,Kanawha,South Charleston,54-039-1005,757
+38.391799,-86.929668,Indiana,Dubois,Jasper,18-037-2001,925
+38.43783,-90.361492,Missouri,Jefferson,Arnold,29-099-0012,755
+38.448833,-81.684717,West Virginia,Kanawha,Not in a city,54-039-0011,326
+38.45934,-82.64041,Kentucky,Boyd,Ashland,21-019-0017,759
+38.508075,-82.659241,Ohio,Lawrence,Ironton,39-087-0012,393
+38.520043,-82.665331,Ohio,Lawrence,Ironton,39-087-0010,343
+38.56844,-121.49311,California,Sacramento,Sacramento,06-067-0010,1095
+38.613779,-121.368014,California,Sacramento,Arden-Arcade,06-067-0006,3043
+38.656429,-90.198348,Missouri,St. Louis City,St. Louis,29-510-0085,46
+38.66373,-78.50442,Virginia,Page,Not in a city,51-139-0004,155
+38.700632,-90.144763,Illinois,Madison,Granite City,17-119-0024,689
+38.828042,-104.827739,Colorado,El Paso,Colorado Springs,08-041-0011,224
+38.903085,-90.143168,Illinois,Madison,Alton,17-119-2009,275
+38.921847,-77.013178,District Of Columbia,District of Columbia,Washington,11-001-0043,4986
+39.055277,-76.878333,Maryland,Prince George's,Beltsville,24-033-0030,4343
+39.063798,-108.561173,Colorado,Mesa,Grand Junction,08-077-0017,523
+39.0725,-84.525,Kentucky,Kenton,Covington,21-117-0007,464
+39.0916,-108.563775,Colorado,Mesa,Grand Junction,08-077-0003,183
+39.101111,-76.729444,Maryland,Anne Arundel,Fort Meade (U.S. Army),24-003-0019,142
+39.10492,-84.55117,Ohio,Hamilton,Cincinnati,39-061-0042,76
+39.117219,-94.635605,Kansas,Wyandotte,Kansas City,20-209-0021,3292
+39.12886,-84.50404,Ohio,Hamilton,Cincinnati,39-061-0040,3601
+39.155,-75.518056,Delaware,Kent,Dover,10-001-0003,707
+39.180527,-84.49215,Ohio,Hamilton,St. Bernard,39-061-8001,56
+39.303174,-94.377014,Missouri,Clay,Not in a city,29-047-0005,2097
+39.310833,-76.474444,Maryland,Baltimore,Essex,24-005-3001,1732
+39.521933,-119.7954,Nevada,Washoe,Reno,32-031-0031,513
+39.525083,-119.807717,Nevada,Washoe,Reno,32-031-0016,5949
+39.528439,-84.3942,Ohio,Butler,Middletown,39-017-1004,361
+39.704005,-104.998113,Colorado,Denver,Denver,08-031-0025,205
+39.739444,-75.558056,Delaware,New Castle,Wilmington,10-003-2004,4722
+39.755969,-84.198674,Ohio,Montgomery,Dayton,39-113-0038,1262
+39.757371,-121.843286,California,Butte,Not in a city,06-007-0002,502
+39.759533,-84.144201,Ohio,Montgomery,Dayton,39-113-0031,252
+39.760659,-84.187678,Ohio,Montgomery,Dayton,39-113-0032,796
+39.76168,-121.84047,California,Butte,Chico,06-007-0008,484
+39.77949,-105.00518,Colorado,Denver,Denver,08-031-0026,2320
+39.808333,-120.471667,California,Plumas,Portola,06-063-1009,549
+39.810833,-86.114444,Indiana,Marion,Indianapolis (Remainder),18-097-0078,4591
+39.81336,-120.47069,California,Plumas,Portola,06-063-1010,493
+39.818715,-75.413973,Pennsylvania,Delaware,Marcus Hook,42-045-0109,562
+39.826007,-104.937438,Colorado,Adams,Commerce City,08-001-0006,1890
+39.8281,-104.93647,Colorado,Adams,Commerce City,08-001-0010,39
+39.82835,-104.93836,Colorado,Adams,Commerce City,08-001-0008,715
+39.834461,-75.768242,Pennsylvania,Chester,Not in a city,42-029-0100,2070
+39.835556,-75.3725,Pennsylvania,Delaware,Chester,42-045-0002,1601
+39.83562,-84.720524,Ohio,Preble,New Paris,39-135-1001,1881
+39.866834,-88.925594,Illinois,Macon,Decatur,17-115-0013,276
+39.915961,-80.733858,West Virginia,Marshall,Moundsville,54-051-1002,908
+39.92002,-77.30968,Pennsylvania,Adams,Not in a city,42-001-0001,1731
+39.922867,-75.186921,Pennsylvania,Philadelphia,Philadelphia,42-101-0055,1193
+39.923042,-75.097617,New Jersey,Camden,Camden,34-007-0003,905
+39.927613,-75.222403,Pennsylvania,Philadelphia,Philadelphia,42-101-0136,176
+39.934559,-75.125219,New Jersey,Camden,Camden,34-007-0002,1285
+39.965278,-76.699444,Pennsylvania,York,York,42-133-0008,1665
+39.991389,-75.080833,Pennsylvania,Philadelphia,Philadelphia,42-101-0048,2504
+40.008889,-75.09778,Pennsylvania,Philadelphia,Philadelphia,42-101-0004,32
+40.009544,-85.52347,Indiana,Henry,Middletown,18-065-0003,1084
+40.035985,-75.002405,Pennsylvania,Philadelphia,Philadelphia,42-101-1002,847
+40.043833,-76.1124,Pennsylvania,Lancaster,Not in a city,42-071-0012,780
+40.046667,-76.283333,Pennsylvania,Lancaster,Lancaster,42-071-0007,2950
+40.114876,-80.700972,West Virginia,Ohio,Wheeling,54-069-0010,111
+40.209387,-104.82405,Colorado,Weld,Platteville,08-123-0008,1044
+40.246992,-76.846988,Pennsylvania,Dauphin,Not in a city,42-043-0401,1018
+40.304694,-79.505667,Pennsylvania,Westmoreland,Greensburg,42-129-0008,2597
+40.309722,-78.915,Pennsylvania,Cambria,Johnstown,42-021-0011,1740
+40.320278,-75.926667,Pennsylvania,Berks,Reading,42-011-0009,15
+40.32207,-80.6063,Ohio,Jefferson,Mingo Junction,39-081-1001,625
+40.337328,-76.383447,Pennsylvania,Lebanon,Not in a city,42-075-0100,3
+40.338516,-76.394788,Pennsylvania,Lebanon,Not in a city,42-075-0101,61
+40.341389,-111.713611,Utah,Utah,Lindon,49-049-4001,2629
+40.3663,-80.6158,Ohio,Jefferson,Steubenville,39-081-0017,1315
+40.38335,-75.9686,Pennsylvania,Berks,Not in a city,42-011-0011,893
+40.392694,-75.925222,Pennsylvania,Berks,Reading,42-011-0010,57
+40.41368,-79.941162,Pennsylvania,Allegheny,Pittsburgh,42-003-0021,82
+40.445278,-80.420833,Pennsylvania,Washington,Not in a city,42-125-5001,1951
+40.456944,-77.165556,Pennsylvania,Perry,Not in a city,42-099-0301,211
+40.462182,-74.429439,New Jersey,Middlesex,East Brunswick (Township of),34-023-0011,1523
+40.472825,-74.422403,New Jersey,Middlesex,North Brunswick Township,34-023-0006,1353
+40.628056,-75.341111,Pennsylvania,Northampton,Freemansburg,42-095-0025,1485
+40.64144,-74.208365,New Jersey,Union,Elizabeth,34-039-0004,4190
+40.71436,-73.99518,New York,New York,New York,36-061-0134,1423
+40.720622,-74.003674,New York,New York,New York,36-061-0062,523
+40.720989,-74.192892,New Jersey,Essex,Newark,34-013-0003,2240
+40.736389,-111.872222,Utah,Salt Lake,Salt Lake City,49-035-3006,5779
+40.786804,-81.394153,Ohio,Stark,Canton,39-151-0017,1535
+40.787628,-74.676301,New Jersey,Morris,Chester,34-027-3001,1540
+40.800717,-81.373,Ohio,Stark,Canton,39-151-0020,160
+40.811389,-77.877028,Pennsylvania,Centre,State College,42-027-0100,1124
+40.816,-73.902,New York,Bronx,New York,36-005-0110,4320
+40.83606,-73.92009,New York,Bronx,New York,36-005-0080,8
+40.86585,-73.88083,New York,Bronx,New York,36-005-0083,44
+40.886389,-111.882222,Utah,Davis,Bountiful,49-011-0001,86
+40.902967,-111.884467,Utah,Davis,Bountiful,49-011-0004,1699
+41.087862,-81.541532,Ohio,Summit,Akron,39-153-0023,1034
+41.094965,-85.101816,Indiana,Allen,Fort Wayne,18-003-0004,96
+41.09596,-80.65847,Ohio,Mahoning,Youngstown,39-099-0014,702
+41.118333,-73.336667,Connecticut,Fairfield,Westport,09-001-9003,90
+41.182227,-104.778334,Wyoming,Laramie,Not in a city,56-021-0100,3682
+41.247486,-95.973142,Nebraska,Douglas,Omaha,31-055-0019,4395
+41.3014,-72.902871,Connecticut,New Haven,New Haven,09-009-0027,4566
+41.310833,-72.916944,Connecticut,New Haven,New Haven,09-009-1123,90
+41.439458,-82.161501,Ohio,Lorain,Lorain,39-093-0016,50
+41.442778,-75.623056,Pennsylvania,Lackawanna,Scranton,42-069-2006,1009
+41.446624,-81.662356,Ohio,Cuyahoga,Newburgh Heights,39-035-0065,207
+41.463071,-82.114261,Ohio,Lorain,Sheffield,39-093-3002,2082
+41.492117,-81.678449,Ohio,Cuyahoga,Cleveland,39-035-0060,3397
+41.530011,-90.587611,Iowa,Scott,Davenport,19-163-0015,3839
+41.586386,-87.475543,Indiana,Lake,Hammond,18-089-2004,561
+41.603159,-93.643118,Iowa,Polk,Des Moines,19-153-0030,790
+41.606662,-87.304943,Indiana,Lake,Gary,18-089-0022,2294
+41.62057,-83.64226,Ohio,Lucas,Toledo,39-095-0026,736
+41.657155,-85.968446,Indiana,Elkhart,Elkhart,18-039-0008,857
+41.664711,-93.614385,Iowa,Polk,Des Moines,19-153-2520,101
+41.667827,-85.969444,Indiana,Elkhart,Elkhart,18-039-0003,151
+41.693659,-86.236673,Indiana,St. Joseph,South Bend,18-141-1008,118
+41.70757,-87.568574,Illinois,Cook,Chicago,17-031-0050,47
+41.7514,-87.713488,Illinois,Cook,Chicago,17-031-0076,1212
+41.763936,-83.471878,Michigan,Monroe,Luna Pier,26-115-0005,619
+41.771071,-88.152534,Illinois,DuPage,Naperville,17-043-4002,615
+41.807469,-71.412968,Rhode Island,Providence,Providence,44-007-0022,1125
+41.841039,-71.36097,Rhode Island,Providence,East Providence,44-007-1010,3775
+41.842649,-111.852199,Utah,Cache,Smithfield,49-005-0007,962
+41.912739,-87.722673,Illinois,Cook,Chicago,17-031-0057,849
+41.923582,-83.34573,Michigan,Monroe,Not in a city,26-115-0006,78
+41.97677,-91.68766,Iowa,Linn,Cedar Rapids,19-113-0040,302
+41.995568,-83.946559,Michigan,Lenawee,Tecumseh,26-091-0007,610
+42.00508,-91.6793,Iowa,Linn,Cedar Rapids,19-113-0037,628
+42.09142,-77.20978,New York,Steuben,Not in a city,36-101-0003,3714
+42.139996,-87.799227,Illinois,Cook,Northbrook,17-031-4201,2020
+42.14175,-80.038611,Pennsylvania,Erie,Erie,42-049-0003,982
+42.189215,-120.353969,Oregon,Lake,Lakeview,41-037-0001,234
+42.190296,-121.731369,Oregon,Klamath,Altamont,41-035-0004,450
+42.19438,-72.555112,Massachusetts,Hampden,Chicopee,25-013-0008,3409
+42.22862,-83.2082,Michigan,Wayne,Allen Park,26-163-0001,2779
+42.240565,-83.599602,Michigan,Washtenaw,Ypsilanti,26-161-0008,515
+42.278067,-85.54189,Michigan,Kalamazoo,Kalamazoo,26-077-0008,522
+42.302786,-83.10653,Michigan,Wayne,Detroit,26-163-0015,1040
+42.306674,-83.148754,Michigan,Wayne,Dearborn,26-163-0033,1739
+42.31411,-122.87923,Oregon,Jackson,Medford,41-029-0133,551
+42.3295,-71.0826,Massachusetts,Suffolk,Boston,25-025-0042,3913
+42.43084,-83.000138,Michigan,Wayne,Detroit,26-163-0019,65
+42.50472,-87.8093,Wisconsin,Kenosha,Pleasant Prairie,55-059-0019,225
+42.504722,-87.8093,Wisconsin,Kenosha,Pleasant Prairie,55-059-0019,225
+42.64225,-73.75464,New York,Albany,Albany,36-001-0005,2738
+42.767786,-86.148577,Michigan,Allegan,Holland,26-005-0003,186
+42.953336,-82.456229,Michigan,St. Clair,Port Huron,26-147-0005,392
+42.984173,-85.671339,Michigan,Kent,Grand Rapids,26-081-0020,2656
+42.995778,-71.462528,New Hampshire,Hillsborough,Manchester,33-011-0020,435
+43.01724,-87.93369,Wisconsin,Milwaukee,Milwaukee,55-079-0010,357
+43.020075,-88.21507,Wisconsin,Waukesha,Waukesha,55-133-0027,718
+43.060975,-87.913504,Wisconsin,Milwaukee,Milwaukee,55-079-0026,2890
+43.075371,-70.748017,New Hampshire,Rockingham,Portsmouth,33-015-0014,613
+43.14618,-77.54817,New York,Monroe,Rochester,36-055-1007,3424
+43.161062,-77.603293,New York,Monroe,Rochester,36-055-6001,550
+43.434996,-88.527879,Wisconsin,Dodge,Not in a city,55-027-0007,893
+43.46611,-88.62111,Wisconsin,Dodge,Kekoskee,55-027-0001,2599
+43.544289,-96.726435,South Dakota,Minnehaha,Sioux Falls,46-099-0006,382
+43.54792,-96.700769,South Dakota,Minnehaha,Sioux Falls,46-099-0008,3572
+43.562401,-116.563232,Idaho,Canyon,Nampa,16-027-0004,795
+43.58925,-119.04872,Oregon,Harney,Burns,41-025-0003,61
+43.59901,-96.78331,South Dakota,Minnehaha,Sioux Falls,46-099-0009,47
+43.600699,-116.347853,Idaho,Ada,Not in a city,16-001-0010,1766
+43.744352,-122.480487,Oregon,Lane,Oakridge,41-039-2013,205
+43.996908,-92.450366,Minnesota,Olmsted,Rochester,27-109-5008,1054
+44.026312,-123.083737,Oregon,Lane,Eugene,41-039-0060,584
+44.063916,-121.312554,Oregon,Deschutes,Bend,41-017-0120,90
+44.067224,-123.141352,Oregon,Lane,Eugene,41-039-0059,103
+44.138619,-87.6161,Wisconsin,Manitowoc,Not in a city,55-071-0007,169
+44.13862,-87.61612,Wisconsin,Manitowoc,Not in a city,55-071-0007,169
+44.299787,-120.844773,Oregon,Crook,Prineville,41-013-0100,27
+44.310555,-84.891865,Michigan,Missaukee,Not in a city,26-113-0001,640
+44.39308,-73.8589,New York,Essex,Not in a city,36-031-0003,1246
+44.480278,-73.214444,Vermont,Chittenden,Burlington,50-007-0012,3151
+44.50729,-87.99344,Wisconsin,Brown,Green Bay,55-009-0005,988
+44.95366,-93.25821,Minnesota,Hennepin,Minneapolis,27-053-0963,4305
+44.95939,-93.03587,Minnesota,Ramsey,St. Paul,27-123-0871,387
+45.13768,-93.207615,Minnesota,Anoka,Blaine,27-003-1002,3532
+45.2066,-90.5972,Wisconsin,Taylor,Not in a city,55-119-8001,1321
+45.339,-118.095206,Oregon,Union,La Grande,41-061-0119,195
+45.496641,-122.602877,Oregon,Multnomah,Portland,41-051-0080,59
+45.528501,-122.972398,Oregon,Washington,Hillsboro,41-067-0004,65
+45.648333,-122.586944,Washington,Clark,Vancouver,53-011-0013,481
+45.64987,-122.5901,Washington,Clark,Vancouver,53-011-0023,113
+46.002602,-112.501247,Montana,Silver Bow,Butte-Silver Bow (Remainder),30-093-0005,1896
+46.2053,-93.75945,Minnesota,Mille Lacs,Onamia,27-095-3051,304
+46.493633,-84.364207,Michigan,Chippewa,Sault Ste. Marie,26-033-0901,594
+46.598056,-120.499167,Washington,Yakima,Yakima,53-077-0009,1800
+46.825425,-100.76821,North Dakota,Burleigh,Bismarck,38-015-0003,3475
+46.842181,-114.021499,Montana,Missoula,Missoula,30-063-0024,123
+46.8505,-111.987164,Montana,Lewis and Clark,Not in a city,30-049-0004,3436
+46.874836,-113.996196,Montana,Missoula,Missoula,30-063-0031,1150
+46.933754,-96.85535,North Dakota,Cass,Not in a city,38-017-1004,3103
+47.1864,-122.4517,Washington,Pierce,Tacoma,53-053-0029,2269
+47.55975,-122.338265,Washington,King,Seattle,53-033-0057,558
+47.568236,-122.308628,Washington,King,Seattle,53-033-0080,42
+47.5812,-103.2995,North Dakota,McKenzie,Not in a city,38-053-0002,270
+47.597222,-122.319722,Washington,King,Seattle,53-033-0030,693
+47.660743,-117.358121,Washington,Spokane,Spokane,53-063-0016,258
+48.054315,-122.171529,Washington,Snohomish,Marysville,53-061-1007,921
+48.391545,-115.553309,Montana,Lincoln,Libby,30-053-0018,611
+61.205861,-149.824602,Alaska,Anchorage,Anchorage,02-020-0018,254
+64.762973,-147.310297,Alaska,Fairbanks North Star,Not in a city,02-090-0035,41
+64.84569,-147.727413,Alaska,Fairbanks North Star,Fairbanks,02-090-0034,1192
