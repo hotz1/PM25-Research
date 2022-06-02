@@ -1,0 +1,15417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="Inactive_CASTNET_Sites" xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd http://www.google.com/kml/ext/2.2 http://code.google.com/apis/kml/schema/kml22gx.xsd">
+	<name>Inactive CASTNET Sites</name>
+	<Snippet maxLines="0"></Snippet>
+	<Style id="IconStyle00">
+		<IconStyle>
+			<scale>0.625</scale>
+			<Icon>
+				<href>Layer0_Symbol_6137a18_0.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>00000000</color>
+			<scale>0</scale>
+		</LabelStyle>
+		<PolyStyle>
+			<color>ff000000</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Folder id="FeatureLayer0">
+		<name>Inactive CASTNET Sites</name>
+		<Snippet maxLines="0"></Snippet>
+		<Placemark id="ID_00000">
+			<name>Arendtsville Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Arendtsville Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>ARE528</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>528</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Arendtsville Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>ain</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Adams</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>39.923241</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-77.307863</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>266</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Arendtsville, PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>PA00</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.017</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>ARE528</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>11</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-77.30786544438278,39.92324897923889,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00001">
+			<name>Bondville Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Bondville Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>BVL530</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>530</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Bondville Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>a</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>IL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Champaign</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>40.051981</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-88.372495</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>213</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Bondville, IL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>IL11</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.104</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>BVL530</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>site collocated with IMPROVE site - deactivated 12/01 but equipment remains in place</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>21</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-88.37250079352447,40.05198849376232,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00002">
+			<name>Cadiz Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Cadiz Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>CDZ571</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>571</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Cadiz Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>ain</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>KY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Trigg</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>36.784053</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-87.85015</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>190</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>7.5 min. Topo Cadiz, KY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>KY99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>19.56</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>3</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>CDZ571</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>28</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-87.85015538215872,36.78405991067504,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00003">
+			<name>Connecticut Hill Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Connecticut Hill Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>CTH510</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>510</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Connecticut Hill Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>ain</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Tompkins</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>42.400875</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-76.653516</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>511</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Mecklenberg, NY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NY67</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.447</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>4</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>CTH510</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>41</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-76.65351840988909,42.40088347787741,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00004">
+			<name>Livonia Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Livonia Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>LIV573</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>573</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Livonia Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>ai</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>IN</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Washington</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EAno</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>38.5347</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-86.2608</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>299</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>KY19</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>62.924</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>6</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>LIV573</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>74</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-86.26080505473041,38.53470732097411,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00005">
+			<name>Lykens</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Lykens</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>LYK123</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>123</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Lykens</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>domwp</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>OH</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Crawford</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>40.916981</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-82.998206</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>303</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Chatfield, OH</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>OH17</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>62.615</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>7</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>LYK123</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>DCP114</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>OXF122</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>control of wet component transferred to NADP on 2/1/99</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>2/7/2013</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>77</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-82.99821027522786,40.91698892209401,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00006">
+			<name>M.K. Goddard Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>M.K. Goddard Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>MKG513</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>513</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>M.K. Goddard Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>ai</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Mercer</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>41.426847</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-80.145247</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>377</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Hadley, PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>PA30</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>81.008</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>8</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>MKG513</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>83</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-80.14525043862676,41.42685514821584,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00007">
+			<name>Quaker City Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Quaker City Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>QAK572</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>572</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Quaker City Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>ain</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>OH</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Noble</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>39.942714</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-81.337914</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>371</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>OH49</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>23.458</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>9</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>QAK572</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>106</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-81.33791769263276,39.94272181572862,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00008">
+			<name>Sikes Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Sikes Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>SIK570</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>570</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Sikes Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>ain</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>LA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Winn</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>32.0575</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-92.4353</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>68</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Sikes, LA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>AR02</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>174.515</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>10</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>SIK570</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>123</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-92.43530634923468,32.05750577333085,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00009">
+			<name>Howland Ameriflux</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Howland Ameriflux</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>HOW191</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>191</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Howland Ameriflux</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>ME</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Penobscot</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>45.203963</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-68.740041</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>68</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>ME09</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>79.091</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>12</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>HOW191</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>E2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>1/28/2013</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>62</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-68.74004098298651,45.2039722665565,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00010">
+			<name>Clingmans Dome MADPro</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Clingmans Dome MADPro</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>CLD303</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>303</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Clingmans Dome MADPro</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dmc</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>TN</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Sevier</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>35.5631</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-83.4986</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>2014</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>TN11</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>13.986</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>17</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>CLD303</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>33</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-83.49860404604016,35.56310685106705,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00011">
+			<name>Yosemite NP Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Yosemite NP Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>YOS204</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>204</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Yosemite NP Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>o</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>CA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Mariposa</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>37.7133</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-119.7061</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1605</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>CA99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>16.244</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>18</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>YOS204</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>6/22/2012</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>145</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-119.7061127844458,37.71330513514835,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00012">
+			<name>Hubbard Brook Special</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Hubbard Brook Special</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>HBR183</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>183</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Hubbard Brook Special</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>d</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NH</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Grafton</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>43.95</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-71.7</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>322</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NH02</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.78</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>24</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>HBR183</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>special study</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>60</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-71.70000090037526,43.95000894763634,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00013">
+			<name>Howland</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Howland</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>HOW132</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>132</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Howland</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>ME</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Penobscot</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>45.215607</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-68.70851</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>66</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Howland, ME</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>ME09</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>80.859</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>25</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>HOW132</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>E2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>61</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-68.70850997294927,45.21561626954445,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00014">
+			<name>Beltsville Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Beltsville Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>BEL216</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>216</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Beltsville Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>r</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>MD</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Prince George's</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>39.028177</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-76.817127</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>47</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Laurel, MD</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Range</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>MD99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.02</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>31</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>BEL216</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>ARE128</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>WSP144</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>17</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-76.81712923436032,39.0281848199063,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00015">
+			<name>Kobuk Valley NP</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Kobuk Valley NP</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>KVA428</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>428</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Kobuk Valley NP</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dm</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>AK</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>AL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>67.0931</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-157.8689</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>88</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>AK96</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>386.969</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>35</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>KVA428</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>9</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>71</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-157.8689279475366,67.09309983308889,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00016">
+			<name>Lye Brook</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Lye Brook</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>LYE145</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>145</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Lye Brook</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>domw</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>VT</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Bennington</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>43.050884</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-73.061334</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>725</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Sunderland, VT</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Mountaintop</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>VT01</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>21.124</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>36</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>LYE145</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>76</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-73.06133529074616,43.05089273537903,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00017">
+			<name>Mount Rainier NP</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Mount Rainier NP</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>MOR409</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>409</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Mount Rainier NP</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>WA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Pierce</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>46.75838</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-122.12429</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>415</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>WA99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.02</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>37</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>MOR409</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/6/2015</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>84</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-122.1243046630099,46.75838559310692,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00018">
+			<name>Res. Triangle Pk.</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Res. Triangle Pk.</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>RTP101</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>101</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Res. Triangle Pk.</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>domr</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NC</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Durham</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>35.91</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-78.88</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>91</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Urban</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NC41</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>27.023</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>39</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>RTP101</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>PED108</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>prototype site - NOAA data prior to 4/27/87; MARGA installed 1/06, 4m filter pack installed 4/06</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>112</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-78.88000268887944,35.91000709799294,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00019">
+			<name>Lilley C. Woods</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Lilley C. Woods</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>LCW121</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>121</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Lilley C. Woods</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>KY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Letcher</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>37.13</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-82.99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>335</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Roxana, KY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>KY22</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>5.802</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>44</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>LCW121</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>SPD111</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>CDR119</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>73</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-82.99000399346947,37.13000719239071,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00020">
+			<name>North Cascades NP</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>North Cascades NP</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>NCS415</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>415</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>North Cascades NP</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>WA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Skagit</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>48.54051</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-121.445652</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>109</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>WA19</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.035</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>51</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>NCS415</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>85</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-121.4456669792874,48.54051576398395,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00021">
+			<name>Egbert Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Egbert Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>EGB281</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>281</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Egbert Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>d</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>ON</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>44.231071</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-79.783115</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>227</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NY92</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>159.95</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>52</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>EGB281</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>day/night concentrations measured from separate filter packs</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>49</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-79.78311856376058,44.23107966677987,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00022">
+			<name>Parsons Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Parsons Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>PAR207</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>207</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Parsons Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>WV</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Tucker</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>39.090434</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-79.661742</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>510</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>WV18</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.091</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>55</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>PAR207</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>LRL117</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>CDR119</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>94</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-79.66174511897162,39.09044172136069,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00023">
+			<name>Perryville</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Perryville</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>PBF129</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>129</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Perryville</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>KY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Boyle</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>37.68</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-84.97</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>279</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>KY03</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>7.479</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>56</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>PBF129</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>ESP127</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>SPD111</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>equipment moved 7.4 km and reestablished as MCK131</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>95</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-84.97000461443579,37.68000721606843,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00024">
+			<name>Oak Ridge</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Oak Ridge</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>ONL102</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>102</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Oak Ridge</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>TN</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Anderson</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>35.96</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-84.29</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>341</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>TN04</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>70.226</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>58</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>ONL102</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>6</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>ESP127</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>PBF129</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>prototype site - NOAA data prior to 6/9/87</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>90</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-84.29000430154336,35.96000690101463,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00025">
+			<name>Poker Flats - Yukon Flats NM</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Poker Flats - Yukon Flats NM</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>POF425</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>425</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Poker Flats - Yukon Flats NM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dm</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>AK</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Fairbanks North Star</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>AL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>65.1178</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-147.4333</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>495</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Livengood, AK</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>AK01</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>4.953</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>62</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>POF425</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>9</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>101</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-147.4333262931411,65.11780180654642,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00026">
+			<name>Quaker City Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Quaker City Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>QAK272</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>272</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Quaker City Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>a</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>OH</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Noble</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>39.942714</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-81.337914</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>371</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>OH49</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>23.458</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>66</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>QAK272</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>105</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-81.33791769263276,39.94272181572862,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00027">
+			<name>Reynolds Creek</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Reynolds Creek</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>RCK163</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>163</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Reynolds Creek</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>ID</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Owyhee</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>MO</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>43.21</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-116.75</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1198</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Silver City, ID</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Range</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>ID11</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.567</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>67</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>RCK163</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>7</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>107</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-116.7500130443963,43.21000587025474,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00028">
+			<name>Reynolds Creek Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Reynolds Creek Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>RCK263</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>263</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Reynolds Creek Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>ID</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Owyhee</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>MO</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>43.21</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-116.75</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1198</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Range</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>ID11</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.567</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>68</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>RCK263</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>7</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>108</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-116.7500130443963,43.21000587025474,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00029">
+			<name>Saval Ranch</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Saval Ranch</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>SAV164</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>164</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Saval Ranch</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NV</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Elko</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>41.29</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-115.86</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1873</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Mahala Creek East, NV</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>ID11</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>225.024</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>72</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>SAV164</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>115</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-115.8600125793612,41.29000577237875,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00030">
+			<name>Scotia Range</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Scotia Range</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>SCR180</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>180</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Scotia Range</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dmw</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Centre</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>40.7884</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-77.9464</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>376</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Pine Grove Mills, PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>PA15</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.052</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>73</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>SCR180</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>special study - continued as wetdep site - met component consisted only of temp and delta_temp</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>116</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-77.94640270340857,40.78840812163622,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00031">
+			<name>Shenandoah NP - Big Meadows Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Shenandoah NP - Big Meadows Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>SHN518</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>518</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Shenandoah NP - Big Meadows Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>a</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>VA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Madison</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>38.5231</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-78.43471</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1068</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Big Meadows, VA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Mountaintop</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>VA28</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.008</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>75</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>SHN518</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>121</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-78.43471270474424,38.52310765683323,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00032">
+			<name>Sikes Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Sikes Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>SIK270</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>270</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Sikes Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>a</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>LA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Winn</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>32.0575</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-92.4353</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>68</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>AR02</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>174.515</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>76</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>SIK270</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>122</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-92.43530634923468,32.05750577333085,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00033">
+			<name>Sumatra Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Sumatra Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>SUM256</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>256</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Sumatra Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>FL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Liberty</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>30.110226</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-84.99038</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>16</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>FL23</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.045</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>81</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>SUM256</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>128</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-84.99038420556309,30.11023160911673,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00034">
+			<name>Uinta</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Uinta</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>UIN162</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>162</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Uinta</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>domw</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>UT</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Duchesne</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>MO</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>40.55</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-110.32</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>2500</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Burnt Mill Spring, UT</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Range</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>UT95</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>75.618</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>83</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>UIN162</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>7</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>130</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-110.3200113838461,40.55000613439512,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00035">
+			<name>Virgin Islands NP - Lind Pt</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Virgin Islands NP - Lind Pt</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>VII423</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>423</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Virgin Islands NP - Lind Pt</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>VI</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>St. John</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>AT</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>18.3364</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-64.7964</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>80</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>VI01</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.031</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>85</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>VII423</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>4</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>133</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-64.79639786988254,18.33640289694242,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00036">
+			<name>Hawaii Volcanoes NP</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Hawaii Volcanoes NP</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>HVT424</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>424</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Hawaii Volcanoes NP</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>HI</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Hawaii</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>HAno</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>19.4197</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-155.24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1199</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest/Tropical</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>CA45</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>3773.537</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>88</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>HVT424</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>10</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>64</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-155.2400145142382,19.41970347818144,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00037">
+			<name>Olympic NP</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Olympic NP</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>OLY421</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>421</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Olympic NP</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>WA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Clallam</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>48.0975</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-123.4256</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>125</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>WA14</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>46.165</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>90</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>OLY421</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>89</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-123.425615186386,48.0975055198025,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00038">
+			<name>Sequoia NP - Lookout Pt</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Sequoia NP - Lookout Pt</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>SEK402</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>402</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Sequoia NP - Lookout Pt</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>NPS</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>CA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Tulare</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>36.4292</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-118.7625</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1225</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Mountaintop</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>CA75</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>15.255</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>91</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>SEK402</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>117</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-118.7625124910949,36.42920507547468,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00039">
+			<name>Wellston</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Wellston</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>WEL149</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>149</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Wellston</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>MI</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Wexford</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>44.2249</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-85.8198</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>295</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Wellston, MI</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>MI53</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.123</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>92</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>WEL149</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>6</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>PRK134</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>ANA115</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>equipment moved 8.1 km and reestablished as HOX149</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>136</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-85.81980545322915,44.22490834887238,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00040">
+			<name>West Point A</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>West Point A</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>WPA103</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>103</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>West Point A</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Orange</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>41.35</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-74.05</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>203</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NY99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.181</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>93</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>WPA103</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>WPB104</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>WSP144</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>prototype site - NOAA data prior to 6/9/87</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>140</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-74.05000150197519,41.35000837869561,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00041">
+			<name>West Point B</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>West Point B</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>WPB104</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>104</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>West Point B</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Orange</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>41.35</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-74.05</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>203</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Popolopen Lake, NY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NY99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.181</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>94</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>WPB104</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>WPA103</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>WSP144</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>prototype site - NOAA data prior to 1/22/87</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>141</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-74.05000150197519,41.35000837869561,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00042">
+			<name>Alhambra Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Alhambra Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>ALH257</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>257</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Alhambra Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>domw</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>IL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Madison</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>38.869001</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-89.622815</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>164</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>IL46</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.08</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>101</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>ALH257</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>6</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>VIN140</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>BVL130</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>5</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-89.62282104721871,38.86900821525249,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00043">
+			<name>Alhambra Aerosol</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Alhambra Aerosol</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>ALH557</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>557</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Alhambra Aerosol</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>a</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>IL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Madison</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>38.869001</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-89.622815</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>164</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Pocahontas, IL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>IL46</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.08</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>102</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>ALH557</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>6</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-89.62282104721871,38.86900821525249,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00044">
+			<name>Argonne NL</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Argonne NL</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>ANL146</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>146</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Argonne NL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>IL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>DuPage</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>41.7</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-87.99</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>229</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Sag Bridge, IL</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Urban/Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>IN34</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>75.493</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>104</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>ANL146</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>6</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>BVL130</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>SAL133</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>8</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-87.99000583797149,41.70000780301941,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00045">
+			<name>Arendtsville Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Arendtsville Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>ARE228</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>228</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Arendtsville Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>domw</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Adams</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>39.923241</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-77.307863</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>266</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Arendtsville, PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>PA00</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.017</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>106</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>ARE228</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>BEL116</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>PSU106</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>10</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-77.30786544438278,39.92324897923889,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00046">
+			<name>Ashland Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ashland Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>ASH235</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>235</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Ashland Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>ME</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Aroostook</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>46.603832</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-68.413227</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>231</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Squa Pan, ME</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Flat</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>ME00</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>42.343</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>108</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>ASH235</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>WST109</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>13</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-68.41322695580592,46.60384151855314,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00047">
+			<name>Chiricahua NM Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Chiricahua NM Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>CHA267</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>267</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Chiricahua NM Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>AZ</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Cochise</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>MOno</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>32.009405</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-109.389058</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1569</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Range</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>AZ98</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.036</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>115</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>CHA267</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>7</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>29</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-109.3890683808079,32.00941004174098,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00048">
+			<name>Coweeta Special</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Coweeta Special</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>COW182</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>182</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Coweeta Special</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>d</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NC</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Macon</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>35.060527</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-83.43034</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>683</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NC25</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.015</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>122</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>COW182</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>special study</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>39</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-83.43034399681054,35.06053374875516,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00049">
+			<name>Deer Creek Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Deer Creek Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>DCP214</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>214</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Deer Creek Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>OH</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Fayette</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>39.635888</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-83.260563</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>264</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>OH54</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.003</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>126</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>DCP214</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>LYK123</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>OXF122</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>44</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-83.26056725196928,39.63589567056465,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00050">
+			<name>Georgia Station Collocated</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Georgia Station Collocated</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>GAS253</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>253</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Georgia Station Collocated</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>GA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Pike</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>33.181173</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-84.410054</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>265</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Agric</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Rolling</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>Mixed</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>GA41</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.078</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>131</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>GAS253</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>SND152</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>3/31/2011</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>54</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-84.41005817963342,33.18117931129696,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00051">
+			<name>Converse Station</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Converse Station</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>CON186</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>186</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Converse Station</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dom</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>CA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>San Bernardino</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>PA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>34.194048</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-116.912977</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1718</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Big Bear Lake</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest/Arid</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>CA94</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.03</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>132</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>CON186</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>2/7/2013</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>36</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-116.9129889713796,34.19405294741799,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00052">
+			<name>Coweeta Screwdriver Knob</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Coweeta Screwdriver Knob</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>COW005</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>5</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Coweeta Screwdriver Knob</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dm</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NC</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Macon</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>35.04826</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-83.45428</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>960</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NC25</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>2.559</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>142</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>COW005</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>SE4</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>11/18/2014</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>37</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-83.45428400311211,35.04826674525355,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ID_00053">
+			<name>Whiteface Mountain Summit</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Whiteface Mountain Summit</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>CASTNET.SITE.SITE_ID</td>
+
+<td>WFM007</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.SITE_NUM</td>
+
+<td>7</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.SITE_NAME</td>
+
+<td>Whiteface Mountain Summit</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ACTIVE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.INACTIVE</td>
+
+<td>dm</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.AGENCY</td>
+
+<td>EPA</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.STATE</td>
+
+<td>NY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.COUNTY</td>
+
+<td>Essex</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TIME_ZONE</td>
+
+<td>EA</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LATITUDE</td>
+
+<td>44.39</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.LONGITUDE</td>
+
+<td>-73.86</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ELEVATION</td>
+
+<td>1415</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.MAPID</td>
+
+<td>Wilmington, NY</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.LAND_USE</td>
+
+<td>Forest</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.TERRAIN</td>
+
+<td>Complex</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.MLM</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.NADP_ID</td>
+
+<td>NY98</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.NADP_DISTANCE</td>
+
+<td>0.37</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE.UPDATE_DATE</td>
+
+<td>1/30/2020 1:25:29 PM</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE.ESRI_OID</td>
+
+<td>143</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.SITE_ID</td>
+
+<td>WFM007</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.CONTINUOUS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.MLM_TIME_ZONE</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE1</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.NEARSITE2</td>
+
+<td>NONE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.NEARSITE3</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.GROUP_ID</td>
+
+<td>E2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.COMMENTS</td>
+
+<td>&lt;Null&gt;</td>
+
+</tr>
+
+<tr>
+
+<td>CASTNET.SITE_OPS.UPDATE_DATE</td>
+
+<td>6/27/2016</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>CASTNET.SITE_OPS.ESRI_OID</td>
+
+<td>137</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+			<styleUrl>#IconStyle00</styleUrl>
+			<Point>
+				<coordinates>-73.86000164759548,44.39000894884811,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
