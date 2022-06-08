@@ -1,7 +1,14 @@
 #############
 # Code to extract data from IMPROVE dataset
-# Data was queried on http://views.cira.colostate.edu/fed/QueryWizard/Default.aspx
-# The dataset (downloaded as an Excel workbook) contains the data and the metadata
+# Raw Data was queried on http://views.cira.colostate.edu/fed/QueryWizard/Default.aspx
+# Queried Data: "IMPROVE Aerosol (1-in-3 day)" 
+# Query Sites: Select all
+# Query Parameters: "Aluminum (Fine)", "Calcium (Fine)", "Iron (Fine)", "Mass, PM2.5 (Fine)", 
+#                   "Nitrate (Fine)", "Silicon (Fine)", "Sulfate (Fine)", "Titanium (Fine)"
+# Query Dates: Years 2000-2021, all months
+# Query Fields: "Dataset", "SiteCode", "POC", "Date", "AuxID", "SiteName", "Latitude",
+#               "Longitude", "Elevation", "State", "CountyFIPS", "EPACode"
+# The dataset (downloaded as an Excel workbook from the site) contains both the queried data and the metadata
 #############
 
 library(tidyverse)
