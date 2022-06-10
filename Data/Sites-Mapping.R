@@ -47,7 +47,15 @@ Sites_Info <- rbind(AQS_small, CSN_small, IMPROVE_small, CASTNET_small)
 
 # Remove sites with missing geographical location
 Sites_Info <- Sites_Info %>%
-  drop_na(Latitude, Longitude)
+  drop_na(Latitude, Longitude) %>%
+  unique()
+
+# Subset to sites in California and nearby states (based on latitude, longitude, and state borders)
+Sites_Near_Cali <- Sites_Info %>%
+  filter(Latitude <= 42) %>%
+  filter(Latitude >= 31.33) %>%
+  filter(Longitude <= -109.05) %>%
+  filter(Longitude >= -124.43)
 
 library(sf)
 library(leaflet)
@@ -57,16 +65,33 @@ library(RColorBrewer)
 # Create an interactive map of all data sites
 
 # Colour palette for the map
-sites_pal <- colorFactor("Set1", levels(Sites_Info$Dataset))
+all_sites_pal <- colorFactor("Set1", levels(Sites_Info$Dataset))
 
-Sites.Map <- leaflet(data = Sites_Info) %>% 
+All.Sites.Map <- leaflet(data = Sites_Info) %>% 
   addTiles() %>%
-  addCircleMarkers(~Longitude, ~Latitude, color= ~sites_pal(Dataset), opacity = 0.5,
+  addCircleMarkers(~Longitude, ~Latitude, color= ~all_sites_pal(Dataset), opacity = 0.5,
                    radius = 7, popup = paste("Site Name:", Sites_Info$Site.Name, "<br>",
                                              "Site Code:", Sites_Info$Site.Code, "<br>",
                                              "EPA Site Code:", Sites_Info$EPA.Code, "<br>",
                                              "Dataset:", Sites_Info$Dataset)) %>%
-  addLegend(position = "topright", pal = sites_pal, values = Sites_Info$Dataset,
+  addLegend(position = "topright", pal = all_sites_pal, values = Sites_Info$Dataset,
             title = "Data Collected at Site")
 
-saveWidget(Sites.Map, file="./Data/Sites-Map.html")
+saveWidget(All.Sites.Map, file="./Data/Sites-Map.html")
+
+# Create an interactive map of data sites near California
+
+# Colour palette for the map
+cali_sites_pal <- colorFactor("Set1", levels(Sites_Near_Cali$Dataset))
+
+Cali.Sites.Map <- leaflet(data = Sites_Near_Cali) %>% 
+  addTiles() %>%
+  addCircleMarkers(~Longitude, ~Latitude, color= ~cali_sites_pal(Dataset), opacity = 0.5,
+                   radius = 7, popup = paste("Site Name:", Sites_Near_Cali$Site.Name, "<br>",
+                                             "Site Code:", Sites_Near_Cali$Site.Code, "<br>",
+                                             "EPA Site Code:", Sites_Near_Cali$EPA.Code, "<br>",
+                                             "Dataset:", Sites_Near_Cali$Dataset)) %>%
+  addLegend(position = "topright", pal = cali_sites_pal, values = Sites_Near_Cali$Dataset,
+            title = "Data Collected at Site")
+
+saveWidget(Cali.Sites.Map, file="./Data/Sites-Near-California-Map.html")
