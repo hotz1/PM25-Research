@@ -6,8 +6,9 @@
 #############
 
 library(tidyverse)
-library(dtplyr)
 library(lubridate)
+library(plotly)
+library(htmlwidgets)
 
 # Set working directory
 setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
@@ -22,17 +23,22 @@ AQS_lower48 <- AQS_data %>%
 CSN_lower48 <- AQS_CSN_merged %>% 
   filter(!(State %in% c("Alaska", "Canada", "Country Of Mexico", "Hawaii", "Puerto Rico", "Virgin Islands")))
 
-# Mutate Date variables into Day, Week, Month, and Year variables
+# Mutate Date variable into a datetime variable using the lubridate package
 AQS_lower48 <- AQS_lower48 %>%
-  mutate(Day = lubridate::day(Date),
-         Week = lubridate::week(Date),
-         Month = lubridate::month(Date),
-         Year = lubridate::year(Date))
+  mutate(Date = lubridate::as_date(Date))
+CSN_lower48 <- AQS_lower48 %>%
+  mutate(Date = lubridate::as_date(Date))
+
+# Create variables representing the start of the week, month, and year for each respective day
+# By convention, we will start weeks on Mondays, months on the 1st of the month, and years on January 1st
+AQS_lower48 <- AQS_lower48 %>%
+  mutate(Week_Start = lubridate::floor_date(Date, "week", week_start = getOption("lubridate.week.start", 1)),
+         Month_Start = lubridate::floor_date(Date, "month"),
+         Year_Start = lubridate::floor_date(Date, "year"))
 CSN_lower48 <- CSN_lower48 %>%
-  mutate(Day = lubridate::day(Date),
-         Week = lubridate::week(Date),
-         Month = lubridate::month(Date),
-         Year = lubridate::year(Date))
+  mutate(Week_Start = lubridate::floor_date(Date, "week", week_start = getOption("lubridate.week.start", 1)),
+         Month_Start = lubridate::floor_date(Date, "month"),
+         Year_Start = lubridate::floor_date(Date, "year"))
 
 # Compute daily average of PM2.5 across the continental US
 daily_mean_pm25_USA <- AQS_lower48 %>%
@@ -90,11 +96,11 @@ CSN_lower48 <- CSN_lower48 %>%
 daily_mean_dust_USA <- CSN_lower48 %>%
   select(Date, Al, Si, Ca, Ti, Fe, Dust) %>%
   group_by(Date) %>%
-  mutate(Al = mean(Al),
-         Si = mean(Si),
-         Ca = mean(Ca),
-         Ti = mean(Ti),
-         Fe = mean(Fe),
+  mutate(Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
          Dust = mean(Dust, na.rm = TRUE)) %>%
   ungroup() %>%
   unique()
@@ -103,27 +109,38 @@ daily_mean_dust_USA <- CSN_lower48 %>%
 daily_mean_dust_statewide <- CSN_lower48 %>%
   select(Date, State, Al, Si, Ca, Ti, Fe, Dust) %>%
   group_by(Date, State) %>%
-  mutate(Al = mean(Al),
-         Si = mean(Si),
-         Ca = mean(Ca),
-         Ti = mean(Ti),
-         Fe = mean(Fe),
+  mutate(Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
          Dust = mean(Dust, na.rm = TRUE)) %>%
   ungroup() %>%
   unique()
 
-library(plotly)
-library(htmlwidgets)
-
 # Create a time series plot of daily mean PM2.5 measurements across the continental U.S.
-daily_pm25_USA_timeseries <- ggplot(data = daily_mean_pm25_USA, aes(x = Date, y = PM25)) +
+daily_pm25_USA_plot <- ggplot(data = daily_mean_pm25_USA, aes(x = Date, y = PM25)) +
   geom_line() +
   labs(x = "Date",
        y = "Mean Daily PM2.5",
-       title = "Daily Mean PM2.5 measurements at CSN datasites in the continental U.S.",
+       title = "Daily mean PM2.5 measurements at CSN datasites in the continental U.S.",
        subtitle = "Measurements taken at CSN datasites from 2000-2021") +
   theme_bw()
 
 # Save the plot created above as a PNG file
-ggsave(filename = "Daily_PM25_USA.png", plot = daily_pm25_USA_timeseries,
+ggsave(filename = "Daily_PM25_USA.png", plot = daily_pm25_USA_plot,
        device = "png", path = "./Summary Statistics")
+
+
+
+daily_pm25_statewide_plots <- daily_mean_pm25_statewide %>%
+  plot_ly(x = ~Date, y = ~PM25, color = ~State, type = "scatter", mode = "lines",
+          hover_info = "text", 
+          text = ~paste0("State: ", State,
+                         "<br>Date: ", Date,
+                         "<br>PM2.5: ", PM25)) %>%
+  layout(title = "Daily mean PM2.5 measurements per state at CSN datasites in the continental U.S.",
+         yaxis = list(title = "Mean Daily PM2.5"),
+         xaxis = list(title = "Date"))
+
+saveWidget(daily_pm25_statewide_plots, file = "./Summary Statistics/Daily_PM25_Statewide.html")
