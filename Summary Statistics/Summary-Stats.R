@@ -26,7 +26,7 @@ CSN_lower48 <- AQS_CSN_merged %>%
 # Mutate Date variable into a datetime variable using the lubridate package
 AQS_lower48 <- AQS_lower48 %>%
   mutate(Date = lubridate::as_date(Date))
-CSN_lower48 <- AQS_lower48 %>%
+CSN_lower48 <- CSN_lower48 %>%
   mutate(Date = lubridate::as_date(Date))
 
 # Create variables representing the start of the week, month, and year for each respective day
@@ -40,13 +40,93 @@ CSN_lower48 <- CSN_lower48 %>%
          Month_Start = lubridate::floor_date(Date, "month"),
          Year_Start = lubridate::floor_date(Date, "year"))
 
-# Compute daily average of PM2.5 across the continental US
+
+
+
+# Compute daily average of PM2.5 across the continental U.S.
 daily_mean_pm25_USA <- AQS_lower48 %>%
   select(Date, PM25) %>%
   group_by(Date) %>%
   mutate(PM25 = mean(PM25, na.rm = TRUE)) %>%
   ungroup() %>%
   unique()
+
+# Compute weekly average of PM2.5 across the continental U.S.
+weekly_mean_pm25_USA <- AQS_lower48 %>%
+  select(Week_Start, PM25) %>%
+  group_by(Week_Start) %>%
+  mutate(PM25 = mean(PM25, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
+
+# Compute monthly average of PM2.5 across the continental U.S.
+monthly_mean_pm25_USA <- AQS_lower48 %>%
+  select(Month_Start, PM25) %>%
+  group_by(Month_Start) %>%
+  mutate(PM25 = mean(PM25, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
+
+# Compute yearly average of PM2.5 across the continental U.S.
+yearly_mean_pm25_USA <- AQS_lower48 %>%
+  select(Year_Start, PM25) %>%
+  group_by(Year_Start) %>%
+  mutate(PM25 = mean(PM25, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
+
+# Create a time series plot of daily mean PM2.5 measurements across the continental U.S.
+daily_pm25_USA_plot <- ggplot(data = daily_mean_pm25_USA, aes(x = Date, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Daily PM2.5",
+       title = "Daily mean PM2.5 measurements at AQS datasites in the continental U.S.",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Daily_PM25_USA.png", plot = daily_pm25_USA_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
+# Create a time series plot of weekly mean PM2.5 measurements across the continental U.S.
+weekly_pm25_USA_plot <- ggplot(data = weekly_mean_pm25_USA, aes(x = Week_Start, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Weekly PM2.5",
+       title = "Weekly mean PM2.5 measurements at AQS datasites in the continental U.S.",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_PM25_USA.png", plot = weekly_pm25_USA_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
+# Create a time series plot of monthly mean PM2.5 measurements across the continental U.S.
+monthly_pm25_USA_plot <- ggplot(data = monthly_mean_pm25_USA, aes(x = Month_Start, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Monthly PM2.5",
+       title = "Monthly mean PM2.5 measurements at AQS datasites in the continental U.S.",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_PM25_USA.png", plot = monthly_pm25_USA_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
+# Create a time series plot of yearly mean PM2.5 measurements across the continental U.S.
+yearly_pm25_USA_plot <- ggplot(data = yearly_mean_pm25_USA, aes(x = Year_Start, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Yearly PM2.5",
+       title = "Yearly mean PM2.5 measurements at AQS datasites in the continental U.S.",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_PM25_USA.png", plot = yearly_pm25_USA_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
 
 # Compute daily average of PM2.5 per state
 daily_mean_pm25_statewide <- AQS_lower48 %>%
@@ -56,47 +136,104 @@ daily_mean_pm25_statewide <- AQS_lower48 %>%
   ungroup() %>%
   unique()
 
-# Compute 'daily' average of nitrate across the continental US
-daily_mean_nitrate_USA <- CSN_lower48 %>%
-  select(Date, nitrate) %>%
-  group_by(Date) %>%
-  mutate(nitrate = mean(nitrate, na.rm = TRUE)) %>%
+# Compute weekly average of PM2.5 per state
+weekly_mean_pm25_statewide <- AQS_lower48 %>%
+  select(Week_Start, State, PM25) %>%
+  group_by(Week_Start, State) %>%
+  mutate(PM25 = mean(PM25, na.rm = TRUE)) %>%
   ungroup() %>%
   unique()
 
-# Compute 'daily' average of nitrate per state
-daily_mean_nitrate_statewide <- CSN_lower48 %>%
-  select(Date, State, nitrate) %>%
-  group_by(Date, State) %>%
-  mutate(nitrate = mean(nitrate, na.rm = TRUE)) %>%
+# Compute monthly average of PM2.5 per state
+monthly_mean_pm25_statewide <- AQS_lower48 %>%
+  select(Month_Start, State, PM25) %>%
+  group_by(Month_Start, State) %>%
+  mutate(PM25 = mean(PM25, na.rm = TRUE)) %>%
   ungroup() %>%
   unique()
 
-# Compute 'daily' average of sulfate across the continental US
-daily_mean_sulfate_USA <- CSN_lower48 %>%
-  select(Date, sulfate) %>%
-  group_by(Date) %>%
-  mutate(sulfate = mean(sulfate, na.rm = TRUE)) %>%
+# Compute yearly average of PM2.5 per state
+yearly_mean_pm25_statewide <- AQS_lower48 %>%
+  select(Year_Start, State, PM25) %>%
+  group_by(Year_Start, State) %>%
+  mutate(PM25 = mean(PM25, na.rm = TRUE)) %>%
   ungroup() %>%
   unique()
 
-# Compute 'daily' average of sulfate per state
-daily_mean_sulfate_statewide <- CSN_lower48 %>%
-  select(Date, State, sulfate) %>%
-  group_by(Date, State) %>%
-  mutate(sulfate = mean(sulfate, na.rm = TRUE)) %>%
-  ungroup() %>%
-  unique()
+# Create a time series plot of daily mean PM2.5 measurements in California
+daily_pm25_Cali_plot <- daily_mean_pm25_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Date, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Daily PM2.5",
+       title = "Daily mean PM2.5 measurements at AQS datasites in California",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Daily_PM25_California.png", plot = daily_pm25_Cali_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
+# Create a time series plot of weekly mean PM2.5 measurements in California
+weekly_pm25_Cali_plot <- weekly_mean_pm25_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Week_Start, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Weekly PM2.5",
+       title = "Weekly mean PM2.5 measurements at AQS datasites in California",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_PM25_California.png", plot = weekly_pm25_Cali_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
+# Create a time series plot of monthly mean PM2.5 measurements in California
+monthly_pm25_Cali_plot <- monthly_mean_pm25_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Month_Start, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Monthly PM2.5",
+       title = "Monthly mean PM2.5 measurements at AQS datasites in California",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_PM25_California.png", plot = monthly_pm25_Cali_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
+# Create a time series plot of yearly mean PM2.5 measurements in California
+yearly_pm25_Cali_plot <- yearly_mean_pm25_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Year_Start, y = PM25)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Mean Yearly PM2.5",
+       title = "Yearly mean PM2.5 measurements at AQS datasites in California",
+       subtitle = "Measurements taken at AQS datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_PM25_California.png", plot = yearly_pm25_Cali_plot,
+       device = "png", path = "./Summary Statistics/PM 2.5 Plots")
+
+
+
 
 # Compute dust mass using the given dust mass formula (based on presence of dust components)
 CSN_lower48 <- CSN_lower48 %>%
   mutate(Dust = 2.2*Al + 2.49*Si + 1.63*Ca + 1.94*Ti + 2.42*Fe)
 
-# Compute 'daily' averages of dust components and dust mass across the continental US
-daily_mean_dust_USA <- CSN_lower48 %>%
-  select(Date, Al, Si, Ca, Ti, Fe, Dust) %>%
+# Compute daily averages of nitrate, sulfate, dust components and dust mass across the continental U.S.
+daily_mean_pollutants_USA <- CSN_lower48 %>%
+  select(Date, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
   group_by(Date) %>%
-  mutate(Al = mean(Al, na.rm = TRUE),
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
          Si = mean(Si, na.rm = TRUE),
          Ca = mean(Ca, na.rm = TRUE),
          Ti = mean(Ti, na.rm = TRUE),
@@ -105,11 +242,13 @@ daily_mean_dust_USA <- CSN_lower48 %>%
   ungroup() %>%
   unique()
 
-# Compute 'daily' averages of dust components and dust mass per state
-daily_mean_dust_statewide <- CSN_lower48 %>%
-  select(Date, State, Al, Si, Ca, Ti, Fe, Dust) %>%
-  group_by(Date, State) %>%
-  mutate(Al = mean(Al, na.rm = TRUE),
+# Compute weekly averages of nitrate, sulfate, dust components and dust mass across the continental U.S.
+weekly_mean_pollutants_USA <- CSN_lower48 %>%
+  select(Week_Start, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
+  group_by(Week_Start) %>%
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
          Si = mean(Si, na.rm = TRUE),
          Ca = mean(Ca, na.rm = TRUE),
          Ti = mean(Ti, na.rm = TRUE),
@@ -118,29 +257,442 @@ daily_mean_dust_statewide <- CSN_lower48 %>%
   ungroup() %>%
   unique()
 
-# Create a time series plot of daily mean PM2.5 measurements across the continental U.S.
-daily_pm25_USA_plot <- ggplot(data = daily_mean_pm25_USA, aes(x = Date, y = PM25)) +
-  geom_line() +
-  labs(x = "Date",
-       y = "Mean Daily PM2.5",
-       title = "Daily mean PM2.5 measurements at CSN datasites in the continental U.S.",
+# Compute monthly averages of nitrate, sulfate, dust components and dust mass across the continental U.S.
+monthly_mean_pollutants_USA <- CSN_lower48 %>%
+  select(Month_Start, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
+  group_by(Month_Start) %>%
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
+         Dust = mean(Dust, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
+
+# Compute yearly averages of nitrate, sulfate, dust components and dust mass across the continental U.S.
+yearly_mean_pollutants_USA <- CSN_lower48 %>%
+  select(Year_Start, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
+  group_by(Year_Start) %>%
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
+         Dust = mean(Dust, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
+
+# Create a time series plot of daily mean nitrate measurements across the continental U.S.
+daily_nitrate_USA_plot <- daily_mean_pollutants_USA %>%
+  ggplot(aes(x = Date, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Daily Quantity of Nitrate",
+       title = "Daily mean nitrate (NO3) measurements at CSN datasites in the continental U.S.",
        subtitle = "Measurements taken at CSN datasites from 2000-2021") +
   theme_bw()
 
 # Save the plot created above as a PNG file
-ggsave(filename = "Daily_PM25_USA.png", plot = daily_pm25_USA_plot,
-       device = "png", path = "./Summary Statistics")
+ggsave(filename = "Daily_Nitrate_USA.png", plot = daily_nitrate_USA_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of daily mean sulfate measurements across the continental U.S.
+daily_sulfate_USA_plot <- daily_mean_pollutants_USA %>%
+  ggplot(aes(x = Date, y = sulfate)) +
+  geom_line(color = "darkblue") +
+  labs(x = "Year",
+       y = "Mean Daily Quantity of Sulfate",
+       title = "Daily mean sulfate (SO4) measurements at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Daily_Sulfate_USA.png", plot = daily_sulfate_USA_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of daily mean dust mass measurements across the continental U.S.
+daily_dust_USA_plot <- daily_mean_pollutants_USA %>%
+  ggplot(aes(x = Date, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Daily Dust Mass",
+       title = "Daily dust mass measured at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Daily_DustMass_USA.png", plot = daily_dust_USA_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
+
+# Create a time series plot of weekly mean nitrate measurements across the continental U.S.
+weekly_nitrate_USA_plot <- weekly_mean_pollutants_USA %>%
+  ggplot(aes(x = Week_Start, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Weekly Quantity of Nitrate",
+       title = "Weekly mean nitrate (NO3) measurements at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_Nitrate_USA.png", plot = weekly_nitrate_USA_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of weekly mean sulfate measurements across the continental U.S.
+weekly_sulfate_USA_plot <- weekly_mean_pollutants_USA %>%
+  ggplot(aes(x = Week_Start, y = sulfate)) +
+  geom_line(color = "darkblue") +
+  labs(x = "Year",
+       y = "Mean Weekly Quantity of Sulfate",
+       title = "Weekly mean sulfate (SO4) measurements at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_Sulfate_USA.png", plot = weekly_sulfate_USA_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of weekly mean dust mass measurements across the continental U.S.
+weekly_dust_USA_plot <- weekly_mean_pollutants_USA %>%
+  ggplot(aes(x = Week_Start, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Weekly Dust Mass",
+       title = "Weekly dust mass measured at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_DustMass_USA.png", plot = weekly_dust_USA_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
+
+# Create a time series plot of monthly mean nitrate measurements across the continental U.S.
+monthly_nitrate_USA_plot <- monthly_mean_pollutants_USA %>%
+  ggplot(aes(x = Month_Start, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Monthly Quantity of Nitrate",
+       title = "Monthly mean nitrate (NO3) measurements at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_Nitrate_USA.png", plot = monthly_nitrate_USA_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of monthly mean sulfate measurements across the continental U.S.
+monthly_sulfate_USA_plot <- monthly_mean_pollutants_USA %>%
+  ggplot(aes(x = Month_Start, y = sulfate)) +
+  geom_line(color = "darkblue") +
+  labs(x = "Year",
+       y = "Mean Monthly Quantity of Sulfate",
+       title = "Monthly mean sulfate (SO4) measurements at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_Sulfate_USA.png", plot = monthly_sulfate_USA_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of monthly mean dust mass measurements across the continental U.S.
+monthly_dust_USA_plot <- monthly_mean_pollutants_USA %>%
+  ggplot(aes(x = Month_Start, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Monthly Dust Mass",
+       title = "Monthly dust mass measured at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_DustMass_USA.png", plot = monthly_dust_USA_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
+
+# Create a time series plot of yearly mean nitrate measurements across the continental U.S.
+yearly_nitrate_USA_plot <- yearly_mean_pollutants_USA %>%
+  ggplot(aes(x = Year_Start, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Yearly Quantity of Nitrate",
+       title = "Yearly mean nitrate (NO3) measurements at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_Nitrate_USA.png", plot = yearly_nitrate_USA_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of yearly mean sulfate measurements across the continental U.S.
+yearly_sulfate_USA_plot <- yearly_mean_pollutants_USA %>%
+  ggplot(aes(x = Year_Start, y = sulfate)) +
+  geom_line(color = "darkblue") +
+  labs(x = "Year",
+       y = "Mean Yearly Quantity of Sulfate",
+       title = "Yearly mean sulfate (SO4) measurements at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_Sulfate_USA.png", plot = yearly_sulfate_USA_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of yearly mean dust mass measurements across the continental U.S.
+yearly_dust_USA_plot <- yearly_mean_pollutants_USA %>%
+  ggplot(aes(x = Year_Start, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Yearly Dust Mass",
+       title = "Yearly dust mass measured at CSN datasites in the continental U.S.",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_DustMass_USA.png", plot = yearly_dust_USA_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
 
 
+# Compute daily averages of nitrate, sulfate, dust components and dust mass per state
+daily_mean_pollutants_statewide <- CSN_lower48 %>%
+  select(Date, State, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
+  group_by(Date, State) %>%
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
+         Dust = mean(Dust, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
 
-daily_pm25_statewide_plots <- daily_mean_pm25_statewide %>%
-  plot_ly(x = ~Date, y = ~PM25, color = ~State, type = "scatter", mode = "lines",
-          hover_info = "text", 
-          text = ~paste0("State: ", State,
-                         "<br>Date: ", Date,
-                         "<br>PM2.5: ", PM25)) %>%
-  layout(title = "Daily mean PM2.5 measurements per state at CSN datasites in the continental U.S.",
-         yaxis = list(title = "Mean Daily PM2.5"),
-         xaxis = list(title = "Date"))
+# Compute weekly averages of nitrate, sulfate, dust components and dust mass per state
+weekly_mean_pollutants_statewide <- CSN_lower48 %>%
+  select(Week_Start, State, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
+  group_by(Week_Start, State) %>%
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
+         Dust = mean(Dust, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
 
-saveWidget(daily_pm25_statewide_plots, file = "./Summary Statistics/Daily_PM25_Statewide.html")
+# Compute monthly averages of nitrate, sulfate, dust components and dust mass per state
+monthly_mean_pollutants_statewide <- CSN_lower48 %>%
+  select(Month_Start, State, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
+  group_by(Month_Start, State) %>%
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
+         Dust = mean(Dust, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
+
+# Compute yearly averages of nitrate, sulfate, dust components and dust mass per state
+yearly_mean_pollutants_statewide <- CSN_lower48 %>%
+  select(Year_Start, State, nitrate, sulfate, Al, Si, Ca, Ti, Fe, Dust) %>%
+  group_by(Year_Start, State) %>%
+  mutate(nitrate = mean(nitrate, na.rm = TRUE),
+         sulfate = mean(sulfate, na.rm = TRUE),
+         Al = mean(Al, na.rm = TRUE),
+         Si = mean(Si, na.rm = TRUE),
+         Ca = mean(Ca, na.rm = TRUE),
+         Ti = mean(Ti, na.rm = TRUE),
+         Fe = mean(Fe, na.rm = TRUE),
+         Dust = mean(Dust, na.rm = TRUE)) %>%
+  ungroup() %>%
+  unique()
+
+
+# Create a time series plot of daily mean nitrate measurements in California
+daily_nitrate_California_plot <- daily_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Date, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Daily Quantity of Nitrate",
+       title = "Daily mean nitrate (NO3) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Daily_Nitrate_California.png", plot = daily_nitrate_California_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of daily mean sulfate measurements in California
+daily_sulfate_California_plot <- daily_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Date, y = sulfate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Daily Quantity of Sulfate",
+       title = "Daily mean sulfate (SO4) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Daily_Sulfate_California.png", plot = daily_sulfate_California_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of daily mean dust mass measurements in California
+daily_dust_California_plot <- daily_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Date, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Daily Dust Mass",
+       title = "Daily dust mass measured at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Daily_DustMass_California.png", plot = daily_dust_California_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
+
+# Create a time series plot of weekly mean nitrate measurements in California
+weekly_nitrate_California_plot <- weekly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Week_Start, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Weekly Quantity of Nitrate",
+       title = "Weekly mean nitrate (NO3) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_Nitrate_California.png", plot = weekly_nitrate_California_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of weekly mean sulfate measurements in California
+weekly_sulfate_California_plot <- weekly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Week_Start, y = sulfate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Weekly Quantity of Sulfate",
+       title = "Weekly mean sulfate (SO4) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_Sulfate_California.png", plot = weekly_sulfate_California_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of weekly mean dust mass measurements in California
+weekly_dust_California_plot <- weekly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Week_Start, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Weekly Dust Mass",
+       title = "Weekly dust mass measured at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Weekly_DustMass_California.png", plot = weekly_dust_California_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
+
+# Create a time series plot of monthly mean nitrate measurements in California
+monthly_nitrate_California_plot <- monthly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Month_Start, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Monthly Quantity of Nitrate",
+       title = "Monthly mean nitrate (NO3) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_Nitrate_California.png", plot = monthly_nitrate_California_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of monthly mean sulfate measurements in California
+monthly_sulfate_California_plot <- monthly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Month_Start, y = sulfate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Monthly Quantity of Sulfate",
+       title = "Monthly mean sulfate (SO4) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_Sulfate_California.png", plot = monthly_sulfate_California_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of monthly mean dust mass measurements in California
+monthly_dust_California_plot <- monthly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Month_Start, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Monthly Dust Mass",
+       title = "Monthly dust mass measured at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Monthly_DustMass_California.png", plot = monthly_dust_California_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
+
+# Create a time series plot of yearly mean nitrate measurements in California
+yearly_nitrate_California_plot <- yearly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Year_Start, y = nitrate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Yearly Quantity of Nitrate",
+       title = "Yearly mean nitrate (NO3) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_Nitrate_California.png", plot = yearly_nitrate_California_plot,
+       device = "png", path = "./Summary Statistics/Nitrate Plots")
+
+# Create a time series plot of yearly mean sulfate measurements in California
+yearly_sulfate_California_plot <- yearly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Year_Start, y = sulfate)) +
+  geom_line(color = "darkred") +
+  labs(x = "Year",
+       y = "Mean Yearly Quantity of Sulfate",
+       title = "Yearly mean sulfate (SO4) measurements at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_Sulfate_California.png", plot = yearly_sulfate_California_plot,
+       device = "png", path = "./Summary Statistics/Sulfate Plots")
+
+# Create a time series plot of yearly mean dust mass measurements in California
+yearly_dust_California_plot <- yearly_mean_pollutants_statewide %>%
+  filter(State == "California") %>%
+  ggplot(aes(x = Year_Start, y = Dust)) +
+  geom_line(color = "darkgrey") +
+  labs(x = "Year",
+       y = "Mean Yearly Dust Mass",
+       title = "Yearly dust mass measured at CSN datasites in California",
+       subtitle = "Measurements taken at CSN datasites from 2000-2021") +
+  theme_bw()
+
+# Save the plot created above as a PNG file
+ggsave(filename = "Yearly_DustMass_California.png", plot = yearly_dust_California_plot,
+       device = "png", path = "./Summary Statistics/Dust Mass Plots")
