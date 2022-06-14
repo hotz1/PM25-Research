@@ -696,3 +696,75 @@ yearly_dust_California_plot <- yearly_mean_pollutants_statewide %>%
 # Save the plot created above as a PNG file
 ggsave(filename = "Yearly_DustMass_California.png", plot = yearly_dust_California_plot,
        device = "png", path = "./Summary Statistics/Dust Mass Plots")
+
+
+
+
+# Create a table of metadata for the data queried to compute monthly PM2.5 averages in California
+# Metadata includes the mean PM2.5 during that month, and the total number of unique sites and observations
+cali_monthly_queries_PM25 <- AQS_lower48 %>%
+  filter(State == "California") %>%
+  select(PM25, Month_Start, Site.Code) %>%
+  group_by(Month_Start) %>%
+  summarise(Unique_Sites = length(unique(Site.Code)),
+            Total_Observations = length(Site.Code),
+            Mean_PM25 = mean(PM25)) %>%
+  ungroup() %>%
+  mutate(Month = paste(lubridate::month(Month_Start, label = TRUE, abbr = FALSE),
+                       lubridate::year(Month_Start))) %>%
+  select(Month, Unique_Sites, Total_Observations, Mean_PM25)
+  
+# Save the table above as a csv file
+write.csv(cali_monthly_queries_PM25, file = "./Summary Statistics/PM 2.5 Plots/California_Monthly_PM25_Table.csv")
+
+# Create a table of metadata for the data queried to compute monthly nitrate averages in California
+# Metadata includes the mean nitrate during that month, and the total number of unique sites and observations
+cali_monthly_queries_nitrate <- CSN_lower48 %>%
+  filter(State == "California") %>%
+  select(nitrate, Month_Start, Site.Code) %>%
+  group_by(Month_Start) %>%
+  summarise(Unique_Sites = length(unique(Site.Code)),
+            Total_Observations = length(Site.Code),
+            Mean_Nitrate = mean(nitrate, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(Month = paste(lubridate::month(Month_Start, label = TRUE, abbr = FALSE),
+                       lubridate::year(Month_Start))) %>%
+  select(Month, Unique_Sites, Total_Observations, Mean_Nitrate)
+
+# Save the table above as a csv file
+write.csv(cali_monthly_queries_nitrate, file = "./Summary Statistics/Nitrate Plots/California_Monthly_Nitrate_Table.csv")
+
+# Create a table of metadata for the data queried to compute monthly sulfate averages in California
+# Metadata includes the mean sulfate during that month, and the total number of unique sites and observations
+cali_monthly_queries_sulfate <- CSN_lower48 %>%
+  filter(State == "California") %>%
+  select(sulfate, Month_Start, Site.Code) %>%
+  group_by(Month_Start) %>%
+  summarise(Unique_Sites = length(unique(Site.Code)),
+            Total_Observations = length(Site.Code),
+            Mean_Sulfate = mean(sulfate, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(Month = paste(lubridate::month(Month_Start, label = TRUE, abbr = FALSE),
+                       lubridate::year(Month_Start))) %>%
+  select(Month, Unique_Sites, Total_Observations, Mean_Sulfate)
+
+# Save the table above as a csv file
+write.csv(cali_monthly_queries_sulfate, file = "./Summary Statistics/Sulfate Plots/California_Monthly_Sulfate_Table.csv")
+
+
+# Create a table of metadata for the data queried to compute monthly dust mass averages in California
+# Metadata includes the mean dust mass during that month, and the total number of unique sites and observations
+cali_monthly_queries_dust_mass <- CSN_lower48 %>%
+  filter(State == "California") %>%
+  select(Dust, Month_Start, Site.Code) %>%
+  group_by(Month_Start) %>%
+  summarise(Unique_Sites = length(unique(Site.Code)),
+            Total_Observations = length(Site.Code),
+            Mean_Dust_Mass = mean(Dust, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(Month = paste(lubridate::month(Month_Start, label = TRUE, abbr = FALSE),
+                       lubridate::year(Month_Start))) %>%
+  select(Month, Unique_Sites, Total_Observations, Mean_Dust_Mass)
+
+# Save the table above as a csv file
+write.csv(cali_monthly_queries_dust_mass, file = "./Summary Statistics/Dust Mass Plots/California_Monthly_Dust_Mass_Table.csv")
