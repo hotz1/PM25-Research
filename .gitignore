@@ -9,3 +9,10 @@ Data/CSN Data/daily_SPEC/
 *.RData
 *.Rhistory
 Data/AQS Data/daily_88101/
+Data/CSN Data/daily_SPEC.zip
+Data/AQS Data/AQS_PM25_2000_2021_Cali.csv
+Data/AQS Data/AQS_PM25_2000_2021_USA.csv
+Data/AQS-CSN Merging/AQS_CSN_Data_2000_2021.csv
+Data/CASTNET Data/Active_Sites.kmz
+Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv
+Data/CSN Data/CSN_PM25_SPEC_2000_2021_USA.csv
