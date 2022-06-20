@@ -80,7 +80,7 @@ grab.nc.url = function(url, paths = integer()){
   # nc.list: character vector of URLs for relevant .nc files
   
   # collect the dates from the html file names
-  date = substr(url, 23, 32)
+  date = substr(url, 34, 43)
   
   # reads html table of the OPeNDAP page, collects the first column (file names)
   nc.list = readHTMLTable(htmlParse(url), stringsAsFactors = FALSE)[[1]][,1]
@@ -134,6 +134,11 @@ for(year in 2000:2021){
   misr.filepaths = paste0(getwd(), '/Data/MISR/MISR_urls/temp_files')
   misr.filepaths = paste0(misr.filepaths, '/', list.files(misr.filepaths))
   file.remove(misr.filepaths)
+  
+  # Summarize number of NetCDF files found for a given year
+  cat('Year: ', year, '\n',
+      'Total Dates with Data: ', length(misr.filepaths), '\n',
+      'Total NetCDF Files Found: ', length(ncdf.urls), sep = '')
 }
 
 
