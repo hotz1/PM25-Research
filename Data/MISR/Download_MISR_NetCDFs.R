@@ -156,8 +156,8 @@ for(year in 2000:2021){
   
   indices = 1:length(ncdf.urls)
   for(i in indices){
-    cat('Downloading [', sprintf('%05d', i), '/',
-        sprintf('%05d', max(indices)), ']: ',
+    cat('Downloading [', sprintf('%04d', i), '/',
+        sprintf('%04d', max(indices)), ']: ',
         substr(ncdf.urls[i], 63, 72), '...', sep = '')
     
     start = Sys.time()
