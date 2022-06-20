@@ -138,41 +138,43 @@ for(year in 2000:2021){
   # Summarize number of NetCDF files found for a given year
   cat('Year: ', year, '\n',
       'Total Dates with Data: ', length(misr.filepaths), '\n',
-      'Total NetCDF Files Found: ', length(ncdf.urls), sep = '')
+      'Total NetCDF Files Found: ', length(ncdf.urls), '\n', sep = '')
 }
 
 
 
 # Part 3 - Download .nc files ---------------------------------------------
-# optional: read vector from RDS object to resume downloading
-ncdf.urls = readRDS('./Data/MISR/MISR_urls/ncdf_urls_2000.rds')
 
-
-# make sure you have created a directory named ndcf in your working path (to store ncdf files)
-# indices of url vector
+# Make sure you have created a directory named ndcf in your working path (to store ncdf files)
 
 ncdf.folder = 'Data/MISR/NetCDF_files'
 ncdf.folder = paste0(getwd(), '/', ncdf.folder, '/')
 
-indices = 1:length(misr.urls)
-for(i in indices){
-  cat('Downloading [', sprintf('%05d', i), '/',
-      sprintf('%05d', max(indices)), ']: ',
-      substr(ncdf.urls[i], 63, 72), '...', sep = '')
+for(year in 2000:2021){
+  # Read vector from RDS object to resume downloading
+  ncdf.urls = readRDS(paste0('./Data/MISR/MISR_urls/ncdf_urls_', year, '.rds'))
   
-  start = Sys.time()
-  tryCatch(
-    {
-    # download the NetCDF file (if possible)
-    download.file(ncdf.urls[i], paste0(ncdf.folder, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))),
-                  quiet = TRUE)
-    # print total time taken to download the file (in seconds) 
-    cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
-    },
-    error = function(cond){
-      # gives warning if failed, including file name
-      message(paste0('\nWARNING: ', substr(ncdf.urls[i], 74, nchar(ncdf.urls[i])),
-                     ' failed to download\n'))
-    }
-  )
+  indices = 1:length(ncdf.urls)
+  for(i in indices){
+    cat('Downloading [', sprintf('%05d', i), '/',
+        sprintf('%05d', max(indices)), ']: ',
+        substr(ncdf.urls[i], 63, 72), '...', sep = '')
+    
+    start = Sys.time()
+    tryCatch(
+      {
+        # download the NetCDF file (if possible)
+        download.file(ncdf.urls[i], paste0(ncdf.folder, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))),
+                      quiet = TRUE)
+        
+        # print total time taken to download the file (in seconds) 
+        cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+      },
+      error = function(cond){
+        # gives warning if failed, including file name
+        message(paste0('\nWARNING: ', substr(ncdf.urls[i], 74, nchar(ncdf.urls[i])),
+                       ' failed to download\n'))
+      }
+    )
+  }
 }
