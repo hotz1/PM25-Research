@@ -3,6 +3,7 @@
 # The files are downloaded from NASA's OPeNDAP Hyrax server (https://opendap.larc.nasa.gov/opendap/jsp/index.jsp)
 # The dataset used is the MIL2ASAE_3 dataset (https://opendap.larc.nasa.gov/opendap/hyrax/MISR/MIL2ASAE.003/contents.html)
 # The dataset contains Level 2 Aerosol parameters, with dates ranging from March 1, 2000 until November 30, 2021 (as of June 20, 2022)
+# Paths are chosen to encompass California based on the MISR paths site (https://l0dup05.larc.nasa.gov/cgi-bin/DUE/misr_loc/misr_loc.cgi)
 # Last updated: June 20, 2022
 #############
 
@@ -123,7 +124,7 @@ for(year in 2000:2021){
   # Scrape NetCDF file links from MISR urls and dates
   system.time({
     ncdf.urls = unlist(sapply(misr.urls[substr(misr.urls, 34, 37) == year],
-                              function(x) grab.nc.url(x, paths = c(8:55))),
+                              function(x) grab.nc.url(x, paths = c(36:48))),
                      use.names = F)
     })
   
