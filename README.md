@@ -7,3 +7,4 @@ Data Sources:
 - EPA: https://aqs.epa.gov/aqsweb/airdata/download_files.html
 - MISR: https://l0dup05.larc.nasa.gov/cgi-bin/MISR/main.cgi
 - NASA MERRA-2 GMI: https://acd-ext.gsfc.nasa.gov/Projects/GEOSCCM/MERRA2GMI/ 
+- Daily meteorology: https://daymet.ornl.gov/
