@@ -47,13 +47,13 @@ download.misr.urls = function(start, end, url.folder = ''){
   for(i in 1:length(OPeNDAP.urls)){
     tryCatch(
       {
-      # download a file for a given day to the chosen subfolder in the directory
-      cat(substr(OPeNDAP.urls[i], 63, 72), '...', sep = ''); start = Sys.time()
-      download.file(OPeNDAP.urls[i], paste0(url.folder, substr(OPeNDAP.urls[i], 63, 72), '.contents.html'),
-                    quiet = TRUE)
-      downloaded = downloaded + 1
-      # print total time taken to download the file (in seconds) 
-      cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+        # download a file for a given day to the chosen subfolder in the directory
+        cat(substr(OPeNDAP.urls[i], 63, 72), '...', sep = ''); start = Sys.time()
+        download.file(OPeNDAP.urls[i], paste0(url.folder, substr(OPeNDAP.urls[i], 63, 72), '.contents.html'),
+                      quiet = TRUE)
+        downloaded = downloaded + 1
+        # print total time taken to download the file (in seconds) 
+        cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
       },
       # print a warning if the page could not be found
       error = function(cond) {
@@ -125,8 +125,8 @@ for(year in 2000:2021){
   system.time({
     ncdf.urls = unlist(sapply(misr.urls[substr(misr.urls, 34, 37) == year],
                               function(x) grab.nc.url(x, paths = c(36:48))),
-                     use.names = F)
-    })
+                       use.names = F)
+  })
   
   # Export vector of NetCDF links to RDS object to keep the download links for usage at a later time
   saveRDS(ncdf.urls, paste0('./Data/MISR/MISR_urls/ncdf_urls_', year, '.rds'))
@@ -165,9 +165,8 @@ for(year in 2000:2021){
     tryCatch(
       {
         # download the NetCDF file (if possible)
-        download.file(url = ncdf.urls[i], 
-                      filepath = paste0(ncdf.folder, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))),
-                      quiet = TRUE, mode = "wb")
+        download.file(ncdf.urls[i], paste0(ncdf.folder, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))),
+                      quiet = TRUE)
         
         # print total time taken to download the file (in seconds) 
         cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
