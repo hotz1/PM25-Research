@@ -166,7 +166,7 @@ for(year in 2000:2021){
       {
         # download the NetCDF file (if possible)
         download.file(ncdf.urls[i], paste0(ncdf.folder, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))),
-                      quiet = TRUE)
+                      quiet = TRUE, method = "wb")
         
         # print total time taken to download the file (in seconds) 
         cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
