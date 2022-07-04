@@ -1,7 +1,7 @@
 #############
 # Code to read, process, and reformat data stored in NetCDF files downloaded from NASA's MISR Level 2 Aerosol dataset
 # The files are downloaded from NASA's OPeNDAP Hyrax server (https://opendap.larc.nasa.gov/opendap/jsp/index.jsp)
-# Last updated: June 30, 2022
+# Last updated: July 4, 2022
 #############
 
 library(ncdf4)
