@@ -116,6 +116,8 @@ for(i in 1:length(netcdf_list)){
   aod_74 = na.omit(aod_74, cols = c('x','y'))
   
   misr_74_list[[i]] <- aod_74
+  
+  nc_close(netcdf)
 }
 
 # Bind all of the individual datasets together to create a larger dataset 
