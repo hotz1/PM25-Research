@@ -53,6 +53,9 @@ for(i in 1:length(netcdf_list)){
   misr_dataset <- na.omit(misr_dataset, cols = c(1:7))
   
   misr_data_list[[i]] <- misr_dataset
+  
+  # Close the opened NetCDF file to prevent data loss
+  nc_close(netcdf)
 }
 
 # Bind all of the individual datasets together to create a larger dataset 
