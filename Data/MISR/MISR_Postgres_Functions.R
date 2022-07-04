@@ -23,7 +23,12 @@ extract.ncdf = function(files, file.index, region, var.list, pixels.list,
   # pixels.list    : data.table containing a current list of unique pixels' xy coordinates
   # filter.data    : Defaults to true. When true, remove pixels with at least a certain number of columns which are missing
   # filter.region  : Defaults to true. When true, filter to exclusively select pixels within the provided region
-  
+  #
+  #
+  # Function Outputs:
+  #
+  # misr.data       : Entire MISR dataset from the file, including the pixel ids
+  # misr.pixels     : Data table of all unique pixels from the selected file's flightpath, including new pixels
   
   # Open the chosen file
   mycdf = nc_open(files[file.index])
@@ -144,4 +149,40 @@ extract.ncdf = function(files, file.index, region, var.list, pixels.list,
     tmp = tmp[sapply(over.region, length) > 0]
     cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   }
+  
+  
+  # Count number of unique pixels for the selected MISR flightpath, not including the current file
+  path.pixels = pixels.list[substr(pixel_id, 1, 4) == path]
+  pix.count = nrow(path.pixels)
+  if(pix.count > 0){
+    # Merge with currently-existing pixels. New pixels will have (temporary) NA pixel_ids
+    path.pixels = merge(path.pixels, tmp[,c('lon','lat')], 
+                        all = TRUE, by = c('lon', 'lat'))
+    path.pixels = path.pixels[order(pixel_id)]
+  }
+  else{
+    # This case will handle the first NewCDF file, which has no prior existing pixels
+    path.pixels = data.table(tmp[,c('lon','lat')])
+    # Generate 'pixel_id' values for these pixels
+    path.pixels[, pixel_id := paste0(path, '_', sprintf('%07d', 1:nrow(path.pixels)))]
+  }
+  
+  # If there are any new pixels which were not present before
+  if(nrow(path.pixels) > pix.count){
+    # Count the new total number of pixels
+    new.count = nrow(path.pixels)
+    cat('*** New pixels:', (new.count - pix.count), 'found\n')
+    # Generate pixel_id for each of the new pixels
+    path.pixels[, pixel_id := ifelse(!is.na(pixel_id), pixel_id,
+                                     paste0(path, '_', sprintf('%07d', (pix.count+1):new.count)))]
+  }
+
+  # Add new pixels into the list of all pixels  
+  pixels.list = rbind(pixels.list[substr(pixel_id, 1, 4) != path], path.pixels)
+  
+  # Merge the pixels and their pixel_ids into the larger MISR dataset
+  tmp = merge(tmp, pixels.list, all.x=T, by=c('lon','lat'))
+
+  # Return the dataset derived from the NetCDF file and the set of pixels, including new pixels added with this .nc file
+  return(list(misr.data = tmp, misr.pixels = pixels.list))
 }
