@@ -84,13 +84,13 @@ for(i in 1:length(netcdf_list)){
   date = as.Date(paste(year, month, day, sep = "-"))
   
   # Get longitudes and latitudes for measured data
-  lon = ncvar_get(netcdf, varlist[5])
-  lat = ncvar_get(netcdf, varlist[4])
-  lon_lat = data.table(lon = as.vector(lon),
-                       lat = as.vector(lat))
+  longitude = ncvar_get(netcdf, varlist[5])
+  latitude = ncvar_get(netcdf, varlist[4])
+  lon_lat = data.table(lon = as.vector(longitude),
+                       lat = as.vector(latitude))
   
   # Project latitude and longitude to an x-y grid
-  proj_xy = data.table(project(as.matrix(lon_lat), proj=proj_ca))
+  proj_xy = data.table(project(as.matrix(lon_lat), proj = proj_ca))
   names(proj_xy) = c('x','y')
   
   # Get the Aerosol Optical Depth per Mixture data
