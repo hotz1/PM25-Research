@@ -4,6 +4,7 @@
 #############
 
 require(sf)
+require(plyr)
 require(dplyr)
 require(ncdf4)
 require(data.table)
@@ -156,13 +157,13 @@ extract.ncdf = function(files, file.index, region, var.list, pixels.list,
   pix.count = nrow(path.pixels)
   if(pix.count > 0){
     # Merge with currently-existing pixels. New pixels will have (temporary) NA pixel_ids
-    path.pixels = merge(path.pixels, tmp[,c('lon','lat')], 
-                        all = TRUE, by = c('lon', 'lat'))
+    path.pixels = merge(path.pixels, tmp[,c('longitude','latitude')], 
+                        all = TRUE, by = c('longitude', 'latitude'))
     path.pixels = path.pixels[order(pixel_id)]
   }
   else{
-    # This case will handle the first NewCDF file, which has no prior existing pixels
-    path.pixels = data.table(tmp[,c('lon','lat')])
+    # This case will handle the first NetCDF file, which has no prior existing pixels
+    path.pixels = data.table(tmp[,c('longitude','latitude')])
     # Generate 'pixel_id' values for these pixels
     path.pixels[, pixel_id := paste0(path, '_', sprintf('%07d', 1:nrow(path.pixels)))]
   }
@@ -181,7 +182,7 @@ extract.ncdf = function(files, file.index, region, var.list, pixels.list,
   pixels.list = rbind(pixels.list[substr(pixel_id, 1, 4) != path], path.pixels)
   
   # Merge the pixels and their pixel_ids into the larger MISR dataset
-  tmp = merge(tmp, pixels.list, all.x=T, by=c('lon','lat'))
+  tmp = merge(tmp, pixels.list, all.x=T, by=c('longitude','latitude'))
 
   # Return the dataset derived from the NetCDF file and the set of pixels, including new pixels added with this .nc file
   return(list(misr.data = tmp, misr.pixels = pixels.list))
