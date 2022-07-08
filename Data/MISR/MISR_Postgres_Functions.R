@@ -1,6 +1,6 @@
 #############
 # Defining functions which can copy MISR datasets from R into a SQL database using Postgres and the RPostgreSQL package
-# Last updated: July 4, 2022
+# Last updated: July 5, 2022
 #############
 
 require(sf)

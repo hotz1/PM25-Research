@@ -11,7 +11,7 @@ require(XML)
 require(ncdf4)
 require(data.table)
 
-setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+# setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
 # FUNCTIONS ---------------------------------------------------------------
 # FUNCTION to download MISR pages for specified date range to a specific subfolder of the working directory

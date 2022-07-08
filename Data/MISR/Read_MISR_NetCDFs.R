@@ -1,7 +1,7 @@
 #############
 # Code to read, process, and reformat data stored in NetCDF files downloaded from NASA's MISR Level 2 Aerosol dataset
 # The files are downloaded from NASA's OPeNDAP Hyrax server (https://opendap.larc.nasa.gov/opendap/jsp/index.jsp)
-# Last updated: July 4, 2022
+# Last updated: July 8, 2022
 #############
 
 library(ncdf4)
@@ -10,7 +10,7 @@ library(dplyr)
 library(proj4) 
 
 # set the working directory
-setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+# setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
 #### Geographic projection for California applied to lat/lon ####
 proj_ca <- "+proj=aea +lat_1=34.0 +lat_2=40.5 +lon_0=-120.0 +x_0=0 +y_0=-4000000 +ellps=GRS80 +datum=NAD83 +units=km"
