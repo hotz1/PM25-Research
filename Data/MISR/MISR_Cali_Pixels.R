@@ -6,15 +6,18 @@
 # Last updated: July 11, 2022
 #############
 
-install.packages(c("data.table", "downloader", "dplyr", "leaflet", "magrittr", "ncdf4", "sf", "stringr"))
+install.packages(c("data.table", "downloader", "dplyr", "magrittr", "ncdf4", "sf", "stringr"))
 require(data.table)
 require(downloader)
 require(dplyr)
-require(leaflet)
 require(magrittr)
 require(ncdf4)
 require(sf)
 require(stringr)
+
+# Increase amount of time before a file download times out to 5 minutes
+options(timeout = max(300, getOption("timeout")))
+
 
 # Get directory names 
 misr_urls.dir = paste0(getwd(), '/Data/MISR/MISR_urls/') # Folder containing urls for the NetCDF files to download
@@ -74,21 +77,38 @@ get_pixels_in_region <- function(ncdf.dir, ncdf.file, region){
 
 # Get lists (one for each year) of urls for the NetCDF files to download from the OpenDAP server
 ncdf_urls_list <- list.files(misr_urls.dir, pattern = "*.rds", full.names = T)
-ncdf.filenames <- readRDS(ncdf_urls_list[1])
+
+ncdf.urls <- readRDS(ncdf_urls_list[1])
+
+ncdf.urls <- ncdf.urls[1:5]
 
 
 # An empty list which will be populated with individual lists of pixels in a region
-pixels.list = vector("list", length = length(ncdf.filenames))
+pixels.list = vector("list", length = length(ncdf.urls))
 
-for(i in 1:length(ncdf.filenames)){
-  # Download the file
-  download.file(url = ncdf.filenames[i], destfile = paste0(ncdf.dir, substr(ncdf.filenames[i], 74,
-                                                                            nchar(ncdf.filenames[i]))))
-  # Extract all pixels located in California
-  pixels.list[[i]] = get_pixels_in_region(ncdf.dir, ncdf.file = ncdf.filenames[i], region = california)
+for(i in 1:length(ncdf.urls)){
+  start = Sys.time()
   
-  # Remove the file when we're done with it
-  file.remove(paste0(ncdf.dir, substr(ncdf.filenames[i], 74, nchar(ncdf.filenames[i]))))
+  # Attempt to download the file, with a catch clause to avoid breaking the loop in case of error
+  tryCatch({
+    # Attempt to download the NetCDF file from the OpenDAP server
+    download.file(ncdf.urls[i], paste0(ncdf.dir, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))),
+                  quiet = TRUE, method = "libcurl", mode = "wb")
+    cat("File", i, "downloaded!\n")
+    
+    # Extract all pixels in the file which are located in California
+    pixels.list[[i]] = get_pixels_in_region(ncdf.dir, ncdf.file = substr(ncdf.urls[i], 74, nchar(ncdf.urls[i])),
+                                            region = california)
+    
+    # Remove the file when we're done with it
+    file.remove(paste0(ncdf.dir, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))))
+    cat("File", i, "deleted!\n")
+  },
+  error = function(cond){
+      message(paste0('WARNING: File', i, 'failed to download.\n'))
+  })
+  
+  cat("Time taken:", round(difftime(Sys.time(), start, units = 'secs'), 2), 'seconds.\n')
 }
 
 # Bind all the individual rows together into one larger dataset
@@ -102,4 +122,4 @@ all.pixels <- all.pixels %>%
   ungroup() %>%
   select(longitude, latitude, pixel_id)
 
-write.csv(all.pixels, paste0(getwd(), '/Data/MISR/cali_pixels.csv'))
+write.csv(all.pixels, paste0(getwd(), '/Data/MISR/cali_pixels.csv'), row.names = F)
