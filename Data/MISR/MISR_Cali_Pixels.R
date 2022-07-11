@@ -3,7 +3,7 @@
 # A 'pixel' consists of three components; a unique pixel ID, and the real-world latitude and longitude which the pixel represents.
 # The pixel ID is a string of the form "P###_#######", where the first three numerals represent the MISR flightpath of the pixel
 # and the following 7 numerals represent the individual pixel's ID along that flight path.
-# Last updated: July 8, 2022
+# Last updated: July 11, 2022
 #############
 
 require(data.table)
@@ -15,21 +15,16 @@ require(ncdf4)
 require(sf)
 require(stringr)
 
-# Load in California shapefile
-california <- st_read(paste0(getwd(), '/Data/ca-state-boundary/CA_State_TIGER2016.shp'))
-
+# Get directory names 
 misr_urls.dir = paste0(getwd(), '/Data/MISR/MISR_urls/') # Folder containing urls for the NetCDF files to download
 ncdf.dir = paste0(getwd(), '/Data/MISR/NetCDF_files/') # Folder to download NetCDF files into
 
-# Get lists of NetCDF urls to download from the OpenDAP server
-ncdf_urls_list <- list.files(misr_urls.dir, pattern = "*.rds", full.names = T)
+# Load in California shapefile
+california <- st_read(paste0(getwd(), '/Data/ca-state-boundary/CA_State_TIGER2016.shp')) %>%
+  st_transform(crs = 4326)
 
-# ncdf.filenames = list.files(ncdf.dir, pattern = '.nc', full.names = F)
 
-
-pixels.list = list()
-
-#### Function to get the list of pixels in a NetCDF file which are in a certain given region ####
+#### Function to get the list of pixels within a NetCDF file which are located inside of the given region ####
 get_pixels_in_region <- function(ncdf.dir, ncdf.file, region){
   # Function Inputs: 
   # 
@@ -50,31 +45,22 @@ get_pixels_in_region <- function(ncdf.dir, ncdf.file, region){
   path = str_extract(ncdf.file, pattern = "P[0-9]*") 
   cat("Path:", path, "\n")
   
-  # Create a table of pixels (unique latitudes + longitudes)
+  # Create a table of pixels (path number + unique latitudes/longitudes)
   pixels = data.table(
+    path = path,
     longitude = ncvar_get(mycdf, var.list[5]) %>% as.vector(),
     latitude = ncvar_get(mycdf, var.list[4]) %>% as.vector()) %>%
     na.omit
   
   # Get a list of pixels in the given region
   in.region <- pixels %>% 
-    st_as_sf(coords = c('longitude','latitude'), crs = st_crs(region), remove = F) %>%
+    st_as_sf(coords = c('longitude','latitude'), crs = 4326, remove = F) %>%
     st_contains(x = region, y = .) %>% 
     unlist
   
+  # Select only the pixels which are located in the given region
+  pixels <- pixels %>% filter(row_number() %in% in.region)
   cat(length(in.region), 'pixels in the given region.\n')
-  
-  if(length(in.region) > 0){
-    pixels <- pixels %>%
-      filter(row_number() %in% in.region) %>%
-      mutate(pixel_id = paste0(path, '_', sprintf('%07d', 1:n()))) %>%
-      select(pixel_id, longitude, latitude)
-  }
-  else{
-    pixels <- data.table(longitude = numeric(), 
-                         latitude = numeric(),
-                         pixel_id = character())
-  }
   
   # Close and remove the NetCDF to prevent memory leakage and free up working memory
   nc_close(mycdf)
@@ -83,3 +69,36 @@ get_pixels_in_region <- function(ncdf.dir, ncdf.file, region){
   
   return(pixels.dt = pixels)
 }
+
+
+# Get lists (one for each year) of urls for the NetCDF files to download from the OpenDAP server
+ncdf_urls_list <- list.files(misr_urls.dir, pattern = "*.rds", full.names = T)
+ncdf.filenames <- readRDS(ncdf_urls_list[1])
+
+
+# An empty list which will be populated with individual lists of pixels in a region
+pixels.list = vector("list", length = length(ncdf.filenames))
+
+for(i in 1:length(ncdf.filenames)){
+  # Download the file
+  download.file(url = ncdf.filenames[i], destfile = paste0(ncdf.dir, substr(ncdf.filenames[i], 74,
+                                                                            nchar(ncdf.filenames[i]))))
+  # Extract all pixels located in California
+  pixels.list[[i]] = get_pixels_in_region(ncdf.dir, ncdf.file = ncdf.filenames[i], region = california)
+  
+  # Remove the file when we're done with it
+  file.remove(paste0(ncdf.dir, substr(ncdf.filenames[i], 74, nchar(ncdf.filenames[i]))))
+}
+
+# Bind all the individual rows together into one larger dataset
+all.pixels = do.call("rbind", pixels.list)
+
+# Remove duplicate rows and then create unique pixel_id values for each lat-lon pair
+all.pixels <- all.pixels %>% 
+  unique() %>%
+  group_by(path) %>%
+  mutate(pixel_id = paste0(path, '_', sprintf('%06d', 1:n()))) %>%
+  ungroup() %>%
+  select(longitude, latitude, pixel_id)
+
+write.csv(all.pixels, paste0(getwd(), '/Data/MISR/cali_pixels.csv'))
