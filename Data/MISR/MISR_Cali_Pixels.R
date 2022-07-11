@@ -6,6 +6,7 @@
 # Last updated: July 11, 2022
 #############
 
+install.packages(c("data.table", "downloader", "dplyr", "leaflet", "magrittr", "ncdf4", "sf", "stringr"))
 require(data.table)
 require(downloader)
 require(dplyr)
