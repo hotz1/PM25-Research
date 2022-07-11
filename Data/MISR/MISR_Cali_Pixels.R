@@ -77,10 +77,7 @@ get_pixels_in_region <- function(ncdf.dir, ncdf.file, region){
 
 # Get lists (one for each year) of urls for the NetCDF files to download from the OpenDAP server
 ncdf_urls_list <- list.files(misr_urls.dir, pattern = "*.rds", full.names = T)
-
 ncdf.urls <- readRDS(ncdf_urls_list[1])
-
-ncdf.urls <- ncdf.urls[1:5]
 
 
 # An empty list which will be populated with individual lists of pixels in a region
