@@ -6,10 +6,11 @@
 # Last updated: July 11, 2022
 #############
 
-install.packages(c("data.table", "downloader", "dplyr", "magrittr", "ncdf4", "sf", "stringr"))
+install.packages(c("data.table", "downloader", "dplyr", "leaflet", "magrittr", "ncdf4", "sf", "stringr"))
 require(data.table)
 require(downloader)
 require(dplyr)
+require(leaflet)
 require(magrittr)
 require(ncdf4)
 require(sf)
@@ -87,6 +88,7 @@ for(i in 1:length(ncdf.urls)){
   start = Sys.time()
   
   # Attempt to download the file, with a catch clause to avoid breaking the loop in case of error
+  cat('Attempting to download file ', i, '.\n', sep = '')
   tryCatch({
     # Attempt to download the NetCDF file from the OpenDAP server
     download.file(ncdf.urls[i], paste0(ncdf.dir, substr(ncdf.urls[i], 74, nchar(ncdf.urls[i]))),
@@ -119,4 +121,14 @@ all.pixels <- all.pixels %>%
   ungroup() %>%
   select(longitude, latitude, pixel_id)
 
+# Save the list of pixels as a csv file
 write.csv(all.pixels, paste0(getwd(), '/Data/MISR/cali_pixels.csv'), row.names = F)
+
+# Create a map in leaflet (and save it) to verify that the pixels cover the desired region
+cali_pixel_map <- leaflet(data = all.pixels) %>% 
+  addTiles() %>% 
+  addCircleMarkers(~longitude, ~latitude, opacity = 0.5, radius = 0.1, 
+                   popup = paste("Pixel ID:", all.pixels$pixel_id, "<br>",
+                                 "Longitude", all.pixels$longitude, "<br>",
+                                 "Latitude:", all.pixels$latitude))
+htmlwidgets::saveWidget(cali_pixel_map, paste0(getwd(), '/Data/MISR/cali_pixels_map.html'))
