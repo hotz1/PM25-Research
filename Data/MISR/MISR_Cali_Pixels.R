@@ -3,7 +3,7 @@
 # A 'pixel' consists of three components; a unique pixel ID, and the real-world latitude and longitude which the pixel represents.
 # The pixel ID is a string of the form "P###_#######", where the first three numerals represent the MISR flightpath of the pixel
 # and the following 7 numerals represent the individual pixel's ID along that flight path.
-# Last updated: July 11, 2022
+# Last updated: July 13, 2022
 #############
 
 install.packages(c("data.table", "downloader", "dplyr", "leaflet", "magrittr", "ncdf4", "sf", "stringr"))
