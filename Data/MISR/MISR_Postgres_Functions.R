@@ -1,6 +1,7 @@
 #############
-# Defining functions which can copy MISR datasets from R into a SQL database using Postgres and the RPostgreSQL package
-# Last updated: July 5, 2022
+# Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R, and
+# Then load these data into an SQL database using Postgres, PostGIS, and the RPostgreSQL package
+# Last updated: July 14, 2022
 #############
 
 require(sf)
@@ -11,32 +12,35 @@ require(data.table)
 require(stringr)
 require(RPostgreSQL)
 
+# Get directory names 
+misr_urls.dir = paste0(getwd(), '/Data/MISR/MISR_urls/') # Folder containing urls for the NetCDF files to download
+ncdf.dir = paste0(getwd(), '/Data/MISR/NetCDF_files/') # Folder to download NetCDF files into
+
+# Load in California shapefile
+california <- st_read(paste0(getwd(), '/Data/ca-state-boundary/CA_State_TIGER2016.shp')) %>%
+  st_transform(crs = 4326)
 
 #### Function to extract relevant layers from MISR NetCDF files ####
-extract.ncdf = function(files, file.index, region, var.list, pixels.list,
-                        filter.data = T, filter.region = T){
+extract.ncdf = function(filename, region, var.list, filter.data = T, filter.region = T){
   # Function Inputs: 
   # 
-  # files          : Vector of file names
-  # file.index     : Index of chosen file in the vector above
+  # filename       : A NetCDF file which is downloaded in the working directory, to be read into the
   # region         : An sf polygon representing a particular geographic region. Used for spatial filtering.
   # var.list       : vector of NetCDF layers' variable names
-  # pixels.list    : data.table containing a current list of unique pixels' xy coordinates
   # filter.data    : Defaults to true. When true, remove pixels with at least a certain number of columns which are missing
   # filter.region  : Defaults to true. When true, filter to exclusively select pixels within the provided region
   #
   #
   # Function Outputs:
   #
-  # misr.data       : Entire MISR dataset from the file, including the pixel ids
-  # misr.pixels     : Data table of all unique pixels from the selected file's flightpath, including new pixels
+  # misr.data       : A data table containing the information which was stored in the MISR NetCDF files, and the MISR flight path
   
   # Open the chosen file
-  mycdf = nc_open(files[file.index])
+  mycdf = nc_open(filename)
   
   # Find the MISR flight path from the NetCDF filename. Paths are 'stored' in the MISR NetCDF filename as 
   # 'P' followed by some (usually 3) numeric characters, representing the path number
-  path = str_extract(files[file.index], pattern = "P[0-9]*")
+  path = str_extract(filename, pattern = "P[0-9]+")
   
   #### Get Aerosol Optical Depth (AOD) per mixture data from the NetCDF ####
   cat('- Aerosol Optical Depth Mixtures......')
@@ -73,6 +77,7 @@ extract.ncdf = function(files, file.index, region, var.list, pixels.list,
   start = Sys.time()
   # create data.table combining all relevant layers as columns
   tmp = data.table(
+      path = path,
       # Coordinates + Elevation
       longitude = as.vector(ncvar_get(mycdf, var.list[5])),
       latitude = as.vector(ncvar_get(mycdf, var.list[4])),
@@ -125,8 +130,9 @@ extract.ncdf = function(files, file.index, region, var.list, pixels.list,
   gc()
   
   # Create a single datetime column from the year/month/day/hour/minute columns, and then remove those 5 columns
-  tmp <- tmp %>% mutate(datetime = paste0(paste(year, sprintf('%02d', month), sprintf('%02d', day), sep = '-'), " ",
-                                          paste(sprintf('%02d', hour), sprintf('%02d', min), '00', sep = ':'))) %>%
+  tmp <- tmp %>% 
+    mutate(datetime = paste0(paste(year, sprintf('%02d', month), sprintf('%02d', day), sep = '-'), " ",
+                             paste(sprintf('%02d', hour), sprintf('%02d', min), '00', sep = ':'))) %>%
     select(-c('year', 'month', 'day', 'hour', 'min'))
   cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   
@@ -143,47 +149,20 @@ extract.ncdf = function(files, file.index, region, var.list, pixels.list,
   
   # If the region filtering setting is true, check if each pixel is in the designated geographic region
   if(filter.region){
-    cat('- Filtering pixels in selected region...')
+    cat('- Filtering pixels in selected region......')
     start = Sys.time()
-    pixels.sf = st_as_sf(tmp[, c('longitude', 'latitude')], coords = c('longitude', 'latitude'), crs = 4326)
-    over.region = suppressMessages(st_intersects(pixels.sf, region, sparse = TRUE))
-    tmp = tmp[sapply(over.region, length) > 0]
+    
+    in.region <- tmp %>% 
+      st_as_sf(coords = c('longitude','latitude'), crs = 4326, remove = F) %>%
+      st_contains(x = region, y = .) %>% 
+      unlist
+
+    tmp <- tmp %>% filter(row_number() %in% in.region)
     cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   }
-  
-  
-  # Count number of unique pixels for the selected MISR flightpath, not including the current file
-  path.pixels = pixels.list[substr(pixel_id, 1, 4) == path]
-  pix.count = nrow(path.pixels)
-  if(pix.count > 0){
-    # Merge with currently-existing pixels. New pixels will have (temporary) NA pixel_ids
-    path.pixels = merge(path.pixels, tmp[,c('longitude','latitude')], 
-                        all = TRUE, by = c('longitude', 'latitude'))
-    path.pixels = path.pixels[order(pixel_id)]
-  }
-  else{
-    # This case will handle the first NetCDF file, which has no prior existing pixels
-    path.pixels = data.table(tmp[,c('longitude','latitude')])
-    # Generate 'pixel_id' values for these pixels
-    path.pixels[, pixel_id := paste0(path, '_', sprintf('%07d', 1:nrow(path.pixels)))]
-  }
-  
-  # If there are any new pixels which were not present before
-  if(nrow(path.pixels) > pix.count){
-    # Count the new total number of pixels
-    new.count = nrow(path.pixels)
-    cat('*** New pixels:', (new.count - pix.count), 'found\n')
-    # Generate pixel_id for each of the new pixels
-    path.pixels[, pixel_id := ifelse(!is.na(pixel_id), pixel_id,
-                                     paste0(path, '_', sprintf('%07d', (pix.count+1):new.count)))]
-  }
-
-  # Add new pixels into the list of all pixels  
-  pixels.list = rbind(pixels.list[substr(pixel_id, 1, 4) != path], path.pixels)
-  
-  # Merge the pixels and their pixel_ids into the larger MISR dataset
-  tmp = merge(tmp, pixels.list, all.x=T, by=c('longitude','latitude'))
 
   # Return the dataset derived from the NetCDF file and the set of pixels, including new pixels added with this .nc file
-  return(list(misr.data = tmp, misr.pixels = pixels.list))
+  return(tmp)
 }
+
+mylist = extract.ncdf(filename = nc_files[1], region = california, var.list = varlist, filter.data = T, filter.region = T)
