@@ -208,5 +208,4 @@ for(year in 2000:2021){
   }
   
   misr_yearly <- do.call("rbind", misr_extracted)
-  misr_yearly_full <- merge.data.table(misr_yearly, cali_pixels, by = c('latitude', 'longitude'), all.x = T, all.y = F)
 }
