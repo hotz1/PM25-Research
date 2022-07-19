@@ -125,10 +125,10 @@ all.pixels <- all.pixels %>%
 write.csv(all.pixels, paste0(getwd(), '/Data/MISR/cali_pixels.csv'), row.names = F)
 
 # Create a map in leaflet (and save it) to verify that the pixels cover the desired region
-cali_pixel_map <- leaflet(data = all.pixels) %>% 
-  addTiles() %>% 
-  addCircleMarkers(~longitude, ~latitude, opacity = 0.5, radius = 0.1, 
-                   popup = paste("Pixel ID:", all.pixels$pixel_id, "<br>",
-                                 "Longitude", all.pixels$longitude, "<br>",
-                                 "Latitude:", all.pixels$latitude))
-htmlwidgets::saveWidget(cali_pixel_map, paste0(getwd(), '/Data/MISR/cali_pixels_map.html'))
+#cali_pixel_map <- leaflet(data = all.pixels) %>% 
+#  addTiles() %>% 
+#  addCircleMarkers(~longitude, ~latitude, opacity = 0.5, radius = 0.1, 
+#                   popup = paste("Pixel ID:", all.pixels$pixel_id, "<br>",
+#                                 "Longitude", all.pixels$longitude, "<br>",
+#                                 "Latitude:", all.pixels$latitude))
+#htmlwidgets::saveWidget(cali_pixel_map, paste0(getwd(), '/Data/MISR/cali_pixels_map.html'))
