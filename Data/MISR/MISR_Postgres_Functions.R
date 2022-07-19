@@ -171,6 +171,9 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
 # Read in a list of the NetCDF variable names (these are the same for all MISR NetCDF files)
 varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 
+# Read in a set of pixels located in California and their pixel IDs
+cali_pixels <- data.table(read.csv(paste0(getwd(), '/Data/MISR/cali_pixels.csv')))
+
 #### Code to extract all relevant NetCDF files for each year (2000-2021) and combine them into one dataset for the whole year ####
 for(year in 2000:2021){
   # Read in list of urls for MISR files to download from the OpenDAP server
@@ -205,4 +208,5 @@ for(year in 2000:2021){
   }
   
   misr_yearly <- do.call("rbind", misr_extracted)
+  misr_yearly_full <- merge.data.table(misr_yearly, cali_pixels, by = c('latitude', 'longitude'), all.x = T, all.y = F)
 }
