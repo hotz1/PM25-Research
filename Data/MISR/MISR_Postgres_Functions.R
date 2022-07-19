@@ -27,7 +27,7 @@ california <- st_read(paste0(getwd(), '/Data/ca-state-boundary/CA_State_TIGER201
 extract.ncdf = function(filename, region, var.list, filter.data = T, filter.region = T){
   # Function Inputs: 
   # 
-  # filename       : A NetCDF file which is downloaded in the working directory, to be read into the
+  # filename       : The location of a NetCDF file which is downloaded in the working directory, to be read into R (use full filepath) 
   # region         : An sf polygon representing a particular geographic region. Used for spatial filtering.
   # var.list       : vector of NetCDF layers' variable names
   # filter.data    : Defaults to true. When true, remove pixels with at least a certain number of columns which are missing
@@ -168,9 +168,44 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
   return(tmp)
 }
 
+# Read in a list of the NetCDF variable names (these are the same for all MISR NetCDF files)
+varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 
-#### Test code to check the extract.ncdf function works
-nc_files <- list.files(path = ncdf.dir, pattern = ".nc", full.names = T)
-nc1 = nc_open(nc_files[1])
-varlist = names(nc1$var)
-mylist = extract.ncdf(filename = nc_files[4], region = california, var.list = varlist, filter.data = T, filter.region = T)
+#### Code to extract all relevant NetCDF files for each year (2000-2021) and combine them into one dataset for the whole year ####
+for(year in 2000:2000){
+  # Read in list of urls for MISR files to download from the OpenDAP server
+  misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
+  
+  misr_urls = misr_urls[1:25]
+  
+  misr_extracted <- vector("list", length = length(misr_urls))
+  
+  for(i in 1:length(misr_urls)){
+    start = Sys.time()
+    
+    # Attempt to download the file, with a catch clause to avoid breaking the loop in case of error
+    cat('Attempting to download file ', i, '.\n', sep = '')
+    tryCatch({
+      # Attempt to download the NetCDF file from the OpenDAP server
+      new_filename = paste0(ncdf.dir, substr(misr_urls[i], 74, nchar(misr_urls[i])))
+      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
+      
+      cat("File", i, "downloaded!\n")
+      
+      # Extract all pixels in the file which are located in California
+      misr_extracted[[i]] = extract.ncdf(filename = new_filename, region = california, var.list = varlist)
+      
+      # Remove the file when we're done with it
+      file.remove(new_filename)
+      cat("File", i, "deleted!\n")
+    },
+    error = function(cond){
+      message(paste0('WARNING: File', i, 'failed to download.\n'))
+    })
+    
+    cat("Time taken:", round(difftime(Sys.time(), start, units = 'secs'), 2), 'seconds.\n')
+    
+  }
+  
+  misr_yearly <- do.call("rbind", misr_extracted)
+}
