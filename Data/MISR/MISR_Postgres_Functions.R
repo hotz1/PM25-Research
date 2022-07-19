@@ -1,7 +1,7 @@
 #############
 # Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R, and
 # Then load these data into an SQL database using Postgres, PostGIS, and the RPostgreSQL package
-# Last updated: July 14, 2022
+# Last updated: July 19, 2022
 #############
 
 require(sf)
@@ -11,6 +11,9 @@ require(ncdf4)
 require(data.table)
 require(stringr)
 require(RPostgreSQL)
+
+# Increase amount of time before a file download times out to 5 minutes
+options(timeout = max(300, getOption("timeout")))
 
 # Get directory names 
 misr_urls.dir = paste0(getwd(), '/Data/MISR/MISR_urls/') # Folder containing urls for the NetCDF files to download
@@ -165,4 +168,9 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
   return(tmp)
 }
 
-mylist = extract.ncdf(filename = nc_files[1], region = california, var.list = varlist, filter.data = T, filter.region = T)
+
+#### Test code to check the extract.ncdf function works
+nc_files <- list.files(path = ncdf.dir, pattern = ".nc", full.names = T)
+nc1 = nc_open(nc_files[1])
+varlist = names(nc1$var)
+mylist = extract.ncdf(filename = nc_files[4], region = california, var.list = varlist, filter.data = T, filter.region = T)
