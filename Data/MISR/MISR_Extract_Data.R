@@ -1,6 +1,6 @@
 #############
-# Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R, and
-# Then load these data into an SQL database using Postgres, PostGIS, and the RPostgreSQL package
+# Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R
+# and write these data to a locally-saved csv file
 # Last updated: July 19, 2022
 #############
 
@@ -10,7 +10,6 @@ require(dplyr)
 require(ncdf4)
 require(data.table)
 require(stringr)
-require(RPostgreSQL)
 
 # Increase amount of time before a file download times out to 5 minutes
 options(timeout = max(300, getOption("timeout")))
@@ -18,6 +17,7 @@ options(timeout = max(300, getOption("timeout")))
 # Get directory names 
 misr_urls.dir = paste0(getwd(), '/Data/MISR/MISR_urls/') # Folder containing urls for the NetCDF files to download
 ncdf.dir = paste0(getwd(), '/Data/MISR/NetCDF_files/') # Folder to download NetCDF files into
+datasets.dir = paste0(getwd(), '/Data/MISR/MISR_datasets/') # Folder to write datasets into
 
 # Load in California shapefile
 california <- st_read(paste0(getwd(), '/Data/ca-state-boundary/CA_State_TIGER2016.shp')) %>%
@@ -136,7 +136,8 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
   tmp <- tmp %>% 
     mutate(datetime = paste0(paste(year, sprintf('%02d', month), sprintf('%02d', day), sep = '-'), " ",
                              paste(sprintf('%02d', hour), sprintf('%02d', min), '00', sep = ':'))) %>%
-    select(-c('year', 'month', 'day', 'hour', 'min'))
+    select(-c('year', 'month', 'day', 'hour', 'min')) %>%
+    relocate(datetime, .after = elevation)
   cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   
   # If the data filtering setting is true, remove observations for any pixels with too much missing data
@@ -175,9 +176,11 @@ varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 cali_pixels <- data.table(read.csv(paste0(getwd(), '/Data/MISR/cali_pixels.csv')))
 
 #### Code to extract all relevant NetCDF files for each year (2000-2021) and combine them into one dataset for the whole year ####
-for(year in 2000:2021){
+for(year in 2000:2000){
   # Read in list of urls for MISR files to download from the OpenDAP server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
+  
+  misr_urls <- misr_urls[1:30]
   
   misr_extracted <- vector("list", length = length(misr_urls))
   
@@ -208,4 +211,5 @@ for(year in 2000:2021){
   }
   
   misr_yearly <- do.call("rbind", misr_extracted)
+  write.csv(misr_yearly, paste0(datasets.dir, 'MISR_Data_', year, '.csv'), row.names = F)
 }
