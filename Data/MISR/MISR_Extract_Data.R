@@ -1,7 +1,7 @@
 #############
 # Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R
 # and write these data to a locally-saved csv file
-# Last updated: July 19, 2022
+# Last updated: July 25, 2022
 #############
 
 require(sf)
@@ -179,8 +179,6 @@ for(year in 2000:2021){
   # Read in list of urls for MISR files to download from the OpenDAP server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
   
-  misr_urls <- misr_urls[1:30]
-  
   misr_extracted <- vector("list", length = length(misr_urls))
   
   for(i in 1:length(misr_urls)){
@@ -196,7 +194,7 @@ for(year in 2000:2021){
       cat("File", i, "downloaded!\n")
       
       # Extract all pixels in the file which are located in California
-      misr_extracted[[i]] = extract.ncdf(filename = new_filename, region = california, var.list = varlist)
+      misr_extracted[[i]] = extract.ncdf(filename = new_filename, region = california, var.list = varlist, filter.data = F)
       
       # Remove the file when we're done with it
       file.remove(new_filename)
