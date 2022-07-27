@@ -1,7 +1,7 @@
 #############
 # Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R
-# and write these data to a locally-saved csv file
-# Last updated: July 25, 2022
+# and write these data to locally stored csv files
+# Last updated: July 27, 2022
 #############
 
 require(sf)
@@ -175,9 +175,9 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
 varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 
 #### Code to extract all relevant NetCDF files for each year (2000-2021) and combine them into one dataset for the whole year ####
-for(year in 2000:2021){
+for(year in 2000:2000){
   # Read in list of urls for MISR files to download from the OpenDAP server
-  misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
+  misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))[1:3]
   
   misr_extracted <- vector("list", length = length(misr_urls))
   
@@ -209,4 +209,6 @@ for(year in 2000:2021){
   
   misr_yearly <- do.call("rbind", misr_extracted)
   write.csv(misr_yearly, paste0(datasets.dir, 'MISR_Data_', year, '.csv'), row.names = F)
+  cat("Year:", year, "\n")
+  cat("Total Observations:", nrow(misr_yearly), "\n")
 }
