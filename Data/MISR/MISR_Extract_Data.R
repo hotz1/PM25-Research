@@ -4,12 +4,12 @@
 # Last updated: July 27, 2022
 #############
 
-require(sf)
-require(plyr)
-require(dplyr)
-require(ncdf4)
-require(data.table)
-require(stringr)
+library(sf)
+library(plyr)
+library(dplyr)
+library(ncdf4)
+library(data.table)
+library(stringr)
 
 # setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
