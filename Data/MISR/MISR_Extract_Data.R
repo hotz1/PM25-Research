@@ -4,6 +4,7 @@
 # Last updated: July 27, 2022
 #############
 
+install.packages(c("sf", "plyr", "dplyr", "ncdf4", "data.table", "stringr"))
 library(sf)
 library(plyr)
 library(dplyr)
