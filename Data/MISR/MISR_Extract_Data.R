@@ -210,5 +210,5 @@ for(year in 2000:2000){
   misr_yearly <- do.call("rbind", misr_extracted)
   write.csv(misr_yearly, paste0(datasets.dir, 'MISR_Data_', year, '.csv'), row.names = F)
   cat("Year:", year, "\n")
-  cat("Total Observations:", nrow(misr_yearly), "\n")
+  cat("Total Observations:", nrow(misr_yearly), "\n\n")
 }
