@@ -4,12 +4,12 @@
 # Last updated: July 28, 2022
 #############
 
-library(sf, lib.loc = '/usr/local/lib/R/site-library')
-library(plyr, lib.loc = '/usr/local/lib/R/site-library')
-library(dplyr, lib.loc = '/usr/local/lib/R/site-library')
-library(ncdf4, lib.loc = '/usr/local/lib/R/site-library')
-library(data.table, lib.loc = '/usr/local/lib/R/site-library')
-library(stringr, lib.loc = '/usr/local/lib/R/site-library')
+library(sf)
+library(plyr)
+library(dplyr)
+library(ncdf4)
+library(data.table)
+library(stringr)
 
 # setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
