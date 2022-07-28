@@ -1,16 +1,15 @@
 #############
 # Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R
 # and write these data to locally stored csv files
-# Last updated: July 27, 2022
+# Last updated: July 28, 2022
 #############
 
-install.packages(c("sf", "plyr", "dplyr", "ncdf4", "data.table", "stringr"))
-library(sf)
-library(plyr)
-library(dplyr)
-library(ncdf4)
-library(data.table)
-library(stringr)
+library(sf, lib.loc = '/usr/local/lib/R/site-library')
+library(plyr, lib.loc = '/usr/local/lib/R/site-library')
+library(dplyr, lib.loc = '/usr/local/lib/R/site-library')
+library(ncdf4, lib.loc = '/usr/local/lib/R/site-library')
+library(data.table, lib.loc = '/usr/local/lib/R/site-library')
+library(stringr, lib.loc = '/usr/local/lib/R/site-library')
 
 # setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
