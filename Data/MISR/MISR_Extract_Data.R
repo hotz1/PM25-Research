@@ -134,12 +134,19 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
   rm(mycdf, aod.74, chisq.74, flags.74)
   gc()
   
-  # Create a single datetime column from the year/month/day/hour/minute columns, and then remove those 5 columns
+  # Create a single date column from the year/month/day columns, and then remove those 3 columns
   tmp <- tmp %>% 
-    mutate(datetime = paste0(paste(year, sprintf('%02d', month), sprintf('%02d', day), sep = '-'), " ",
-                             paste(sprintf('%02d', hour), sprintf('%02d', min), '00', sep = ':'))) %>%
-    select(-c('year', 'month', 'day', 'hour', 'min')) %>%
-    relocate(datetime, .after = elevation)
+    mutate(date = paste(year, sprintf('%02d', month), sprintf('%02d', day), sep = '-')) %>%
+    select(-c('year', 'month', 'day')) %>%
+    relocate(date, .after = elevation)
+  
+  # Create a single time of day column from the hour+minute columns, and then remove those 2 columns
+  tmp <- tmp %>% 
+    mutate(time = paste(sprintf('%02d', hour), sprintf('%02d', min), '00', sep = ':')) %>%
+    select(-c('hour', 'min')) %>%
+    relocate(time, .after = date)
+  
+  
   cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   
   # If the data filtering setting is true, remove observations for any pixels with too much missing data
