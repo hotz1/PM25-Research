@@ -1,7 +1,7 @@
 #############
 # An R script which spatially matches previously collected and cleaned MISR Level 2 Aerosol data to
 # PM2.5 and Speciation data which were collected by the EPA within 24 hours of the MISR satellite.
-# Last updated: August 3, 2022
+# Last updated: August 5, 2022
 #############
 
 library(sf)
@@ -32,38 +32,47 @@ IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPR
   filter(State == "CA")
 
 
-# Create pixel_ID values for different pixels from the MISR dataset.
+# Create pixel.id values for different pixels from the MISR dataset.
 # These will be used to match MISR pixels with local AQS/CSN/IMPROVE data sites.
 misr.pixels <- misr.cali %>%
   select(path, longitude, latitude) %>%
   unique() %>%
   group_by(path) %>%
-  mutate(pixel_id = paste0(path, '_', sprintf('%06d', 1:n()))) %>%
-  ungroup()
-
-# Add pixel ID values to the main MISR dataset
-misr.cali <- merge.data.frame(misr.cali, misr.pixels) %>%
-  relocate(pixel_id, .before = path)
-
+  mutate(pixel.id = paste0(path, '_', sprintf('%06d', 1:n()))) %>%
+  ungroup() %>%
+  rename(pixel.path = path, pixel.longitude = longitude, pixel.latitude = latitude) %>%
+  select(pixel.id, pixel.longitude, pixel.latitude)
 
 # Create a table containing info about AQS data collection sites
 AQS.sites <- AQS.PM25.cali %>%
   select(Longitude, Latitude, Site.Code) %>%
   unique() %>%
-  mutate(Site.Code = paste0("AQS_", Site.Code))
+  mutate(Site.Code = paste0("AQS_", Site.Code)) %>%
+  rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
+  select(Site.Code, Site.Longitude, Site.Latitude)
 
 # Create a table containing info about CSN data collection sites
 CSN.sites <- CSN.SPEC.cali %>%
   select(Longitude, Latitude, Site.Code) %>%
   unique() %>%
-  mutate(Site.Code = paste0("CSN_", Site.Code))
+  mutate(Site.Code = paste0("CSN_", Site.Code)) %>%
+  rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
+  select(Site.Code, Site.Longitude, Site.Latitude)
 
 # Create a table containing info about CSN data collection sites
 IMPROVE.sites <- IMPROVE.SPEC.cali %>%
   select(Longitude, Latitude, SiteCode) %>%
   unique() %>%
   mutate(Site.Code = paste0("IMPROVE_", SiteCode)) %>%
-  select(Longitude, Latitude, Site.Code)
+  rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
+  select(Site.Code, Site.Longitude, Site.Latitude)
 
 # Create a table of all data sites
 data.sites <- rbind(AQS.sites, CSN.sites, IMPROVE.sites)
+
+# Convert tables into sf coordinates
+misr.pixels <- sf::st_as_sf(misr.pixels, coords = c(2:3), crs = 4326)
+data.sites <- sf::st_as_sf(data.sites, coords = c(2:3), crs = 4326)
+
+# Collect pairs of MISR pixels and data collection sites within 4.4 km of each other
+pairs <- st_join(misr.pixels, data.sites, join = st_is_within_distance, dist = units::set_units(4.4, km), left = FALSE)
