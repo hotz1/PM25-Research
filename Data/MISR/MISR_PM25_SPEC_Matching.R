@@ -1,7 +1,7 @@
 #############
 # An R script which spatially matches previously collected and cleaned MISR Level 2 Aerosol data to
 # PM2.5 and Speciation data which were collected by the EPA within 24 hours of the MISR satellite.
-# Last updated: August 5, 2022
+# Last updated: August 8, 2022
 #############
 
 library(sf)
@@ -22,14 +22,18 @@ for(i in 1:length(misr.annual.filenames)){
 misr.cali <- do.call("rbind", misr.annual.files)
 
 # Read in PM2.5 data collected at AQS data sites in California
-AQS.PM25.cali <- read_csv(paste0(getwd(), '/Data/AQS Data/AQS_PM25_2000_2021_Cali.csv'))
+AQS.PM25.cali <- read_csv(paste0(getwd(), '/Data/AQS Data/AQS_PM25_2000_2021_Cali.csv')) %>%
+  mutate(Site.Code = paste0("AQS_", Site.Code))
 
 # Read in speciation data collected at CSN data sites in California
-CSN.SPEC.cali <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv'))
+CSN.SPEC.cali <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv')) %>%
+  mutate(Site.Code = paste0("CSN_", Site.Code))
 
 # Read in speciation data from the IMPROVE dataset and select only the observations which are in California
 IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPROVE_Raw_Data_2000_2021.xlsx'), sheet = 1) %>%
-  filter(State == "CA")
+  filter(State == "CA") %>%
+  rename(Site.Code = SiteCode) %>%
+  mutate(Site.Code = paste0("IMPROVE_", Site.Code))
 
 
 # Create pixel.id values for different pixels from the MISR dataset.
@@ -40,14 +44,16 @@ misr.pixels <- misr.cali %>%
   group_by(path) %>%
   mutate(pixel.id = paste0(path, '_', sprintf('%06d', 1:n()))) %>%
   ungroup() %>%
-  rename(pixel.path = path, pixel.longitude = longitude, pixel.latitude = latitude) %>%
-  select(pixel.id, pixel.longitude, pixel.latitude)
+  select(pixel.id, longitude, latitude)
+
+# Merge MISR dataset with the newly-created MISR pixel IDs
+misr.cali <- merge(misr.cali, misr.pixels) %>%
+  relocate(pixel.id, .after = latitude)
 
 # Create a table containing info about AQS data collection sites
 AQS.sites <- AQS.PM25.cali %>%
   select(Longitude, Latitude, Site.Code) %>%
   unique() %>%
-  mutate(Site.Code = paste0("AQS_", Site.Code)) %>%
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(Site.Code, Site.Longitude, Site.Latitude)
 
@@ -55,24 +61,26 @@ AQS.sites <- AQS.PM25.cali %>%
 CSN.sites <- CSN.SPEC.cali %>%
   select(Longitude, Latitude, Site.Code) %>%
   unique() %>%
-  mutate(Site.Code = paste0("CSN_", Site.Code)) %>%
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(Site.Code, Site.Longitude, Site.Latitude)
 
 # Create a table containing info about CSN data collection sites
 IMPROVE.sites <- IMPROVE.SPEC.cali %>%
-  select(Longitude, Latitude, SiteCode) %>%
+  select(Longitude, Latitude, Site.Code) %>%
   unique() %>%
-  mutate(Site.Code = paste0("IMPROVE_", SiteCode)) %>%
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(Site.Code, Site.Longitude, Site.Latitude)
 
-# Create a table of all data sites
-data.sites <- rbind(AQS.sites, CSN.sites, IMPROVE.sites)
+# Convert the tables above into sf objects
+misr.pixels_sf <- sf::st_as_sf(misr.pixels, coords = c(2:3), crs = 4326)
+AQS.sites_sf <- sf::st_as_sf(AQS.sites, coords = c(2:3), crs = 4326)
+CSN.sites_sf <- sf::st_as_sf(CSN.sites, coords = c(2:3), crs = 4326)
+IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
 
-# Convert tables into sf coordinates
-misr.pixels <- sf::st_as_sf(misr.pixels, coords = c(2:3), crs = 4326)
-data.sites <- sf::st_as_sf(data.sites, coords = c(2:3), crs = 4326)
+# Collect pairs of MISR pixels and AQS data collection sites within 4.4 km of each other
+MISR.near.AQS <- st_join(misr.pixels_sf, AQS.sites_sf, join = st_is_within_distance, dist = units::set_units(4.4, km), left = FALSE)
+MISR.near.AQS <- data.frame(MISR.near.AQS) %>%
+  select(pixel.id, Site.Code)
 
-# Collect pairs of MISR pixels and data collection sites within 4.4 km of each other
-pairs <- st_join(misr.pixels, data.sites, join = st_is_within_distance, dist = units::set_units(4.4, km), left = FALSE)
+# Merge MISR data with pairs of pixels which are near AQS data collection sites
+MISR.cali.near.AQS <- merge(misr.cali, MISR.near.AQS)
