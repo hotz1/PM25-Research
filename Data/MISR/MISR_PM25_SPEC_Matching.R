@@ -23,17 +23,21 @@ misr.cali <- do.call("rbind", misr.annual.files)
 
 # Read in PM2.5 data collected at AQS data sites in California
 AQS.PM25.cali <- read_csv(paste0(getwd(), '/Data/AQS Data/AQS_PM25_2000_2021_Cali.csv')) %>%
-  mutate(Site.Code = paste0("AQS_", Site.Code))
+  mutate(Site.Code = paste0("AQS_", Site.Code)) %>%
+  rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
+  select(PM25, POC, Date, Site.Latitude, Site.Longitude, Site.Code)
 
 # Read in speciation data collected at CSN data sites in California
 CSN.SPEC.cali <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv')) %>%
-  mutate(Site.Code = paste0("CSN_", Site.Code))
+  mutate(Site.Code = paste0("CSN_", Site.Code)) %>%
+  rename(Site.Longitude = Longitude, Site.Latitude = Latitude)
 
 # Read in speciation data from the IMPROVE dataset and select only the observations which are in California
 IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPROVE_Raw_Data_2000_2021.xlsx'), sheet = 1) %>%
   filter(State == "CA") %>%
   rename(Site.Code = SiteCode) %>%
-  mutate(Site.Code = paste0("IMPROVE_", Site.Code))
+  mutate(Site.Code = paste0("IMPROVE_", Site.Code)) %>%
+  rename(Site.Longitude = Longitude, Site.Latitude = Latitude)
 
 
 # Create pixel.id values for different pixels from the MISR dataset.
@@ -52,23 +56,19 @@ misr.cali <- merge(misr.cali, misr.pixels) %>%
 
 # Create a table containing info about AQS data collection sites
 AQS.sites <- AQS.PM25.cali %>%
-  select(Longitude, Latitude, Site.Code) %>%
-  unique() %>%
-  rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
-  select(Site.Code, Site.Longitude, Site.Latitude)
+  select(Site.Code, Site.Longitude, Site.Latitude) %>%
+  unique()
 
 # Create a table containing info about CSN data collection sites
 CSN.sites <- CSN.SPEC.cali %>%
   select(Longitude, Latitude, Site.Code) %>%
   unique() %>%
-  rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(Site.Code, Site.Longitude, Site.Latitude)
 
 # Create a table containing info about CSN data collection sites
 IMPROVE.sites <- IMPROVE.SPEC.cali %>%
   select(Longitude, Latitude, Site.Code) %>%
   unique() %>%
-  rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(Site.Code, Site.Longitude, Site.Latitude)
 
 # Convert the tables above into sf objects
@@ -83,4 +83,8 @@ MISR.near.AQS <- data.frame(MISR.near.AQS) %>%
   select(pixel.id, Site.Code)
 
 # Merge MISR data with pairs of pixels which are near AQS data collection sites
-MISR.cali.near.AQS <- merge(misr.cali, MISR.near.AQS)
+MISR.AQS.match <- merge(misr.cali, MISR.near.AQS)
+MISR.AQS.match <- merge(AQS.PM25.cali, MISR.AQS.match, by.x = c("Date", "Site.Code"), by.y = c("date", "Site.Code")) %>%
+  rename(pixel.longitude = longitude, pixel.latitude = latitude) %>%
+  select(-c(time)) %>%
+  relocate(PM25, .after = Date)
