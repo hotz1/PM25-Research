@@ -1,7 +1,7 @@
 #############
 # An R script which spatially matches previously collected and cleaned MISR Level 2 Aerosol data to
 # PM2.5 and Speciation data which were collected by the EPA within 24 hours of the MISR satellite.
-# Last updated: August 8, 2022
+# Last updated: August 9, 2022
 #############
 
 library(sf)
@@ -88,3 +88,5 @@ MISR.AQS.match <- merge(AQS.PM25.cali, MISR.AQS.match, by.x = c("Date", "Site.Co
   rename(pixel.longitude = longitude, pixel.latitude = latitude) %>%
   select(-c(time)) %>%
   relocate(PM25, .after = Date)
+
+write.csv(MISR.AQS.match, paste0(getwd(), '/Data/MISR/MISR_AQS_Matched.csv'), row.names = F)
