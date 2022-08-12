@@ -79,8 +79,8 @@ AQS.sites_sf <- sf::st_as_sf(AQS.sites, coords = c(2:3), crs = 4326)
 CSN.sites_sf <- sf::st_as_sf(CSN.sites, coords = c(2:3), crs = 4326)
 IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
 
-# Collect pairs of MISR pixels and AQS data collection sites within 4.4 km of each other
-MISR.near.AQS <- st_join(misr.pixels_sf, AQS.sites_sf, join = st_is_within_distance, dist = units::set_units(4.4, km), left = FALSE)
+# Collect pairs of MISR pixels and AQS data collection sites within 2.2 km of the MISR pixels
+MISR.near.AQS <- st_join(misr.pixels_sf, AQS.sites_sf, join = st_is_within_distance, dist = units::set_units(2.2, km), left = FALSE)
 MISR.near.AQS <- data.frame(MISR.near.AQS) %>%
   select(pixel.id, Site.Code)
 
