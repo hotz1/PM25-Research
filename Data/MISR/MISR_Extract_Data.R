@@ -1,7 +1,7 @@
 #############
 # Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R
 # and write these data to locally stored csv files
-# Last updated: August 10, 2022
+# Last updated: August 16, 2022
 #############
 
 library(sf)
@@ -13,8 +13,8 @@ library(stringr)
 
 # setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
-# Increase amount of time before a file download times out to 5 minutes
-options(timeout = max(300, getOption("timeout")))
+# Increase amount of time before a file download times out to 10 minutes
+options(timeout = max(600, getOption("timeout")))
 
 # Get directory names 
 misr_urls.dir = paste0(getwd(), '/Data/MISR/MISR_urls/') # Folder containing urls for the NetCDF files to download
