@@ -20,7 +20,7 @@ misr.annual.pixels <- vector("list", length = length(misr.annual.filenames))
 # Populate the empty list by selecting all unique path/latitude/longitude combinations for each year
 for(i in 1:length(misr.annual.filenames)){
   misr.annual <- read_csv(misr.annual.filenames[i], guess_max = Inf)
-  misr.annual.pixels[i] <- misr.annual %>% 
+  misr.annual.pixels[[i]] <- misr.annual %>% 
     select(path, longitude, latitude) %>%
     unique()
 }
