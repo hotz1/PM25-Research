@@ -1,7 +1,7 @@
 #############
 # Defining functions to read data from downloaded MISR Level 2 Aerosol NetCDF files into R
 # and write these data to locally stored csv files
-# Last updated: August 16, 2022
+# Last updated: August 17, 2022
 #############
 
 library(sf)
