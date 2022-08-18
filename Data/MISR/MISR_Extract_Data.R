@@ -186,7 +186,10 @@ for(year in 2008:2008){
   # Read in list of urls for MISR files to download from the OpenDAP server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
   
+  # Empty list which will be populated by the loop below
   misr_extracted <- vector("list", length = length(misr_urls))
+  
+  success_counter = 0
   
   for(i in 1:length(misr_urls)){
     start = Sys.time()
@@ -197,8 +200,10 @@ for(year in 2008:2008){
       # Attempt to download the NetCDF file from the OpenDAP server
       new_filename = paste0(ncdf.dir, substr(misr_urls[i], 74, nchar(misr_urls[i])))
       download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
-      
       cat("File", i, "downloaded!\n")
+      
+      # Increment the counter
+      success_counter = success_counter + 1
       
       # Extract all pixels in the file which are located in California
       misr_extracted[[i]] = extract.ncdf(filename = new_filename, region = california, var.list = varlist, filter.data = F)
@@ -208,7 +213,7 @@ for(year in 2008:2008){
       cat("File", i, "deleted!\n")
     },
     error = function(cond){
-      message(paste0('WARNING: File', i, 'failed to download.\n'))
+      message(paste('WARNING: File', i, 'failed to download.\n'))
     })
     
     cat("Total time taken:", round(difftime(Sys.time(), start, units = 'secs'), 2), 'seconds.\n\n')
@@ -217,5 +222,7 @@ for(year in 2008:2008){
   misr_yearly <- do.call("rbind", misr_extracted)
   write.csv(misr_yearly, paste0(datasets.dir, 'MISR_Data_', year, '.csv'), row.names = F)
   cat("Year:", year, "\n")
+  cat("Successful Downloads:", success_counter, "\n")
+  cat("Successful Downloads:", length(misr_urls) - success_counter, "\n")
   cat("Total Observations:", nrow(misr_yearly), "\n\n")
 }
