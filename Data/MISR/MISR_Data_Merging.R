@@ -22,7 +22,7 @@ merged.data.dir = paste0(getwd(), '/Data/MISR/MISR_merged_data/') # Sub-folder w
 # Read in PM2.5 data collected at AQS data sites in California
 cat('- Reading in AQS Data......')
 start = Sys.time()
-AQS.PM25.cali <- read_csv(paste0(getwd(), '/Data/AQS Data/AQS_PM25_2000_2021_Cali.csv')) %>%
+AQS.PM25.cali <- read_csv(paste0(getwd(), '/Data/AQS Data/AQS_PM25_2000_2021_Cali.csv'), show_col_types = FALSE) %>%
   mutate(Site.Code = paste0("AQS_", Site.Code)) %>%
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(-c("State", "County", "City", "State.Code", "County.Code", "Site.Num"))
@@ -31,7 +31,7 @@ cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '
 # Read in Speciation data collected at CSN data sites in California
 cat('- Reading in CSN Data......')
 start = Sys.time()
-CSN.SPEC.cali <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv')) %>%
+CSN.SPEC.cali <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv'), show_col_types = FALSE) %>%
   mutate(Site.Code = paste0("CSN_", Site.Code)) %>%
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(-c("State", "County", "City", "State.Code", "County.Code", "Site.Num"))
@@ -74,7 +74,7 @@ IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
 # Read in MISR pixel ID values (generated in a different R script)
 cat('- Reading in MISR Pixels......')
 start = Sys.time()
-misr.pixels <- read_csv(paste0(getwd(), '/Data/MISR/misr_california_pixels.csv'))
+misr.pixels <- read_csv(paste0(getwd(), '/Data/MISR/misr_california_pixels.csv'), show_col_types = FALSE)
 
 # Convert MISR pixel ID values to an sf object
 misr.pixels_sf <- sf::st_as_sf(misr.pixels, coords = c(2:3), crs = 4326)
