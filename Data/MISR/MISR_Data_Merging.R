@@ -114,7 +114,7 @@ improve.misr.annual <- vector("list", length = length(misr.annual.filenames))
 
 # For each MISR file, load in the MISR dataset, and merge with the AQS/CSN/IMPROVE datasets based on spatial matching and time matching
 for(i in 1:length(misr.annual.filenames)){
-  year <- substr(misr.annual.filenames[1], nchar(misr.annual.filenames[i]) - 7, nchar(misr.annual.filenames[i]) - 4)
+  year <- substr(misr.annual.filenames[i], nchar(misr.annual.filenames[i]) - 7, nchar(misr.annual.filenames[i]) - 4)
   cat('- Loading MISR Data from ', year, '......', sep = '')
   start = Sys.time()
   misr.annual <- read_csv(misr.annual.filenames[i], guess_max = Inf, show_col_types = FALSE)
