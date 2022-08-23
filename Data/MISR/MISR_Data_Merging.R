@@ -32,11 +32,11 @@ CSN.SPEC.cali <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_202
   select(-c("State", "County", "City", "State.Code", "County.Code", "Site.Num"))
 
 # Read in speciation data from the IMPROVE dataset and select only the observations which are in California
-IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPROVE_Raw_Data_2000_2021.xlsx'), sheet = 1) %>%
-  filter(State == "CA") %>%
-  rename(Site.Code = SiteCode) %>%
-  mutate(Site.Code = paste0("IMPROVE_", Site.Code)) %>%
-  rename(Site.Longitude = Longitude, Site.Latitude = Latitude)
+#IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPROVE_Raw_Data_2000_2021.xlsx'), sheet = 1) %>%
+#  filter(State == "CA") %>%
+#  rename(Site.Code = SiteCode) %>%
+#  mutate(Site.Code = paste0("IMPROVE_", Site.Code)) %>%
+#  rename(Site.Longitude = Longitude, Site.Latitude = Latitude)
 
 # Create a table containing info about AQS data collection sites
 AQS.sites <- AQS.PM25.cali %>%
@@ -49,16 +49,16 @@ CSN.sites <- CSN.SPEC.cali %>%
   unique() %>%
   select(Site.Code, Site.Longitude, Site.Latitude)
 
-# Create a table containing info about CSN data collection sites
-IMPROVE.sites <- IMPROVE.SPEC.cali %>%
-  select(Longitude, Latitude, Site.Code) %>%
-  unique() %>%
-  select(Site.Code, Site.Longitude, Site.Latitude)
+# Create a table containing info about IMPROVE data collection sites
+#IMPROVE.sites <- IMPROVE.SPEC.cali %>%
+#  select(Longitude, Latitude, Site.Code) %>%
+#  unique() %>%
+#  select(Site.Code, Site.Longitude, Site.Latitude)
 
 # Convert the tables above into sf objects
 AQS.sites_sf <- sf::st_as_sf(AQS.sites, coords = c(2:3), crs = 4326)
 CSN.sites_sf <- sf::st_as_sf(CSN.sites, coords = c(2:3), crs = 4326)
-IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
+#IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
 
 # Read in MISR pixel ID values (generated in a different R script)
 misr.pixels <- read_csv(paste0(getwd(), '/Data/MISR/misr_california_pixels.csv'))
@@ -81,7 +81,7 @@ misr.annual.filenames <- list.files(misr.datasets.dir, pattern = ".csv", full.na
 # Create empty (for now) lists which will store annual merged MISR datasets 
 aqs.misr.annual <- vector("list", length = length(misr.annual.filenames))
 csn.misr.annual <- vector("list", length = length(misr.annual.filenames))
-improve.misr.annual <- vector("list", length = length(misr.annual.filenames))
+#improve.misr.annual <- vector("list", length = length(misr.annual.filenames))
 
 
 
