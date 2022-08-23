@@ -2,7 +2,7 @@
 # An R script which creates a list of all unique MISR pixel locations (latitude + longitude) and
 # assigns a unique pixel ID to each of these locations based on the MISR satellite flightpath
 # corresponding to the pixel.
-# Last updated: August 17, 2022
+# Last updated: August 23, 2022
 #############
 
 library(tidyverse)
@@ -37,4 +37,4 @@ misr.pixels <- misr.pixels.all %>%
   ungroup()
 
 # Save to a locally stored csv file
-write.csv(misr.pixels, paste0(getwd(), '/Data/MISR/california_pixels.csv'), row.names = F)
+write.csv(misr.pixels, paste0(getwd(), '/Data/MISR/misr_california_pixels.csv'), row.names = F)
