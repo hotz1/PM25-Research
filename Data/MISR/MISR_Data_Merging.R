@@ -20,23 +20,36 @@ merged.data.dir = paste0(getwd(), '/Data/MISR/MISR_merged_data/') # Sub-folder w
 
 
 # Read in PM2.5 data collected at AQS data sites in California
+cat('- Reading in AQS Data......')
+start = Sys.time()
 AQS.PM25.cali <- read_csv(paste0(getwd(), '/Data/AQS Data/AQS_PM25_2000_2021_Cali.csv')) %>%
   mutate(Site.Code = paste0("AQS_", Site.Code)) %>%
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(-c("State", "County", "City", "State.Code", "County.Code", "Site.Num"))
+cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
 
 # Read in Speciation data collected at CSN data sites in California
+cat('- Reading in CSN Data......')
+start = Sys.time()
 CSN.SPEC.cali <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv')) %>%
   mutate(Site.Code = paste0("CSN_", Site.Code)) %>%
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(-c("State", "County", "City", "State.Code", "County.Code", "Site.Num"))
+cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
 
-# Read in speciation data from the IMPROVE dataset and select only the observations which are in California
-#IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPROVE_Raw_Data_2000_2021.xlsx'), sheet = 1) %>%
-#  filter(State == "CA") %>%
-#  rename(Site.Code = SiteCode) %>%
-#  mutate(Site.Code = paste0("IMPROVE_", Site.Code)) %>%
-#  rename(Site.Longitude = Longitude, Site.Latitude = Latitude)
+# Read in Speciation data from the IMPROVE dataset and select only the observations which are in California
+cat('- Reading in IMPROVE Data......')
+start = Sys.time()
+IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPROVE_Raw_Data_2000_2021.xlsx'), sheet = 1) %>%
+  filter(State == "CA") %>%
+  rename(Site.Name = SiteName, Site.ID = SiteCode, Site.Code = EPACode, Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
+  mutate(Site.Code = paste0("IMPROVE_", paste(substr(Site.Code, 0, 2), substr(Site.Code, 3, 5),
+                                              substr(Site.Code, 6, 9), sep = "-"))) %>%
+  select(-c("Dataset", "AuxID", "State", "CountyFIPS"))
+cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+
+
+
 
 # Create a table containing info about AQS data collection sites
 AQS.sites <- AQS.PM25.cali %>%
@@ -45,20 +58,18 @@ AQS.sites <- AQS.PM25.cali %>%
 
 # Create a table containing info about CSN data collection sites
 CSN.sites <- CSN.SPEC.cali %>%
-  select(Site.Longitude, Site.Latitude, Site.Code) %>%
-  unique() %>%
-  select(Site.Code, Site.Longitude, Site.Latitude)
+  select(Site.Code, Site.Longitude, Site.Latitude) %>%
+  unique()
 
 # Create a table containing info about IMPROVE data collection sites
-#IMPROVE.sites <- IMPROVE.SPEC.cali %>%
-#  select(Longitude, Latitude, Site.Code) %>%
-#  unique() %>%
-#  select(Site.Code, Site.Longitude, Site.Latitude)
+IMPROVE.sites <- IMPROVE.SPEC.cali %>%
+  select(Site.Code, Site.Longitude, Site.Latitude) %>%
+  unique()
 
 # Convert the tables above into sf objects
 AQS.sites_sf <- sf::st_as_sf(AQS.sites, coords = c(2:3), crs = 4326)
 CSN.sites_sf <- sf::st_as_sf(CSN.sites, coords = c(2:3), crs = 4326)
-#IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
+IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
 
 # Read in MISR pixel ID values (generated in a different R script)
 misr.pixels <- read_csv(paste0(getwd(), '/Data/MISR/misr_california_pixels.csv'))
