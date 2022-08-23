@@ -18,7 +18,6 @@ misr.datasets.dir = paste0(getwd(), '/Data/MISR/MISR_datasets/') # Sub-folder co
 merged.data.dir = paste0(getwd(), '/Data/MISR/MISR_merged_data/') # Sub-folder which will store merged MISR datasets
 
 
-
 # Read in PM2.5 data collected at AQS data sites in California
 cat('- Reading in AQS Data......')
 start = Sys.time()
@@ -49,8 +48,6 @@ IMPROVE.SPEC.cali <- readxl::read_excel(paste0(getwd(), '/Data/IMPROVE Data/IMPR
 cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
 
 
-
-
 # Create a table containing info about AQS data collection sites
 AQS.sites <- AQS.PM25.cali %>%
   select(Site.Code, Site.Longitude, Site.Latitude) %>%
@@ -71,6 +68,7 @@ AQS.sites_sf <- sf::st_as_sf(AQS.sites, coords = c(2:3), crs = 4326)
 CSN.sites_sf <- sf::st_as_sf(CSN.sites, coords = c(2:3), crs = 4326)
 IMPROVE.sites_sf <- sf::st_as_sf(IMPROVE.sites, coords = c(2:3), crs = 4326)
 
+
 # Read in MISR pixel ID values (generated in a different R script)
 cat('- Reading in MISR Pixels......')
 start = Sys.time()
@@ -78,9 +76,7 @@ misr.pixels <- read_csv(paste0(getwd(), '/Data/MISR/misr_california_pixels.csv')
 
 # Convert MISR pixel ID values to an sf object
 misr.pixels_sf <- sf::st_as_sf(misr.pixels, coords = c(2:3), crs = 4326)
-cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
-
-
+cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n\n', sep = '')
 
 
 # Collect pairs of MISR pixels and AQS data collection sites within 2.2 km of the MISR pixels
@@ -105,9 +101,7 @@ start = Sys.time()
 MISR.near.IMPROVE <- st_join(misr.pixels_sf, IMPROVE.sites_sf, join = st_is_within_distance, dist = units::set_units(2.2, km), left = FALSE)
 MISR.near.IMPROVE <- data.frame(MISR.near.IMPROVE) %>%
   select(pixel.id, Site.Code)
-cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
-
-
+cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n\n', sep = '')
 
 
 # Collect MISR filenames
@@ -118,14 +112,12 @@ aqs.misr.annual <- vector("list", length = length(misr.annual.filenames))
 csn.misr.annual <- vector("list", length = length(misr.annual.filenames))
 improve.misr.annual <- vector("list", length = length(misr.annual.filenames))
 
-
-
 # For each MISR file, load in the MISR dataset, and merge with the AQS/CSN/IMPROVE datasets based on spatial matching and time matching
 for(i in 1:length(misr.annual.filenames)){
   year <- substr(misr.annual.filenames[1], nchar(misr.annual.filenames[i]) - 7, nchar(misr.annual.filenames[i]) - 4)
-  cat('- Reading MISR Data from ', year, '......', sep = '')
+  cat('- Loading MISR Data from ', year, '......', sep = '')
   start = Sys.time()
-  misr.annual <- read_csv(misr.annual.filenames[i], guess_max = Inf)
+  misr.annual <- read_csv(misr.annual.filenames[i], guess_max = Inf, show_col_types = FALSE)
   cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   
   # Merge MISR dataset with the MISR pixel IDs
@@ -150,7 +142,6 @@ for(i in 1:length(misr.annual.filenames)){
   cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   
   
-  
   # Merge MISR data with any CSN data sites which are within 2.2 km of a MISR pixel
   cat('Merging MISR data with CSN data......')
   start = Sys.time()
@@ -164,7 +155,6 @@ for(i in 1:length(misr.annual.filenames)){
   cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   
   
-  
   # Merge MISR data with any IMPROVE data sites which are within 2.2 km of a MISR pixel
   cat('Merging MISR data with IMPROVE data......')
   start = Sys.time()
@@ -175,7 +165,7 @@ for(i in 1:length(misr.annual.filenames)){
     rename(pixel.longitude = longitude, pixel.latitude = latitude) %>%
     select(-c(time))
   improve.misr.annual[[i]] <- MISR.IMPROVE.match
-  cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+  cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n\n', sep = '')
 }
 
 # Bind together all of the AQS/CSN/IMPROVE datasets which have been matched with corresponding MISR data
