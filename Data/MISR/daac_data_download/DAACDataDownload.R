@@ -35,15 +35,16 @@ netrc <- file.path(daac.dir,'.netrc', fsep = .Platform$file.sep)  # Path to netr
 # If you already have a .netrc file with your Earthdata Login credentials stored in your home
 # directory, this portion will be skipped. Otherwise you will be prompted for your NASA Earthdata
 # Login Username/Password and a netrc file will be created to store your credentials (in home dir)
-if (file.exists(netrc) == FALSE || grepl("urs.earthdata.nasa.gov", readLines(netrc)) = FALSE) {
-  netrc_conn <- file(netrc)
 
-  # User will be prompted for NASA Earthdata Login Username and Password below
-  writeLines(c("machine urs.earthdata.nasa.gov",
-               sprintf("login %s", getPass(msg = "Enter NASA Earthdata Login Username \n (or create an account at urs.earthdata.nasa.gov) :")),
-               sprintf("password %s", getPass(msg = "Enter NASA Earthdata Login Password:"))), netrc_conn)
-  close(netrc_conn)
-  }
+#if (file.exists(netrc) == FALSE || grepl("urs.earthdata.nasa.gov", readLines(netrc)) == FALSE) {
+#  netrc_conn <- file(netrc)
+#
+#  # User will be prompted for NASA Earthdata Login Username and Password below
+#  writeLines(c("machine urs.earthdata.nasa.gov",
+#               sprintf("login %s", getPass(msg = "Enter NASA Earthdata Login Username \n (or create an account at urs.earthdata.nasa.gov) :")),
+#               sprintf("password %s", getPass(msg = "Enter NASA Earthdata Login Password:"))), netrc_conn)
+#  close(netrc_conn)
+#  }
 
 # ---------------------------CONNECT TO DATA POOL AND DOWNLOAD FILES------------------------------ #
 # Below, define either a single link to a file for download, a list of links, or a text file
