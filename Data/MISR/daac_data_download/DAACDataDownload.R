@@ -8,12 +8,10 @@
 # ------------------------------------------------------------------------------------------------ #
 # Check for required packages, install if not previously installed
 if ("sys" %in% rownames(installed.packages()) == FALSE) {install.packages("sys")}
-#if ("getPass" %in% rownames(installed.packages()) == FALSE) { install.packages("getPass")}
 if ("httr" %in% rownames(installed.packages()) == FALSE) { install.packages("httr")}
 
 # Load necessary packages into R
 library(sys)
-#library(getPass)
 library(httr)
 # ---------------------------------SET UP ENVIRONMENT--------------------------------------------- #
 
@@ -37,7 +35,7 @@ netrc <- file.path(daac.dir,'.netrc', fsep = .Platform$file.sep)  # Path to netr
 # If you already have a .netrc file with your Earthdata Login credentials stored in your home
 # directory, this portion will be skipped. Otherwise you will be prompted for your NASA Earthdata
 # Login Username/Password and a netrc file will be created to store your credentials (in home dir)
-if (file.exists(netrc) == FALSE || grepl("urs.earthdata.nasa.gov", readLines(netrc)) == FALSE) {
+if (file.exists(netrc) == FALSE || grepl("urs.earthdata.nasa.gov", readLines(netrc)) = FALSE) {
   netrc_conn <- file(netrc)
 
   # User will be prompted for NASA Earthdata Login Username and Password below
