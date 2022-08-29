@@ -178,62 +178,26 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
   return(tmp)
 }
 
+
+#### Code to extract all relevant NetCDF files for a given year (between 2000-2021) and combine them into one dataset for the whole year ####
+
 # Read in a list of the NetCDF variable names (these are the same for all MISR NetCDF files)
 varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 
-# Select start and end years for MISR data extraction
+# Select year where the downloaded MISR data is from
 cat("Select the starting year to extract MISR data for.\n")
-start.yr = readLines(con = "stdin", n = 1)
-start.yr = as.integer(start.yr)
-cat("Select the final year to extract MISR data for.\n")
-end.yr = readLines(con = "stdin", n = 1)
-end.yr = as.integer(end.yr)
+year = readLines(con = "stdin", n = 1)
+year = as.integer(year)
 
-#### Code to extract all relevant NetCDF files for each year (2000-2021) and combine them into one dataset for the whole year ####
-for(year in start.yr:end.yr){
-  # Read in list of urls for MISR files to download from the OpenDAP server
-  misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
-  
-  # Empty list which will be populated by the loop below
-  misr_extracted <- vector("list", length = length(misr_urls))
-  
-  success_counter = 0
-  
-  for(i in 1:length(misr_urls)){
-    start = Sys.time()
-    
-    # Attempt to download the file, with a catch clause to avoid breaking the loop in case of error
-    cat('Attempting to download file ', i, '.\n', sep = '')
-    tryCatch({
-      # Attempt to download the NetCDF file from the OpenDAP server
-      new_filename = paste0(ncdf.dir, substr(misr_urls[i], 74, nchar(misr_urls[i])))
-      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
-      cat("File", i, "downloaded!\n")
-      
-      # Increment the counter
-      success_counter = success_counter + 1
-      
-      # Extract all pixels in the file which are located in California
-      misr_extracted[[i]] = extract.ncdf(filename = new_filename, region = california, var.list = varlist, filter.data = F)
-      
-      # Remove the file when we're done with it
-      file.remove(new_filename)
-      cat("File", i, "deleted!\n")
-    },
-    error = function(cond){
-      if(file.exists(new_filename)){
-        file.remove(new_filename)
-      }
-      message(paste('WARNING: File', i, 'failed to download.\n'))
-    })
-    
-    cat("Total time taken:", round(difftime(Sys.time(), start, units = 'secs'), 2), 'seconds.\n\n')
-  }
-  
-  misr_yearly <- do.call("rbind", misr_extracted)
-  write.csv(misr_yearly, paste0(datasets.dir, 'MISR_Data_', year, '.csv'), row.names = F)
-  cat("Year:", year, "\n")
-  cat("Successful Downloads:", success_counter, "\n")
-  cat("Unsuccessful Downloads:", length(misr_urls) - success_counter, "\n")
-  cat("Total Observations:", nrow(misr_yearly), "\n\n")
+netcdf.files <- list.files(ncdf.dir, pattern = ".nc", full.names = TRUE)
+misr_extracted <- vector("list", length = length(netcdf.files))
+
+for(i in 1:length(netcdf.files)){
+  # Extract all pixels in the file which are located in California
+  misr_extracted[[i]] = extract.ncdf(filename = netcdf.files[i], region = california, var.list = varlist, filter.data = F)
 }
+
+misr_yearly <- do.call("rbind", misr_extracted)
+write.csv(misr_yearly, paste0(datasets.dir, 'MISR_Data_', year, '.csv'), row.names = F)
+cat("Year:", year, "\n")
+cat("Total Observations:", nrow(misr_yearly), "\n\n")
