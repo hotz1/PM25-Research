@@ -72,19 +72,31 @@ year = as.integer(year)
 
 files <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
 
-# Loop through all files
-for (i in 1:length(files)) {
+success_counter = 0 # Count successful file downloads
+
+# Loop through all files and download them
+for (i in 1:length(files)){
+  start = Sys.time()
+  
   filename <-  tail(strsplit(files[i], '/')[[1]], n = 1) # Keep original filename
 
   # Write file to disk (authenticating with netrc) using the current directory/filename
   response <- GET(files[i], write_disk(filename, overwrite = TRUE), progress(),
                   config(netrc = TRUE, netrc_file = netrc), set_cookies("LC" = "cookies"))
 
+  download.time <- round(difftime(Sys.time(), start, units = 'secs'), 2)
+  
   # Check to see if file downloaded correctly
   if (response$status_code == 200) {
-    print(sprintf("%s downloaded at %s", filename, dl_dir))
+    success_counter <- success_counter + 1
+    cat("\nFile", i, "successfully downloaded!\n")
+    cat("Time taken:", round(difftime(Sys.time(), start, units = 'secs'), 2), 'seconds\n')
   } 
   else {
-  print(sprintf("%s not downloaded. Verify that your username and password are correct in %s", filename, netrc))
+    cat("\nFile", i, "failed to download.\n")
   }
 }
+
+cat("Year:", year, "\n")
+cat("Successful File Downloads:", success_counter, "\n")
+cat("Unsuccessful File Downloads:", files - success_counter, "\n")
