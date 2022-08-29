@@ -181,8 +181,16 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
 # Read in a list of the NetCDF variable names (these are the same for all MISR NetCDF files)
 varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 
+# Select start and end years for MISR data extraction
+cat("Select the starting year to extract MISR data for.\n")
+start.yr = readLines(con = "stdin", n = 1)
+start.yr = as.integer(start.yr)
+cat("Select the final year to extract MISR data for.\n")
+end.yr = readLines(con = "stdin", n = 1)
+end.yr = as.integer(end.yr)
+
 #### Code to extract all relevant NetCDF files for each year (2000-2021) and combine them into one dataset for the whole year ####
-for(year in 2002:2002){
+for(year in start.yr:end.yr){
   # Read in list of urls for MISR files to download from the OpenDAP server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
   
