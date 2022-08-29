@@ -4,7 +4,7 @@
 # an Earthdata Login enabled server.
 # ------------------------------------------------------------------------------------------------ #
 # Author: Cole Krehbiel
-# Last Updated: 11/20/2018
+# Last Updated: 08/29/2022 (for local use)
 # ------------------------------------------------------------------------------------------------ #
 # Check for required packages, install if not previously installed
 if ("sys" %in% rownames(installed.packages()) == FALSE) {install.packages("sys")}

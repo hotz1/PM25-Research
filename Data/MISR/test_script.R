@@ -1,7 +1,7 @@
 print("Hello World!")
 cat("Hello", "World!")
 print(getwd())
-cat("Choose a year.")
+cat("Select a year to extract MISR data for.\n")
 year = readLines(con = "stdin", n = 1)
 print(year)
 print(class(year))
