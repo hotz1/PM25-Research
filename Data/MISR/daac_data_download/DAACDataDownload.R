@@ -90,10 +90,10 @@ for (i in 1:length(files)){
   if (response$status_code == 200) {
     success_counter <- success_counter + 1
     cat("\nFile", i, "successfully downloaded!\n")
-    cat("Time taken:", round(difftime(Sys.time(), start, units = 'secs'), 2), 'seconds\n')
+    cat("Time taken:", round(difftime(Sys.time(), start, units = 'secs'), 2), 'seconds\n\n')
   } 
   else {
-    cat("\nFile", i, "failed to download.\n")
+    cat("\nFile", i, "failed to download.\n\n")
   }
 }
 
