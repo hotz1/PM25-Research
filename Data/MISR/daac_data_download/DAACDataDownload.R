@@ -8,12 +8,12 @@
 # ------------------------------------------------------------------------------------------------ #
 # Check for required packages, install if not previously installed
 if ("sys" %in% rownames(installed.packages()) == FALSE) {install.packages("sys")}
-if ("getPass" %in% rownames(installed.packages()) == FALSE) { install.packages("getPass")}
+#if ("getPass" %in% rownames(installed.packages()) == FALSE) { install.packages("getPass")}
 if ("httr" %in% rownames(installed.packages()) == FALSE) { install.packages("httr")}
 
 # Load necessary packages into R
 library(sys)
-library(getPass)
+#library(getPass)
 library(httr)
 # ---------------------------------SET UP ENVIRONMENT--------------------------------------------- #
 
@@ -83,7 +83,8 @@ for (i in 1:length(files)) {
   # Check to see if file downloaded correctly
   if (response$status_code == 200) {
     print(sprintf("%s downloaded at %s", filename, dl_dir))
-  } else {
+  } 
+  else {
   print(sprintf("%s not downloaded. Verify that your username and password are correct in %s", filename, netrc))
   }
 }
