@@ -208,8 +208,9 @@ for(year in start.yr:end.yr){
     cat('Attempting to download file ', i, '.\n', sep = '')
     tryCatch({
       # Attempt to download the NetCDF file from the OpenDAP server
-      new_filename = paste0(ncdf.dir, substr(misr_urls[i], 74, nchar(misr_urls[i])))
-      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
+      new_filename = paste0(ncdf.dir, substr(misr_urls[i], 68, nchar(misr_urls[i])))
+      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "wget",
+                    extra = getOption('--header "Authorization: Bearer $TOKEN" --recursive --no-parent --reject "index.html*" --execute robots=off $URL'))
       cat("File", i, "downloaded!\n")
       
       # Increment the counter
