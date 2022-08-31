@@ -219,22 +219,15 @@ for(year in start.yr:end.yr){
     # Attempt to download the file, with a catch clause to avoid breaking the loop in case of error
     cat('Attempting to download file ', i, '.\n', sep = '')
     tryCatch({
-      # Attempt to download the NetCDF file from the OpenDAP server
+      # Attempt to download the NetCDF file from the server using wget
       new_filename = paste0(ncdf.dir, substr(misr_urls[i], 62, nchar(misr_urls[i])))
-      
-      URL <- misr_urls[i]
-      
-      # download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
-      
-      system(paste('wget --header "Authorization: Bearer', paste0(TOKEN, '"'),
-                   '--recursive --no-parent --reject "index.html*" --execute robots=off', URL, 
+      system(paste('wget -nv --header "Authorization: Bearer', paste0(TOKEN, '"'),
+                   '--recursive --no-parent --reject "index.html*" --execute robots=off', misr_urls[i], 
                    '-O', new_filename))
-      
+
       cat("File", i, "downloaded!\n")
       
-      cat(file.size(new_filename), "bytes.\n")
-      
-      # Increment the counter
+      # Increment the successful file download counter
       success_counter = success_counter + 1
       
       # Extract all pixels in the file which are located in California
