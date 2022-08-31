@@ -221,7 +221,8 @@ for(year in start.yr:end.yr){
       
       URL <- misr_urls[i]
       
-      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
+      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "wget", 
+                    extra = '--load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --keep-session-cookies')
       cat("File", i, "downloaded!\n")
       
       cat(file.size(new_filename), "bytes.\n")
