@@ -222,7 +222,7 @@ for(year in start.yr:end.yr){
       URL <- misr_urls[i]
       
       download.file(misr_urls[i], new_filename, quiet = TRUE, method = "wget", 
-                    extra = "--header \"Authorization: Bearer $TOKEN\" --recursive --no-parent --reject \"index.html*\" --execute robots=off $URL")
+                    extra = '--header "Authorization: Bearer $TOKEN" --recursive --no-parent --reject "index.html*" --execute robots=off $URL')
       cat("File", i, "downloaded!\n")
       
       cat(file.size(new_filename), "bytes.\n")
