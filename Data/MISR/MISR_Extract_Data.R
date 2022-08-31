@@ -221,7 +221,7 @@ for(year in start.yr:end.yr){
     tryCatch({
       # Attempt to download the NetCDF file from the server using wget
       new_filename = paste0(ncdf.dir, substr(misr_urls[i], 62, nchar(misr_urls[i])))
-      system(paste('wget -quiet -nv --header "Authorization: Bearer', paste0(TOKEN, '"'),
+      system(paste('wget -q -nv --header "Authorization: Bearer', paste0(TOKEN, '"'),
                    '--recursive --no-parent --reject "index.html*" --execute robots=off', misr_urls[i], 
                    '-O', new_filename))
 
