@@ -189,6 +189,9 @@ TOKEN <- readLines(paste0(getwd(), '/Data/MISR/earthdata_token.txt'))
 netrc_path <- paste0(getwd(), '/Data/MISR/.netrc')
 cookie_path <- paste0(getwd(), '/Data/MISR/.urs_cookies')
 
+# Change working directory
+setwd(ncdf.dir)
+
 # Select start and end years for MISR data extraction
 cat("Select the starting year to extract MISR data for.\n")
 start.yr = readLines(con = "stdin", n = 1)
