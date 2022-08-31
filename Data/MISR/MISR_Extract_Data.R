@@ -214,10 +214,9 @@ for(year in start.yr:end.yr){
       # Attempt to download the NetCDF file from the OpenDAP server
       new_filename = paste0(ncdf.dir, substr(misr_urls[i], 62, nchar(misr_urls[i])))
       
-      URL <- misr_urls[i]
+      #URL <- misr_urls[i]
       
-      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "wget",
-                    extra = getOption('--header "Authorization: Bearer $TOKEN" --recursive --no-parent --reject "index.html*" --execute robots=off $URL'))
+      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
       cat("File", i, "downloaded!\n")
       
       cat(file.size(new_filename), "bytes.\n")
