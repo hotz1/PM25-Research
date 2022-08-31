@@ -133,7 +133,7 @@ for(year in 2000:2022){
   
   # Find the file paths of the downloaded files and remove them from the temporary file folder
   misr.filepaths = paste0(getwd(), '/Data/MISR/MISR_urls/temp_files')
-  misr.filepaths = paste0(misr.filepaths, '/', list.files(misr.filepaths))
+  misr.filepaths = paste0(misr.filepaths, '/', list.files(misr.filepaths, pattern = ".html"))
   file.remove(misr.filepaths)
   
   # Summarize number of NetCDF files found for a given year
