@@ -204,7 +204,7 @@ end.yr = as.integer(end.yr)
 #### provided above and combine them into one dataset for that whole year ####
 for(year in start.yr:end.yr){
   # Read in list of urls for MISR files to download from the NASA server
-  misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))[1:2]
+  misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
   misr_urls <- stringr::str_replace(misr_urls, "opendap.larc.nasa.gov/opendap", "asdc.larc.nasa.gov/data")
   misr_urls <- stringr::str_remove(misr_urls, "hyrax/")
   
