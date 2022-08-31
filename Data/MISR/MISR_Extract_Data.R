@@ -10,6 +10,7 @@ library(dplyr)
 library(ncdf4)
 library(data.table)
 library(stringr)
+library(httr)
 
 # setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
@@ -214,7 +215,7 @@ for(year in start.yr:end.yr){
       # Attempt to download the NetCDF file from the OpenDAP server
       new_filename = paste0(ncdf.dir, substr(misr_urls[i], 62, nchar(misr_urls[i])))
       
-      #URL <- misr_urls[i]
+      URL <- misr_urls[i]
       
       download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
       cat("File", i, "downloaded!\n")
