@@ -186,13 +186,14 @@ varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 TOKEN <- readLines(paste0(getwd(), '/Data/MISR/earthdata_token.txt'))
 
 # Set netrc filepath and urs_cookies filepath
+# Make sure you have a netrc file corresponding to your EarthData login, and a urs_cookies file!
 netrc_path <- paste0(getwd(), '/Data/MISR/.netrc')
 cookie_path <- paste0(getwd(), '/Data/MISR/.urs_cookies')
 
-# Change working directory
+# Change working directory to the directory where we want to download NetCDF files to
 setwd(ncdf.dir)
 
-# Select start and end years for MISR data extraction
+# User input to select start and end years for MISR data extraction
 cat("Select the starting year to extract MISR data for.\n")
 start.yr = readLines(con = "stdin", n = 1)
 start.yr = as.integer(start.yr)
@@ -203,7 +204,7 @@ end.yr = as.integer(end.yr)
 #### Code to extract all relevant NetCDF files for each year in the range ####
 #### provided above and combine them into one dataset for that whole year ####
 for(year in start.yr:end.yr){
-  # Read in list of urls for MISR files to download from the NASA server
+  # Read in list of urls for MISR files to download from the NASA EarthData server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))
   misr_urls <- stringr::str_replace(misr_urls, "opendap.larc.nasa.gov/opendap", "asdc.larc.nasa.gov/data")
   misr_urls <- stringr::str_remove(misr_urls, "hyrax/")
