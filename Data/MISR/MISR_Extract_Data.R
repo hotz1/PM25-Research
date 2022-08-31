@@ -189,10 +189,12 @@ cat("Select the final year to extract MISR data for.\n")
 end.yr = readLines(con = "stdin", n = 1)
 end.yr = as.integer(end.yr)
 
-#### Code to extract all relevant NetCDF files for each year (2000-2021) and combine them into one dataset for the whole year ####
+#### Code to extract all relevant NetCDF files for each year in the range ####
+#### provided above and combine them into one dataset for that whole year ####
 for(year in start.yr:end.yr){
   # Read in list of urls for MISR files to download from the OpenDAP server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))[1:2]
+  misr_urls <- stringr::str_replace(misr_urls, "opendap.larc.nasa.gov/opendap", "asdc.larc.nasa.gov/data")
   
   # Empty list which will be populated by the loop below
   misr_extracted <- vector("list", length = length(misr_urls))
