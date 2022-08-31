@@ -193,7 +193,7 @@ cookie_path <- paste0(getwd(), '/Data/MISR/.urs_cookies')
 cat("Select the starting year to extract MISR data for.\n")
 start.yr = readLines(con = "stdin", n = 1)
 start.yr = as.integer(start.yr)
-cat("Select the final year to extract MISR data for.\n\n")
+cat("Select the final year to extract MISR data for.\n")
 end.yr = readLines(con = "stdin", n = 1)
 end.yr = as.integer(end.yr)
 
@@ -221,8 +221,10 @@ for(year in start.yr:end.yr){
       
       URL <- misr_urls[i]
       
-      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "wget", 
-                    extra = '--load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --keep-session-cookies')
+      # download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
+      
+      system(paste("wget --load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --keep-session-cookies", URL))
+      
       cat("File", i, "downloaded!\n")
       
       cat(file.size(new_filename), "bytes.\n")
