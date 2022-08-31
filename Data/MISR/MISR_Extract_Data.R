@@ -185,23 +185,27 @@ varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 # Read in EarthData token
 TOKEN <- readLines(paste0(getwd(), '/Data/MISR/earthdata_token.txt'))
 
+# Set netrc filepath and urs_cookies filepath
+netrc_path <- paste0(getwd(), '/Data/MISR/.netrc')
+cookie_path <- paste0(getwd(), '/Data/MISR/.urs_cookies')
+
 # Select start and end years for MISR data extraction
 cat("Select the starting year to extract MISR data for.\n")
 start.yr = readLines(con = "stdin", n = 1)
 start.yr = as.integer(start.yr)
-cat("Select the final year to extract MISR data for.\n")
+cat("Select the final year to extract MISR data for.\n\n")
 end.yr = readLines(con = "stdin", n = 1)
 end.yr = as.integer(end.yr)
 
 #### Code to extract all relevant NetCDF files for each year in the range ####
 #### provided above and combine them into one dataset for that whole year ####
 for(year in start.yr:end.yr){
-  # Read in list of urls for MISR files to download from the OpenDAP server
+  # Read in list of urls for MISR files to download from the NASA server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))[1:2]
   misr_urls <- stringr::str_replace(misr_urls, "opendap.larc.nasa.gov/opendap", "asdc.larc.nasa.gov/data")
   misr_urls <- stringr::str_remove(misr_urls, "hyrax/")
   
-  # Empty list which will be populated by the loop below
+  # Empty list which will be populated by the loop below, containing the info for each MISR file we download
   misr_extracted <- vector("list", length = length(misr_urls))
   
   success_counter = 0
@@ -217,7 +221,8 @@ for(year in start.yr:end.yr){
       
       URL <- misr_urls[i]
       
-      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
+      download.file(misr_urls[i], new_filename, quiet = TRUE, method = "wget", 
+                    extra = "--header \"Authorization: Bearer $TOKEN\" --recursive --no-parent --reject \"index.html*\" --execute robots=off $URL")
       cat("File", i, "downloaded!\n")
       
       cat(file.size(new_filename), "bytes.\n")
