@@ -2,9 +2,9 @@
 # Code to download NetCDF files from NASA's MISR Level 2 Aerosol dataset
 # The files are downloaded from NASA's OPeNDAP Hyrax server (https://opendap.larc.nasa.gov/opendap/jsp/index.jsp)
 # The dataset used is the MIL2ASAE_3 dataset (https://opendap.larc.nasa.gov/opendap/hyrax/MISR/MIL2ASAE.003/contents.html)
-# The dataset contains Level 2 Aerosol parameters, with dates ranging from March 1, 2000 until November 30, 2021 (as of June 27, 2022)
+# The dataset contains Level 2 Aerosol parameters, with dates ranging from March 1, 2000 until February 28, 2022 (as of August 22, 2022)
 # Paths are chosen to encompass California based on the MISR paths site (https://l0dup05.larc.nasa.gov/cgi-bin/DUE/misr_loc/misr_loc.cgi)
-# Last updated: July 8, 2022
+# Last updated: August 31, 2022
 #############
 
 require(XML) 
@@ -111,7 +111,7 @@ grab.nc.url = function(url, paths = integer()){
 # For loop to download and scrape html files for each year in order to collect the NetCDF file links for that year
 # This loop downloads files into a temporary file folder, reads data from these files, and deletes them after they are used.
 
-for(year in 2000:2021){
+for(year in 2000:2022){
   # Part 1 - Download MISR url pages from NASA site ----------------------------------------
   download.misr.urls(start = paste0(year, '-01-01'), end = paste0(year, '-12-31'),
                      url.folder = 'Data/MISR/MISR_urls/temp_files')
@@ -151,7 +151,7 @@ for(year in 2000:2021){
 ncdf.folder = 'Data/MISR/NetCDF_files'
 ncdf.folder = paste0(getwd(), '/', ncdf.folder, '/')
 
-for(year in 2000:2021){
+for(year in 2000:2022){
   # Read vector from RDS object to resume downloading
   ncdf.urls = readRDS(paste0('./Data/MISR/MISR_urls/ncdf_urls_', year, '.rds'))
   
