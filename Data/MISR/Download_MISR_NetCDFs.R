@@ -132,8 +132,7 @@ for(year in 2000:2022){
   saveRDS(ncdf.urls, paste0('./Data/MISR/MISR_urls/ncdf_urls_', year, '.rds'))
   
   # Find the file paths of the downloaded files and remove them from the temporary file folder
-  misr.filepaths = paste0(getwd(), '/Data/MISR/MISR_urls/temp_files')
-  misr.filepaths = paste0(misr.filepaths, '/', list.files(misr.filepaths, pattern = ".html"))
+  misr.filepaths = list.files('./Data/MISR/MISR_urls/temp_files', pattern = ".html", full.names = TRUE)
   file.remove(misr.filepaths)
   
   # Summarize number of NetCDF files found for a given year
