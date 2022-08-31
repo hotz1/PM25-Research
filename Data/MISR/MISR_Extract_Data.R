@@ -181,6 +181,9 @@ extract.ncdf = function(filename, region, var.list, filter.data = T, filter.regi
 # Read in a list of the NetCDF variable names (these are the same for all MISR NetCDF files)
 varlist <- readRDS(file = paste0(getwd(), '/Data/MISR/NetCDF_variables.rds'))
 
+# Read in EarthData token
+TOKEN <- readLines(paste0(getwd(), '/Data/MISR/earthdata_token.txt'))
+
 # Select start and end years for MISR data extraction
 cat("Select the starting year to extract MISR data for.\n")
 start.yr = readLines(con = "stdin", n = 1)
@@ -209,6 +212,9 @@ for(year in start.yr:end.yr){
     tryCatch({
       # Attempt to download the NetCDF file from the OpenDAP server
       new_filename = paste0(ncdf.dir, substr(misr_urls[i], 68, nchar(misr_urls[i])))
+      
+      URL <- misr_urls[i]
+      
       download.file(misr_urls[i], new_filename, quiet = TRUE, method = "wget",
                     extra = getOption('--header "Authorization: Bearer $TOKEN" --recursive --no-parent --reject "index.html*" --execute robots=off $URL'))
       cat("File", i, "downloaded!\n")
