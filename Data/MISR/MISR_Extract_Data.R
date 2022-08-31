@@ -198,6 +198,7 @@ for(year in start.yr:end.yr){
   # Read in list of urls for MISR files to download from the OpenDAP server
   misr_urls <- readRDS(list.files(path = misr_urls.dir, pattern = paste0(year, '.rds'), full.names = T))[1:2]
   misr_urls <- stringr::str_replace(misr_urls, "opendap.larc.nasa.gov/opendap", "asdc.larc.nasa.gov/data")
+  misr_urls <- stringr::str_remove(misr_urls, "hyrax/")
   
   # Empty list which will be populated by the loop below
   misr_extracted <- vector("list", length = length(misr_urls))
@@ -211,7 +212,7 @@ for(year in start.yr:end.yr){
     cat('Attempting to download file ', i, '.\n', sep = '')
     tryCatch({
       # Attempt to download the NetCDF file from the OpenDAP server
-      new_filename = paste0(ncdf.dir, substr(misr_urls[i], 68, nchar(misr_urls[i])))
+      new_filename = paste0(ncdf.dir, substr(misr_urls[i], 62, nchar(misr_urls[i])))
       
       URL <- misr_urls[i]
       
