@@ -226,7 +226,7 @@ for(year in start.yr:end.yr){
       
       # download.file(misr_urls[i], new_filename, quiet = TRUE, method = "libcurl", mode = "wb")
       
-      system(paste("wget --load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --keep-session-cookies", URL))
+      system('wget --header "Authorization: Bearer $TOKEN" --recursive --no-parent --reject "index.html*" --execute robots=off $URL')
       
       cat("File", i, "downloaded!\n")
       
