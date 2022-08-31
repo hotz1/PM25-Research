@@ -219,6 +219,8 @@ for(year in start.yr:end.yr){
                     extra = getOption('--header "Authorization: Bearer $TOKEN" --recursive --no-parent --reject "index.html*" --execute robots=off $URL'))
       cat("File", i, "downloaded!\n")
       
+      cat(file.size(new_filename), "bytes.\n")
+      
       # Increment the counter
       success_counter = success_counter + 1
       
