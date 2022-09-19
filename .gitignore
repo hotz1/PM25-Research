@@ -17,3 +17,4 @@ Data/CASTNET Data/Active_Sites.kmz
 Data/CSN Data/CSN_PM25_SPEC_2000_2021_Cali.csv
 Data/CSN Data/CSN_PM25_SPEC_2000_2021_USA.csv
 Data/MISR/MISR_datasets/MISR_Data_*.csv
+Data/MISR/MISR_merged_data/*.csv
