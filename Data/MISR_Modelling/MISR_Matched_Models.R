@@ -1,7 +1,7 @@
 #############
 # An R script to create models which predict certain values (Nitrate, Sulfate, PM2.5, Dust Mass, etc.)
 # based on the MISR data which was matched with CSN/AQS data from 2000-2022.
-# Last updated: September 22, 2022
+# Last updated: September 23, 2022
 #############
 
 library(tidyverse)
