@@ -1,18 +1,31 @@
 ---
 title: "MISR Data Modelling"
 author: "Joey Hotz"
-date: "Last Updated: September 23, 2022"
-output: 
-  bookdown::html_document2:
-    theme: readable
-    highlight: zenburn
-    number_sections: false
+date: "Last Updated: September 27, 2022"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+
 library(tidyverse)
 library(data.table)
 
-# setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 ```
+
+## Reading Data
+
+First, we will read in the MISR datasets which have been matched to the AQS and CSN datasets. These data were matched spatially by considering every AQS/CSN data collection site within a 2.2 km radius of a MISR data pixel, and these matches were further filtered by matching these observations based on the dates when they were recorded.
+```{r}
+MISR_AQS <- read_csv(paste0(getwd(), "/Data/MISR/MISR_merged_data/MISR_AQS_Matched.csv"), show_col_types = FALSE)
+MISR_CSN <- read_csv(paste0(getwd(), "/Data/MISR/MISR_merged_data/MISR_CSN_Matched.csv"), show_col_types = FALSE)
+```
+
+## Exploratory Data Analysis
+
+## Charts and Graphs
+
+Next, we will create some charts and plots of the matched MISR data, to get visual representations of the data which we have collected.
+
+First, we will create a "correlation heatmap" to visually depict the correlations between the 74 AOD mixtures which were collected in the MISR data.
 
