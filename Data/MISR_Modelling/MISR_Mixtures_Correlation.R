@@ -38,11 +38,16 @@ for(i in 1:length(misr.annual.filenames)){
 # Combine 74 mixtures for each year into one large dataframe
 misr.all.mixtures <- do.call("rbind", misr.annual.mixtures)
 
+# Remove any rows containing missing observations 
+# (to cut down on space, as these would be discarded later anyways for computing correlations)
+misr.all.mixtures <- misr.all.mixtures %>%
+  drop_na()
+
 # Remove data for individual years (no reason in keeping duplicates of the data)
 remove(misr.annual.mixtures)
 
 # Create a matrix containing correlation coefficients for each pair of mixtures
-mixture.corr <- round(cor(misr.all.mixtures, use = "pairwise.complete.obs"), 3)
+mixture.corr <- round(cor(misr.all.mixtures), digits = 3)
 
 # Reshape correlation matrix into a large table (required for plotting the heatmap)
 melted_mixture.corr <- reshape2::melt(mixture.corr)
