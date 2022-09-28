@@ -53,7 +53,7 @@ mixture.corr <- round(cor(misr.all.mixtures), digits = 3)
 melted_mixture.corr <- reshape2::melt(mixture.corr)
 
 # Save the melted mixture correlation matrix as a csv file locally
-write.csv(melted_mixture.corr, filename = paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Melted.csv"), row.names = F)
+write_csv(melted_mixture.corr, paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Melted.csv"), row.names = F)
 
 
 # # Create the correlation heatmap, and save it as an image locally.
