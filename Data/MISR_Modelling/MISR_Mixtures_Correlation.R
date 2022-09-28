@@ -52,24 +52,28 @@ mixture.corr <- round(cor(misr.all.mixtures), digits = 3)
 # Reshape correlation matrix into a large table (required for plotting the heatmap)
 melted_mixture.corr <- reshape2::melt(mixture.corr)
 
-# Create the correlation heatmap, and save it as an image locally.
-mixtures_heatmap <- melted_mixture.corr %>%
-  ggplot(aes(x = Var1, y = Var2, fill = value)) +
-  labs(title = "Pearson Correlation between pairs of 74 AOD Mixtures from the MISR dataset",
-       subtitle = "MISR Data collected from 2000-2022 in California") +
-  geom_tile(color = "black") +
-  scale_fill_gradient2(low = "#ff0000", high = "#00ff00", mid = "#ffffff", 
-                       midpoint = 0, limit = c(-1,1), name = "Correlation") +
-  geom_text(aes(Var2, Var1, label = value), color = "black", size = 1.5) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        plot.title = element_text(hjust = 0.5, size = 25), 
-        plot.subtitle = element_text(hjust = 0.5, size = 20))
-        
+# Save the melted mixture correlation matrix as a csv file locally
+write.csv(melted_mixture.corr, filename = paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Melted.csv"), row.names = F)
 
 
-# Save the plot created above as a local PNG file
-ggsave(filename = paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Heatmap.png"),
-       plot = mixtures_heatmap, device = "png", width = 18, height = 16)
-       
+# # Create the correlation heatmap, and save it as an image locally.
+# mixtures_heatmap <- melted_mixture.corr %>%
+#   ggplot(aes(x = Var1, y = Var2, fill = value)) +
+#   labs(title = "Pearson Correlation between pairs of 74 AOD Mixtures from the MISR dataset",
+#        subtitle = "MISR Data collected from 2000-2022 in California") +
+#   geom_tile(color = "black") +
+#   scale_fill_gradient2(low = "#ff0000", high = "#00ff00", mid = "#ffffff",
+#                        midpoint = 0, limit = c(-1,1), name = "Correlation") +
+#   geom_text(aes(Var2, Var1, label = value), color = "black", size = 1.5) +
+#   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+#         axis.title.x = element_blank(),
+#         axis.title.y = element_blank(),
+#         plot.title = element_text(hjust = 0.5, size = 25),
+#         plot.subtitle = element_text(hjust = 0.5, size = 20))
+# 
+# 
+# 
+# # Save the plot created above as a local PNG file
+# ggsave(filename = paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Heatmap.png"),
+#        plot = mixtures_heatmap, device = "png", width = 18, height = 16)
+
