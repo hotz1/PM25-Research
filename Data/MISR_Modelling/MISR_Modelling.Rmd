@@ -1,7 +1,7 @@
 ---
 title: "MISR Data Modelling"
 author: "Joey Hotz"
-date: "Last Updated: September 27, 2022"
+date: "Last Updated: September 29, 2022"
 output: html_document
 ---
 
@@ -10,22 +10,74 @@ knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 
 
 library(tidyverse)
 library(data.table)
-
+library(knitr)
+library(kableExtra)
 ```
 
 ## Reading Data
 
 First, we will read in the MISR datasets which have been matched to the AQS and CSN datasets. These data were matched spatially by considering every AQS/CSN data collection site within a 2.2 km radius of a MISR data pixel, and these matches were further filtered by matching these observations based on the dates when they were recorded.
-```{r}
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 MISR_AQS <- read_csv(paste0(getwd(), "/Data/MISR/MISR_merged_data/MISR_AQS_Matched.csv"), show_col_types = FALSE)
 MISR_CSN <- read_csv(paste0(getwd(), "/Data/MISR/MISR_merged_data/MISR_CSN_Matched.csv"), show_col_types = FALSE)
 ```
 
 ## Exploratory Data Analysis
 
-## Charts and Graphs
+First, we will do some exploratory data analysis for these datasets, so we can have a better understanding of the data which we collected.
+
+### Missing Values
+
+To start off, we will examine counts of missing values in our datasets, to determine how much of the data which we aim to use is actually present in the dataset.
+
+```{r table-1, echo = FALSE}
+# Filter merged dataset to only the variables which we needed
+MISR_AQS_smaller <- MISR_AQS %>%
+  select(Date, PM25, c(12:19), c(37:110))
+
+# Get variable names, and counts of recorded and missing values
+MISR_AQS_var_info <- cbind(colnames(MISR_AQS_smaller),
+                           colSums(!is.na(MISR_AQS_smaller)),
+                           colSums(is.na(MISR_AQS_smaller)))
+colnames(MISR_AQS_var_info) <- c("Variable Name", "Recorded Values", "Missing Values")
+
+knitr::kable(MISR_AQS_var_info, row.names = FALSE, caption = "Counts of Variables in the merged MISR and AQS dataset") %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"),
+                full_width = TRUE,
+                fixed_thead = TRUE) %>%
+  scroll_box(height = '500px')
+```
+
+First, we notice that there are no missing values for the Date and PM2.5 variables, which is excellent, as these are arguably our two most important variables.
+
+We can also notice that there are the same amount of recorded and missing values for each of the 8 AOD variables. If we examine these 8 variables further, we find that they are a "package deal"; for each observation, there is either a recorded value for all 8 of these variables, or a missing value for all 8 variables.
+
+Unfortunately, the same cannot be said for the 74 AOD mixture variables. From the table above, we can clearly see that the number of available observations varies for each of the 74 mixtures. However, of these 74 mixtures, the mixtures with the fewest number of recorded observations (`aod_mix_71` and `aod_mix_72`) each have `r MISR_AQS_var_info[82, 2]` recorded values. Furthermore, a table containing all 74 mixtures would have `r nrow(drop_na(select(MISR_AQS_smaller, c(1:2, 11:84))))` observations which have a recorded value for each of the 74 mixtures, which is a fair amount of data to work with.
+
+### Charts and Graphs
 
 Next, we will create some charts and plots of the matched MISR data, to get visual representations of the data which we have collected.
 
-First, we will create a "correlation heatmap" to visually depict the correlations between the 74 AOD mixtures which were collected in the MISR data.
+First, we will create a "correlation heatmap" to visually depict the correlations between the 74 AOD mixtures which were collected in the MISR data. In the correlation heatmap shown below, the correlations between these different mixtures are measured from -1 to 1, and each square in the heatmap is coloured in, with it's colour and intensity proportional to the correlation between the variables.
 
+![Correlation Heatmap for the 74 MISR Mixtures](C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research/Data/MISR_Modelling/Mixtures_Correlation_Heatmap.png)
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Read in the csv file containing MISR data
+melted_mixture.corr <- read_csv(paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Melted.csv"))
+smallest_mixture.corr <- melted_mixture.corr %>% 
+  filter(value == min(melted_mixture.corr$value))
+```
+
+As we can clearly see in the correlation heatmap displayed above, the 74 AOD mixtures in the collected MISR data are all strongly correlated with one another, as the entire heatmap is green. 
+
+In fact, the weakest correlation between a pair of these 74 AOD mixtures is `r smallest_mixture.corr[2,3]`, which is the correlation between `r smallest_mixture.corr[2,1]` and  `r smallest_mixture.corr[2,2]`, which is still considered to be a strong positive linear relationship.
+
+
+
+## Model Fitting
+
+Next, we will test a variety of different model fitting techniques on our dataset in order to determine which models are generally more efficient and serve as better models to make predictions for our dataset.
+
+We will create a whole host of different models, as we have multiple different values in these two datasets which we want to predict, and there are multiple different sets of predictors which we aim to incorporate.
+
+The 6 main values which we want to predict are; PM2.5, $\text{SO}_{4}^{2-}$ (sulfate), $\text{NO}_{3}^{-}$ (nitrate), dust mass, elemental carbon, and organic carbon. The two primary sets of predictors which we want to use are the 8 measured AOD values, and the 74 MISR AOD mixtures.
