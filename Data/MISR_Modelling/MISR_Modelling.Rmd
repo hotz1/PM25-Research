@@ -259,6 +259,7 @@ PM25_mixtures.train <- PM25_mixtures[mixtures.train,]
 PM25_mixtures.test <- PM25_mixtures[mixtures.test,]
 ```
 
+### PM2.5 AOD XGBoost
 
 ```{r pm25-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
 # Create sets of values to use in xgboosting
@@ -268,7 +269,9 @@ nrounds_vals <- c(10, 20, 50, 100)
 pm25_aod_xgb_params <- expand.grid(eta = eta_vals, max_depth = max_depth_vals, nrounds = nrounds_vals)
 
 
-# Empty (filled later) vectors of RMSE and R2 values for each xgboost
+
+
+# Empty (filled later) vectors of RMSE and R2 values for each xgboost model
 pm25_aod_xgb_RMSE <- rep(NA, times = nrow(pm25_aod_xgb_params))
 pm25_aod_xgb_R2 <- rep(NA, times = nrow(pm25_aod_xgb_params))
 
@@ -302,3 +305,59 @@ knitr::kable(pm25_aod_xgb_table, row.names = FALSE,
 Of the 96 xgboost models which we fitted as seen in the table above, the lowest RMSE among the 96 models was `r min(pm25_aod_xgb_RMSE)`, and the highest R2 value among these models was `r max(pm25_aod_xgb_R2)`.
 
 Coincidentally, the xgboost model which attained the lowest RMSE was also the xgboost model which attained the highest R2 value. This model had the parameters `eta = 0.6`, `max_depth = 10`, and `nrounds = 100`, which were all the highest values used for these respective variables.
+
+### log(PM2.5) AOD XGBoost
+
+As we saw when visualizing the data above, the log-plots of the four variables which we want to predict are much more symmetrical than the histograms of the distributions of these variables themselves. Thus, we will also create xgboost models to predict these logarithmic values.
+
+```{r log-pm25-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
+# Create sets of values to use in xgboosting
+eta_vals <- c(0.05, 0.1, 0.3, 0.6)
+max_depth_vals <- c(1, 2, 4, 5, 8, 10)
+nrounds_vals <- c(10, 20, 50, 100)
+log_pm25_aod_xgb_params <- expand.grid(eta = eta_vals, max_depth = max_depth_vals, nrounds = nrounds_vals)
+
+
+# Empty (filled later) vectors of RMSE and R2 values for each xgboost model
+log_pm25_aod_xgb_RMSE <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
+log_pm25_aod_xgb_R2 <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
+pm25_aod_xgb_RMSE <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
+pm25_aod_xgb_R2 <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
+
+for(i in 1:nrow(log_pm25_aod_xgb_params)){
+  # Get collection of parameters
+  eta = log_pm25_aod_xgb_params[i, "eta"]
+  max_depth = log_pm25_aod_xgb_params[i, "max_depth"]
+  nrounds = log_pm25_aod_xgb_params[i, "nrounds"]
+  
+  # Fit xgboost model with given parameters
+  log_PM25_AOD_xgb <- xgboost(data = as.matrix(PM25_AOD.train)[,2:9], label = as.matrix(log(PM25_AOD.train + 0.001, base = 10)[,1]),
+                              eta = eta, max_depth = max_depth, nrounds = nrounds, verbose = 0)
+  
+  # Predict values for the test set with the xgboost model
+  log_PM25_AOD_xgb_pred <- predict(log_PM25_AOD_xgb, newdata = as.matrix(PM25_AOD.test)[,2:9])
+  exp_PM25_AOD_xgb_pred <- 10^log_PM25_AOD_xgb_pred - 0.001
+  
+  # Compute RMSE and R2 of data on the test dataset
+  log_pm25_aod_xgb_RMSE[i] <- caret::RMSE(log_PM25_AOD_xgb_pred, log(PM25_AOD.test$PM25 + 0.001, base = 10))
+  log_pm25_aod_xgb_R2[i] <- caret::R2(log_PM25_AOD_xgb_pred, log(PM25_AOD.test$PM25 + 0.001, base = 10))
+  pm25_aod_xgb_RMSE[i] <- caret::RMSE(exp_PM25_AOD_xgb_pred, PM25_AOD.test$PM25)
+  pm25_aod_xgb_R2[i] <- caret::R2(exp_PM25_AOD_xgb_pred, PM25_AOD.test$PM25)
+}
+
+log_pm25_aod_xgb_table <- cbind(log_pm25_aod_xgb_params, log_RMSE = log_pm25_aod_xgb_RMSE, log_R2 = log_pm25_aod_xgb_R2,
+                                RMSE = pm25_aod_xgb_RMSE, R2 = pm25_aod_xgb_R2)
+
+knitr::kable(log_pm25_aod_xgb_table, row.names = FALSE,
+             col.names = c("eta", "max_depth", "nrounds", "RMSE of log(PM2.5)", "R2 of log(PM2.5)",
+                           "RMSE of PM2.5", "R2 of PM2.5"),
+             caption = paste0("Model Performance of xgboost models on the test dataset", 
+                              "<br>", "Model: Predicting log(PM2.5) and PM2.5 using AOD")) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"),
+                fixed_thead = TRUE) %>%
+  scroll_box(height = '500px')
+```
+
+Of the 96 xgboost models which we fitted as shown in the table above, the lowest RMSE for predicting log(PM2.5) was `r min(log_pm25_aod_xgb_RMSE)`, the lowest RMSE for predicting PM2.5 was `r min(pm25_aod_xgb_RMSE)`, the highest R2 value for predicting log(PM2.5) was `r max(log_pm25_aod_xgb_R2)`, and the highest R2 value for predicting PM2.5 was `r max(pm25_aod_xgb_R2)`.
+
+Coincidentally, the xgboost model which was optimal for all four of these metrics was the model which was fitted with the parameters `eta = 0.6`, `max_depth = 10`, and `nrounds = 100`, which were all the highest values used for these respective variables. 
