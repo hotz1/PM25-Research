@@ -12,6 +12,7 @@ knitr::opts_chunk$set(fig.dim = c(8, 4))
 
 library(tidyverse)
 library(data.table)
+library(lubridate)
 library(knitr)
 library(kableExtra)
 library(gridExtra)
@@ -24,9 +25,25 @@ library(caret)
 
 First, we will read in the MISR datasets which have been matched to the AQS and CSN datasets. These data were matched spatially by considering every AQS/CSN data collection site within a 2.2 km radius of a MISR data pixel, and these matches were further filtered by matching these observations based on the dates when they were recorded.
 
+We will also slightly alter these datasets, by changing the way that dates are stored in the data. Instead of storing dates as one object in a YYYY-MM-DD format, we will instead store the day, month, and year as three separate attributes.
+
 ```{r load-data, echo = FALSE, message = FALSE, warning = FALSE}
 MISR_AQS <- read_csv(paste0(getwd(), "/Data/MISR/MISR_merged_data/MISR_AQS_Matched.csv"), show_col_types = FALSE)
 MISR_CSN <- read_csv(paste0(getwd(), "/Data/MISR/MISR_merged_data/MISR_CSN_Matched.csv"), show_col_types = FALSE)
+
+MISR_AQS <- MISR_AQS %>% 
+  mutate(Year = lubridate::year(Date),
+         Month = lubridate::month(Date),
+         Day = lubridate::day(Date)) %>%
+  relocate(c(Year, Month, Day), .after = PM25) %>%
+  select(-c(Date))
+
+MISR_CSN <- MISR_CSN %>% 
+  mutate(Year = lubridate::year(Date),
+         Month = lubridate::month(Date),
+         Day = lubridate::day(Date)) %>%
+  relocate(c(Year, Month, Day), .after = Date) %>%
+  select(-c(Date))
 ```
 
 In addition to the data which we collected from the CSN dataset, we will also use a formula to estimate the total dust mass in a given area, based on the presence of certain elements.
@@ -38,7 +55,6 @@ MISR_CSN <- MISR_CSN %>%
   mutate(Dust = 2.2*Al + 2.49*Si + 1.63*Ca + 1.94*Ti + 2.42*Fe) %>%
   relocate(Dust, .after = sulfate)
 ```
-
 
 ## Exploratory Data Analysis
 
@@ -77,7 +93,7 @@ knitr::kable(round(var_summaries, 4), caption = "Numerical Summaries of the vari
 
 Based on the table above, we see that there are a few negative values recorded for Dust Mass and PM2.5 concentrations. As a concentration must be strictly non-negative (as we cannot have negative amounts of a particle), we will replace all negative values with 0.
 
-```{r remove-negatives, echo = FALSE, message = FALSE, warning = FALSE}
+```{r replace-negatives, echo = FALSE, message = FALSE, warning = FALSE}
 MISR_AQS <- MISR_AQS %>% 
   mutate(PM25 = replace(PM25, which(PM25 < 0), 0))
 
@@ -89,12 +105,14 @@ MISR_CSN <- MISR_CSN %>%
 
 In addition to examining numerical summaries of these values, we will also examine histograms of the values to see the overall distributions of these variables in a more visual manner.
 
-```{r dust-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 10)}
+```{r dust-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 12)}
 dust_histogram <- MISR_CSN %>% 
   ggplot(aes(x = Dust)) +
   geom_histogram(bins = 50, color = "black", fill = "grey") +
   labs(x = "Dust Mass", y = "Count", title = "Counts of Dust Masses in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 dust_log_histogram <- MISR_CSN %>% 
@@ -102,17 +120,21 @@ dust_log_histogram <- MISR_CSN %>%
   geom_histogram(bins = 50, color = "black", fill = "grey") +
   labs(x = "log(Dust Mass)", y = "Count", title = "Counts of Dust Masses in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 gridExtra::grid.arrange(dust_histogram, dust_log_histogram)
 ```
 
-```{r nitrate-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 10)}
+```{r nitrate-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 12)}
 nitrate_histogram <- MISR_CSN %>% 
   ggplot(aes(x = nitrate)) +
   geom_histogram(bins = 50, color = "black", fill = "darkred") +
   labs(x = "Nitrate", y = "Count", title = "Counts of Nitrate (NO3) Concentrations in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 nitrate_log_histogram <- MISR_CSN %>% 
@@ -120,17 +142,21 @@ nitrate_log_histogram <- MISR_CSN %>%
   geom_histogram(bins = 50, color = "black", fill = "darkred") +
   labs(x = "Nitrate", y = "Count", title = "Counts of Nitrate (NO3) Concentrations in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 gridExtra::grid.arrange(nitrate_histogram, nitrate_log_histogram)
 ```
 
-```{r sulfate-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 10)}
+```{r sulfate-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 12)}
 sulfate_histogram <- MISR_CSN %>% 
   ggplot(aes(x = sulfate)) +
   geom_histogram(bins = 50, color = "black", fill = "darkblue") +
   labs(x = "Sulfate", y = "Count", title = "Counts of Sulfate (SO4) Concentrations in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 sulfate_log_histogram <- MISR_CSN %>% 
@@ -138,17 +164,21 @@ sulfate_log_histogram <- MISR_CSN %>%
   geom_histogram(bins = 50, color = "black", fill = "darkblue") +
   labs(x = "Sulfate", y = "Count", title = "Counts of Sulfate (SO4) Concentrations in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 gridExtra::grid.arrange(sulfate_histogram, sulfate_log_histogram)
 ```
 
-```{r pm25-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 10)}
+```{r pm25-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 12)}
 pm25_histogram <- MISR_AQS %>% 
   ggplot(aes(x = PM25)) +
   geom_histogram(bins = 50, color = "black", fill = "green") +
   labs(x = "PM2.5 Mass", y = "Count", title = "Counts of PM2.5 Masses in Merged MISR/AQS Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 pm25_log_histogram <- MISR_AQS %>% 
@@ -156,6 +186,8 @@ pm25_log_histogram <- MISR_AQS %>%
   geom_histogram(bins = 50, color = "black", fill = "green") +
   labs(x = "PM2.5 Mass", y = "Count", title = "Counts of PM2.5 Masses Concentrations in Merged MISR/AQS Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
+  stat_bin(bins = 50, geom = "text", color = "black", aes(label = ..count.., y = ..count..), 
+           size = 2, angle = 90, hjust = -0.25, vjust = 0.3) +
   theme_bw()
 
 gridExtra::grid.arrange(pm25_histogram, pm25_log_histogram)
@@ -167,16 +199,15 @@ The log-plots above all appear to be relatively symmetrical and look somewhat li
 
 ### Historical Data
 
-In addition to the histograms which show the general distributions of these data over our 22-year period, we have created time series plots of dust mass, nitrate, PM2.5, and sulfate concentrations in California over time as a way to visualize how these quantities have changed over time. 
+In addition to the histograms which show the general distributions of these data over our 22-year period, we have created time series plots of dust mass, nitrate, PM2.5, and sulfate concentrations in California over time as a way to visualize how these quantities have changed over time.
 
 The PM2.5 data is sourced from the AQS data collection sites, whereas the dust mass, nitrate, and sulfate concentrations come from the CSN datasets.
 
-![Monthly Dust Mass Concentrations in California](C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research/Summary Statistics/Dust Mass Plots/Monthly_DustMass_California.png)
-![Monthly Nitrate Concentrations in California](C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research/Summary Statistics/Nitrate Plots/Monthly_Nitrate_California.png)
+![Monthly Dust Mass Concentrations in California](C:/Users/johot/Desktop/Joey's%20Files/Work/NSERC%202022/PM25-Research/Summary%20Statistics/Dust%20Mass%20Plots/Monthly_DustMass_California.png) ![Monthly Nitrate Concentrations in California](C:/Users/johot/Desktop/Joey's%20Files/Work/NSERC%202022/PM25-Research/Summary%20Statistics/Nitrate%20Plots/Monthly_Nitrate_California.png)
 
-![Monthly PM2.5 Concentrations in California](C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research/Summary Statistics/PM 2.5 Plots/Monthly_PM25_California.png)
+![Monthly PM2.5 Concentrations in California](C:/Users/johot/Desktop/Joey's%20Files/Work/NSERC%202022/PM25-Research/Summary%20Statistics/PM%202.5%20Plots/Monthly_PM25_California.png)
 
-![Monthly Dust Mass Concentrations in California](C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research/Summary Statistics/Sulfate Plots/Monthly_Sulfate_California.png)
+![Monthly Dust Mass Concentrations in California](C:/Users/johot/Desktop/Joey's%20Files/Work/NSERC%202022/PM25-Research/Summary%20Statistics/Sulfate%20Plots/Monthly_Sulfate_California.png)
 
 ### Finding Missing Values
 
@@ -185,7 +216,7 @@ To start off, we will examine counts of missing values in our datasets, to deter
 ```{r missing-vals-table-1, echo = FALSE}
 # Filter merged dataset to only the variables which we needed
 MISR_AQS_smaller <- MISR_AQS %>%
-  select(Date, PM25, c(12:19), c(37:110))
+  select(PM25, Year, Month, Day, c(14:21), c(39:112))
 
 # Get variable names, and counts of recorded and missing values
 MISR_AQS_var_info <- cbind(colnames(MISR_AQS_smaller),
@@ -212,7 +243,8 @@ Next, we will create some charts and plots of the matched MISR data, to get visu
 
 First, we will create a "correlation heatmap" to visually depict the correlations between the 74 AOD mixtures which were collected in the MISR data. In the correlation heatmap shown below, the correlations between these different mixtures are measured from -1 to 1, and each square in the heatmap is coloured in, with it's colour and intensity proportional to the correlation between the variables.
 
-![Correlation Heatmap for the 74 MISR Mixtures](C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research/Data/MISR_Modelling/Mixtures_Correlation_Heatmap.png)
+![Correlation Heatmap for the 74 MISR Mixtures](C:/Users/johot/Desktop/Joey's%20Files/Work/NSERC%202022/PM25-Research/Data/MISR_Modelling/Mixtures_Correlation_Heatmap.png)
+
 ```{r smallest-mixture-corr, echo = FALSE, message = FALSE, warning = FALSE}
 # Read in the csv file containing MISR data
 melted_mixture.corr <- read_csv(paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Melted.csv"))
@@ -220,9 +252,9 @@ smallest_mixture.corr <- melted_mixture.corr %>%
   filter(value == min(melted_mixture.corr$value))
 ```
 
-As we can clearly see in the correlation heatmap displayed above, the 74 AOD mixtures in the collected MISR data are all strongly correlated with one another, as the entire heatmap is green. 
+As we can clearly see in the correlation heatmap displayed above, the 74 AOD mixtures in the collected MISR data are all strongly correlated with one another, as the entire heatmap is green.
 
-In fact, the weakest correlation between a pair of these 74 AOD mixtures is `r smallest_mixture.corr[2,3]`, which is the correlation between `r smallest_mixture.corr[2,1]` and  `r smallest_mixture.corr[2,2]`, which is still considered to be a strong positive linear relationship.
+In fact, the weakest correlation between a pair of these 74 AOD mixtures is `r smallest_mixture.corr[2,3]`, which is the correlation between `r smallest_mixture.corr[2,1]` and `r smallest_mixture.corr[2,2]`, which is still considered to be a strong positive linear relationship between two variables.
 
 ## Model Fitting
 
@@ -232,132 +264,92 @@ We will create a whole host of different models, as we have multiple different v
 
 The 6 main values which we want to predict are; PM2.5, $\text{SO}_{4}^{2-}$ (sulfate), $\text{NO}_{3}^{-}$ (nitrate), dust mass, elemental carbon, and organic carbon. The two primary sets of predictors which we want to use are the 8 measured AOD values, and the 74 MISR AOD mixtures.
 
-First, we will split each of our two datasets into a training and a test dataset, with 75% of the data being placed in the training set, and the remaining 25% being put into the validation set.
+In addition to these two sets of predictors mentioned above, we will also introduce a "Months" variable to help account for the changes in these values over time. The Months variable will be computed by determining how many months it has been since March 2000, which represents the beginning of our collected data.
+
+First, we will remove all rows with missing values for these desired predictors, and then we will split both of our datasets into a training dataset, a validation dataset, and a test dataset, with a 70/15/15 split for the training, validation, and test datasets, respectively.
 
 ```{r test-train-PM25, echo = FALSE, message = FALSE, warning = FALSE}
+# Introduce the Months variable as described above
+MISR_AQS_smaller <- MISR_AQS_smaller %>% 
+  mutate(Months = 12 * (Year - 2000) + Month - 3)
+
 # Select PM2.5 and the 8 AOD parameters from merged AQS/MISR dataset, and drop rows with missing data
 PM25_AOD <- MISR_AQS_smaller %>% 
-  select(PM25, c(3:10)) %>%
+  select(PM25, Months, c(5:12)) %>%
   drop_na()
 
 # Select PM2.5 and the 74 AOD mixtures from merged AQS/MISR dataset, and drop rows with missing data
 PM25_mixtures <- MISR_AQS_smaller %>% 
-  select(PM25, c(11:84)) %>%
+  select(PM25, Months, c(13:86)) %>%
   drop_na()
+
 
 # Randomly select testing/training datasets for AOD data and 74 mixtures
 set.seed(12345)
 
-AOD.train = sample(c(1:nrow(PM25_AOD)), size = floor(0.75 * nrow(PM25_AOD)), replace = FALSE)
-AOD.test = setdiff(c(1:nrow(PM25_AOD)), AOD.train)
+# Select train/validation/testing datasets for AOD data with a 70/15/15 split 
+AOD.train = sample(c(1:nrow(PM25_AOD)), size = floor(0.70 * nrow(PM25_AOD)), replace = FALSE)
+AOD.nottrain = setdiff(c(1:nrow(PM25_AOD)), AOD.train)
+AOD.validation = sample(AOD.nottrain, size = floor(0.50 * length(AOD.nottrain)), replace = FALSE)
+AOD.test = setdiff(AOD.nottrain, AOD.validation)
 PM25_AOD.train <- PM25_AOD[AOD.train,]
+PM25_AOD.validation <- PM25_AOD[AOD.validation,]
 PM25_AOD.test <- PM25_AOD[AOD.test,]
 
-mixtures.train = sample(c(1:nrow(PM25_mixtures)), size = floor(0.75 * nrow(PM25_mixtures)), replace = FALSE)
-mixtures.test = setdiff(c(1:nrow(PM25_mixtures)), mixtures.train)
+# Select train/validation/testing datasets for mixtures data with a 70/15/15 split 
+mixtures.train = sample(c(1:nrow(PM25_mixtures)), size = floor(0.70 * nrow(PM25_mixtures)), replace = FALSE)
+mixtures.nottrain = setdiff(c(1:nrow(PM25_mixtures)), mixtures.train)
+mixtures.validation = sample(mixtures.nottrain, size = floor(0.50 * length(mixtures.nottrain)), replace = FALSE)
+mixtures.test = setdiff(mixtures.nottrain, mixtures.validation)
 PM25_mixtures.train <- PM25_mixtures[mixtures.train,]
+PM25_mixtures.validation <- PM25_mixtures[mixtures.validation,]
 PM25_mixtures.test <- PM25_mixtures[mixtures.test,]
 ```
 
 ### PM2.5 AOD XGBoost
 
 ```{r pm25-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
-# Create sets of values to use in xgboosting
-eta_vals <- c(0.05, 0.1, 0.3, 0.6)
-max_depth_vals <- c(1, 2, 4, 5, 8, 10)
-nrounds_vals <- c(10, 20, 50, 100)
-pm25_aod_xgb_params <- expand.grid(eta = eta_vals, max_depth = max_depth_vals, nrounds = nrounds_vals)
-
-
-
+# Create sets of parameter values to use for xgboost models
+pm25_aod_xgb_params <- expand.grid(nrounds = c(100),
+                                   eta = c(0.1, 0.3, 0.6, 1.0),
+                                   max_depth = c(10),
+                                   gamma = c(0.01),
+                                   colsample_bytree = c(0.5, 0.75, 1),
+                                   min_child_weight = c(0, 1),
+                                   subsample = c(0.5, 0.75, 1))
 
 # Empty (filled later) vectors of RMSE and R2 values for each xgboost model
 pm25_aod_xgb_RMSE <- rep(NA, times = nrow(pm25_aod_xgb_params))
 pm25_aod_xgb_R2 <- rep(NA, times = nrow(pm25_aod_xgb_params))
 
 for(i in 1:nrow(pm25_aod_xgb_params)){
-  # Get collection of parameters
-  eta = pm25_aod_xgb_params[i, "eta"]
-  max_depth = pm25_aod_xgb_params[i, "max_depth"]
-  nrounds = pm25_aod_xgb_params[i, "nrounds"]
-  
+  # Get the row in the table
+  params_row <- pm25_aod_xgb_params[i,]
+
   # Fit xgboost model with given parameters
-  PM25_AOD_xgb <- xgboost(data = as.matrix(PM25_AOD.train)[,2:9], label = as.matrix(PM25_AOD.train)[,1],
-                          eta = eta, max_depth = max_depth, nrounds = nrounds, verbose = 0)
+  PM25_AOD_xgb <- xgboost(data = as.matrix(PM25_AOD.train)[,2:10], label = as.matrix(PM25_AOD.train)[,1],
+                          nrounds = 100, verbose = 0,
+                          params = list(eta = params_row$eta, max_depth = params_row$max_depth, 
+                                        gamma = params_row$gamma, colsample_bytree = params_row$colsample_bytree,
+                                        min_child_weight = params_row$min_child_weight, subsample = params_row$subsample))
   
   # Predict values for the test set with the xgboost model
-  PM25_AOD_xgb_pred <- predict(PM25_AOD_xgb, newdata = as.matrix(PM25_AOD.test)[,2:9])
+  PM25_AOD_xgb_pred <- predict(PM25_AOD_xgb, newdata = as.matrix(PM25_AOD.validation)[,2:10])
   # Compute RMSE and R2 of data on the test dataset
-  pm25_aod_xgb_RMSE[i] <- caret::RMSE(PM25_AOD_xgb_pred, PM25_AOD.test$PM25)
-  pm25_aod_xgb_R2[i] <- caret::R2(PM25_AOD_xgb_pred, PM25_AOD.test$PM25)
+  pm25_aod_xgb_RMSE[i] <- caret::RMSE(PM25_AOD_xgb_pred, PM25_AOD.validation$PM25)
+  pm25_aod_xgb_R2[i] <- caret::R2(PM25_AOD_xgb_pred, PM25_AOD.validation$PM25)
 }
 
 pm25_aod_xgb_table <- cbind(pm25_aod_xgb_params, RMSE = pm25_aod_xgb_RMSE, R2 = pm25_aod_xgb_R2)
 
-knitr::kable(pm25_aod_xgb_table, row.names = FALSE, 
-             caption = paste0("Model Performance of xgboost models on the test dataset", 
+knitr::kable(pm25_aod_xgb_table, row.names = FALSE,
+             caption = paste0("Model Performance of xgboost models on the validation dataset",
                               "<br>", "Model: Predicting PM2.5 using AOD")) %>%
   kable_styling(bootstrap_options = c("striped", "bordered"),
                 fixed_thead = TRUE) %>%
   scroll_box(height = '500px')
 ```
 
-Of the 96 xgboost models which we fitted as seen in the table above, the lowest RMSE among the 96 models was `r min(pm25_aod_xgb_RMSE)`, and the highest R2 value among these models was `r max(pm25_aod_xgb_R2)`.
+Of the 72 xgboost models which we fitted as seen in the table above, the lowest RMSE among the 96 models was `r min(pm25_aod_xgb_RMSE)`, and the highest R2 value among these models was `r max(pm25_aod_xgb_R2)`.
 
-Coincidentally, the xgboost model which attained the lowest RMSE was also the xgboost model which attained the highest R2 value. This model had the parameters `eta = 0.6`, `max_depth = 10`, and `nrounds = 100`, which were all the highest values used for these respective variables.
-
-### log(PM2.5) AOD XGBoost
-
-As we saw when visualizing the data above, the log-plots of the four variables which we want to predict are much more symmetrical than the histograms of the distributions of these variables themselves. Thus, we will also create xgboost models to predict these logarithmic values.
-
-```{r log-pm25-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
-# Create sets of values to use in xgboosting
-eta_vals <- c(0.05, 0.1, 0.3, 0.6)
-max_depth_vals <- c(1, 2, 4, 5, 8, 10)
-nrounds_vals <- c(10, 20, 50, 100)
-log_pm25_aod_xgb_params <- expand.grid(eta = eta_vals, max_depth = max_depth_vals, nrounds = nrounds_vals)
-
-
-# Empty (filled later) vectors of RMSE and R2 values for each xgboost model
-log_pm25_aod_xgb_RMSE <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
-log_pm25_aod_xgb_R2 <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
-pm25_aod_xgb_RMSE <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
-pm25_aod_xgb_R2 <- rep(NA, times = nrow(log_pm25_aod_xgb_params))
-
-for(i in 1:nrow(log_pm25_aod_xgb_params)){
-  # Get collection of parameters
-  eta = log_pm25_aod_xgb_params[i, "eta"]
-  max_depth = log_pm25_aod_xgb_params[i, "max_depth"]
-  nrounds = log_pm25_aod_xgb_params[i, "nrounds"]
-  
-  # Fit xgboost model with given parameters
-  log_PM25_AOD_xgb <- xgboost(data = as.matrix(PM25_AOD.train)[,2:9], label = as.matrix(log(PM25_AOD.train + 0.001, base = 10)[,1]),
-                              eta = eta, max_depth = max_depth, nrounds = nrounds, verbose = 0)
-  
-  # Predict values for the test set with the xgboost model
-  log_PM25_AOD_xgb_pred <- predict(log_PM25_AOD_xgb, newdata = as.matrix(PM25_AOD.test)[,2:9])
-  exp_PM25_AOD_xgb_pred <- 10^log_PM25_AOD_xgb_pred - 0.001
-  
-  # Compute RMSE and R2 of data on the test dataset
-  log_pm25_aod_xgb_RMSE[i] <- caret::RMSE(log_PM25_AOD_xgb_pred, log(PM25_AOD.test$PM25 + 0.001, base = 10))
-  log_pm25_aod_xgb_R2[i] <- caret::R2(log_PM25_AOD_xgb_pred, log(PM25_AOD.test$PM25 + 0.001, base = 10))
-  pm25_aod_xgb_RMSE[i] <- caret::RMSE(exp_PM25_AOD_xgb_pred, PM25_AOD.test$PM25)
-  pm25_aod_xgb_R2[i] <- caret::R2(exp_PM25_AOD_xgb_pred, PM25_AOD.test$PM25)
-}
-
-log_pm25_aod_xgb_table <- cbind(log_pm25_aod_xgb_params, log_RMSE = log_pm25_aod_xgb_RMSE, log_R2 = log_pm25_aod_xgb_R2,
-                                RMSE = pm25_aod_xgb_RMSE, R2 = pm25_aod_xgb_R2)
-
-knitr::kable(log_pm25_aod_xgb_table, row.names = FALSE,
-             col.names = c("eta", "max_depth", "nrounds", "RMSE of log(PM2.5)", "R2 of log(PM2.5)",
-                           "RMSE of PM2.5", "R2 of PM2.5"),
-             caption = paste0("Model Performance of xgboost models on the test dataset", 
-                              "<br>", "Model: Predicting log(PM2.5) and PM2.5 using AOD")) %>%
-  kable_styling(bootstrap_options = c("striped", "bordered"),
-                fixed_thead = TRUE) %>%
-  scroll_box(height = '500px')
-```
-
-Of the 96 xgboost models which we fitted as shown in the table above, the lowest RMSE for predicting log(PM2.5) was `r min(log_pm25_aod_xgb_RMSE)`, the lowest RMSE for predicting PM2.5 was `r min(pm25_aod_xgb_RMSE)`, the highest R2 value for predicting log(PM2.5) was `r max(log_pm25_aod_xgb_R2)`, and the highest R2 value for predicting PM2.5 was `r max(pm25_aod_xgb_R2)`.
-
-Coincidentally, the xgboost model which was optimal for all four of these metrics was the model which was fitted with the parameters `eta = 0.6`, `max_depth = 10`, and `nrounds = 100`, which were all the highest values used for these respective variables. 
+Coincidentally, the xgboost model which attained the lowest RMSE was also the xgboost model which attained the highest R2 value. This model had the parameters `nrounds = 100`, `eta = 0.3`, `max_depth = 10`, `gamma = 0.01`, `colsample_bytree = 0.50`, `min_child_weight = 1`, and `subsample = 1`. 
