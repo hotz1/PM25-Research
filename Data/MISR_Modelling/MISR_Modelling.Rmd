@@ -1,15 +1,20 @@
 ---
 title: "MISR Data Modelling"
 author: "Joey Hotz"
-date: "Last Updated: October 6, 2022"
+date: "Last Updated: `r format(Sys.Date(), '%B %d, %Y')`"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_chunk$set(fig.dim = c(8, 4))
+# Set directory (Joey's desktop)
+# knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
+# Set directory (Joey's laptop)
+knitr::opts_knit$set(root.dir = "C:/Users/johot/OneDrive/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load needed libraries/packages
 library(tidyverse)
 library(data.table)
 library(lubridate)
