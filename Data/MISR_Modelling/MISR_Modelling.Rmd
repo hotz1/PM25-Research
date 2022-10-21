@@ -7,10 +7,10 @@ output: html_document
 
 ```{r setup, include=FALSE}
 # Set directory (Joey's desktop)
-# knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
 # Set directory (Joey's laptop)
-knitr::opts_knit$set(root.dir = "C:/Users/johot/OneDrive/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+# knitr::opts_knit$set(root.dir = "C:/Users/johot/OneDrive/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
 knitr::opts_chunk$set(echo = TRUE)
 
