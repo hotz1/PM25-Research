@@ -336,23 +336,21 @@ for(i in 1:nrow(pm25_aod_xgb_params)){
   params_row <- pm25_aod_xgb_params[i,]
 
   # Fit xgboost model with given parameters
-  PM25_AOD_xgb <- xgboost(data = as.matrix(PM25_AOD.train)[,2:15], label = as.matrix(PM25_AOD.train)[,1],
-                          nrounds = 100, verbose = 0,
-                          params = list(eta = params_row$eta, max_depth = params_row$max_depth, 
-                                        gamma = params_row$gamma, colsample_bytree = params_row$colsample_bytree,
-                                        min_child_weight = params_row$min_child_weight, subsample = params_row$subsample))
+  pm25_aod_xgb_models[i] <- xgboost(data = as.matrix(PM25_AOD.train)[,2:15], 
+                                    label = as.matrix(PM25_AOD.train)[,1],
+                                    nrounds = 100, verbose = 0,
+                                    params = list(eta = params_row$eta, max_depth = params_row$max_depth,
+                                                  gamma = params_row$gamma, colsample_bytree = params_row$colsample_bytree,
+                                                  min_child_weight = params_row$min_child_weight, 
+                                                  subsample = params_row$subsample))
   
-  # Predict values for the test set with the xgboost model
-  PM25_AOD_xgb_pred <- predict(PM25_AOD_xgb, newdata = as.matrix(PM25_AOD.validation)[,2:15])
-  # Compute RMSE and R2 of data on the test dataset
+  # Predict values for the validation set with the xgboost model
+  PM25_AOD_xgb_pred <- predict(pm25_aod_xgb_models[[i]], newdata = as.matrix(PM25_AOD.validation)[,2:15])
+  
+  # Compute RMSE and R2 of data on the validation dataset
   pm25_aod_xgb_RMSE[i] <- caret::RMSE(PM25_AOD_xgb_pred, PM25_AOD.validation$PM25)
   pm25_aod_xgb_R2[i] <- caret::R2(PM25_AOD_xgb_pred, PM25_AOD.validation$PM25)
 }
-
-# Select models with best RMSE and best R2
-pm25_aod_xgb_best_RMSE <- which.min(pm25_aod_xgb_RMSE)
-pm25_aod_xgb_best_R2 <- which.max(pm25_aod_xgb_R2)
-
 
 # Create and display table of all 72 XGBoost models
 pm25_aod_xgb_table <- cbind(pm25_aod_xgb_params, RMSE = pm25_aod_xgb_RMSE, R2 = pm25_aod_xgb_R2)
@@ -362,6 +360,10 @@ knitr::kable(pm25_aod_xgb_table, row.names = FALSE,
   kable_styling(bootstrap_options = c("striped", "bordered"),
                 fixed_thead = TRUE) %>%
   scroll_box(height = '500px')
+
+# Select models with best RMSE and best R2
+pm25_aod_xgb_best_RMSE <- pm25_aod_xgb_models[[which.min(pm25_aod_xgb_RMSE)]]
+pm25_aod_xgb_best_R2 <- pm25_aod_xgb_models[[which.max(pm25_aod_xgb_R2)]]
 ```
 
  
