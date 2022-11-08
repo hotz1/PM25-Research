@@ -65,15 +65,15 @@ write.csv(melted_mixture.corr, paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Co
 
 # Read in the csv file containing MISR data
 melted_mixture.corr <- read_csv(paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Melted.csv"))
-
+#melted_mixture.corr <- read_csv("/Users/meredith/Library/CloudStorage/Dropbox/CARB project/PM25-Research/Data/MISR_Modelling/Mixtures_Correlation_Melted.csv")
 # Create the correlation heatmap, and save it as an image locally.
 mixtures_heatmap <- melted_mixture.corr %>%
   ggplot(aes(x = Var1, y = Var2, fill = value)) +
   labs(title = "Pearson Correlation between pairs of 74 AOD Mixtures from the MISR dataset",
        subtitle = "MISR Data collected from 2000-2022 in California") +
   geom_tile(color = "black") +
-  scale_fill_gradient2(low = "#ff0000", high = "#00ff00", mid = "#ffffff",
-                       midpoint = 0, limit = c(-1,1), name = "Correlation") +
+  scale_fill_gradient2(low = "#00ff00", high = "#ff0000", mid = "#ffffff",
+                       midpoint = 0.6, limit = c(0,1), name = "Correlation") +
   geom_text(aes(Var2, Var1, label = value), color = "black", size = 1.5) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
         axis.title.x = element_blank(),
@@ -87,3 +87,5 @@ mixtures_heatmap <- melted_mixture.corr %>%
 ggsave(filename = paste0(getwd(), "/Data/MISR_Modelling/Mixtures_Correlation_Heatmap.png"),
        plot = mixtures_heatmap, device = "png", width = 18, height = 16)
 
+#ggsave(filename = "/Users/meredith/Library/CloudStorage/Dropbox/CARB project/PM25-Research/Data/MISR_Modelling/Mixtures_Correlation_Heatmap.png",
+#       plot = mixtures_heatmap, device = "png", width = 18, height = 16)
