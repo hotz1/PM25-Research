@@ -2,7 +2,13 @@
 title: "MISR Data Modelling"
 author: "Joey Hotz"
 date: "Last Updated: `r format(Sys.Date(), '%B %d, %Y')`"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +32,7 @@ library(xgboost)
 library(caret)
 ```
 
-## Data
+# Data
 
 First, we will read in the MISR datasets which have been matched to the AQS and CSN datasets. These data were matched spatially by considering every AQS/CSN data collection site within a 2.2 km radius of a MISR data pixel, and these matches were further filtered by matching these observations based on the dates when they were recorded.
 
@@ -53,7 +59,7 @@ MISR_CSN <- MISR_CSN %>%
 
 In addition to the data which we collected from the CSN dataset, we will also use a formula to estimate the total dust mass in a given area, based on the presence of certain elements.
 
-The formula to compute dust mass is given by $\text{Dust Mass} = 2.2\times\text{Al} + 2.49\times\text{Si} + 1.63\times\text{Ca} + 1.94\times\text{Ti} + 2.42\times\text{Fe}$.
+The formula for computing dust mass is given by $\text{Dust Mass} = 2.2\times\text{Al} + 2.49\times\text{Si} + 1.63\times\text{Ca} + 1.94\times\text{Ti} + 2.42\times\text{Fe}$.
 
 ```{r compute-dust-mass, echo = FALSE, message = FALSE, warning = FALSE}
 MISR_CSN <- MISR_CSN %>% 
@@ -61,11 +67,11 @@ MISR_CSN <- MISR_CSN %>%
   relocate(Dust, .after = sulfate)
 ```
 
-## Exploratory Data Analysis
+# Exploratory Data Analysis
 
 First, we will do some exploratory data analysis for these datasets, so we can have a better understanding of the data which we collected.
 
-### Numerical Summaries
+## Numerical Summaries
 
 We will examine some brief numerical summaries of our main four variables, in order to know more about their general distributions.
 
@@ -106,7 +112,7 @@ MISR_CSN <- MISR_CSN %>%
   mutate(Dust = replace(Dust, which(Dust < 0), 0))
 ```
 
-### Histograms
+## Histograms
 
 In addition to examining numerical summaries of these values, we will also examine histograms of the values to see the overall distributions of these variables in a more visual manner.
 
@@ -202,7 +208,7 @@ From the plots above, we see that the distributions for each of these four varia
 
 The log-plots above all appear to be relatively symmetrical and look somewhat like Normal distributions, which may be helpful for model fitting and prediction purposes, as these distributions are significantly less skewed by their few large values.
 
-### Historical Data
+## Historical Data
 
 In addition to the histograms which show the general distributions of these data over our 22-year period, we have created time series plots of dust mass, nitrate, PM2.5, and sulfate concentrations in California over time as a way to visualize how these quantities have changed over time.
 
@@ -214,9 +220,11 @@ The PM2.5 data is sourced from the AQS data collection sites, whereas the dust m
 
 ![Monthly Dust Mass Concentrations in California](C:/Users/johot/Desktop/Joey's%20Files/Work/NSERC%202022/PM25-Research/Summary%20Statistics/Sulfate%20Plots/Monthly_Sulfate_California.png)
 
-### Finding Missing Values
+## Finding Missing Values
 
 To start off, we will examine counts of missing values in our datasets, to determine how much of the data which we aim to use is actually present in the dataset.
+
+### Missing Values in the AQS dataset
 
 ```{r missing-vals-table-1, echo = FALSE}
 # Filter merged dataset to only the variables which we needed
@@ -237,13 +245,13 @@ knitr::kable(MISR_AQS_var_info, row.names = FALSE, caption = "Counts of Variable
   scroll_box(height = '500px')
 ```
 
-First, we notice that there are no missing values for the Date and PM2.5 variables, which is excellent, as these are arguably our two most important variables.
+First, we notice that there are no missing values for PM2.5, the date-related variables, or the spatial variables. This is excellent, as these values are the most important predictors for the models which we will fit.
 
 We can also notice that there are the same amount of recorded and missing values for each of the 8 AOD variables. If we examine these 8 variables further, we find that they are a "package deal"; for each observation, there is either a recorded value for all 8 of these variables, or a missing value for all 8 variables.
 
 Unfortunately, the same cannot be said for the 74 AOD mixture variables. From the table above, we can clearly see that the number of available observations varies for each of the 74 mixtures. However, of these 74 mixtures, the mixtures with the fewest number of recorded observations (`aod_mix_71` and `aod_mix_72`) each have `r MISR_AQS_var_info[82, 2]` recorded values. Furthermore, a table containing all 74 mixtures would have `r nrow(drop_na(select(MISR_AQS_smaller, c(1:2, 11:84))))` observations which have a recorded value for each of the 74 mixtures, which is a fair amount of data to work with.
 
-### Charts and Graphs
+## Charts and Graphs
 
 Next, we will create some charts and plots of the matched MISR data, to get visual representations of the data which we have collected.
 
@@ -262,7 +270,7 @@ As we can clearly see in the correlation heatmap displayed above, the 74 AOD mix
 
 In fact, the weakest correlation between a pair of these 74 AOD mixtures is `r smallest_mixture.corr[2,3]`, which is the correlation between `r smallest_mixture.corr[2,1]` and `r smallest_mixture.corr[2,2]`, which is still considered to be a strong positive linear relationship between two variables.
 
-## Model Fitting
+# Model Fitting
 
 Next, we will test a variety of different model fitting techniques on our dataset in order to determine which models are generally more efficient and serve as better models to make predictions for our dataset.
 
@@ -270,100 +278,124 @@ We will create a whole host of different models, as we have multiple different v
 
 The 6 main values which we want to predict are; PM2.5, $\text{SO}_{4}^{2-}$ (sulfate), $\text{NO}_{3}^{-}$ (nitrate), dust mass, elemental carbon, and organic carbon. The two primary sets of predictors which we want to use are the 8 measured AOD values, and the 74 MISR AOD mixtures.
 
-In addition to these two sets of predictors mentioned above, we will also introduce a "Months" variable to help account for the changes in these values over time. The Months variable will be computed by determining how many months it has been since March 2000, which represents the beginning of our collected data.
+In addition to these two sets of predictors mentioned above, we will also introduce a "Months" variable to help account for the changes in these values over time. The Months variable will be computed by determining how many months it has been since March 2000, as March 2000 is the starting point for the data which we have collected.
 
-First, we will remove all rows with missing values for these desired predictors, and then we will split both of our datasets into a training dataset, a validation dataset, and a test dataset, with a 70/15/15 split for the training, validation, and test datasets, respectively.
-
-```{r test-train-PM25, echo = FALSE, message = FALSE, warning = FALSE}
+```{r months-since-start, echo = FALSE, message = FALSE, warning = FALSE}
 # Introduce the Months variable as described above
 MISR_AQS_smaller <- MISR_AQS_smaller %>% 
   mutate(Months = 12 * (Year - 2000) + Month - 3)
+```
+
+To fit our models, we will first remove any observations which have unrecorded values for the desired predictors. Then, we will split the data into a training dataset, a validation dataset, and a test dataset using a 70/15/15 ratio.
+
+```{r test-train-validation-split, echo = FALSE, message = FALSE, warning = FALSE}
+# Set seed for consistent results
+set.seed(12345)
 
 # Select PM2.5 and the 8 AOD parameters from merged AQS/MISR dataset, and drop rows with missing data
 PM25_AOD <- MISR_AQS_smaller %>% 
   select(PM25, Months, c(5:9), c(10:17)) %>%
   drop_na()
 
+# Select train/validation/testing datasets for PM25/AOD data with a 70/15/15 split 
+PM25_AOD_shuffle <- sample(c(1:nrow(PM25_AOD)))
+PM25_AOD.train_indices = PM25_AOD_shuffle[1:round(nrow(PM25_AOD) * 0.7)]
+PM25_AOD.validation_indices = PM25_AOD_shuffle[(round(nrow(PM25_AOD) * 0.7)+1):round(nrow(PM25_AOD) * 0.85)]
+PM25_AOD.test_indices = PM25_AOD_shuffle[(round(nrow(PM25_AOD) * 0.85)+1):nrow(PM25_AOD)]
+PM25_AOD.train <- PM25_AOD[PM25_AOD.train_indices,]
+PM25_AOD.validation <- PM25_AOD[PM25_AOD.validation_indices,]
+PM25_AOD.test <- PM25_AOD[PM25_AOD.test_indices,]
+
+
 # Select PM2.5 and the 74 AOD mixtures from merged AQS/MISR dataset, and drop rows with missing data
 PM25_mixtures <- MISR_AQS_smaller %>% 
   select(PM25, Months, c(5:9), c(18:91)) %>%
   drop_na()
 
-
-# Randomly select testing/training datasets for AOD data and 74 mixtures
-set.seed(12345)
-
-# Select train/validation/testing datasets for AOD data with a 70/15/15 split 
-AOD.train = sample(c(1:nrow(PM25_AOD)), size = floor(0.70 * nrow(PM25_AOD)), replace = FALSE)
-AOD.nottrain = setdiff(c(1:nrow(PM25_AOD)), AOD.train)
-AOD.validation = sample(AOD.nottrain, size = floor(0.50 * length(AOD.nottrain)), replace = FALSE)
-AOD.test = setdiff(AOD.nottrain, AOD.validation)
-PM25_AOD.train <- PM25_AOD[AOD.train,]
-PM25_AOD.validation <- PM25_AOD[AOD.validation,]
-PM25_AOD.test <- PM25_AOD[AOD.test,]
-
 # Select train/validation/testing datasets for mixtures data with a 70/15/15 split 
-mixtures.train = sample(c(1:nrow(PM25_mixtures)), size = floor(0.70 * nrow(PM25_mixtures)), replace = FALSE)
-mixtures.nottrain = setdiff(c(1:nrow(PM25_mixtures)), mixtures.train)
-mixtures.validation = sample(mixtures.nottrain, size = floor(0.50 * length(mixtures.nottrain)), replace = FALSE)
-mixtures.test = setdiff(mixtures.nottrain, mixtures.validation)
-PM25_mixtures.train <- PM25_mixtures[mixtures.train,]
-PM25_mixtures.validation <- PM25_mixtures[mixtures.validation,]
-PM25_mixtures.test <- PM25_mixtures[mixtures.test,]
+PM25_mixtures_shuffle <- sample(c(1:nrow(PM25_mixtures)))
+PM25_mixtures.train_indices = PM25_mixtures_shuffle[1:round(nrow(PM25_mixtures) * 0.7)]
+PM25_mixtures.validation_indices = PM25_mixtures_shuffle[(round(nrow(PM25_mixtures) * 0.7)+1):
+                                                           round(nrow(PM25_mixtures) * 0.85)]
+PM25_mixtures.test_indices = PM25_mixtures_shuffle[(round(nrow(PM25_mixtures) * 0.85)+1):nrow(PM25_mixtures)]
+PM25_mixtures.train <- PM25_mixtures[PM25_mixtures.train_indices,]
+PM25_mixtures.validation <- PM25_mixtures[PM25_mixtures.validation_indices,]
+PM25_mixtures.test <- PM25_mixtures[PM25_mixtures.test_indices,]
 ```
 
-### PM2.5 AOD XGBoost
+## PM2.5 AOD XGBoost
+
+Using the `xgboost` package, we will fit an an XGBooster model (eXtreme Gradient Booster) which predicts PM2.5 concentrations based on the 8 AOD parameters.
+
+To fit this model, we will tune the hyperparameters of the XGBooster (using the `caret` package) by fitting XGB models with different combinations of our potential hyperparameters on the validation dataset, and we will select the hyperparameters corresponding to the model(s) which had the highest R-squared and the lowest RMSE on the validation dataset as candidate models to use on the test set.
 
 ```{r pm25-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
 # Create sets of parameter values to use for xgboost models
-pm25_aod_xgb_params <- expand.grid(nrounds = c(100),
-                                   eta = c(0.1, 0.3, 0.6, 1.0),
-                                   max_depth = c(10),
-                                   gamma = c(0.01),
-                                   colsample_bytree = c(0.5, 0.75, 1),
-                                   min_child_weight = c(0, 1),
-                                   subsample = c(0.5, 0.75, 1))
-
-# Empty (filled later) vector of xgboost models
-pm25_aod_xgb_models <- rep(NA, times = nrow(pm25_aod_xgb_params))
+XGB_hyperparams <- expand.grid(nrounds = c(100), 
+                               eta = c(0.1, 0.3, 0.6, 1.0),
+                               max_depth = c(10),
+                               gamma = c(0.01),
+                               colsample_bytree = c(0.5, 0.75, 1),
+                               min_child_weight = c(0, 1),
+                               subsample = c(0.5, 0.75, 1))
 
 # Empty (filled later) vectors of RMSE and R2 values for each xgboost model
-pm25_aod_xgb_RMSE <- rep(NA, times = nrow(pm25_aod_xgb_params))
-pm25_aod_xgb_R2 <- rep(NA, times = nrow(pm25_aod_xgb_params))
+PM25_AOD_XGB_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+PM25_AOD_XGB_R2 <- rep(NA, times = nrow(XGB_hyperparams))
 
-for(i in 1:nrow(pm25_aod_xgb_params)){
-  # Get the row in the table
-  params_row <- pm25_aod_xgb_params[i,]
+# Empty (filled later) list of variable importances for each xgboost model
+PM25_AOD_XGB_varImp <- vector(mode = "list", length = nrow(XGB_hyperparams))
 
-  # Fit xgboost model with given parameters
-  pm25_aod_xgb_models[i] <- xgboost(data = as.matrix(PM25_AOD.train)[,2:15], 
-                                    label = as.matrix(PM25_AOD.train)[,1],
-                                    nrounds = 100, verbose = 0,
-                                    params = list(eta = params_row$eta, max_depth = params_row$max_depth,
-                                                  gamma = params_row$gamma, colsample_bytree = params_row$colsample_bytree,
-                                                  min_child_weight = params_row$min_child_weight, 
-                                                  subsample = params_row$subsample))
+# Set up the trainControl used in the caret package to fit the model
+train_control <- trainControl(method = "none", search = "grid")
+
+for(i in 1:nrow(XGB_hyperparams)){
+  # Fit XGB model with the given hyperparameters
+  PM25_AOD_XGB <- caret::train(PM25 ~ ., data = PM25_AOD.train, method = 'xgbTree', 
+                               trControl = train_control, tuneGrid = XGB_hyperparams[i,])
   
-  # Predict values for the validation set with the xgboost model
-  PM25_AOD_xgb_pred <- predict(pm25_aod_xgb_models[[i]], newdata = as.matrix(PM25_AOD.validation)[,2:15])
+  PM25_AOD_XGB_varImp[i] <- varImp(PM25_AOD_XGB, scale = F)
   
-  # Compute RMSE and R2 of data on the validation dataset
-  pm25_aod_xgb_RMSE[i] <- caret::RMSE(PM25_AOD_xgb_pred, PM25_AOD.validation$PM25)
-  pm25_aod_xgb_R2[i] <- caret::R2(PM25_AOD_xgb_pred, PM25_AOD.validation$PM25)
+  # Compute predicted values in the validation set based on the fitted model
+  PM25_AOD_XGB_pred <- predict(PM25_AOD_XGB, newdata = PM25_AOD.validation)
+  
+  # Compute RMSE and R2 of the fitted XGB model
+  PM25_AOD_XGB_RMSE[i] <- caret::RMSE(PM25_AOD_XGB_pred, PM25_AOD.validation$PM25)
+  PM25_AOD_XGB_R2[i] <- caret::R2(PM25_AOD_XGB_pred, PM25_AOD.validation$PM25)
 }
 
-# Create and display table of all 72 XGBoost models
-pm25_aod_xgb_table <- cbind(pm25_aod_xgb_params, RMSE = pm25_aod_xgb_RMSE, R2 = pm25_aod_xgb_R2)
-knitr::kable(pm25_aod_xgb_table, row.names = FALSE,
-             caption = paste0("Model Performance of xgboost models on the validation dataset",
-                              "<br>", "Model: Predicting PM2.5 using AOD")) %>%
+# Create and display table of all XGBoost models
+PM25_AOD_XGB_table <- cbind(XGB_hyperparams, RMSE = PM25_AOD_XGB_RMSE, R2 = PM25_AOD_XGB_R2)
+PM25_AOD_XGB_table %>%
+  knitr::kable(row.names = FALSE,
+               caption = paste0("Model Performance of XGBoost models on the validation dataset",
+                                "<br>", "Model: Predicting PM2.5 Concentration using AOD Parameters")) %>%
   kable_styling(bootstrap_options = c("striped", "bordered"),
                 fixed_thead = TRUE) %>%
   scroll_box(height = '500px')
 
-# Select models with best RMSE and best R2
-pm25_aod_xgb_best_RMSE <- pm25_aod_xgb_models[[which.min(pm25_aod_xgb_RMSE)]]
-pm25_aod_xgb_best_R2 <- pm25_aod_xgb_models[[which.max(pm25_aod_xgb_R2)]]
+# Show the XGB models with the lowest RMSE and highest R2 (these may be the same model)
+PM25_AOD_XGB_table %>% 
+  filter(RMSE == min(RMSE) | R2 == max(R2)) %>%
+  knitr::kable(row.names = FALSE,
+               caption = "Best-Performing Model(s) on the validation dataset") %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"))
+
+# Plot of the relationship between RMSE and R2.
+PM25_AOD_XGB_table %>% 
+  ggplot(aes(x = RMSE, y = R2)) +
+  geom_point(color = "blue") +
+  labs(x = "Validation RMSE", y = "Validation R2", title = "RMSE and R2 values of XGBoost models on the validation dataset",
+       subtitle = paste("Based on", nrow(XGB_hyperparams), "fitted XGBoost models")) +
+  theme_bw()
+
+# Variable Importance matrix of the XGB model with the best RMSE
+PM25_AOD_XGB_varImp[[which.min(PM25_AOD_XGB_RMSE)]] %>%
+  knitr::kable(caption = "Variable Importance of the XGB model with the lowest RMSE")
+
+# Variable Importance matrix of the XGB model with the best RMSE
+PM25_AOD_XGB_varImp[[which.max(PM25_AOD_XGB_R2)]] %>%
+  knitr::kable(caption = "Variable Importance of the XGB model with the highest R2")
 ```
 
  
