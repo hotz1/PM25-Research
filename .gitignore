@@ -19,3 +19,4 @@ Data/MISR/MISR_datasets/MISR_Data_*.csv
 Data/MISR/MISR_merged_data/MISR_AQS_Matched.csv
 Data/MISR/MISR_merged_data/MISR_CSN_Matched.csv
 Data/MISR/MISR_merged_data/MISR_IMPROVE_Matched.csv
+Data/Fire_Data/data/merged/*.csv
