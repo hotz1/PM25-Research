@@ -81,7 +81,7 @@ grab.nc.url = function(url, paths = integer()){
   # nc.list: character vector of URLs for relevant .nc files
   
   # collect the dates from the html file names
-  date = substr(url, 34, 43)
+  date = substr(url, 40, 49)
   
   # reads html table of the OPeNDAP page, collects the first column (file names)
   nc.list = readHTMLTable(htmlParse(url), stringsAsFactors = FALSE)[[1]][,1]
