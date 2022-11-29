@@ -123,7 +123,7 @@ for(year in 2000:2022){
   
   # Scrape NetCDF file links from MISR urls and dates
   system.time({
-    ncdf.urls = unlist(sapply(misr.urls[substr(misr.urls, 34, 37) == year],
+    ncdf.urls = unlist(sapply(misr.urls[substr(misr.urls, 40, 43) == year],
                               function(x) grab.nc.url(x, paths = c(27:51))),
                        use.names = F)
   })
