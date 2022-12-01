@@ -13,10 +13,10 @@ output:
 
 ```{r setup, include=FALSE}
 # Set directory (Joey's desktop)
-knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+# knitr::opts_knit$set(root.dir = "C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
 # Set directory (Joey's laptop)
-# knitr::opts_knit$set(root.dir = "C:/Users/johot/OneDrive/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
+knitr::opts_knit$set(root.dir = "C:/Users/johot/OneDrive/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -339,9 +339,13 @@ XGB_hyperparams <- expand.grid(nrounds = c(100),
                                min_child_weight = c(0, 1),
                                subsample = c(0.5, 0.75, 1))
 
-# Empty (filled later) vectors of RMSE and R2 values for each xgboost model
+# Empty (filled later) vectors of validation set RMSE and R2 values for each xgboost model
 PM25_AOD_XGB_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
 PM25_AOD_XGB_R2 <- rep(NA, times = nrow(XGB_hyperparams))
+
+# Empty (filled later) vectors of test set RMSE and R2 values for each xgboost model
+PM25_AOD_XGB_test_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+PM25_AOD_XGB_test_R2 <- rep(NA, times = nrow(XGB_hyperparams))
 
 # Empty (filled later) list of variable importances for each xgboost model
 PM25_AOD_XGB_varImp <- vector(mode = "list", length = nrow(XGB_hyperparams))
@@ -359,9 +363,16 @@ for(i in 1:nrow(XGB_hyperparams)){
   # Compute predicted values in the validation set based on the fitted model
   PM25_AOD_XGB_pred <- predict(PM25_AOD_XGB, newdata = PM25_AOD.validation)
   
-  # Compute RMSE and R2 of the fitted XGB model
+  # Compute validation set RMSE and R2 of the fitted XGB model
   PM25_AOD_XGB_RMSE[i] <- caret::RMSE(PM25_AOD_XGB_pred, PM25_AOD.validation$PM25)
   PM25_AOD_XGB_R2[i] <- caret::R2(PM25_AOD_XGB_pred, PM25_AOD.validation$PM25)
+  
+  # Compute predicted values in the test set based on the fitted model
+  PM25_AOD_XGB_pred_test <- predict(PM25_AOD_XGB, newdata = PM25_AOD.test)
+  
+  # Compute test set RMSE and R2 of the fitted XGB model
+  PM25_AOD_XGB_test_RMSE[i] <- caret::RMSE(PM25_AOD_XGB_pred_test, PM25_AOD.test$PM25)
+  PM25_AOD_XGB_test_R2[i] <- caret::R2(PM25_AOD_XGB_pred_test, PM25_AOD.test$PM25)
 }
 
 # Create and display table of all XGBoost models
