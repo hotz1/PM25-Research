@@ -225,7 +225,7 @@ The PM2.5 data is sourced from the AQS data collection sites, whereas the dust m
 
 To start off, we will examine counts of missing values in our datasets, to determine how much of the data which we aim to use is actually present in the dataset.
 
-### Missing Values in the AQS dataset
+### Missing Values in the AQS Dataset
 
 ```{r missing-vals-table-1, echo = FALSE}
 # Filter merged dataset to only the variables which we needed
@@ -363,11 +363,8 @@ XGB_hyperparams <- expand.grid(nrounds = c(100),
                                min_child_weight = c(0, 1),
                                subsample = c(0.5, 0.75, 1))
 
-XGB_hyperparams <- XGB_hyperparams[1:5] #TEST CODE REMOVE LATER
-
 # Convert this to a matrix
 XGB_hyperparams_matrix <- as.matrix(XGB_hyperparams)
-
 
 # Empty (filled later) vectors of validation set RMSE and R2 values for each xgboost model
 PM25_AOD_XGB_validation_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
@@ -391,8 +388,9 @@ for(i in 1:nrow(XGB_hyperparams)){
   
   # Get plot of variable importance matrix for the fitted xgboost model
   PM25_AOD_XGB_importance <- xgb.importance(model = PM25_AOD_XGB)
-  PM25_AOD_XGB_importance_plots[[i]] <- xgb.ggplot.importance(PM25_AOD_XGB_importance, 
-                                                              rel_to_first = FALSE, n_clusters = 2)
+  PM25_AOD_XGB_importance_plots[[i]] <-
+    xgb.ggplot.importance(PM25_AOD_XGB_importance, rel_to_first = FALSE, n_clusters = 2) +
+    theme_bw()
 
   # Compute predicted values for the validation set based on the fitted XGB model
   XGB_validation_predicted <- predict(PM25_AOD_XGB, newdata = as.matrix(PM25_AOD.validation)[,2:15])
@@ -411,7 +409,8 @@ for(i in 1:nrow(XGB_hyperparams)){
   # Plot predicted vs observed data for the test set
   predicted_vs_real_plots[[i]] <- plot_pred_vs_obs(observed = PM25_AOD.test$PM25, predicted = XGB_test_predicted,
                                                    varname = "PM2.5 Concentration", 
-                                                   subtitle = "Values were predicted using an XGBoost model")
+                                                   subtitle = paste0("Test Set RMSE: ", PM25_AOD_XGB_test_RMSE[i], "\n",
+                                                                     "Test Set R-squared: ", PM25_AOD_XGB_test_R2[i]))
 }
 
 # Create and display table of all XGBoost models
@@ -435,22 +434,28 @@ PM25_AOD_XGB_table %>%
 PM25_AOD_XGB_table %>% 
   ggplot(aes(x = RMSE, y = R2)) +
   geom_point(color = "blue") +
-  labs(x = "Validation RMSE", y = "Validation R2", title = "RMSE and R2 values of XGBoost models on the validation dataset",
+  labs(x = "Validation RMSE", y = "Validation R-squared",
+       title = "RMSE and R-squared values of XGBoost models on the validation dataset",
        subtitle = paste("Based on", nrow(XGB_hyperparams), "fitted XGBoost models")) +
   theme_bw()
 
-if(which.min(PM25_AOD_XGB_RMSE) == which.max(PM25_AOD_XGB_R2)){
+if(which.min(PM25_AOD_XGB_validation_RMSE) == which.max(PM25_AOD_XGB_validation_R2)){
   # Variable Importance matrix of the XGB model with the best RMSE
-  PM25_AOD_XGB_varImp[[which.min(PM25_AOD_XGB_RMSE)]] %>%
-    knitr::kable(caption = "Variable Importance of the best XGBoost model (lowest RMSE and highest R2)")
+  show(PM25_AOD_XGB_importance_plots[[which.min(PM25_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = paste0("Variable Importance of the best XGBoost model\n",
+                                "(lowest RMSE and highest R-squared)")))
+  show(predicted_vs_real_plots[[which.min(PM25_AOD_XGB_validation_RMSE)]])
 } else {
   # Variable Importance matrix of the XGB model with the best RMSE
-  PM25_AOD_XGB_varImp[[which.min(PM25_AOD_XGB_RMSE)]] %>%
-    knitr::kable(caption = "Variable Importance of the XGBoost model with the lowest RMSE")
-  
-  # Variable Importance matrix of the XGB model with the best RMSE
-  PM25_AOD_XGB_varImp[[which.max(PM25_AOD_XGB_R2)]] %>%
-    knitr::kable(caption = "Variable Importance of the XGBoost model with the highest R2")
+  show(PM25_AOD_XGB_importance_plots[[which.min(PM25_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the lowest RMSE"))
+  show(predicted_vs_real_plots[[which.min(PM25_AOD_XGB_validation_RMSE)]])
+  show(PM25_AOD_XGB_importance_plots[[which.max(PM25_AOD_XGB_validation_R2)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the highest R-squared"))
+  show(predicted_vs_real_plots[[which.max(PM25_AOD_XGB_validation_R2)]])
 }
 ```
 
