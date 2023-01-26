@@ -7,6 +7,7 @@
 
 library(tidyverse)
 library(data.table)
+library(v)
 
 # setwd("C:/Users/johot/Desktop/Joey's Files/Work/NSERC 2022/PM25-Research")
 
@@ -19,9 +20,8 @@ misr.annual.pixels <- vector("list", length = length(misr.annual.filenames))
 
 # Populate the empty list by selecting all unique path/latitude/longitude combinations for each year
 for(i in 1:length(misr.annual.filenames)){
-  misr.annual <- read_csv(misr.annual.filenames[i], guess_max = Inf)
-  misr.annual.pixels[[i]] <- misr.annual %>% 
-    select(path, longitude, latitude) %>%
+  misr.annual <- vroom(misr.annual.filenames[i], col_select = c(path, longitude, latitude))
+  misr.annual.pixels[[i]] <- misr.annual %>%
     unique()
 }
 misr.pixels.all <- do.call("rbind", misr.annual.pixels)
@@ -33,7 +33,7 @@ misr.pixels <- misr.pixels.all %>%
   select(path, longitude, latitude) %>%
   unique() %>%
   group_by(path) %>%
-  mutate(pixel.id = paste0(path, '_', sprintf('%06d', 1:n()))) %>%
+  mutate(pixel.id = paste0(path, '_', sprintf('%07d', 1:n()))) %>%
   ungroup()
 
 # Save to a locally stored csv file
