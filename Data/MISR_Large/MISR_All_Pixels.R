@@ -15,14 +15,14 @@ misr.pixels.dir = paste0(getwd(), '/Data/MISR_Large/MISR_annual_pixels/')
 
 #### STEP 1: Read in MISR data in the CMAQ location for each year (2000-2022) and select unique pixels
 
-# # Select all unique path/latitude/longitude combinations for each year and write them to csv files
-# for(i in 2000:2022){
-#   annual.filename <- paste0(misr.datasets.dir, 'MISR_Data_', i, '.csv')
-#   misr.annual <- vroom(annual.filename, col_select = c(path, longitude, latitude))
-#   misr.annual <- misr.annual %>%
-#     unique()
-#   write.csv(misr.annual, paste0(misr.pixels.dir, 'MISR_Pixels_', i, '.csv'))
-# }
+# Select all unique path/latitude/longitude combinations for each year and write them to csv files
+for(i in 2000:2022){
+  annual.filename <- paste0(misr.datasets.dir, 'MISR_Data_', i, '.csv')
+  misr.annual <- vroom(annual.filename, col_select = c(path, longitude, latitude))
+  misr.annual <- misr.annual %>%
+    unique()
+  write.csv(misr.annual, paste0(misr.pixels.dir, 'MISR_Pixels_', i, '.csv'), row.names = F)
+}
 
 
 #### STEP 2: Read in the unique pixels from each year, and merge these together to get all pixels
