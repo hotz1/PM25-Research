@@ -64,8 +64,8 @@ The formula for computing dust mass is given by $\text{Dust Mass} = 2.2\times\te
 
 ```{r compute-dust-mass, echo = FALSE, message = FALSE, warning = FALSE}
 MISR_CSN <- MISR_CSN %>% 
-  mutate(Dust = 2.2*Al + 2.49*Si + 1.63*Ca + 1.94*Ti + 2.42*Fe) %>%
-  relocate(Dust, .after = sulfate)
+  mutate(dust = 2.2*Al + 2.49*Si + 1.63*Ca + 1.94*Ti + 2.42*Fe) %>%
+  relocate(dust, .after = sulfate)
 ```
 
 # Exploratory Data Analysis
@@ -91,7 +91,7 @@ numSum <- function(vect){
   return(num_summary)
 }
 
-dust_summary <- numSum(MISR_CSN$Dust)
+dust_summary <- numSum(MISR_CSN$dust)
 nitrate_summary <- numSum(MISR_CSN$nitrate)
 sulfate_summary <- numSum(MISR_CSN$sulfate)
 pm25_summary <- numSum(MISR_AQS$PM25)
@@ -110,7 +110,7 @@ MISR_AQS <- MISR_AQS %>%
   mutate(PM25 = replace(PM25, which(PM25 < 0), 0))
 
 MISR_CSN <- MISR_CSN %>%
-  mutate(Dust = replace(Dust, which(Dust < 0), 0))
+  mutate(dust = replace(dust, which(dust < 0), 0))
 ```
 
 ## Histograms
@@ -119,7 +119,7 @@ In addition to examining numerical summaries of these values, we will also exami
 
 ```{r dust-mass-histograms, echo = FALSE, message = FALSE, warning = FALSE, fig.dim = c(8, 12)}
 dust_histogram <- MISR_CSN %>% 
-  ggplot(aes(x = Dust)) +
+  ggplot(aes(x = dust)) +
   geom_histogram(bins = 50, color = "black", fill = "grey") +
   labs(x = "Dust Mass", y = "Count", title = "Counts of Dust Masses in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
@@ -128,7 +128,7 @@ dust_histogram <- MISR_CSN %>%
   theme_bw()
 
 dust_log_histogram <- MISR_CSN %>% 
-  ggplot(aes(x = log(Dust + 0.001, base = 10))) +
+  ggplot(aes(x = log(dust + 0.001, base = 10))) +
   geom_histogram(bins = 50, color = "black", fill = "grey") +
   labs(x = "log(Dust Mass)", y = "Count", title = "Counts of Dust Masses in Merged MISR/CSN Dataset",
        subtitle = "Data collected in California from February 2000 to March 2022") +
@@ -252,6 +252,28 @@ We can also notice that there are the same amount of recorded and missing values
 
 Unfortunately, the same cannot be said for the 74 AOD mixture variables. From the table above, we can clearly see that the number of available observations varies for each of the 74 mixtures. However, of these 74 mixtures, the mixtures with the fewest number of recorded observations (`aod_mix_71` and `aod_mix_72`) each have `r MISR_AQS_var_info[82, 2]` recorded values. Furthermore, a table containing all 74 mixtures would have `r nrow(drop_na(select(MISR_AQS_smaller, c(1:2, 11:84))))` observations which have a recorded value for each of the 74 mixtures, which is a fair amount of data to work with.
 
+### Missing Values in the CSN Dataset
+
+```{r missing-vals-table-2, echo = FALSE}
+# Filter merged dataset to only the variables which we needed
+MISR_CSN_smaller <- MISR_CSN %>%
+  select(nitrate, sulfate, dust, Year, Month, Day, Site.Latitude, Site.Longitude, 
+         Mean.Temp, Min.Temp, Max.Temp, Atm.Press, elevation, 
+         pixel.latitude, pixel.longitude, c(60:67), c(85:158))
+
+# Get variable names, and counts of recorded and missing values
+MISR_CSN_var_info <- cbind(colnames(MISR_CSN_smaller),
+                           colSums(!is.na(MISR_CSN_smaller)),
+                           colSums(is.na(MISR_CSN_smaller)))
+colnames(MISR_CSN_var_info) <- c("Variable Name", "Recorded Values", "Missing Values")
+
+knitr::kable(MISR_CSN_var_info, row.names = FALSE, caption = "Counts of Variables in the merged MISR and CSN dataset") %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"),
+                full_width = TRUE,
+                fixed_thead = TRUE) %>%
+  scroll_box(height = '500px')
+```
+
 ## Charts and Graphs
 
 Next, we will create some charts and plots of the matched MISR data, to get visual representations of the data which we have collected.
@@ -285,11 +307,44 @@ In addition to these two sets of predictors mentioned above, we will also introd
 # Introduce the Months variable as described above
 MISR_AQS_smaller <- MISR_AQS_smaller %>% 
   mutate(Months = 12 * (Year - 2000) + Month - 3)
+
+MISR_CSN_smaller <- MISR_CSN_smaller %>% 
+  mutate(Months = 12 * (Year - 2000) + Month - 3)
 ```
 
 To fit our models, we will first remove any observations which have unrecorded values for the desired predictors. Then, we will split the data into a training dataset, a validation dataset, and a test dataset using a 70/15/15 ratio.
 
-```{r test-train-validation-split, echo = FALSE, message = FALSE, warning = FALSE}
+```{r data-splitter, echo = FALSE, message = FALSE, warning = FALSE}
+
+# Define a helper function to split a dataframe into train/test/validation based on given proportions
+data_split <- function(df, props = c(0.8, 0.2, 0)){
+  # Add a row_ID column to use for splitting data
+  df <- df %>%
+    mutate(row_ID = 1:nrow(df))
+  
+  # Select training data
+  df_train <- df %>%
+    dplyr::slice_sample(prop = props[1])
+  
+  # Select non-training data
+  df_nottrain <- dplyr::anti_join(df, df_train, by = 'row_ID')
+  
+  # Split non-training data into test and validation datasets
+  df_test <- df_nottrain %>%
+    dplyr::slice_sample(prop = props[2]/(props[2]+props[3]))
+  df_validation <- dplyr::anti_join(df_nottrain, df_test, by = 'row_ID')
+  
+  # Remove row_ID column from the data
+  df_train <- df_train %>% select(-'row_ID')
+  df_test <- df_test %>% select(-'row_ID')
+  df_validation <- df_validation %>% select(-'row_ID')
+  
+  
+  return(list(df_train, df_test, df_validation))
+}
+```
+
+```{r test-train-validation-splits, echo = FALSE, message = FALSE, warning = FALSE}
 # Set seed for consistent results
 set.seed(12345)
 
@@ -299,13 +354,10 @@ PM25_AOD <- MISR_AQS_smaller %>%
   drop_na()
 
 # Select train/validation/testing datasets for PM25/AOD data with a 70/15/15 split 
-PM25_AOD_shuffle <- sample(c(1:nrow(PM25_AOD)))
-PM25_AOD.train_indices = PM25_AOD_shuffle[1:round(nrow(PM25_AOD) * 0.7)]
-PM25_AOD.validation_indices = PM25_AOD_shuffle[(round(nrow(PM25_AOD) * 0.7)+1):round(nrow(PM25_AOD) * 0.85)]
-PM25_AOD.test_indices = PM25_AOD_shuffle[(round(nrow(PM25_AOD) * 0.85)+1):nrow(PM25_AOD)]
-PM25_AOD.train <- PM25_AOD[PM25_AOD.train_indices,]
-PM25_AOD.validation <- PM25_AOD[PM25_AOD.validation_indices,]
-PM25_AOD.test <- PM25_AOD[PM25_AOD.test_indices,]
+PM25_AOD.split <- data_split(PM25_AOD, props = c(0.7, 0.15, 0.15))
+PM25_AOD.train <- PM25_AOD.split[[1]]
+PM25_AOD.test <- PM25_AOD.split[[2]]
+PM25_AOD.validation <- PM25_AOD.split[[3]]
 
 
 # Select PM2.5 and the 74 AOD mixtures from merged AQS/MISR dataset, and drop rows with missing data
@@ -314,14 +366,76 @@ PM25_mixtures <- MISR_AQS_smaller %>%
   drop_na()
 
 # Select train/validation/testing datasets for mixtures data with a 70/15/15 split 
-PM25_mixtures_shuffle <- sample(c(1:nrow(PM25_mixtures)))
-PM25_mixtures.train_indices = PM25_mixtures_shuffle[1:round(nrow(PM25_mixtures) * 0.7)]
-PM25_mixtures.validation_indices = PM25_mixtures_shuffle[(round(nrow(PM25_mixtures) * 0.7)+1):
-                                                           round(nrow(PM25_mixtures) * 0.85)]
-PM25_mixtures.test_indices = PM25_mixtures_shuffle[(round(nrow(PM25_mixtures) * 0.85)+1):nrow(PM25_mixtures)]
-PM25_mixtures.train <- PM25_mixtures[PM25_mixtures.train_indices,]
-PM25_mixtures.validation <- PM25_mixtures[PM25_mixtures.validation_indices,]
-PM25_mixtures.test <- PM25_mixtures[PM25_mixtures.test_indices,]
+PM25_mixtures.split <- data_split(PM25_mixtures, props = c(0.7, 0.15, 0.15))
+PM25_mixtures.train <- PM25_mixtures.split[[1]]
+PM25_mixtures.test <- PM25_mixtures.split[[2]]
+PM25_mixtures.validation <- PM25_mixtures.split[[3]]
+
+# Select sulfate and the 8 AOD parameters from merged CSN/MISR dataset, and drop rows with missing data
+sulfate_AOD <- MISR_CSN_smaller %>% 
+  select(sulfate, Months, c(7:8), c(13:15), c(9:12), c(16:23)) %>%
+  drop_na()
+
+# Select train/validation/testing datasets for sulfate/AOD data with a 70/15/15 split 
+sulfate_AOD.split <- data_split(sulfate_AOD, props = c(0.7, 0.15, 0.15))
+sulfate_AOD.train <- sulfate_AOD.split[[1]]
+sulfate_AOD.test <- sulfate_AOD.split[[2]]
+sulfate_AOD.validation <- sulfate_AOD.split[[3]]
+
+# Select sulfate and the 74 AOD mixtures from merged CSN/MISR dataset, and drop rows with missing data
+sulfate_mixtures <- MISR_CSN_smaller %>% 
+  select(sulfate, Months, c(7:8), c(13:15), c(9:12), c(24:97)) %>%
+  drop_na()
+
+# Select train/validation/testing datasets for mixtures data with a 70/15/15 split 
+sulfate_mixtures.split <- data_split(sulfate_mixtures, props = c(0.7, 0.15, 0.15))
+sulfate_mixtures.train <- sulfate_mixtures.split[[1]]
+sulfate_mixtures.test <- sulfate_mixtures.split[[2]]
+sulfate_mixtures.validation <- sulfate_mixtures.split[[3]]
+
+# Select nitrate and the 8 AOD parameters from merged CSN/MISR dataset, and drop rows with missing data
+nitrate_AOD <- MISR_CSN_smaller %>% 
+  select(nitrate, Months, c(7:8), c(13:15), c(9:12), c(16:23)) %>%
+  drop_na()
+
+# Select train/validation/testing datasets for nitrate/AOD data with a 70/15/15 split 
+nitrate_AOD.split <- data_split(nitrate_AOD, props = c(0.7, 0.15, 0.15))
+nitrate_AOD.train <- nitrate_AOD.split[[1]]
+nitrate_AOD.test <- nitrate_AOD.split[[2]]
+nitrate_AOD.validation <- nitrate_AOD.split[[3]]
+
+# Select nitrate and the 74 AOD mixtures from merged CSN/MISR dataset, and drop rows with missing data
+nitrate_mixtures <- MISR_CSN_smaller %>% 
+  select(nitrate, Months, c(7:8), c(13:15), c(9:12), c(24:97)) %>%
+  drop_na()
+
+# Select train/validation/testing datasets for mixtures data with a 70/15/15 split 
+nitrate_mixtures.split <- data_split(nitrate_mixtures, props = c(0.7, 0.15, 0.15))
+nitrate_mixtures.train <- nitrate_mixtures.split[[1]]
+nitrate_mixtures.test <- nitrate_mixtures.split[[2]]
+nitrate_mixtures.validation <- nitrate_mixtures.split[[3]]
+
+# Select dust and the 8 AOD parameters from merged CSN/MISR dataset, and drop rows with missing data
+dust_AOD <- MISR_CSN_smaller %>% 
+  select(dust, Months, c(7:8), c(13:15), c(9:12), c(16:23)) %>%
+  drop_na()
+
+# Select train/validation/testing datasets for dust/AOD data with a 70/15/15 split 
+dust_AOD.split <- data_split(dust_AOD, props = c(0.7, 0.15, 0.15))
+dust_AOD.train <- dust_AOD.split[[1]]
+dust_AOD.test <- dust_AOD.split[[2]]
+dust_AOD.validation <- dust_AOD.split[[3]]
+
+# Select dust and the 74 AOD mixtures from merged CSN/MISR dataset, and drop rows with missing data
+dust_mixtures <- MISR_CSN_smaller %>% 
+  select(dust, Months, c(7:8), c(13:15), c(9:12), c(24:97)) %>%
+  drop_na()
+
+# Select train/validation/testing datasets for mixtures data with a 70/15/15 split 
+dust_mixtures.split <- data_split(dust_mixtures, props = c(0.7, 0.15, 0.15))
+dust_mixtures.train <- dust_mixtures.split[[1]]
+dust_mixtures.test <- dust_mixtures.split[[2]]
+dust_mixtures.validation <- dust_mixtures.split[[3]]
 ```
 
 ```{r predicted-vs-observed, echo = FALSE, message = FALSE, warning = FALSE}
@@ -347,6 +461,7 @@ plot_pred_vs_obs <- function(observed, predicted, varname = "", subtitle = ""){
   return(my_plot)
 }
 ```
+
 ## PM2.5 AOD XGBoost
 
 Using the `xgboost` package, we will fit an an XGBooster model (eXtreme Gradient Booster) which predicts PM2.5 concentrations based on the 8 AOD parameters.
@@ -459,4 +574,326 @@ if(which.min(PM25_AOD_XGB_validation_RMSE) == which.max(PM25_AOD_XGB_validation_
 }
 ```
 
- 
+## Sulfate AOD XGBoost
+
+```{r sulfate-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
+# Create sets of parameter values to use for xgboost models
+XGB_hyperparams <- expand.grid(nrounds = c(100), 
+                               eta = c(0.1, 0.3, 0.6, 1.0),
+                               max_depth = c(10),
+                               gamma = c(0.01),
+                               colsample_bytree = c(0.5, 0.75, 1),
+                               min_child_weight = c(0, 1),
+                               subsample = c(0.5, 0.75, 1))
+
+# Convert this to a matrix
+XGB_hyperparams_matrix <- as.matrix(XGB_hyperparams)
+
+# Empty (filled later) vectors of validation set RMSE and R2 values for each xgboost model
+sulfate_AOD_XGB_validation_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+sulfate_AOD_XGB_validation_R2 <- rep(NA, times = nrow(XGB_hyperparams))
+
+# Empty (filled later) vectors of test set RMSE and R2 values for each xgboost model
+sulfate_AOD_XGB_test_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+sulfate_AOD_XGB_test_R2 <- rep(NA, times = nrow(XGB_hyperparams))
+
+# Empty (filled later) list of variable importance plots for each xgboost model
+sulfate_AOD_XGB_importance_plots <- vector(mode = "list", length = nrow(XGB_hyperparams))
+
+# Empty (filled later) list of scatter plots for predicted vs. real test set data for each model
+predicted_vs_real_plots <- vector(mode = "list", length = nrow(XGB_hyperparams))
+
+for(i in 1:nrow(XGB_hyperparams)){
+  # Fit xgboost model with selected hyperparameters
+  hyperparams <- as.list(XGB_hyperparams_matrix[i,])
+  sulfate_AOD_XGB <- xgboost(data = as.matrix(sulfate_AOD.train)[,2:19], label = as.matrix(sulfate_AOD.train)[,1],
+                          nrounds = hyperparams$nrounds, verbose = 0, params = hyperparams[2:7])
+  
+  # Get plot of variable importance matrix for the fitted xgboost model
+  sulfate_AOD_XGB_importance <- xgb.importance(model = sulfate_AOD_XGB)
+  sulfate_AOD_XGB_importance_plots[[i]] <-
+    xgb.ggplot.importance(sulfate_AOD_XGB_importance, rel_to_first = FALSE, n_clusters = 2) +
+    theme_bw()
+
+  # Compute predicted values for the validation set based on the fitted XGB model
+  XGB_validation_predicted <- predict(sulfate_AOD_XGB, newdata = as.matrix(sulfate_AOD.validation)[,2:19])
+
+  # Compute validation set RMSE and R2 of the fitted XGB model
+  sulfate_AOD_XGB_validation_RMSE[i] <- caret::RMSE(XGB_validation_predicted, sulfate_AOD.validation$sulfate)
+  sulfate_AOD_XGB_validation_R2[i] <- caret::R2(XGB_validation_predicted, sulfate_AOD.validation$sulfate)
+
+  # Compute predicted values for the test set based on the fitted XGB model
+  XGB_test_predicted <- predict(sulfate_AOD_XGB, newdata = as.matrix(sulfate_AOD.test)[,2:19])
+
+  # Compute test set RMSE and R2 of the fitted XGB model
+  sulfate_AOD_XGB_test_RMSE[i] <- caret::RMSE(XGB_test_predicted, sulfate_AOD.test$sulfate)
+  sulfate_AOD_XGB_test_R2[i] <- caret::R2(XGB_test_predicted, sulfate_AOD.test$sulfate)
+  
+  # Plot predicted vs observed data for the test set
+  predicted_vs_real_plots[[i]] <- plot_pred_vs_obs(observed = sulfate_AOD.test$sulfate, predicted = XGB_test_predicted,
+                                                   varname = "Sulfate Ion Concentration", 
+                                                   subtitle = paste0("Test Set RMSE: ", sulfate_AOD_XGB_test_RMSE[i], "\n",
+                                                                     "Test Set R-squared: ", sulfate_AOD_XGB_test_R2[i]))
+}
+
+# Create and display table of all XGBoost models
+sulfate_AOD_XGB_table <- cbind(XGB_hyperparams, RMSE = sulfate_AOD_XGB_validation_RMSE, R2 = sulfate_AOD_XGB_validation_R2)
+sulfate_AOD_XGB_table %>%
+  knitr::kable(row.names = FALSE,
+               caption = paste0("Model Performance of XGBoost models on the validation dataset",
+                                "<br>", "Model: Predicting Sulfate Ion Concentration using AOD Parameters")) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"),
+                fixed_thead = TRUE) %>%
+  scroll_box(height = '500px')
+
+# Show the XGB models with the lowest RMSE and highest R2 (these may be the same model)
+sulfate_AOD_XGB_table %>% 
+  filter(RMSE == min(RMSE) | R2 == max(R2)) %>%
+  knitr::kable(row.names = FALSE,
+               caption = "Best-Performing Model(s) on the validation dataset") %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"))
+
+# Plot of the relationship between RMSE and R2.
+sulfate_AOD_XGB_table %>% 
+  ggplot(aes(x = RMSE, y = R2)) +
+  geom_point(color = "blue") +
+  labs(x = "Validation RMSE", y = "Validation R-squared",
+       title = "RMSE and R-squared values of XGBoost models on the validation dataset",
+       subtitle = paste("Based on", nrow(XGB_hyperparams), "fitted XGBoost models")) +
+  theme_bw()
+
+if(which.min(sulfate_AOD_XGB_validation_RMSE) == which.max(sulfate_AOD_XGB_validation_R2)){
+  # Variable Importance matrix of the XGB model with the best RMSE
+  show(sulfate_AOD_XGB_importance_plots[[which.min(sulfate_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = paste0("Variable Importance of the best XGBoost model\n",
+                                "(lowest RMSE and highest R-squared)")))
+  show(predicted_vs_real_plots[[which.min(sulfate_AOD_XGB_validation_RMSE)]])
+} else {
+  # Variable Importance matrix of the XGB model with the best RMSE
+  show(sulfate_AOD_XGB_importance_plots[[which.min(sulfate_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the lowest RMSE"))
+  show(predicted_vs_real_plots[[which.min(sulfate_AOD_XGB_validation_RMSE)]])
+  show(sulfate_AOD_XGB_importance_plots[[which.max(sulfate_AOD_XGB_validation_R2)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the highest R-squared"))
+  show(predicted_vs_real_plots[[which.max(sulfate_AOD_XGB_validation_R2)]])
+}
+```
+
+## Nitrate AOD XGBoost
+
+```{r nitrate-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
+# Create sets of parameter values to use for xgboost models
+XGB_hyperparams <- expand.grid(nrounds = c(100), 
+                               eta = c(0.1, 0.3, 0.6, 1.0),
+                               max_depth = c(10),
+                               gamma = c(0.01),
+                               colsample_bytree = c(0.5, 0.75, 1),
+                               min_child_weight = c(0, 1),
+                               subsample = c(0.5, 0.75, 1))
+
+# Convert this to a matrix
+XGB_hyperparams_matrix <- as.matrix(XGB_hyperparams)
+
+# Empty (filled later) vectors of validation set RMSE and R2 values for each xgboost model
+nitrate_AOD_XGB_validation_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+nitrate_AOD_XGB_validation_R2 <- rep(NA, times = nrow(XGB_hyperparams))
+
+# Empty (filled later) vectors of test set RMSE and R2 values for each xgboost model
+nitrate_AOD_XGB_test_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+nitrate_AOD_XGB_test_R2 <- rep(NA, times = nrow(XGB_hyperparams))
+
+# Empty (filled later) list of variable importance plots for each xgboost model
+nitrate_AOD_XGB_importance_plots <- vector(mode = "list", length = nrow(XGB_hyperparams))
+
+# Empty (filled later) list of scatter plots for predicted vs. real test set data for each model
+predicted_vs_real_plots <- vector(mode = "list", length = nrow(XGB_hyperparams))
+
+for(i in 1:nrow(XGB_hyperparams)){
+  # Fit xgboost model with selected hyperparameters
+  hyperparams <- as.list(XGB_hyperparams_matrix[i,])
+  nitrate_AOD_XGB <- xgboost(data = as.matrix(nitrate_AOD.train)[,2:19], label = as.matrix(nitrate_AOD.train)[,1],
+                          nrounds = hyperparams$nrounds, verbose = 0, params = hyperparams[2:7])
+  
+  # Get plot of variable importance matrix for the fitted xgboost model
+  nitrate_AOD_XGB_importance <- xgb.importance(model = nitrate_AOD_XGB)
+  nitrate_AOD_XGB_importance_plots[[i]] <-
+    xgb.ggplot.importance(nitrate_AOD_XGB_importance, rel_to_first = FALSE, n_clusters = 2) +
+    theme_bw()
+
+  # Compute predicted values for the validation set based on the fitted XGB model
+  XGB_validation_predicted <- predict(nitrate_AOD_XGB, newdata = as.matrix(nitrate_AOD.validation)[,2:19])
+
+  # Compute validation set RMSE and R2 of the fitted XGB model
+  nitrate_AOD_XGB_validation_RMSE[i] <- caret::RMSE(XGB_validation_predicted, nitrate_AOD.validation$nitrate)
+  nitrate_AOD_XGB_validation_R2[i] <- caret::R2(XGB_validation_predicted, nitrate_AOD.validation$nitrate)
+
+  # Compute predicted values for the test set based on the fitted XGB model
+  XGB_test_predicted <- predict(nitrate_AOD_XGB, newdata = as.matrix(nitrate_AOD.test)[,2:19])
+
+  # Compute test set RMSE and R2 of the fitted XGB model
+  nitrate_AOD_XGB_test_RMSE[i] <- caret::RMSE(XGB_test_predicted, nitrate_AOD.test$nitrate)
+  nitrate_AOD_XGB_test_R2[i] <- caret::R2(XGB_test_predicted, nitrate_AOD.test$nitrate)
+  
+  # Plot predicted vs observed data for the test set
+  predicted_vs_real_plots[[i]] <- plot_pred_vs_obs(observed = nitrate_AOD.test$nitrate, predicted = XGB_test_predicted,
+                                                   varname = "Nitrate Ion Concentration", 
+                                                   subtitle = paste0("Test Set RMSE: ", nitrate_AOD_XGB_test_RMSE[i], "\n",
+                                                                     "Test Set R-squared: ", nitrate_AOD_XGB_test_R2[i]))
+}
+
+# Create and display table of all XGBoost models
+nitrate_AOD_XGB_table <- cbind(XGB_hyperparams, RMSE = nitrate_AOD_XGB_validation_RMSE, R2 = nitrate_AOD_XGB_validation_R2)
+nitrate_AOD_XGB_table %>%
+  knitr::kable(row.names = FALSE,
+               caption = paste0("Model Performance of XGBoost models on the validation dataset",
+                                "<br>", "Model: Predicting Nitrate Ion Concentration using AOD Parameters")) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"),
+                fixed_thead = TRUE) %>%
+  scroll_box(height = '500px')
+
+# Show the XGB models with the lowest RMSE and highest R2 (these may be the same model)
+nitrate_AOD_XGB_table %>% 
+  filter(RMSE == min(RMSE) | R2 == max(R2)) %>%
+  knitr::kable(row.names = FALSE,
+               caption = "Best-Performing Model(s) on the validation dataset") %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"))
+
+# Plot of the relationship between RMSE and R2.
+nitrate_AOD_XGB_table %>% 
+  ggplot(aes(x = RMSE, y = R2)) +
+  geom_point(color = "blue") +
+  labs(x = "Validation RMSE", y = "Validation R-squared",
+       title = "RMSE and R-squared values of XGBoost models on the validation dataset",
+       subtitle = paste("Based on", nrow(XGB_hyperparams), "fitted XGBoost models")) +
+  theme_bw()
+
+if(which.min(nitrate_AOD_XGB_validation_RMSE) == which.max(nitrate_AOD_XGB_validation_R2)){
+  # Variable Importance matrix of the XGB model with the best RMSE
+  show(nitrate_AOD_XGB_importance_plots[[which.min(nitrate_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = paste0("Variable Importance of the best XGBoost model\n",
+                                "(lowest RMSE and highest R-squared)")))
+  show(predicted_vs_real_plots[[which.min(nitrate_AOD_XGB_validation_RMSE)]])
+} else {
+  # Variable Importance matrix of the XGB model with the best RMSE
+  show(nitrate_AOD_XGB_importance_plots[[which.min(nitrate_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the lowest RMSE"))
+  show(predicted_vs_real_plots[[which.min(nitrate_AOD_XGB_validation_RMSE)]])
+  show(nitrate_AOD_XGB_importance_plots[[which.max(nitrate_AOD_XGB_validation_R2)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the highest R-squared"))
+  show(predicted_vs_real_plots[[which.max(nitrate_AOD_XGB_validation_R2)]])
+}
+```
+
+## Dust Mass AOD XGBoost
+
+```{r dust-AOD-xgboost, echo = FALSE, warning = FALSE, message = FALSE}
+# Create sets of parameter values to use for xgboost models
+XGB_hyperparams <- expand.grid(nrounds = c(100), 
+                               eta = c(0.1, 0.3, 0.6, 1.0),
+                               max_depth = c(10),
+                               gamma = c(0.01),
+                               colsample_bytree = c(0.5, 0.75, 1),
+                               min_child_weight = c(0, 1),
+                               subsample = c(0.5, 0.75, 1))
+
+# Convert this to a matrix
+XGB_hyperparams_matrix <- as.matrix(XGB_hyperparams)
+
+# Empty (filled later) vectors of validation set RMSE and R2 values for each xgboost model
+dust_AOD_XGB_validation_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+dust_AOD_XGB_validation_R2 <- rep(NA, times = nrow(XGB_hyperparams))
+
+# Empty (filled later) vectors of test set RMSE and R2 values for each xgboost model
+dust_AOD_XGB_test_RMSE <- rep(NA, times = nrow(XGB_hyperparams))
+dust_AOD_XGB_test_R2 <- rep(NA, times = nrow(XGB_hyperparams))
+
+# Empty (filled later) list of variable importance plots for each xgboost model
+dust_AOD_XGB_importance_plots <- vector(mode = "list", length = nrow(XGB_hyperparams))
+
+# Empty (filled later) list of scatter plots for predicted vs. real test set data for each model
+predicted_vs_real_plots <- vector(mode = "list", length = nrow(XGB_hyperparams))
+
+for(i in 1:nrow(XGB_hyperparams)){
+  # Fit xgboost model with selected hyperparameters
+  hyperparams <- as.list(XGB_hyperparams_matrix[i,])
+  dust_AOD_XGB <- xgboost(data = as.matrix(dust_AOD.train)[,2:19], label = as.matrix(dust_AOD.train)[,1],
+                          nrounds = hyperparams$nrounds, verbose = 0, params = hyperparams[2:7])
+  
+  # Get plot of variable importance matrix for the fitted xgboost model
+  dust_AOD_XGB_importance <- xgb.importance(model = dust_AOD_XGB)
+  dust_AOD_XGB_importance_plots[[i]] <-
+    xgb.ggplot.importance(dust_AOD_XGB_importance, rel_to_first = FALSE, n_clusters = 2) +
+    theme_bw()
+
+  # Compute predicted values for the validation set based on the fitted XGB model
+  XGB_validation_predicted <- predict(dust_AOD_XGB, newdata = as.matrix(dust_AOD.validation)[,2:19])
+
+  # Compute validation set RMSE and R2 of the fitted XGB model
+  dust_AOD_XGB_validation_RMSE[i] <- caret::RMSE(XGB_validation_predicted, dust_AOD.validation$dust)
+  dust_AOD_XGB_validation_R2[i] <- caret::R2(XGB_validation_predicted, dust_AOD.validation$dust)
+
+  # Compute predicted values for the test set based on the fitted XGB model
+  XGB_test_predicted <- predict(dust_AOD_XGB, newdata = as.matrix(dust_AOD.test)[,2:19])
+
+  # Compute test set RMSE and R2 of the fitted XGB model
+  dust_AOD_XGB_test_RMSE[i] <- caret::RMSE(XGB_test_predicted, dust_AOD.test$dust)
+  dust_AOD_XGB_test_R2[i] <- caret::R2(XGB_test_predicted, dust_AOD.test$dust)
+  
+  # Plot predicted vs observed data for the test set
+  predicted_vs_real_plots[[i]] <- plot_pred_vs_obs(observed = dust_AOD.test$dust, predicted = XGB_test_predicted,
+                                                   varname = "Dust Mass", 
+                                                   subtitle = paste0("Test Set RMSE: ", dust_AOD_XGB_test_RMSE[i], "\n",
+                                                                     "Test Set R-squared: ", dust_AOD_XGB_test_R2[i]))
+}
+
+# Create and display table of all XGBoost models
+dust_AOD_XGB_table <- cbind(XGB_hyperparams, RMSE = dust_AOD_XGB_validation_RMSE, R2 = dust_AOD_XGB_validation_R2)
+dust_AOD_XGB_table %>%
+  knitr::kable(row.names = FALSE,
+               caption = paste0("Model Performance of XGBoost models on the validation dataset",
+                                "<br>", "Model: Predicting Dust Mass using AOD Parameters")) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"),
+                fixed_thead = TRUE) %>%
+  scroll_box(height = '500px')
+
+# Show the XGB models with the lowest RMSE and highest R2 (these may be the same model)
+dust_AOD_XGB_table %>% 
+  filter(RMSE == min(RMSE) | R2 == max(R2)) %>%
+  knitr::kable(row.names = FALSE,
+               caption = "Best-Performing Model(s) on the validation dataset") %>%
+  kable_styling(bootstrap_options = c("striped", "bordered"))
+
+# Plot of the relationship between RMSE and R2.
+dust_AOD_XGB_table %>% 
+  ggplot(aes(x = RMSE, y = R2)) +
+  geom_point(color = "blue") +
+  labs(x = "Validation RMSE", y = "Validation R-squared",
+       title = "RMSE and R-squared values of XGBoost models on the validation dataset",
+       subtitle = paste("Based on", nrow(XGB_hyperparams), "fitted XGBoost models")) +
+  theme_bw()
+
+if(which.min(dust_AOD_XGB_validation_RMSE) == which.max(dust_AOD_XGB_validation_R2)){
+  # Variable Importance matrix of the XGB model with the best RMSE
+  show(dust_AOD_XGB_importance_plots[[which.min(dust_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = paste0("Variable Importance of the best XGBoost model\n",
+                                "(lowest RMSE and highest R-squared)")))
+  show(predicted_vs_real_plots[[which.min(dust_AOD_XGB_validation_RMSE)]])
+} else {
+  # Variable Importance matrix of the XGB model with the best RMSE
+  show(dust_AOD_XGB_importance_plots[[which.min(dust_AOD_XGB_validation_RMSE)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the lowest RMSE"))
+  show(predicted_vs_real_plots[[which.min(dust_AOD_XGB_validation_RMSE)]])
+  show(dust_AOD_XGB_importance_plots[[which.max(dust_AOD_XGB_validation_R2)]] +
+         labs(title = "XGB Feature Importance",
+              subtitle = "Variable Importance of the XGBoost model with the highest R-squared"))
+  show(predicted_vs_real_plots[[which.max(dust_AOD_XGB_validation_R2)]])
+}
+```
