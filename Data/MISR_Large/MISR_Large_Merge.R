@@ -37,3 +37,41 @@ CSN.SPEC.USA <- read_csv(paste0(getwd(), '/Data/CSN Data/CSN_PM25_SPEC_2000_2021
   rename(Site.Longitude = Longitude, Site.Latitude = Latitude) %>%
   select(-c("State", "County", "City", "State.Code", "County.Code", "Site.Num"))
 cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+
+
+
+# Create a table containing info about AQS data collection sites
+AQS.sites <- AQS.PM25.USA %>%
+  select(Site.Code, Site.Longitude, Site.Latitude) %>%
+  unique()
+
+# Create a table containing info about CSN data collection sites
+CSN.sites <- CSN.SPEC.USA %>%
+  select(Site.Code, Site.Longitude, Site.Latitude) %>%
+  unique()
+
+# Convert the tables above into sf objects
+AQS.sites_sf <- sf::st_as_sf(AQS.sites, coords = c(2:3), crs = 4326)
+CSN.sites_sf <- sf::st_as_sf(CSN.sites, coords = c(2:3), crs = 4326)
+
+
+# Read in MISR pixel ID values (generated in a different R script)
+cat('- Reading in MISR Pixels......')
+start = Sys.time()
+misr.pixels <- read_csv(paste0(getwd(), '/Data/MISR_Large/MISR_CMAQ_pixels.csv'), show_col_types = FALSE)
+
+# Convert MISR pixel ID values to an sf object
+misr.pixels_sf <- sf::st_as_sf(misr.pixels, coords = c(2:3), crs = 4326)
+cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n\n', sep = '')
+
+
+# Collect pairs of MISR pixels and AQS data collection sites within 2.2 km of the MISR pixels
+cat('- Finding AQS Data Sites near MISR pixels......')
+start = Sys.time()
+MISR.near.AQS <- st_join(misr.pixels_sf, AQS.sites_sf, join = st_is_within_distance, dist = units::set_units(2.2, km), left = FALSE)
+MISR.near.AQS <- data.frame(MISR.near.AQS) %>%
+  select(pixel.id, Site.Code)
+cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+
+
+
