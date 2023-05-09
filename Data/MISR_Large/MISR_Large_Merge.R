@@ -88,8 +88,55 @@ misr.annual.filenames <- list.files(misr.datasets.dir, pattern = ".csv", full.na
 aqs.misr.annual <- vector("list", length = length(misr.annual.filenames))
 csn.misr.annual <- vector("list", length = length(misr.annual.filenames))
 
+
 # For each MISR file, load in the MISR dataset, and merge with the AQS/CSN/IMPROVE datasets based on spatial matching and time matching
 for(i in 1:length(misr.annual.filenames)){
   year <- substr(misr.annual.filenames[i], nchar(misr.annual.filenames[i]) - 7, nchar(misr.annual.filenames[i]) - 4)
-  cat(misr.annual.filenames[i], ':', rep(' ', 20), year, sep = '')
+  cat('- Loading MISR Data from ', year, '......', sep = '')
+  start = Sys.time()
+  misr.annual <- read_csv(misr.annual.filenames[i], guess_max = Inf, show_col_types = FALSE)
+  cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+  
+  # Merge MISR dataset with the MISR pixel IDs
+  cat('Merging MISR data with pixel IDs......')
+  start = Sys.time()
+  misr.annual <- merge(misr.annual, misr.pixels) %>%
+    relocate(pixel.id, .after = latitude)
+  cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+  
+  
+  # Merge MISR data with any AQS data sites which are within 2.2 km of a MISR pixel
+  cat('Merging MISR data with AQS data......')
+  start = Sys.time()
+  MISR.AQS.match <- merge(misr.annual, MISR.near.AQS)
+  
+  # Select observations which are on the same date and have the same site code
+  MISR.AQS.match <- merge(AQS.PM25.USA, MISR.AQS.match, by.x = c("Date", "Site.Code"), by.y = c("date", "Site.Code")) %>%
+    rename(pixel.longitude = longitude, pixel.latitude = latitude) %>%
+    select(-c(time)) %>%
+    relocate(PM25, .after = Date)
+  aqs.misr.annual[[i]] <- MISR.AQS.match
+  cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
+  
+  
+  # Merge MISR data with any CSN data sites which are within 2.2 km of a MISR pixel
+  cat('Merging MISR data with CSN data......')
+  start = Sys.time()
+  MISR.CSN.match <- merge(misr.annual, MISR.near.CSN)
+  
+  # Select observations which are on the same date and have the same site code
+  MISR.CSN.match <- merge(CSN.SPEC.USA, MISR.CSN.match, by.x = c("Date", "Site.Code"), by.y = c("date", "Site.Code")) %>%
+    rename(pixel.longitude = longitude, pixel.latitude = latitude) %>%
+    select(-c(time))
+  csn.misr.annual[[i]] <- MISR.CSN.match
+  cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
 }
+
+
+# Bind together all of the AQS/CSN/IMPROVE datasets which have been matched with corresponding MISR data
+aqs.misr.merged <- do.call("rbind", aqs.misr.annual)
+csn.misr.merged <- do.call("rbind", csn.misr.annual)
+
+# Save the merged datasets to the merged dataset directory.
+write.csv(aqs.misr.merged, paste0(merged.data.dir, '/MISR_AQS_Matched.csv'), row.names = F)
+write.csv(csn.misr.merged, paste0(merged.data.dir, '/MISR_CSN_Matched.csv'), row.names = F)
