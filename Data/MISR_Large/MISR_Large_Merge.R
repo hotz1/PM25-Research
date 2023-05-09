@@ -92,13 +92,13 @@ csn.misr.annual <- vector("list", length = length(misr.annual.filenames))
 # For each MISR file, load in the MISR dataset, and merge with the AQS/CSN/IMPROVE datasets based on spatial matching and time matching
 for(i in 1:length(misr.annual.filenames)){
   year <- substr(misr.annual.filenames[i], nchar(misr.annual.filenames[i]) - 7, nchar(misr.annual.filenames[i]) - 4)
-  cat('- Loading MISR Data from ', year, '......', sep = '')
+  cat('\n', 'Loading MISR Data from ', year, '......', sep = '')
   start = Sys.time()
   misr.annual <- read_csv(misr.annual.filenames[i], guess_max = Inf, show_col_types = FALSE)
   cat(round(difftime(Sys.time(), start, units = 'secs'), 2), ' seconds\n', sep = '')
   
   # Merge MISR dataset with the MISR pixel IDs
-  cat('Merging MISR data with pixel IDs......')
+  cat('- Merging MISR data with pixel IDs......')
   start = Sys.time()
   misr.annual <- merge(misr.annual, misr.pixels) %>%
     relocate(pixel.id, .after = latitude)
@@ -106,7 +106,7 @@ for(i in 1:length(misr.annual.filenames)){
   
   
   # Merge MISR data with any AQS data sites which are within 2.2 km of a MISR pixel
-  cat('Merging MISR data with AQS data......')
+  cat('- Merging MISR data with AQS data......')
   start = Sys.time()
   MISR.AQS.match <- merge(misr.annual, MISR.near.AQS)
   
@@ -120,7 +120,7 @@ for(i in 1:length(misr.annual.filenames)){
   
   
   # Merge MISR data with any CSN data sites which are within 2.2 km of a MISR pixel
-  cat('Merging MISR data with CSN data......')
+  cat('- Merging MISR data with CSN data......')
   start = Sys.time()
   MISR.CSN.match <- merge(misr.annual, MISR.near.CSN)
   
