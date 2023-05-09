@@ -22,4 +22,5 @@ Data/MISR/MISR_merged_data/MISR_IMPROVE_Matched.csv
 Data/MISR_Large/MISR_datasets/MISR_Data_*.csv
 Data/MISR_Large/MISR_annual_pixels/*.csv
 Data/Fire_Data/data/merged/*.csv
-
+Data/MISR_Large/MISR_merged_data/MISR_AQS_Matched.csv
+Data/MISR_Large/MISR_merged_data/MISR_CSN_Matched.csv
